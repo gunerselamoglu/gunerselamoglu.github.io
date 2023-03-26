@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Socket.io Example</title>
+    <style>
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+      var socket = io();
+
+      // Get box element
+      var box = document.getElementById('box');
+
+      // Set initial position
+      var position = { x: 0, y: 0 };
+      box.style.left = position.x + 'px';
+      box.style.top = position.y + 'px';
+
+      // Listen for key presses
+      document.addEventListener('keydown', function(event) {
+        var key = event.keyCode;
+        switch (key) {
+          case 37: // left arrow
+            position.x -= 10;
+            break;
+          case 38: // up arrow
+            position.y -= 10;
+            break;
+          case 39: // right arrow
+            position.x += 10;
+            break;
+          case 40: // down arrow
+            position.y += 10;
+            break;
+        }
+
+        // Update box position
+        box.style.left = position.x + 'px';
+        box.style.top = position.y + 'px';
+
+        // Emit position update to server
+        socket.emit('updatePosition', position);
+      });
+
+      // Listen for position updates from server
+      socket.on('updatePosition', function(data) {
+        // Update box position
+        box.style.left = data.x + 'px';
+        box.style.top = data.y + 'px';
+      });
+    </script>
+  </body>
+</html>
