@@ -11,14 +11,19 @@
         position: absolute;
       }
     </style>
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.27/dist-cjs/polyfills.js"></script>
+    <script src="https://unpkg.com/webp-hero@0.0.0-dev.27/dist-cjs/webp-hero.bundle.js"></script>
   </head>
+  <script>
+    var webpMachine = new webpHero.WebpMachine()
+    webpMachine.polyfillDocument()
+  </script>
   <body>
     <div id="box"></div>
-    <picture>
-      <source srcset="image.webp" type="image/webp">
-      <source srcset="image.png" type="image/png"> 
-      <img src="image.png">
-    </picture>
+
+    <img src="image.webp">
+
+   
 
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script>
