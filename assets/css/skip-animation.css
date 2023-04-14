@@ -1,0 +1,21 @@
+@-webkit-keyframes mask-play {
+  from {
+    -webkit-mask-position: 0% 0;
+            mask-position: 0% 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+}
+
+@keyframes mask-play {
+  from {
+    -webkit-mask-position: 0% 0;
+            mask-position: 0% 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
+  }
+}

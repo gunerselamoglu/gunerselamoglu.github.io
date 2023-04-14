@@ -1,0 +1,259 @@
+@keyframes slideCloud {
+  0%   {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes armMove {
+  0%   {
+    transform: translateX(-40px) rotate(0);
+  }
+  40% {
+    transform: translateX(-40px) rotate(8deg);
+  }
+  60% {
+    transform: translateX(-40px) rotate(-4deg);
+  }
+  65% {
+    transform: translateX(-40px) rotate(0);
+  }
+  70% {
+    transform: translateX(-40px) rotate(-4deg);
+  }
+  100% {
+    transform: translateX(-40px) rotate(0);
+  }
+}
+
+@keyframes eyeBrowMove {
+  0%   {
+    transform: translateY(0) translateX(-40px);
+  }
+  5% {
+    transform: translateY(20px) translateX(-40px);
+  }
+  35% {
+    transform: translateY(20px) translateX(-40px);
+  }
+  40% {
+    transform: translateY(10px) translateX(-40px);
+  }
+  65% {
+    transform: translateY(10px) translateX(-40px);
+  }
+  75% {
+    transform: translateY(25px) translateX(-40px);
+  }
+  90% {
+    transform: translateY(25px) translateX(-40px);
+    opacity: 1;
+  }
+  95% {
+   
+    transform: translateY(20px) translateX(-40px);
+  }
+  100% {
+    transform: translateY(0) translateX(-40px);
+  }
+}
+
+
+@keyframes eyesMove {
+  0%   {
+    transform: translateY(0) translateX(-40px);
+  }
+  5% {
+    transform: translateY(15px) translateX(-60px);
+  }
+  35% {
+    transform: translateY(20px) translateX(-60px);
+  }
+  40% {
+    transform: translateY(10px) translateX(-20px);
+  }
+  65% {
+    transform: translateY(10px) translateX(-20px);
+  }
+  75% {
+    transform: translateY(40px) translateX(-40px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(40px) translateX(-40px);
+    opacity: 1;
+  }
+  95% {
+   
+    transform: translateY(20px) translateX(-40px);
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px) translateX(-40px);
+  }
+}
+
+@media (max-width:1023px) {
+  @keyframes eyesMove {
+    0%   {
+      transform: translateY(0) translateX(-40px);
+    }
+    5% {
+      transform: translateY(7px) translateX(-47px);
+    }
+    35% {
+      transform: translateY(10px) translateX(-47px);
+    }
+    40% {
+      transform: translateY(5px) translateX(-35px);
+    }
+    65% {
+      transform: translateY(5px) translateX(-35px);
+    }
+    75% {
+      transform: translateY(12px) translateX(-40px);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(12px) translateX(-40px);
+      opacity: 1;
+    }
+    95% {
+     
+      transform: translateY(10px) translateX(-40px);
+      opacity: 1;
+    }
+    96% {
+      opacity: 0;
+    }
+    98% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(5px) translateX(-40px);
+    }
+  }
+
+  @keyframes eyeBrowMove {
+    0%   {
+      transform: translateY(0) translateX(-40px);
+    }
+    5% {
+      transform: translateY(7px) translateX(-40px);
+    }
+    35% {
+      transform: translateY(7px) translateX(-40px);
+    }
+    40% {
+      transform: translateY(3px) translateX(-40px);
+    }
+    65% {
+      transform: translateY(3px) translateX(-40px);
+    }
+    75% {
+      transform: translateY(8px) translateX(-40px);
+    }
+    90% {
+      transform: translateY(8px) translateX(-40px);
+      opacity: 1;
+    }
+    95% {
+     
+      transform: translateY(7px) translateX(-40px);
+    }
+    100% {
+      transform: translateY(0) translateX(-40px);
+    }
+  }
+}
+
+
+@keyframes tuzluCenterMove {
+  0%   {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes tuzluLeftMove {
+  0%   {
+    transform: translateX(-20%);
+  }
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+}
+
+@keyframes tuzluRightMove {
+  0%   {
+    transform: translateX(20%);
+  }
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+}
+
+@media (max-width:1023px) {
+  @keyframes tuzluCenterMove {
+    0%   {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

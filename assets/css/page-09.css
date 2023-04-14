@@ -1,0 +1,173 @@
+.page-09__ayse-teyze {
+  z-index: 2;
+  opacity: 0;
+}
+
+.page-09__ayse-teyze.fadeIn {
+  animation-name: fadeIn09;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+.page-09__ayse-teyze-content {
+  position: absolute;
+  z-index: 2;
+  max-width: 562px;
+  width: 70%;
+  font-size: 20px;
+  left: 12.083333333333334%;
+  top:50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.page-09__ayse-teyze-content font {
+  font-size: 25px;
+}
+
+.page-09__ayse-teyze-content.fadeIn{
+  animation-name: fadeIn09;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.page-09__hasan-amca {
+  z-index: 2;
+  opacity: 0;
+}
+
+.page-09__hasan-amca.fadeIn {
+  animation-name: fadeIn09;
+  animation-duration: 13s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+
+.page-09__hasan-amca-content {
+  position: absolute;
+  z-index: 2;
+  max-width: 539px;
+  width: 70%;
+  font-size: 20px;
+  left: 12.083333333333334%;
+  top:35%;
+  opacity: 0;
+}
+
+.page-09__hasan-amca-content.fadeIn {
+  animation-name: fadeIn09;
+  animation-duration: 13s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+}
+
+.page-09__hasan-amca-content font {
+  font-size: 25px;
+}
+
+.page-09__rasim-amca {
+  z-index: 2;
+  opacity: 0;
+}
+
+.page-09__rasim-amca.fadeIn {
+  animation-name: fadeIn09-2;
+  animation-duration: 12s;
+  animation-delay: 21s;
+  animation-fill-mode: forwards;
+}
+
+.page-09__rasim-amca-content {
+  position: absolute;
+  z-index: 2;
+  max-width: 539px;
+  width: 70%;
+  font-size: 20px;
+  left: 12.083333333333334%;
+  top:38.7962962962963%;
+  opacity: 0;
+}
+
+.page-09__rasim-amca-content font {
+  font-size: 25px;
+}
+
+.page-09__rasim-amca-content.fadeIn {
+  animation-name: fadeIn09-2;
+  animation-duration: 12s;
+  animation-delay: 22s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width:1720px) { 
+  .page-09__ayse-teyze-content,
+  .page-09__hasan-amca-content,
+  .page-09__rasim-amca-content  {
+    font-size:18px;
+  }
+
+  .page-09__ayse-teyze-content font,
+  .page-09__hasan-amca-content font,
+  .page-09__rasim-amca-content font  {
+    font-size:23px;
+  }
+
+  .page-09__hasan-amca-content {
+    max-width: 490px;
+  }
+
+  .page-09__rasim-amca-content {
+    max-width: 516px;
+  }
+}
+
+@media (max-width:1640px) { 
+  .page-09__ayse-teyze-content,
+  .page-09__hasan-amca-content,
+  .page-09__rasim-amca-content  {
+    font-size:14px;
+  }
+
+  .page-09__ayse-teyze-content font,
+  .page-09__hasan-amca-content font,
+  .page-09__rasim-amca-content font  {
+    font-size:18px;
+  }
+
+  .page-09__hasan-amca-content {
+    max-width: 380px;
+  }
+
+  .page-09__rasim-amca-content {
+    max-width: 403px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .page-09__ayse-teyze-content,
+  .page-09__hasan-amca-content,
+  .page-09__rasim-amca-content  {
+    display: none;
+  }
+
+  .page-09__ayse-teyze,
+  .page-09__hasan-amca,
+  .page-09__rasim-amca {
+    left:0;
+    right:0;
+    margin: auto;
+  }
+
+  .page-09__splash img {
+    width:100%;
+    height:auto;
+    position: relative;
+    object-fit: fill;
+  }
+
+  .page-09__splash.o-section__figure {
+    width:100%;
+    height: 100%;
+  }
+}

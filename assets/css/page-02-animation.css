@@ -1,0 +1,76 @@
+@keyframes slideLeftPage02Blow {
+  0%   {
+    transform: translateX(-90px);
+    opacity: 0;
+  }
+  5%   {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  35%   {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes Page02Light {
+  0%   {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  45%   {
+    opacity: 1;
+  }
+  50%   {
+    opacity: 0;
+  }
+  80%   {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  85% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideDownPage02ConfetiFront {
+  0%   {
+    margin-top: -100%;
+  }
+  100% {
+    margin-top: 38%;
+  }
+}
+
+@keyframes slideDownPage02ConfetiBack {
+  0%   {
+    margin-top: -100%;
+  }
+  100% {
+    margin-top: 40%;
+  }
+}
+
+@keyframes slideLeftPage02Content {
+  0%   {
+    right:1.572916666666667%;
+    opacity: 0;
+  }
+  100% {
+    right:5.572916666666667%;
+    opacity: 1;
+  }
+}

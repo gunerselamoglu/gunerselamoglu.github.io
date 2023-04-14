@@ -1,0 +1,285 @@
+
+.footers {
+  position: fixed;
+  width:100%;
+  height: 124px!important;
+  left:0;
+  padding: 0 60px;
+  z-index: 11;
+  bottom: 0; 
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.footers__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(180deg, rgba(3, 10, 24, 0) 1%, rgba(19, 69, 105, 0.91) 149.65%);
+  opacity: 0.4;
+  bottom: 0;
+  z-index: -1;
+}
+
+.footers.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.footers__left {
+  left:30px;
+  top:0;
+  width:50%;
+  display: flex;
+  align-items: center;
+  transition: all .3s ease-out;
+}
+
+.footers__left a {
+  margin-right: 24px;
+  display: inline-block;
+}
+
+.footers__left a:nth-child(1) img{
+  width:28px;
+}
+
+.footers__right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footers__right a {
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.footers__right a:hover {
+  transform: scale(1.12);
+}
+
+.footers__map-button {
+  margin-right:24px;
+}
+
+.footers__map-button.active svg{
+  background: linear-gradient(206.84deg, #0E96E2 0%, #005FA4 81.36%), #0067B1;
+  border-radius: 100%;
+}
+
+.footers__map-button,
+.footers__map-button svg {
+  width: 80px;
+  height: 80px;
+}
+
+.footers__map-button.active circle {
+  stroke: transparent;
+}
+
+.sound-control {
+  height: 80px;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.sound-control:hover {
+  transform: scale(1.12);
+}
+
+.everlib-logo {
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.everlib-logo .everlib-logo-first-bar, 
+.everlib-logo .everlib-logo-second-bar, 
+.everlib-logo .everlib-logo-third-bar, 
+.everlib-logo .everlib-logo-fourth-bar {
+  width: 3.6px;;
+  margin: 0 2px;
+  padding: 0;
+  vertical-align: top;
+  background: #004D85;
+  border-radius:4px;
+}
+
+.sound-control.play .everlib-logo .everlib-logo-first-bar, 
+.sound-control.play .everlib-logo .everlib-logo-second-bar, 
+.sound-control.play .everlib-logo .everlib-logo-third-bar, 
+.sound-control.play .everlib-logo .everlib-logo-fourth-bar {
+  animation: equalize 4s 0s infinite;
+  animation-timing-function: linear;
+  transition: 0.5s;
+}
+.sound-control.play .everlib-logo .everlib-logo-first-bar {
+  transition: 0.5s;
+  animation-delay: -1.9s;
+}
+.everlib-logo .everlib-logo-first-bar {
+  height: 5px;
+}
+.sound-control.play .everlib-logo .everlib-logo-second-bar {
+  animation-delay: -2.9s;
+}
+.everlib-logo .everlib-logo-second-bar {
+  height: 5px;
+}
+.sound-control.play .everlib-logo .everlib-logo-third-bar {
+  animation-delay: -3.9s;
+}
+.everlib-logo .everlib-logo-third-bar {
+  height: 5px;
+}
+.sound-control.play .everlib-logo .everlib-logo-fourth-bar {
+  animation-delay: -4.9s;
+}
+.everlib-logo .everlib-logo-fourth-bar {
+  height: 5px;
+}
+@keyframes equalize {
+  0% {
+    height: 24px;
+  }
+  4% {
+    height: 21px;
+  }
+  8% {
+    height: 20px;
+  }
+  12% {
+    height: 15px;
+  }
+  16% {
+    height: 10px;
+  }
+  20% {
+    height: 15px;
+  }
+  24% {
+    height: 20px;
+  }
+  28% {
+    height: 5px;
+  }
+  32% {
+    height: 20px;
+  }
+  36% {
+    height: 24px;
+  }
+  40% {
+    height: 10px;
+  }
+  44% {
+    height: 20px;
+  }
+  48% {
+    height: 24px;
+  }
+  52% {
+    height: 15px;
+  }
+  56% {
+    height: 5px;
+  }
+  60% {
+    height: 15px;
+  }
+  64% {
+    height: 24px;
+  }
+  68% {
+    height: 15px;
+  }
+  72% {
+    height: 24px;
+  }
+  76% {
+    height: 10px;
+  }
+  80% {
+    height: 24px;
+  }
+  84% {
+    height: 19px;
+  }
+  88% {
+    height: 24px;
+  }
+  92% {
+    height: 10px;
+  }
+  96% {
+    height: 24px;
+  }
+  100% {
+    height: 24px;
+  }
+}
+
+
+
+@media (max-width:1720px) {
+  .intro__start-button-wrapper {
+    width: 9.90625%;
+    height: 9.9065vw;
+    bottom: 5.87037037037037%;
+  }
+
+  .footers {
+    height:70px!important;
+  }
+
+  .footers__map-button,
+  .footers__map-button svg,
+  .sound-control {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .footers {
+    padding: 0 20px 0;
+    height:50px!important;
+  }
+
+  .footers__left a {
+    margin-right:15px;
+  }
+
+  .footers__map-button,
+  .footers__map-button svg,
+  .sound-control {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footers__map-button {
+    margin-right: 15px;
+  }
+
+  .everlib-logo .everlib-logo-first-bar, 
+  .everlib-logo .everlib-logo-second-bar, 
+  .everlib-logo .everlib-logo-third-bar, 
+  .everlib-logo .everlib-logo-fourth-bar {
+    width: 2.6px;
+    margin: 0px 1px;
+  }
+}

@@ -1,74 +1,2299 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
   <head>
-    <meta charset="UTF-8">
-    <title>Socket.io Example</title>
-    <style>
-      #box {
-        width: 50px;
-        height: 50px;
-        background-color: red;
-        position: absolute;
-      }
-    </style>
-    <script src="https://unpkg.com/webp-hero@0.0.0-dev.27/dist-cjs/polyfills.js"></script>
-    <script src="https://unpkg.com/webp-hero@0.0.0-dev.27/dist-cjs/webp-hero.bundle.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=No" />
+    <meta name="description" content="Merhaba! Benim adım Tuzlu. 1 yaşımdayım." />
+    <meta property="og:url" content="https://www.yarininsuyu.com/tuzlu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tuzlu - Bir Göl Hikayesi" />
+    <meta property="og:description" content="Merhaba! Benim adım Tuzlu. 1 yaşımdayım." />
+    <meta property="og:image" content="https://www.yarininsuyu.com/assets/img/intro-page/tuzlu-intro.png" />
+    <link rel="icon" sizes="32x32" href="./assets/img/favicon-32x32.svg">
+    <link rel="icon" type="image/svg" href="./assets/img/favicon-16x16.svg" />
+    <title>Tuzlu - Bir Göl Hikayesi | Yarının Suyu</title>
+    
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
   </head>
-  <script>
-    var webpMachine = new webpHero.WebpMachine()
-    webpMachine.polyfillDocument()
-  </script>
   <body>
-    <div id="box"></div>
+    <!-- Loading -->
+    <div class="loading-screen js-loading">
+      <span class="loading-screen__rectangle"></span>
+      <span class="loading-screen__sky"></span>
 
-    <img src="image.webp">
+      <div class="loading-screen__content js-loading-content">
+        <img
+          class="loading-screen__tuzlu"
+          src="./assets/img/loading-tuzlu.gif"
+          alt="tuzlu loading"
+          title="Loading Tuzlu..."
+        />
+        <p class="loading-screen__hello">Merhaba ben Tuzlu!</p>
+        <p class="loading-screen__sound-text">Sesi açmayı unutmayın</p>
+        <img
+          class="loading-screen__sound-ico"
+          src="./assets/img/speaker.svg"
+          alt="ses ikon"
+          title="Sesi açmayı unutmayın"
+        />
+      </div>
 
-   
+      <div class="sound-open js-sound-open" style="visibility: hidden;">
+        <img src="./assets/img/sound-open-icon.svg" class="sound-open__icon" alt="sound open icon" />
+        <p class="sound-open__content">Daha iyi bir deneyim için sesli olarak devam edebilirsin.</p>
+        <p class="sound-open__buttons">
+          <button class="sound-open__button-white js-start-sound">
+            SESLİ DEVAM ET
+          </button>
+          <button class="sound-open__button js-start-mute">
+            SESSİZ
+          </button>
+        </p>
+      </div>
+    </div>
+    <!-- Loading End -->
 
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <script>
-      var socket = io();
+    <!-- Rotate Phone -->
+    <div class="rotate-phone">
+      <img src="./assets/img/rotate-phone.svg" class="rotate-phone__mobile" />
+      <img src="./assets/img/screen-lock.svg" class="rotate-phone__screen-lock" />
+    </div>
+    <!-- Rotate Phone End -->
 
-      // Get box element
-      var box = document.getElementById('box');
+    <!-- Header -->
+    <header class="header js-header">
+      <img src="./assets/img/logo-finish.png" class="finish-logo" alt="Finish logo" title="Finish" />
+      <img src="./assets/img/ys-logo-inner.svg" class="header__ys-logo js-header-ys-logo" alt="Yarının suyu logo" title="Yarının suyu" />
 
-      // Set initial position
-      var position = { x: 0, y: 0 };
-      box.style.left = position.x + 'px';
-      box.style.top = position.y + 'px';
+      <a href="/assets/pdf/tuzlu-bir-gol-hikayesi-basin-bulteni.zip" class="header__download js-download-press-kit" target="_blank">BASIN KİTİNİ İNDİR</a>
+      
+      <a href="#" class="sections-button js-open-sections hidden">
+        <svg class="sections__circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+          <circle class="sections__circle js-sections-circle" cx="17" cy="17" r="15.5"></circle>
+        </svg>
+        <span class="sections-order js-pages-index">1</span>
+        <span class="sections-order">11</span>
+        <span class="circle"></span>
+      </a>
 
-      // Listen for key presses
-      document.addEventListener('keydown', function(event) {
-        var key = event.keyCode;
-        switch (key) {
-          case 37: // left arrow
-            position.x -= 10;
-            break;
-          case 38: // up arrow
-            position.y -= 10;
-            break;
-          case 39: // right arrow
-            position.x += 10;
-            break;
-          case 40: // down arrow
-            position.y += 10;
-            break;
-        }
+      <div class="header-profile js-header-profile">
+        <div class="header-profile__opener js-header-profile-opener">
+            <div class="header-profile__user">
+                <div class="header-profile__user-avatar">
+                    <div class="point">
+                        <svg class="round" viewBox="0 0 100 100" width="100%" height="100%" data-percent="50" style="stroke-dasharray: 0, 999;">
+                            <circle cx="50" cy="50" r="0"></circle>
+                        </svg>
+                    </div><img src="./assets/img/yarinin-suyu-logo-text-free.svg" alt="Güner Selamoğlu" title="Güner Selamoğlu">
+                </div>
+                <div class="header-profile__user-content">
+                    <h6 class="header-profile__user-name">Güner</h6><img class="header-profile__user-arrow" src="./assets/img/icon-header-profile-arrow.svg">
+                </div>
+            </div>
+            <div class="header-profile__box">
+                <div class="mobile-nav-profile__row">
+                    <a href="/profil" class="mobile-nav-profile__user">
+                        <div class="mobile-nav-profile__user-avatar"><img src="./assets/img/yarinin-suyu-logo-text-free.svg" alt="Güner Selamoğlu" title="Güner Selamoğlu"></div>
+                        <div class="mobile-nav-profile__user-content">
+                            <h6 class="mobile-nav-profile__user-name">Güner Selamoğlu</h6>
+                            <p class="mobile-nav-profile__user-email">guner.selamoglu@ph.com.tr</p>
+                        </div>
+                      </a>
+                </div>
+                <div class="mobile-nav-profile__row">
+                    <ul class="mobile-nav-profile__items">
+                        <li class="mobile-nav-profile__item"><a class="mobile-nav-profile__link" href="/profil/" title="Profilim">Profilim </a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav-profile__row"><a class="mobile-nav-profile__exit" href="/logout/" title="Çıkış Yap"><img src="./assets/img/icon-profile-exit.svg" alt="Çıkış Yap">Çıkış Yap</a></div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- Header End -->
 
-        // Update box position
-        box.style.left = position.x + 'px';
-        box.style.top = position.y + 'px';
+    <!-- Footer -->
+    <footer class="footers js-footer">
+      <div class="footers__shadow"></div>
+      <div class="footers__left js-footers-left">
+        <a href="https://open.spotify.com/episode/0DKohQNmeV5hycTKTdyzXt?si=6e6ce3f5c7cc4237&nd=1" class="js-spotify-btn" target="_blank">
+          <img src="./assets/img/spotify-icon.svg" alt="spotify logo" title="Spotify" />
+        </a>
 
-        // Emit position update to server
-        socket.emit('updatePosition', position);
-      });
+        <a href="https://www.youtube.com/finishturkiye/" target="_blank">
+          <img src="./assets/img/youtube-icon.svg" alt="youtube logo" title="Youtube" />
+        </a>
 
-      // Listen for position updates from server
-      socket.on('updatePosition', function(data) {
-        // Update box position
-        box.style.left = data.x + 'px';
-        box.style.top = data.y + 'px';
-      });
-    </script>
+        <a href="https://www.instagram.com/yarininsuyu/" target="_blank" class="js-instagram-btn">
+          <img src="./assets/img/Instagram-icon.svg" alt="Instagram logo" title="Instagram" />
+        </a>
+      </div>
+
+      <div class="footers__right">
+        <a href="#" target="_blank" class="js-open-map footers__map-button">
+          <svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40.4824" r="38.1984" stroke="#fff" stroke-width="3.6033"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M58.8538 51.422C58.8535 51.6738 58.7743 51.9197 58.6266 52.128C58.4786 52.3366 58.2688 52.4979 58.024 52.5912L46.8686 56.8441C46.5534 56.9646 46.2012 56.9641 45.886 56.8424L35.3498 52.7778L24.626 56.8449C24.22 56.9992 23.7604 56.9511 23.3987 56.7167C23.0371 56.4823 22.8208 56.0919 22.8208 55.6745V31.218V31.2183C22.8208 30.9667 22.8997 30.7211 23.0474 30.5128C23.1948 30.3045 23.4043 30.1432 23.6488 30.0496L34.7658 25.7962C35.0801 25.6753 35.4314 25.6753 35.7457 25.7962L46.3738 29.8624L57.0464 25.7954C57.4525 25.6408 57.9124 25.6883 58.2743 25.9227C58.6363 26.1568 58.8531 26.5472 58.8534 26.9649L58.8538 51.422ZM33.9539 28.8204V39.9143L25.4576 38.4384V32.071L33.9539 28.8204ZM56.2173 41.4613L47.7217 38.08V32.2827C47.7217 32.2107 47.7155 32.1388 47.7032 32.0677L56.2176 28.8241L56.2173 41.4613ZM45.0852 37.7365L36.5904 39.6093V28.832L45.101 32.0882L45.1007 32.0885C45.0901 32.1526 45.0848 32.2175 45.0851 32.2824L45.0852 37.7365ZM36.5904 42.1932L45.0852 40.3213V53.8185L36.5768 50.5361C36.5857 50.4774 36.5901 50.4184 36.5898 50.359L36.5904 42.1932ZM47.7217 53.8081V40.8081L56.1495 44.1627C56.1724 44.1711 56.1942 44.1796 56.2172 44.1872V50.5688L47.7217 53.8081ZM25.4583 40.9988L33.9539 42.4739V50.3593V50.359C33.9539 50.4363 33.9612 50.5136 33.976 50.5898V50.5906L25.4585 53.821L25.4583 40.9988Z" fill="white"/>
+          </svg>
+        </a>   
+
+        <div class="sound-control js-sound-control">
+          <span class="everlib-logo">
+            <i class="everlib-logo-first-bar"></i>
+            <i class="everlib-logo-second-bar"></i>
+            <i class="everlib-logo-third-bar"></i>
+            <i class="everlib-logo-fourth-bar"></i>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Map -->
+    <div class="map js-map">
+      <div class="map__wrapper">
+        <figure class="map__bg">
+          <picture>
+            <source srcset="./assets/img/map.webp">
+            <source srcset="./assets/img/map.jpg">
+            <img src="./assets/img/map.jpg" alt="map">
+          </picture>
+        </figure>
+
+        <span class="map__close js-close-map">
+          <img src="./assets/img/close.svg" alt="close icon" title="Haritayı kapat" />
+        </span>
+
+        <div class="map__content-wrapper">
+          <h2 class="map__content-title">Tuz Gölü</h2>
+          <div class="map__content">
+            <div class="map__content-overfow">
+              <p><font>Konum:</font>	İç Anadolu Bölgesi/Türkiye</p>
+              <p><font>Koordinatlar:</font>	38.50°K 35.20°D</p>
+              <p><font>Yüzölçümü:</font>	1500 km²</p>
+              <p><font>Ortalama derinlik:</font>	40cm - 1m</p>
+              <p><font>Genel Özellikleri:</font>  Türkiye’ deki en büyük ikinci ve dünyanın en tuzlu 2. gölüdür.</p>
+              <p>Bölgede 85 kuş türü, 4 tanesi endemik        129 böcek türü, 15 memeli türü ve 38 tane endemik bitki türü bulunmaktadır.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map End -->
+
+    <!-- Sections -->
+    <div class="sections js-sections">
+      <span class="sections__close js-close-sections">
+        <img src="./assets/img/close.svg" alt="close icon" title="Haritayı kapat" />
+      </span>
+
+      <h2 class="sections__title">BÖLÜMLER</h2>
+      <div class="sections__list-wrapper">
+        <ul class="sections__list js-sections-list">
+          <li class="sections__list-li" style="display:none">
+            <a href="#giris">Giriş </a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#merhaba">Merhaba <span>00:23</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#dogum-gunu">Doğum günü <span>00:40</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#birsey-duydum">Birşey duydum... <span>00:52</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#golde-yuruyus">Gölde yürüyüş <span>01:24</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#bir-planimiz-var">Bir planımız var! <span>01:55</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#yola-koyulduk">Yola koyulduk. <span>02:15</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#tasarruf-zamani">Tasarruf zamanı <span>02:35</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#keyifli-bir-yaz">Keyifli bir yaz <span>02:43</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#tasarruf-ettik">Tasarruf ettik <span>03:21</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#iyilik-bulasicidir">İyilik bulaşıcıdır <span>03:53</span></a>
+          </li>
+          <li class="sections__list-li">
+            <a href="#benim-mirasim-su">Benim mirasım su <span>04:04</span></a>
+          </li>
+          <li class="sections__list-li" style="display:none">
+            <a href="#son">Son </a>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    <!-- Sections End -->
+
+    <div id="tuzlu" class="fullpage">
+      <!-- Intro Page -->
+      <section class="intro section hide js-intro-section">
+        <div class="wrapper intro-desktop o-section__figure-wrapper">
+          <figure class="intro__sky js-intro-sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page/sky.png">
+              <source srcset="./assets/img/intro-page/sky.png">
+              <img src="./assets/img/intro-page/sky.png" alt="sky">
+            </picture>
+          </figure>
+
+          <figure class="intro__cloud-left js-intro-cloud-left o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page/cloud-left.png">
+                <source srcset="./assets/img/intro-page/cloud-left.png">
+                <img src="./assets/img/intro-page/cloud-left.png" alt="cloud">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-left-little js-intro-cloud-left-little o-section__figure">
+            <div data-depth="0.01">
+              <picture>
+                <source srcset="./assets/img/intro-page/cloud-left-little.png">
+                <source srcset="./assets/img/intro-page/cloud-left-little.png">
+                <img src="./assets/img/intro-page/cloud-left-little.png" alt="cloud left little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-right js-intro-cloud-right o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page/cloud-right.png">
+                <source srcset="./assets/img/intro-page/cloud-right.png">
+                <img src="./assets/img/intro-page/cloud-right.png" alt="cloud">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__mountain js-intro-mountain o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page/mountain.png">
+                <source srcset="./assets/img/intro-page/mountain.png">
+                <img src="./assets/img/intro-page/mountain.png" alt="mountain">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-right-little js-intro-cloud-right-little o-section__figure">
+            <div data-depth="0.01">
+              <picture>
+                <source srcset="./assets/img/intro-page/cloud-right-little.png">
+                <source srcset="./assets/img/intro-page/cloud-right-little.png">
+                <img src="./assets/img/intro-page/cloud-right-little.png" alt="cloud right little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__lake js-intro-lake o-section__figure">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/intro-page/lake.png">
+                <source srcset="./assets/img/intro-page/lake.png">
+                <img src="./assets/img/intro-page/lake.png" alt="lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__light-effect js-intro-light-effect o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page/shine.png">
+                <img src="./assets/img/intro-page/shine.png" alt="light effext little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__light-effect2 js-intro-light-effect2 o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/shine2.png">
+                <img src="./assets/img/intro-page/shine2.png" alt="light effext little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__light-effect3 js-intro-light-effect3 o-section__figure">
+            <div data-depth="0.4">
+              <picture>
+                <source srcset="./assets/img/intro-page/shine3.png">
+                <img src="./assets/img/intro-page/shine3.png" alt="light effext little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__water js-intro-water o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/water.png">
+                <source srcset="./assets/img/intro-page/water.png">
+                <img src="./assets/img/intro-page/water.png" alt="water">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__mussel js-intro-mussel o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/mussel-left.png">
+                <source srcset="./assets/img/intro-page/mussel-left.png">
+                <img src="./assets/img/intro-page/mussel-left.png" alt="mussel left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__fish-red js-intro-fish-red o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page/fish-red-left.png">
+              <source srcset="./assets/img/intro-page/fish-red-left.png">
+              <img src="./assets/img/intro-page/fish-red-left.png" alt="fish red">
+            </picture>
+          </figure>
+
+          <figure class="intro__rock-left js-intro-rock-left o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/intro-page/rock-left.png">
+                <source srcset="./assets/img/intro-page/rock-left.png">
+                <img src="./assets/img/intro-page/rock-left.png" alt="rock left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__bubbles js-intro-bubbles o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/intro-page/bubbles-right.png">
+                <source srcset="./assets/img/intro-page/bubbles-right.png">
+                <img src="./assets/img/intro-page/bubbles-right.png" alt="bubbles left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__fish-shadow js-intro-fish-shadow o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page/fish-shadow-right.png">
+              <source srcset="./assets/img/intro-page/fish-shadow-right.png">
+              <img src="./assets/img/intro-page/fish-shadow-right.png" alt="mussel left">
+            </picture>
+          </figure>
+
+          <figure class="intro__fishes-shadow js-intro-fishes o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page/fishes-shadow-right.png">
+              <source srcset="./assets/img/intro-page/fishes-shadow-right.png">
+              <img src="./assets/img/intro-page/fishes-shadow-right.png" alt="mussel left">
+            </picture>
+          </figure>
+
+          <figure class="intro__shrimp js-intro-shrimp o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page/shrimp-right.png">
+                <source srcset="./assets/img/intro-page/shrimp-right.png">
+                <img src="./assets/img/intro-page/shrimp-right.png" alt="mussel left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__rock-right js-intro-rock-right o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page/rock-right.png">
+                <source srcset="./assets/img/intro-page/rock-right.png">
+                <img src="./assets/img/intro-page/rock-right.png" alt="rock right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__plant-blur js-plant-blur o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/plant-right-blur.png">
+                <source srcset="./assets/img/intro-page/plant-right-blur.png">
+                <img src="./assets/img/intro-page/plant-right-blur.png" alt="plant blur">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__plant-green js-intro-plant-green o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/plant-right-green.png">
+                <source srcset="./assets/img/intro-page/plant-right-green.png">
+                <img src="./assets/img/intro-page/plant-right-green.png" alt="plant blur">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__tuzlu js-intro-tuzlu o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page/tuzlu-intro.png">
+                <source srcset="./assets/img/intro-page/tuzlu-intro.png">
+                <img src="./assets/img/intro-page/tuzlu-intro.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__wave js-intro-wave o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/wave.png">
+                <source srcset="./assets/img/intro-page/wave.png">
+                <img src="./assets/img/intro-page/wave.png" alt="wave">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__front-bug js-intro-front-bug o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page/front-bug.png">
+                <source srcset="./assets/img/intro-page/front-bug.png">
+                <img src="./assets/img/intro-page/front-bug.png" alt="front bug">
+              </picture>
+            </div>
+          </figure>
+
+          <div class="intro-content">
+            <img src="./assets/img/yarinin-suyu-logo.svg" class="intro__ys-logo js-ys-logo" alt="Yarının suyu logo" title="Yarının suyu" />
+
+            <img src="./assets/img/intro-page/tuzlu-title.png" class="intro__tuzlu-title js-tuzlu-title" title="Tuzlu" alt="tuzlu title" />
+
+            <img src="./assets/img/intro-page/bir-gol-hikayesi.svg" class="intro__gol-hikayesi js-gol-hikayesi" title="Bir göl hikayesi" alt="bir gör hikayesi" />
+
+            <p class="intro__explanation js-intro-explanation">
+              Hem yetişkinlere hem de çocuklara yönelik bu çocuk kitabıyla siz de yarının suyunu kurtarmak için bize katılın, bu mirası birlikte koruyalım. Tuz Gölü'nün masalına birlikte kulak verelim.
+            </p>
+          </div>
+
+          <a href="#merhaba" class="intro__start-button-wrapper js-intro-start-button">
+            <img class="intro__start-big-circle" src="./assets/img/intro-page/start-button-big-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__start-middle-circle" src="./assets/img/intro-page/start-button-middle-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__start-blue-circle" src="./assets/img/intro-page/start-button-blue-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__arrow-bottom" src="./assets/img/intro-page/arrow-bottom.svg" alt="arrow icon" />
+            <p class="intro__start-text">BAŞLAMAK İÇİN SAYFAYI KAYDIR</p>
+          </a>
+          <div class="intro__bottom-shadow"></div>
+        </div>
+
+        <!-- mobile -->
+        <div class="wrapper intro-mobile o-section__figure-wrapper">
+          <figure class="intro__sky js-intro-sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page-mobile/sky.png">
+              <source srcset="./assets/img/intro-page-mobile/sky.png">
+              <img src="./assets/img/intro-page-mobile/sky.png" alt="sky">
+            </picture>
+          </figure>
+
+          <figure class="intro__cloud-left js-intro-cloud-left o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/cloud-left.png">
+                <source srcset="./assets/img/intro-page-mobile/cloud-left.png">
+                <img src="./assets/img/intro-page-mobile/cloud-left.png" alt="cloud">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-left-little js-intro-cloud-left-little o-section__figure">
+            <div data-depth="0.01">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/cloud-left-little.png">
+                <source srcset="./assets/img/intro-page-mobile/cloud-left-little.png">
+                <img src="./assets/img/intro-page-mobile/cloud-left-little.png" alt="cloud left little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-right js-intro-cloud-right o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/cloud-right.png">
+                <source srcset="./assets/img/intro-page-mobile/cloud-right.png">
+                <img src="./assets/img/intro-page-mobile/cloud-right.png" alt="cloud">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__mountain js-intro-mountain o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/mountain.png">
+                <source srcset="./assets/img/intro-page-mobile/mountain.png">
+                <img src="./assets/img/intro-page-mobile/mountain.png" alt="mountain">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__cloud-right-little js-intro-cloud-right-little o-section__figure">
+            <div data-depth="0.01">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/cloud-right-little.png">
+                <source srcset="./assets/img/intro-page-mobile/cloud-right-little.png">
+                <img src="./assets/img/intro-page-mobile/cloud-right-little.png" alt="cloud right little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__lake js-intro-lake o-section__figure">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/lake.png">
+                <source srcset="./assets/img/intro-page-mobile/lake.png">
+                <img src="./assets/img/intro-page-mobile/lake.png" alt="lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__water js-intro-water o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/water.png">
+                <source srcset="./assets/img/intro-page-mobile/water.png">
+                <img src="./assets/img/intro-page-mobile/water.png" alt="water">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__fish-red js-intro-fish-red o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page-mobile/fish-red-left.png">
+              <source srcset="./assets/img/intro-page-mobile/fish-red-left.png">
+              <img src="./assets/img/intro-page-mobile/fish-red-left.png" alt="fish red">
+            </picture>
+          </figure>
+
+          <figure class="intro__bubbles js-intro-bubbles o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/bubbles-right.png">
+                <source srcset="./assets/img/intro-page-mobile/bubbles-right.png">
+                <img src="./assets/img/intro-page-mobile/bubbles-right.png" alt="bubbles left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__fish-shadow js-intro-fish-shadow o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page-mobile/fish-shadow-right.png">
+              <source srcset="./assets/img/intro-page-mobile/fish-shadow-right.png">
+              <img src="./assets/img/intro-page-mobile/fish-shadow-right.png" alt="fish shadow right">
+            </picture>
+          </figure>
+
+          <figure class="intro__fishes-shadow js-intro-fishes o-section__figure">
+            <picture>
+              <source srcset="./assets/img/intro-page-mobile/fishes-shadow-right.png">
+              <source srcset="./assets/img/intro-page-mobile/fishes-shadow-right.png">
+              <img src="./assets/img/intro-page-mobile/fishes-shadow-right.png" alt="fishes shadow right">
+            </picture>
+          </figure>
+
+          <figure class="intro__shrimp js-intro-shrimp o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/shrimp-right.png">
+                <source srcset="./assets/img/intro-page-mobile/shrimp-right.png">
+                <img src="./assets/img/intro-page-mobile/shrimp-right.png" alt="shrimp right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__rock-right js-intro-rock-right o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/rock-right.png">
+                <source srcset="./assets/img/intro-page-mobile/rock-right.png">
+                <img src="./assets/img/intro-page-mobile/rock-right.png" alt="rock right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__plant-blur js-plant-blur o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/plant-right-blur.png">
+                <source srcset="./assets/img/intro-page-mobile/plant-right-blur.png">
+                <img src="./assets/img/intro-page-mobile/plant-right-blur.png" alt="plant blur">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__plant-green js-intro-plant-green o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/plant-right-green.png">
+                <source srcset="./assets/img/intro-page-mobile/plant-right-green.png">
+                <img src="./assets/img/intro-page-mobile/plant-right-green.png" alt="plant blur">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__tuzlu js-intro-tuzlu o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/tuzlu-intro.png">
+                <source srcset="./assets/img/intro-page-mobile/tuzlu-intro.png">
+                <img src="./assets/img/intro-page-mobile/tuzlu-intro.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="intro__wave js-intro-wave o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/intro-page-mobile/wave.png">
+                <source srcset="./assets/img/intro-page-mobile/wave.png">
+                <img src="./assets/img/intro-page-mobile/wave.png" alt="wave">
+              </picture>
+            </div>
+          </figure>
+
+          <div class="intro-content">
+            <img src="./assets/img/intro-page/tuzlu-title.png" class="intro__tuzlu-title js-tuzlu-title" title="Tuzlu" alt="tuzlu title" />
+            
+            <img src="./assets/img/intro-page/bir-gol-hikayesi.svg" class="intro__gol-hikayesi js-gol-hikayesi" title="Bir göl hikayesi" alt="bir gör hikayesi" />
+            
+            <p class="intro__explanation js-intro-explanation">
+              Hem yetişkinlere hem de çocuklara yönelik bu çocuk kitabıyla siz de yarının suyunu kurtarmak için bize katılın, bu mirası birlikte koruyalım. Tuz Gölü'nün masalına birlikte kulak verelim.
+            </p>
+          </div>
+
+          <a href="#merhaba" class="intro__start-button-wrapper js-intro-start-button">
+            <img class="intro__start-big-circle" src="./assets/img/intro-page/start-button-big-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__start-middle-circle" src="./assets/img/intro-page/start-button-middle-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__start-blue-circle" src="./assets/img/intro-page/start-button-blue-circle.svg" alt="Start button" title="Başlamak için sayfayı kaydır" />
+            <img class="intro__arrow-bottom" src="./assets/img/intro-page/arrow-bottom.svg" alt="arrow icon" />
+            <p class="intro__start-text">HİKAYEYE BAŞLA</p>
+          </a>
+          <div class="intro__bottom-shadow"></div>
+        </div>
+
+      </section>
+      <!-- Intro Page End -->
+
+      <!-- Page 01 -->
+      <section class="page-01 section o-section">
+        <div class="page-01__content js-page-01-content">
+          <p>
+            <span>Merhaba! Benim adım Tuzlu.1 yaşımdayım.</span>
+            Evet, kocamaaaan bir 1 yaşımda.
+          </p>
+          <p>
+            Geçtiğimiz yıl tam burada, bu bembeyaz gölde gelmişim dünyaya; Tuz Gölü’nde. 
+          </p>
+          <p>
+            Bu yüzden adımı ‘Tuzlu’ koymuşlar. <br />
+            Bana sorarsanız ismimi, kanatlarımın ucundaki beyaz tüylerden almışım. <br />
+            Sanki doğar doğmaz uçlarını tuza bulamışım.
+          </p>
+        </div>
+
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-01__lake o-section__figure">
+            <picture class="page-01__lake-image js-page-01-lake">
+              <source srcset="./assets/img/page-01/lake.png">
+              <img src="./assets/img/page-01/lake.png" alt="lake">
+            </picture>
+          </figure>
+
+          <figure class="page-01__cloud-right js-page-01-cloud-right o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-01/cloud-right.png">
+                <source srcset="./assets/img/page-01/cloud-right.png">
+                <img src="./assets/img/page-01/cloud-right.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-01__cloud-small js-page-01-cloud-small o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-01/cloud-small.png">
+                <source srcset="./assets/img/page-01/cloud-small.png">
+                <img src="./assets/img/page-01/cloud-small.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure> 
+
+          <figure class="page-01__flamingos js-page-01-flamingos o-section__figure">
+            <div data-depth="0.05">
+              <picture>
+                <source srcset="./assets/img/page-01/flamingos.png">
+                <source srcset="./assets/img/page-01/flamingos.png">
+                <img src="./assets/img/page-01/flamingos.jpg" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>  
+
+          <figure class="page-01__tuzlu js-page-01-tuzlu o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-01/tuzlu.png">
+                <source srcset="./assets/img/page-01/tuzlu.png">
+                <img src="./assets/img/page-01/tuzlu.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-01__plant-left js-page-01-plant-left o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-01/plant-left.png">
+                <source srcset="./assets/img/page-01/plant-left.png">
+                <img src="./assets/img/page-01/plant-left.png" alt="plant left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-01__plant-middle js-page-01-plant-middle o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-01/plant-middle.png">
+                <source srcset="./assets/img/page-01/plant-middle.png">
+                <img src="./assets/img/page-01/plant-middle.png" alt="plant middle">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-01__plant-right js-page-01-plant-right o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-01/plant-right.png">
+                <source srcset="./assets/img/page-01/plant-right.png">
+                <img src="./assets/img/page-01/plant-right.png" alt="plant right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-01__yusufcuk">
+            <img src="./assets/img/page-01/yusufcuk/snk1.png" class="js-page-01-yusufcuk" alt="plant right">
+          </figure>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            <span>Merhaba! Benim adım Tuzlu.1 yaşımdayım.</span>
+            Evet, kocamaaaan bir 1 yaşımda.
+          </p>
+          <p>
+            Geçtiğimiz yıl tam burada, bu bembeyaz gölde gelmişim dünyaya; Tuz Gölü’nde. 
+          </p>
+          <p>
+            Bu yüzden adımı ‘Tuzlu’ koymuşlar. <br />
+            Bana sorarsanız ismimi, kanatlarımın ucundaki beyaz tüylerden almışım. <br />
+            Sanki doğar doğmaz uçlarını tuza bulamışım.
+          </p>
+        </div>
+      </section>
+      <!-- Page 01 End -->
+
+      <!-- Page 02 -->
+      <section class="page-02 section o-section">
+        <div class="page-02__content">
+          <p class="page-02__content-1 js-page-02-content-1">
+            Tuz Gölü’ndeki bu ılık yaz günü çok güzel başlamıştı. Annem ve babam, doğum günüm için birlikte harika bir pasta hazırlamıştı.  
+          </p>
+          <p class="page-02__content-2 js-page-02-content-2">
+            İçinde en taze yosunlar, leziz karidesler… <br />
+            Yeni yaşımda daha pembe olma hayali, tüm hediyelerden <font>daha güzel. </font>                
+          </p>
+        </div>
+
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-02__lake js-page-02-lake o-section__figure">
+            <picture>
+              <source srcset="./assets/img/page-02/lake.png">
+              <source srcset="./assets/img/page-02/lake.png">
+              <img src="./assets/img/page-02/lake.png" alt="lake">
+            </picture>
+          </figure>
+
+          <figure class="page-02__lake js-page-02-lake-floor o-section__figure" data-limit-x="0">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/page-02/lake-floor.png">
+                <source srcset="./assets/img/page-02/lake-floor.png">
+                <img src="./assets/img/page-02/lake-floor.png" alt="lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__cloud-left js-page-02-cloud-left o-section__figure" data-limit-y="0">
+            <div data-depth="0.03">
+              <picture>
+                <source srcset="./assets/img/page-02/cloud-left.png">
+                <source srcset="./assets/img/page-02/cloud-left.png">
+                <img src="./assets/img/page-02/cloud-left.png" alt="cloud-left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__cloud-top js-page-02-cloud-top o-section__figure" data-limit-y="0">
+            <div data-depth="0.03">
+              <picture>
+                <source srcset="./assets/img/page-02/cloud-top.png">
+                <source srcset="./assets/img/page-02/cloud-top.jpg">
+                <img src="./assets/img/page-02/cloud-top.png" alt="cloud-top">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__flamingos js-page-02-flamingos o-section__figure" data-scalar-x="2">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/flamingos.png">
+                <source srcset="./assets/img/page-02/flamingos.png">
+                <img src="./assets/img/page-02/flamingos.png" alt="flamingos">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__blow js-page-02-blow o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/blow.png">
+                <source srcset="./assets/img/page-02/blow.png">
+                <img src="./assets/img/page-02/blow.png" alt="blow">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__tuzlu js-page-02-tuzlu o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/tuzlu.png">
+                <source srcset="./assets/img/page-02/tuzlu.png">
+                <img src="./assets/img/page-02/tuzlu.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__tuzlu-eyeball js-page-02-tuzlu-eyeball o-section__figure">
+            <div data-depth="0.12">
+              <picture>
+                <source srcset="./assets/img/page-02/eyeball.png">
+                <source srcset="./assets/img/page-02/eyeball.png">
+                <img src="./assets/img/page-02/eyeball.png" alt="tuzlu">
+              </picture>
+           </div>
+          </figure>
+
+          <figure class="page-02__decor js-page-02-decor o-section__figure">
+            <div data-depth="0.03">
+              <picture>
+                <source srcset="./assets/img/page-02/decor-back.png">
+                <source srcset="./assets/img/page-02/decor-back.png">
+                <img src="./assets/img/page-02/decor-back.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__firefly js-page-02-firefly o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-02/firefly.png">
+                <source srcset="./assets/img/page-02/firefly.png">
+                <img src="./assets/img/page-02/firefly.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__firefly-light js-firefly-light o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-02/firefly-light.png">
+                <source srcset="./assets/img/page-02/firefly-light.png">
+                <img src="./assets/img/page-02/firefly-light.png" alt="firelfy light">
+              </picture>
+           </div>
+          </figure>
+          
+          <figure class="page-02__cake js-page-02-cake o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/cake.png">
+                <source srcset="./assets/img/page-02/cake.png">
+                <img src="./assets/img/page-02/cake.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__flamingo-front-pink js-page-02-flamingo-front-pink o-section__figure" data-scalar-y="6">
+            <div data-depth="0.25">
+              <picture>
+                <source srcset="./assets/img/page-02/flamingo-front-pink.png">
+                <source srcset="./assets/img/page-02/flamingo-front-pink.png">
+                <img src="./assets/img/page-02/flamingo-front-pink.png" alt="flamingo front pink">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__bird-front-right js-page-02-bird-front-right o-section__figure" data-scalar-y="3">
+            <div data-depth="0.20">
+              <picture>
+                <source srcset="./assets/img/page-02/bird-front-right.png">
+                <source srcset="./assets/img/page-02/bird-front-right.png">
+                <img src="./assets/img/page-02/bird-front-right.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__flamingo-right-pink js-page-02-flamingo-right-pink o-section__figure" data-scalar-y="6">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/flamingo-right-pink.png">
+                <source srcset="./assets/img/page-02/flamingo-right-pink.png">
+                <img src="./assets/img/page-02/flamingo-right-pink.png" alt="Flamingo right pink">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__bird-top-right js-page-02-bird-top-right o-section__figure" data-scalar-y="0">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-02/bird-top-right.png">
+                <source srcset="./assets/img/page-02/bird-top-right.png">
+                <img src="./assets/img/page-02/bird-top-right.png" alt="bird top right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__flamingo-front-black js-page-02-flamingo-front-black o-section__figure" data-scalar-y="3">
+            <div data-depth="0.25">
+              <picture>
+                <source srcset="./assets/img/page-02/flamingo-front-black.png">
+                <source srcset="./assets/img/page-02/flamingo-front-black.png">
+                <img src="./assets/img/page-02/flamingo-front-black.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__confeti-front js-page-02-confeti-front o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/confeti-front.png">
+                <source srcset="./assets/img/page-02/confeti-front.png">
+                <img src="./assets/img/page-02/confeti-front.png" alt="confeti front">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-02__confeti-back js-page-02-confeti-back o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-02/confeti-back.png">
+                <source srcset="./assets/img/page-02/confeti-back.png">
+                <img src="./assets/img/page-02/confeti-back.png" alt="confeti back">
+              </picture>
+            </div>
+          </figure>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            Tuz Gölü’ndeki bu ılık yaz günü çok güzel başlamıştı. Annem ve babam, doğum günüm için birlikte harika bir pasta hazırlamıştı.  
+          </p>
+          <p>
+            İçinde en taze yosunlar, leziz karidesler… <br />
+            Yeni yaşımda daha pembe olma hayali, tüm hediyelerden <font>daha güzel. </font>                
+          </p>
+        </div>
+      </section>
+      <!-- Page 02 End -->
+
+      <!-- Page 03 -->
+      <section class="page-03 section o-section">
+        <p class="page-03__content js-page-03-content">
+          Sonra bir şey oldu, göldeki neşe yavaş yavaş kayboldu. Babamı bir arkadaşıyla konuşurken duydum;  birkaç gün içinde <font>gölü terk etmemiz gerektiğini söylüyordu. </font> 
+        </p>
+        
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-03__lake js-page-03-lake o-section__figure">
+            <picture>
+              <source srcset="./assets/img/page-03/lake.jpeg">
+              <img src="./assets/img/page-03/lake.jpeg" alt="lake">
+            </picture>
+          </figure>
+
+          <figure class="page-03__lake-floor js-page-03-lake-floor o-section__figure" data-limit-x="0">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/page-03/lake-floor.png">
+                <img src="./assets/img/page-03/lake-floor.png" alt="lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__cloud js-page-03-cloud o-section__figure" data-limit-y="0">
+            <div data-depth="0.05">
+              <picture>
+                <source srcset="./assets/img/page-03/cloud_left.png">
+                <source srcset="./assets/img/page-03/cloud_left.png">
+                <img src="./assets/img/page-03/cloud_left.png" alt="bulut">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__tuzlu js-page-03-tuzlu o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/page-03/tuzlu.png">
+                <source srcset="./assets/img/page-03/tuzlu.png">
+                <img src="./assets/img/page-03/tuzlu.png" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <div class="page-03__thunder-white js-page-03-thunder"></div>
+          
+          <figure class="page-03__rock-left js-page-03-rock-left o-section__figure" data-limit-y="0">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-03/rock-left.png">
+                <source srcset="./assets/img/page-03/rock-left.png">
+                <img src="./assets/img/page-03/rock-left.png" alt="rock left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__rock-left-dark js-page-03-rock-left-dark o-section__figure" data-limit-y="0">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-03/rock-left-dark.png">
+                <source srcset="./assets/img/page-03/rock-left-dark.png">
+                <img src="./assets/img/page-03/rock-left-dark.png" alt="rock left dark">
+              </picture>
+            </div>
+          </figure> 
+
+          <figure class="page-03__rock-right js-page-03-rock-right o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-03/rock-right.png">
+                <source srcset="./assets/img/page-03/rock-right.png">
+                <img src="./assets/img/page-03/rock-right.png" alt="rock right">
+              </picture>
+           </div>
+          </figure>
+
+          <figure class="page-03__rock-right-dark js-page-03-rock-right-dark o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-03/rock-right-dark.png">
+                <source srcset="./assets/img/page-03/rock-right-dark.png">
+                <img src="./assets/img/page-03/rock-right-dark.png" alt="rock right dark">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-left-gaga js-page-03-flamingo-left-gaga o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-left-gaga.png">
+                <source srcset="./assets/img/page-03/flamingo-left-gaga.png">
+                <img src="./assets/img/page-03/flamingo-left-gaga.png" alt="flamingo left gaga">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-left-gaga-dark js-page-03-flamingo-left-gaga-dark o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-left-gaga-dark.png">
+                <source srcset="./assets/img/page-03/flamingo-left-gaga-dark.png">
+                <img src="./assets/img/page-03/flamingo-left-gaga-dark.png" alt="flamingo left gaga darl">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-left js-page-03-flamingo-left o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-left.png">
+                <source srcset="./assets/img/page-03/flamingo-left.png">
+                <img src="./assets/img/page-03/flamingo-left.png" alt="flamingo left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-left-dark js-page-03-flamingo-left-dark o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-left-dark.png">
+                <source srcset="./assets/img/page-03/flamingo-left-dark.png">
+                <img src="./assets/img/page-03/flamingo-left-dark.png" alt="flamingo left dark">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-right js-page-03-flamingo-right o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-right.png">
+                <source srcset="./assets/img/page-03/flamingo-right.png">
+                <img src="./assets/img/page-03/flamingo-right.png" alt="flamingo right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-right-dark js-page-03-flamingo-right-dark o-section__figure"  data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-right-dark.png">
+                <source srcset="./assets/img/page-03/flamingo-right-dark.png">
+                <img src="./assets/img/page-03/flamingo-right-dark.png" alt="flamingo right dark">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-right-wing js-page-03-flamingo-right-wing o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-right-wing.png">
+                <source srcset="./assets/img/page-03/flamingo-right-wing.png">
+                <img src="./assets/img/page-03/flamingo-right-wing.png" alt="flamingo right wing">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__flamingo-right-wing-dark js-page-03-flamingo-right-wing-dark o-section__figure" data-limit-y="0">
+            <div data-depth="0.13">
+              <picture>
+                <source srcset="./assets/img/page-03/flamingo-right-wing-dark.png">
+                <source srcset="./assets/img/page-03/flamingo-right-wing-dark.png">
+                <img src="./assets/img/page-03/flamingo-right-wing-dark.png" alt="flamingo right wing dark">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__plant-left-dark js-page-03-plant-left-dark o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-03/plant-left-dark.png">
+                <source srcset="./assets/img/page-03/plant-left-dark.png">
+                <img src="./assets/img/page-03/plant-left-dark.png" alt="plant left dark">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__plant-left js-page-03-plant-left o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-03/plant-left.png">
+                <source srcset="./assets/img/page-03/plant-left.png">
+                <img src="./assets/img/page-03/plant-left.png" alt="plant left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__plant-right js-page-03-plant-right o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-03/plant-right.png">
+                <source srcset="./assets/img/page-03/plant-right.png">
+                <img src="./assets/img/page-03/plant-right.png" alt="plant right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-03__plant-right-dark js-page-03-plant-right-dark o-section__figure" data-limit-y="0" data-scalar-x="5">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-03/plant-right-dark.png">
+                <source srcset="./assets/img/page-03/plant-right-dark.png">
+                <img src="./assets/img/page-03/plant-right-dark.png" alt="plant right dark">
+              </picture>
+            </div>
+          </figure>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            Sonra bir şey oldu, göldeki neşe yavaş yavaş kayboldu. Babamı bir arkadaşıyla konuşurken duydum;  birkaç gün içinde <font>gölü terk etmemiz gerektiğini söylüyordu. </font> 
+          </p>
+        </div>
+      </section>
+      <!-- Page 03 End -->
+
+      <!-- Page 04 -->
+      <section class="page-04 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-04__rock js-page-04-rock o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-04/rock.png">
+                <source srcset="./assets/img/page-04/rock.png">
+                <img src="./assets/img/page-04/rock.png" alt="rock">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__tuzlu js-page-04-tuzlu o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-04/tuzlu.png">
+                <source srcset="./assets/img/page-04/tuzlu.png">
+                <img src="./assets/img/page-04/tuzlu.png" alt="Tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__tuzlu-cloud js-page-04-tuzlu-cloud o-section__figure">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/page-04/tuzlu-cloud.png">
+                <source srcset="./assets/img/page-04/tuzlu-cloud.png">
+                <img src="./assets/img/page-04/tuzlu-cloud.png" alt="Tuzlu cloud">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__ball js-page-04-ball o-section__figure" data-limit-y="0">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-04/ball.png">
+                <source srcset="./assets/img/page-04/ball.png">
+                <img src="./assets/img/page-04/ball.png" alt="ball">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__tuzlu-friend js-page-04-tuzlu-friend o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-04/tuzlu-friend.png">
+                <source srcset="./assets/img/page-04/tuzlu-friend.png">
+                <img src="./assets/img/page-04/tuzlu-friend.png" alt="Tuzlu friend">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__tuzlu-drink js-page-04-tuzlu-drink  o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-04/tuzlu-drink.png">
+                <source srcset="./assets/img/page-04/tuzlu-drink.png">
+                <img src="./assets/img/page-04/tuzlu-drink.png" alt="Tuzlu drink">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-04__foot-print js-page-04-foot-print o-section__figure">
+            <div data-depth="0.1">
+              <picture  class="page-04__foot-print-1">
+                <source srcset="./assets/img/page-04/foot-print-1.png">
+                <source srcset="./assets/img/page-04/foot-print-1.png">
+                <img src="./assets/img/page-04/foot-print-1.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-2 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-2.png">
+                <source srcset="./assets/img/page-04/foot-print-2.png">
+                <img src="./assets/img/page-04/foot-print-2.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-3 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-3.png">
+                <source srcset="./assets/img/page-04/foot-print-3.png">
+                <img src="./assets/img/page-04/foot-print-3.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-4 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-4.png">
+                <source srcset="./assets/img/page-04/foot-print-4.png">
+                <img src="./assets/img/page-04/foot-print-4.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-5 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-5.png">
+                <source srcset="./assets/img/page-04/foot-print-5.png">
+                <img src="./assets/img/page-04/foot-print-5.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-6 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-6.png">
+                <source srcset="./assets/img/page-04/foot-print-6.png">
+                <img src="./assets/img/page-04/foot-print-6.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-7 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-7.png">
+                <source srcset="./assets/img/page-04/foot-print-7.png">
+                <img src="./assets/img/page-04/foot-print-7.png" alt="Foot print">
+              </picture>
+
+              <picture class="page-04__foot-print-8 o-section__figure">
+                <source srcset="./assets/img/page-04/foot-print-8.png">
+                <source srcset="./assets/img/page-04/foot-print-8.png">
+                <img src="./assets/img/page-04/foot-print-8.png" alt="Foot print">
+              </picture>
+            </div>
+          </figure>
+
+          <p class="page-04__content-1 js-page-04-content-1">
+            Bu duyduğum en kötü haberdi, nasıl olabilirdi? Dediklerine göre ‘Gölün su seviyesi ve içinde yaşamamız için gerekli olan besinler çok azalmış. Kıtlık endişesi ile en yakın ve güvenli su birikintisine uçmamız şartmış.’ 
+          </p>
+
+          <p class="page-04__content-2 js-page-04-content-2">
+            Ama ben bütün bir yaz burada, dünyaya geldiğim bu gölde; serinlemek, dinlenmek, harika gün batımları izlemek ve arkadaşlarımla <font>sınırsızca oyunlar oynamak istiyordum.</font>
+          </p>
+
+          <p class="page-04__content-3 js-page-04-content-3">
+            Kalbimi bir hüzün kapladı, <br /><font>başka bir yolu daha olmalı!</font>
+          </p>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            Bu duyduğum en kötü haberdi, nasıl olabilirdi? Dediklerine göre ‘Gölün su seviyesi ve içinde yaşamamız için gerekli olan besinler çok azalmış. Kıtlık endişesi ile en yakın ve güvenli su birikintisine uçmamız şartmış.’ 
+          </p>
+          <p>
+            Ama ben bütün bir yaz burada, dünyaya geldiğim bu gölde; serinlemek, dinlenmek, harika gün batımları izlemek ve arkadaşlarımla <font>sınırsızca oyunlar oynamak istiyordum.</font>
+          </p>
+          <p>
+            Kalbimi bir hüzün kapladı, <br /><font>başka bir yolu daha olmalı!</font>
+          </p>
+        </div>
+      </section>
+      <!-- Page 04 End -->
+
+      <!-- Page 05 -->
+      <section class="page-05 section o-section">
+       <div class="wrapper o-section__figure-wrapper">
+         <figure class="page-05__sky js-page-05-sky o-section__figure">
+           <picture>
+             <source srcset="./assets/img/page-05/sky.png">
+             <source srcset="./assets/img/page-05/sky.png">
+             <img src="./assets/img/page-05/sky.png" alt="lake">
+           </picture>
+         </figure>
+         <figure class="page-05__lake js-page-05-lake o-section__figure" data-limit-x="0">
+           <div data-depth="0.06">
+             <picture>
+               <source srcset="./assets/img/page-05/lake.png">
+               <source srcset="./assets/img/page-05/lake.png">
+               <img src="./assets/img/page-05/lake.png" alt="lake">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__tuzlu js-page-05-tuzlu o-section__figure">
+           <div data-depth="0.10">
+             <picture>
+               <img class="js-tuzlu-image" src="./assets/img/page-05/tuzlu-body/tuzlu_body_0.png" alt="Tuzlu">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__children js-page-05-children o-section__figure">
+           <div data-depth="0.12">
+             <picture>
+               <source srcset="./assets/img/page-05/children.png">
+               <source srcset="./assets/img/page-05/children.png">
+               <img src="./assets/img/page-05/children.png" alt="Children">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__cloud-top-big js-page-05-cloud-top-big o-section__figure" data-limit-y="0">
+           <div data-depth="0.05">
+             <picture>
+               <source srcset="./assets/img/page-05/cloud-top-big.png">
+               <source srcset="./assets/img/page-05/cloud-top-big.png">
+               <img src="./assets/img/page-05/cloud-top-big.png" alt="cloud">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__cloud-top-little js-page-05-cloud-top-little o-section__figure" data-limit-y="0">
+           <div data-depth="0.05">
+             <picture>
+               <source srcset="./assets/img/page-05/cloud-top-little.png">
+               <source srcset="./assets/img/page-05/cloud-top-little.png">
+               <img src="./assets/img/page-05/cloud-top-little.png" alt="cloud">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__cloud-bottom js-page-05-cloud-bottom o-section__figure" data-limit-y="0">
+           <div data-depth="0.05">
+             <picture>
+               <source srcset="./assets/img/page-05/cloud-bottom.png">
+               <source srcset="./assets/img/page-05/cloud-bottom.png">
+               <img src="./assets/img/page-05/cloud-bottom.png" alt="cloud">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-05__plant js-page-05-plant o-section__figure" data-limit-y="0" data-scalar-x="5">
+           <div data-depth="0.15">
+             <picture>
+               <source srcset="./assets/img/page-05/plant.png">
+               <source srcset="./assets/img/page-05/plant.png">
+               <img src="./assets/img/page-05/plant.png" alt="Plant">
+             </picture>
+           </div>
+         </figure>
+         <p class="page-05__content-1 js-page-05-content-1">
+           Bu derin üzüntüyle gölün kıyısında tek başıma, sessiz, sakin bir yürüyüşe çıktım. Biraz sonra bir kayanın üzerinde oturan ve en az benim kadar üzgün görünen bir çocukla karşılaştım.
+         </p>
+         <p class="page-05__content-2 js-page-05-content-2">
+           Öylece oturmuş gölü seyrediyordu. O kadar üzgündü ki, yaklaştığımı bile fark etmedi. <br />
+         <font>Gagamla hafifçe omuzuna dokundum.</font>
+         </p>
+         <p class="page-05__content-3 js-page-05-content-3">
+           “Merhaba!” dedim. “Benim adım Tuzlu.”<br />
+           Hiç şaşırmadı. <br />
+           “Merhaba.” dedi kısık bir sesle. <font>“Ben de Bulut.”</font>
+         </p>
+       </div>
+
+       <div class="page-mobile-content">
+        <p>
+          Bu derin üzüntüyle gölün kıyısında tek başıma, sessiz, sakin bir yürüyüşe çıktım. Biraz sonra bir kayanın üzerinde oturan ve en az benim kadar üzgün görünen bir çocukla karşılaştım.
+        </p>
+        <p>
+          Öylece oturmuş gölü seyrediyordu. O kadar üzgündü ki, yaklaştığımı bile fark etmedi. <br />
+        <font>Gagamla hafifçe omuzuna dokundum.</font>
+        </p>
+        <p>
+          “Merhaba!” dedim. “Benim adım Tuzlu.”<br />
+          Hiç şaşırmadı. <br />
+          “Merhaba.” dedi kısık bir sesle. <font>“Ben de Bulut.”</font>
+        </p>
+      </div>
+      </section>
+      <!-- Page 05 End -->
+
+      <!-- Page 06 -->
+      <section class="page-06 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-06__sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/page-06/sky.png">
+              <source srcset="./assets/img/page-06/sky.png">
+              <img src="./assets/img/page-06/sky.png" alt="Sky">
+            </picture>
+          </figure>
+
+          <figure class="page-06__cloud-left js-page-06-cloud-left o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-06/cloud-left.png">
+                <source srcset="./assets/img/page-06/cloud-left.png">
+                <img src="./assets/img/page-06/cloud-left.png" alt="cloud left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__cloud-right js-page-06-cloud-right o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-06/cloud-right.png">
+                <source srcset="./assets/img/page-06/cloud-right.png">
+                <img src="./assets/img/page-06/cloud-right.png" alt="cloud right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__tuzlu-right js-page-06-tuzlu-right o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-06/tuzlu-right.png">
+                <source srcset="./assets/img/page-06/tuzlu-right.png">
+                <img src="./assets/img/page-06/tuzlu-right.png" alt="tuzlu right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__child js-page-06-child o-section__figure">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-06/child.png">
+                <source srcset="./assets/img/page-06/child.png">
+                <img src="./assets/img/page-06/child.png" alt="Child">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__child-arm js-page-06-child-arm o-section__figure">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-06/arm.png">
+                <source srcset="./assets/img/page-06/arm.png">
+                <img src="./assets/img/page-06/arm.png" alt="Child arm">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__child-eye-brow js-page-06-child-eye-brow o-section__figure">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-06/eye-brow.png">
+                <source srcset="./assets/img/page-06/eye-brow.png">
+                <img src="./assets/img/page-06/eye-brow.png" alt="Child eye brow">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__child-eyes js-page-06-child-eyes o-section__figure">
+            <div data-depth="0.10">
+              <picture>
+                <source srcset="./assets/img/page-06/eyes.png">
+                <source srcset="./assets/img/page-06/eyes.png">
+                <img src="./assets/img/page-06/eyes.png" alt="Child eyes">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__tuzlu-left js-page-06-tuzlu-left o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-06/tuzlu-left.png">
+                <source srcset="./assets/img/page-06/tuzlu-left.png">
+                <img src="./assets/img/page-06/tuzlu-left.png" alt="tuzlu left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-06__tuzlu-center js-page-06-tuzlu-center o-section__figure">
+            <div data-depth="0.2">
+              <picture>
+                <source srcset="./assets/img/page-06/tuzlu-center.png">
+                <source srcset="./assets/img/page-06/tuzlu-center.png">
+                <img src="./assets/img/page-06/tuzlu-center.png" alt="tuzlu center">
+              </picture>
+            </div>
+          </figure>
+
+          <p class="page-06__content-1 js-page-06-content-1">
+            Neden bu kadar üzgün olduğunu sordum. “Göl” dedi. “Her geçen gün daha da kuruyor. Yüzlerce canlı burayı terk ediyor. Ve ben, bunu durdurmak istiyorum ama ne yapacağımı bilmiyorum.
+          </p>
+
+          <p class="page-06__content-2 js-page-06-content-2">
+            Bir anda heyecanlandım. <br />
+            <font>“Ben de ben de!” diye kanat çırptım.</font>
+            “Ben de sana yardım etmek istiyorum!”
+          </p>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            Neden bu kadar üzgün olduğunu sordum. “Göl” dedi. “Her geçen gün daha da kuruyor. Yüzlerce canlı burayı terk ediyor. Ve ben, bunu durdurmak istiyorum ama ne yapacağımı bilmiyorum.
+          </p>
+          <p>
+            Bir anda heyecanlandım. <br />
+            <font>“Ben de ben de!” diye kanat çırptım.</font>
+            “Ben de sana yardım etmek istiyorum!”
+          </p>
+        </div>
+      </section>
+      <!-- Page 06 End -->
+
+      <!-- Page 07 -->
+      <section class="page-07 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-07__beach o-section__figure js-beach" data-limit-x="0">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-07/beach.jpeg">
+                <source srcset="./assets/img/page-07/beach.jpeg">
+                <img src="./assets/img/page-07/beach.jpeg" alt="Beach">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-07__boy js-page-07-boy o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-07/boy.png">
+                <source srcset="./assets/img/page-07/boy.png">
+                <img src="./assets/img/page-07/boy.png" alt="boy">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-07__hand-left js-page-07-hand-left o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-07/hand-left.png">
+                <source srcset="./assets/img/page-07/hand-left.png">
+                <img src="./assets/img/page-07/hand-left.png" alt="hand left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-07__hand-right js-page-07-hand-right o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-07/hand-right.png">
+                <source srcset="./assets/img/page-07/hand-right.png">
+                <img src="./assets/img/page-07/hand-right.png" alt="hand right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-07__rota js-page-07-rota o-section__figure" data-limit-x="0">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-07/rota.png">
+                <source srcset="./assets/img/page-07/rota.png">
+                <img src="./assets/img/page-07/rota.png" alt="rota">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-07__tuzlu js-page-07-tuzlu o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-07/tuzlu.png">
+                <source srcset="./assets/img/page-07/tuzlu.png">
+                <img src="./assets/img/page-07/tuzlu.png" alt="Tuzlu">
+              </picture>
+            </div>
+          </figure>
+          
+          <p class="page-07__content js-page-07-content">
+            O an karar vermiştim. Gitmeyecektik,  kalıp mücadele edecek ve bu kar beyazı devasa yuvayı, gölü kurtaracaktık. 
+            <font>Bulut ile birlikte bir plan yaptık.</font>
+          </p>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            O an karar vermiştim. Gitmeyecektik,  kalıp mücadele edecek ve bu kar beyazı devasa yuvayı, gölü kurtaracaktık. 
+            <font>Bulut ile birlikte bir plan yaptık.</font>
+          </p>
+        </div>
+      </section>
+      <!-- Page 07 End -->
+
+      <!-- Page 08 -->
+      <section class="page-08 section o-section">
+       <div class="wrapper o-section__figure-wrapper">
+         <figure class="page-08__sky o-section__figure">
+           <div data-depth="0.02">
+             <picture>
+               <source srcset="./assets/img/page-08/sky.jpeg">
+               <source srcset="./assets/img/page-08/sky.jpeg">
+               <img src="./assets/img/page-08/sky.jpg" alt="Sky">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__mountains js-page-08-mountains o-section__figure">
+           <div data-depth="0.04">
+             <picture>
+               <source srcset="./assets/img/page-08/mountines.png">
+               <source srcset="./assets/img/page-08/mountines.png">
+               <img src="./assets/img/page-08/mountines.png" alt="Mountains">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__cloud-left js-page-08-cloud-left o-section__figure">
+           <div data-depth="0.02">
+             <picture>
+               <source srcset="./assets/img/page-08/cloud-left.png">
+               <source srcset="./assets/img/page-08/cloud-left.png">
+               <img src="./assets/img/page-08/cloud-left.png" alt="Cloud left">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__cloud-right js-page-08-cloud-right o-section__figure">
+           <div data-depth="0.02">
+             <picture>
+               <source srcset="./assets/img/page-08/cloud-right.png">
+               <source srcset="./assets/img/page-08/cloud-right.png">
+               <img src="./assets/img/page-08/cloud-right.png" alt="Cloud right">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__houses js-page-08-houses o-section__figure" data-limit-x="0">
+           <div data-depth="0.03">
+             <picture>
+               <source srcset="./assets/img/page-08/houses.png">
+               <source srcset="./assets/img/page-08/houses.png">
+               <img src="./assets/img/page-08/houses.png" alt="Houses">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__bridge js-page-08-bridge o-section__figure">
+           <div>
+             <picture>
+               <source srcset="./assets/img/page-08/bridge.png">
+               <source srcset="./assets/img/page-08/bridge.png">
+               <img src="./assets/img/page-08/bridge.png" alt="Bridge">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__tuzlu js-page-08-tuzlu o-section__figure">
+           <div>
+             <picture>
+               <img src="./assets/img/page-08/tuzlu-bulut/tuzlu_bulut_0.png" class="js-tuzlu-bulut" alt="Tuzlu">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__plants js-page-08-plants o-section__figure">
+           <div data-depth="0.08">
+             <picture>
+               <source srcset="./assets/img/page-08/plants.png">
+               <source srcset="./assets/img/page-08/plants.png">
+               <img src="./assets/img/page-08/plants.png" alt="Plants">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__branch js-page-08-branch o-section__figure" data-limit-x="0">
+           <div data-depth="0.07">
+             <picture>
+               <source srcset="./assets/img/page-08/branch.png">
+               <source srcset="./assets/img/page-08/branch.png">
+               <img src="./assets/img/page-08/branch.png" alt="Branch">
+             </picture>
+           </div>
+         </figure>
+         <figure class="page-08__rabbit js-page-08-rabbit o-section__figure">
+           <div data-depth="0.08">
+             <picture>
+               <img src="./assets/img/page-08/rabbit/rabbit_0.png" alt="Rabbit" class="js-rabbit-ear">
+             </picture>
+           </div>
+         </figure>
+         <p class="page-08__content js-page-08-content">
+           Kapı kapı bütün civar köyleri dolaşıp yetişkinlere suyu nasıl tasarruflu kullanmaları gerektiğini anlatacaktık.
+           <font>Yola koyulduk.</font>
+         </p>
+       </div>
+
+       <div class="page-mobile-content">
+        <p>
+          Kapı kapı bütün civar köyleri dolaşıp yetişkinlere suyu nasıl tasarruflu kullanmaları gerektiğini anlatacaktık.
+          <font>Yola koyulduk.</font>
+        </p>
+      </div>
+      </section>
+      <!-- Page 08 End -->
+
+      <!-- Page 09 -->
+      <section class="page-09 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-09__splash o-section__figure">
+            <picture>
+              <source srcset="./assets/img/page-09/splash.jpeg">
+              <source srcset="./assets/img/page-09/splash.jpeg">
+              <img src="./assets/img/page-09/splash.jpeg" alt="Splash">
+            </picture>
+          </figure>
+
+          <figure class="page-09__ayse-teyze js-page-09-ayse-teyze o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-09/ayse-teyze.png">
+                <source srcset="./assets/img/page-09/ayse-teyze.png">
+                <img src="./assets/img/page-09/ayse-teyze.png" alt="ayşe teyze">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-09__hasan-amca js-page-09-hasan-amca o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-09/hasan-amca.png">
+                <source srcset="./assets/img/page-09/hasan-amca.png">
+                <img src="./assets/img/page-09/hasan-amca.png" alt="hasan amca">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-09__rasim-amca js-page-09-rasim-amca o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-09/rasim-amca.png">
+                <source srcset="./assets/img/page-09/rasim-amca.png">
+                <img src="./assets/img/page-09/rasim-amca.png" alt="rasim amca">
+              </picture>
+            </div>
+          </figure>
+
+          <p class="page-09__ayse-teyze-content js-page-09-ayse-teyze-content">
+          <font>Ayla teyzelerin mutfak musluğu damlatıyordu.</font> 
+          <br /><br />
+            Neyse ki tamir işlerinden anlıyordu. <br />
+            Hikmet Amca da yardım etti, birlikte tamir ettiler.
+          </p>
+
+          <p class="page-09__hasan-amca-content js-page-09-hasan-amca-content">
+            Hasan amcalara da gittik. Onun da herkes gibi bir su kuyusu vardı. Bunun göle olan büyük zararından bahsettik. 
+            <br /><br />
+            <font>“Ne olacak canım!” demeyeceğine söz verdi, </font><br />
+            biz de yola devam ettik.
+          </p>
+
+          <p class="page-09__rasim-amca-content js-page-09-rasim-amca-content">
+            Rasim amcayı da bulaşıkları makineye dizmeden önce sudan geçirirken gördük. <font>Bu alışkanlığından vazgeçerse, 
+            her yıkamada 57 litre sudan tasarruf</font> edeceğini söylediğimizde yüzünde bir tebessüm belirdi, bize teşekkür etti.
+          </p>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            <font>Ayla teyzelerin mutfak musluğu damlatıyordu.</font> 
+            <br /><br />
+              Neyse ki tamir işlerinden anlıyordu. <br />
+              Hikmet Amca da yardım etti, birlikte tamir ettiler.
+            </p>
+            <p>
+              Hasan amcalara da gittik. Onun da herkes gibi bir su kuyusu vardı. Bunun göle olan büyük zararından bahsettik. 
+              <br /><br />
+              <font>“Ne olacak canım!” demeyeceğine söz verdi, </font><br />
+              biz de yola devam ettik.
+            </p>
+            <p>
+              Rasim amcayı da bulaşıkları makineye dizmeden önce sudan geçirirken gördük. <font>Bu alışkanlığından vazgeçerse, 
+              her yıkamada 57 litre sudan tasarruf</font> edeceğini söylediğimizde yüzünde bir tebessüm belirdi, bize teşekkür etti.
+            </p>
+        </div>
+      </section>
+      <!-- Page 09 End -->
+
+      <!-- Page 10 -->
+      <section class="page-10 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-10__sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/page-10/sky.jpeg">
+              <source srcset="./assets/img/page-10/sky.jpeg">
+              <img src="./assets/img/page-10/sky.jpeg" alt="Sky">
+            </picture>
+          </figure>
+
+          <figure class="page-10__cloud js-page-10-clouds o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-10/clouds.png">
+                <img src="./assets/img/page-10/clouds.png" alt="Clouds">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__flamingos-little js-page-10-flamingos-little o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-10/flamingos-little.png">
+                <source srcset="./assets/img/page-10/flamingos-little.png">
+                <img src="./assets/img/page-10/flamingos-little.png" alt="Flamingos little">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__tuzlu js-page-10-tuzlu o-section__figure">
+            <div data-depth="0.05">
+              <picture>
+                <img src="./assets/img/page-10/tuzlu-surf/tuzlu_surf_0.png" class="js-tuzlu-surf" alt="tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__flamingos-back js-page-10-flamingos-back o-section__figure">
+            <div data-depth="0.05">
+              <picture>
+                <source srcset="./assets/img/page-10/flamingos-back.png">
+                <source srcset="./assets/img/page-10/flamingos-back.png">
+                <img src="./assets/img/page-10/flamingos-back.png" alt="Flamingos back">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__flamingos-middle js-page-10-flamingos-middle o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/page-10/flamingos-middle.png">
+                <source srcset="./assets/img/page-10/flamingos-middle.png">
+                <img src="./assets/img/page-10/flamingos-middle.png" alt="Flamingos middle">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__flamingos-front js-page-10-flamingos-front o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-10/flamingos-front.png">
+                <source srcset="./assets/img/page-10/flamingos-front.png">
+                <img src="./assets/img/page-10/flamingos-front.png" alt="Flamingos front">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-10__sun js-page-10-sun o-section__figure">
+            <div data-depth="0.04">
+              <picture>
+                <source srcset="./assets/img/page-10/sun.png">
+                <source srcset="./assets/img/page-10/sun.png">
+                <img src="./assets/img/page-10/sun.png" alt="Sun">
+              </picture>
+            </div>
+          </figure>
+
+          <p class="page-10__content-1 js-page-10-content-1">
+            <font>İyilik ne bulaşıcı şeydi.</font> 
+            <br />
+            Zamanla bu bilinç bütün civar köylere, kasabalara yayıldı. 
+            Su seviyesi eskisi kadar olmasa da <font>şimdilik yeterli yüksekliğe ulaşmıştı.</font> Bizim birkaç gün; birkaç haftayı, ayı buldu.
+          </p>
+
+          <p class="page-10__content-2 js-page-10-content-2">
+            Sürümüz artık beni her gördüğünde, “Hey, Tuzlu! Sayende bütün yazı keyifle geçirdik, teşekkür ederiz.” diyordu. Annem ve babam da bundan çok gurur duyuyordu. 
+            Hepsi uzun yıllar daha, her yaz keyifle burada konaklayacağımızı bilselerdi keşke…
+          </p>
+        </div>
+
+        <div class="page-mobile-content">
+          <p>
+            <font>İyilik ne bulaşıcı şeydi.</font> 
+            <br />
+            Zamanla bu bilinç bütün civar köylere, kasabalara yayıldı. 
+            Su seviyesi eskisi kadar olmasa da <font>şimdilik yeterli yüksekliğe ulaşmıştı.</font> Bizim birkaç gün; birkaç haftayı, ayı buldu.
+          </p>
+          <p>
+            Sürümüz artık beni her gördüğünde, “Hey, Tuzlu! Sayende bütün yazı keyifle geçirdik, teşekkür ederiz.” diyordu. Annem ve babam da bundan çok gurur duyuyordu. 
+            Hepsi uzun yıllar daha, her yaz keyifle burada konaklayacağımızı bilselerdi keşke…
+          </p>
+        </div>
+      </section>
+      <!-- Page 10 End -->
+
+      <!-- Page 11 -->
+      <section class="page-11 section o-section">
+        <div class="wrapper o-section__figure-wrapper">
+          <figure class="page-11__lake-sky o-section__figure" data-limit-x="0">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/page-11/Sky.jpeg">
+                <source srcset="./assets/img/page-11/Sky.jpeg">
+                <img src="./assets/img/page-11/Sky.jpeg" alt="Lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__lake-sun page-11-sun o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/page-11/Sun.png">
+                <source srcset="./assets/img/page-11/Sun.png">
+                <img src="./assets/img/page-11/Sun.png" alt="Sun">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__lake js-page-11-lake o-section__figure" data-limit-x="0">
+            <div data-depth="0.06">
+              <picture>
+                <source srcset="./assets/img/page-11/lake.png">
+                <source srcset="./assets/img/page-11/lake.jpg">
+                <img src="./assets/img/page-11/lake.jpg" alt="Lake">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__flamingos js-page-11-flamingos o-section__figure">
+            <div data-depth="0.04">
+              <picture>
+                <source srcset="./assets/img/page-11/flamingos.png">
+                <source srcset="./assets/img/page-11/flamingos.png">
+                <img src="./assets/img/page-11/flamingos.png" alt="Flamingos">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__clouds js-page-11-clouds o-section__figure">
+            <div data-depth="0.04">
+              <picture>
+                <source srcset="./assets/img/page-11/clouds.png">
+                <source srcset="./assets/img/page-11/clouds.png">
+                <img src="./assets/img/page-11/clouds.png" alt="Boy">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__wave js-page-11-wave o-section__figure" data-limit-x="0">
+            <div data-depth="0.12">
+              <picture>
+                <source srcset="./assets/img/page-11/wave.png">
+                <source srcset="./assets/img/page-11/wave.png">
+                <img src="./assets/img/page-11/wave.png" alt="Wave">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__tuzlu js-page-11-tuzlu o-section__figure">
+            <div data-depth="0.08">
+              <picture class="page-11__tuzlu-body">
+                <img src="./assets/img/page-11/tuzlu_bulut/tuzlu_bulut_0.png" class="js-page-11-tuzlu-bulut" alt="Tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__karides js-page-11-karides o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-11/karides.png">
+                <source srcset="./assets/img/page-11/karides.png">
+                <img src="./assets/img/page-11/karides.png" alt="karides">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__plant-left js-page-11-plant-left o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/page-11/plant-left.png">
+                <source srcset="./assets/img/page-11/plant-left.png">
+                <img src="./assets/img/page-11/plant-left.png" alt="Plant left">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__plant-right js-page-11-plant-right o-section__figure">
+            <div data-depth="0.08">
+              <picture>
+                <source srcset="./assets/img/page-11/plant-right.png">
+                <source srcset="./assets/img/page-11/plant-right.png">
+                <img src="./assets/img/page-11/plant-right.png" alt="Plant right">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__baliklar js-page-11-baliklar o-section__figure">
+            <div data-depth="0.07">
+              <picture>
+                <source srcset="./assets/img/page-11/fishes.png">
+                <source srcset="./assets/img/page-11/fishes.png">
+                <img src="./assets/img/page-11/fishes.png" alt="balıklar">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__balik js-page-11-balik o-section__figure">
+            <div data-depth="0.11">
+              <picture>
+                <source srcset="./assets/img/page-11/balik1.png">
+                <source srcset="./assets/img/page-11/balik1.png">
+                <img src="./assets/img/page-11/balik1.png" alt="balık">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__bubble4 js-page-11-bubble-4 o-section__figure">
+            <div>
+              <picture>
+                <source srcset="./assets/img/page-11/bubble_4.png">
+                <source srcset="./assets/img/page-11/bubble_4.png">
+                <img src="./assets/img/page-11/bubble_4.png" alt="baloncuk">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__bubble5 js-page-11-bubble-5 o-section__figure">
+            <div data-depth="0.15">
+              <picture>
+                <source srcset="./assets/img/page-11/bubble_5.png">
+                <source srcset="./assets/img/page-11/bubble_5.png">
+                <img src="./assets/img/page-11/bubble_5.png" alt="baloncuk">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="page-11__wave-line js-page-11-wave-line o-section__figure" data-limit-x="0">
+            <div data-depth="0.12">
+              <picture>
+                <source srcset="./assets/img/page-11/wave-line.png">
+                <source srcset="./assets/img/page-11/wave-line.png">
+                <img src="./assets/img/page-11/wave-line.png" alt="Wave line">
+              </picture>
+            </div>
+          </figure>
+
+          <p class="page-11__content js-page-11-content">
+            <font>Ben Tuzlu ve “Benim Mirasım Su”</font><br />
+            Yeni öykülerde bu mirası korumaya birlikte devam edeceğiz. Kurtaracak daha çooook ‘gölümüz’ var.
+          </p>
+       </div>
+
+       <div class="page-mobile-content">
+        <p>
+          <font>Ben Tuzlu ve “Benim Mirasım Su”</font><br />
+          Yeni öykülerde bu mirası korumaya birlikte devam edeceğiz. Kurtaracak daha çooook ‘gölümüz’ var.
+        </p>
+      </div>
+      </section>
+      <!-- Page 11 End -->
+
+      <!-- Son -->
+      <section class="son section o-section">
+        <div class="wrapper son-desktop o-section__figure-wrapper">
+          <figure class="son__sky js-son-sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/son/sky.jpeg">
+              <img src="./assets/img/son/sky.jpeg" alt="Sky">
+            </picture>
+          </figure>
+
+          <figure class="son__lake js-son-lake o-section__figure" data-limit-x="0">
+            <div data-depth="0.05">
+              <picture>
+                <source srcset="./assets/img/son/lake-floor.png">
+                <img src="./assets/img/son/lake-floor.png" alt="Lake floor">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__tuzlu js-son-tuzlu o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/son/tuzlu.png">
+                <source srcset="./assets/img/son/tuzlu.png">
+                <img src="./assets/img/son/tuzlu.png" alt="Tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__boy js-son-boy o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/son/boy.png">
+                <source srcset="./assets/img/son/boy.png">
+                <img src="./assets/img/son/boy.png" alt="Boy">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__shine js-son-shine o-section__figure">
+            <div data-depth="0.02">
+              <picture>
+                <source srcset="./assets/img/son/shine.png">
+                <source srcset="./assets/img/son/shine.png">
+                <img src="./assets/img/son/shine.png" alt="Shine">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__shine js-son-shine2 o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/son/shine2.png">
+                <source srcset="./assets/img/son/shine2.png">
+                <img src="./assets/img/son/shine2.png" alt="Shine">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__shine js-son-shine3 o-section__figure">
+            <div data-depth="0.4">
+              <picture>
+                <source srcset="./assets/img/son/shine3.png">
+                <source srcset="./assets/img/son/shine3.png">
+                <img src="./assets/img/son/shine3.png" alt="Shine">
+              </picture>
+            </div>
+          </figure>
+
+          <div class="son__content">
+            <img src="./assets/img/yarinin-suyu-logo.svg" class="son__ys-logo js-son-ys-logo" alt="Yarının suyu logo" title="Yarının suyu" />
+
+            <img src="./assets/img/intro-page/tuzlu-title.png" class="son__tuzlu-title js-son-tuzlu-title" title="Tuzlu" alt="tuzlu title" />
+
+            <p class="son__explanation js-son-explanation">
+              Tuzlu’nun gerçek hikayesini artık sen de biliyorsun. destek olmak için paylaş, daha fazla kişiye ulaşalım!
+            </p>
+
+            <p class="son__social-wrap js-son-social">
+              <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://www.yarininsuyu.com/tuzlu'),'facebook-share-dialog','width=626,height=436'); return false;" class="son__social-link js-share-fb">FACEBOOK</a>
+              <a onclick="window.open('https://twitter.com/intent/tweet?url=https://www.yarininsuyu.com/tuzlu&text=Tuzlu - Bir Göl Hikayesi','twitter-share-dialog','width=626,height=436'); return false;" class="son__social-link js-share-tw">TWITTER</a>
+            </p>
+            <a href="https://yarininsuyu.com/su-ayak-izini-hesapla" class="son__promise js-son-promise" target="_blank">SEN DE SÖZ VER</a>
+          </div>
+          
+          <a href="#giris" class="son__replay js-son-replay">
+            <img src="./assets/img/son/button-replay.svg" alt="replay" />
+          </a>
+        </div>
+
+        <!-- mobile -->
+        <div class="wrapper son-mobile o-section__figure-wrapper">
+          <figure class="son__sky js-son-sky o-section__figure">
+            <picture>
+              <source srcset="./assets/img/son-mobile/sky.jpeg">
+              <img src="./assets/img/son-mobile/sky.jpeg" alt="Sky">
+            </picture>
+          </figure>
+
+          <figure class="son__tuzlu js-son-tuzlu o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/son-mobile/tuzlu.png">
+                <source srcset="./assets/img/son-mobile/tuzlu.png">
+                <img src="./assets/img/son-mobile/tuzlu.png" alt="Tuzlu">
+              </picture>
+            </div>
+          </figure>
+
+          <figure class="son__boy js-son-boy o-section__figure">
+            <div data-depth="0.1">
+              <picture>
+                <source srcset="./assets/img/son-mobile/boy.png">
+                <source srcset="./assets/img/son-mobile/boy.png">
+                <img src="./assets/img/son-mobile/boy.png" alt="Boy">
+              </picture>
+            </div>
+          </figure>
+
+          <div class="son__content">
+            <img src="./assets/img/intro-page/tuzlu-title.png" class="son__tuzlu-title js-son-tuzlu-title" title="Tuzlu" alt="tuzlu title" />
+
+            <p class="son__explanation js-son-explanation">
+              Tuzlu’nun gerçek hikayesini artık sen de biliyorsun. destek olmak için paylaş, daha fazla kişiye ulaşalım!
+            </p>
+
+            <p class="son__social-wrap js-son-social">
+              <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://www.yarininsuyu.com/tuzlu'),'facebook-share-dialog','width=626,height=436'); return false;" class="son__social-link js-share-fb">FACEBOOK</a>
+              <a onclick="window.open('https://twitter.com/intent/tweet?url=https://www.yarininsuyu.com/tuzlu&text=Tuzlu - Bir Göl Hikayesi','twitter-share-dialog','width=626,height=436'); return false;" class="son__social-link js-share-tw">TWITTER</a>
+            </p>
+            <a href="https://yarininsuyu.com/su-ayak-izini-hesapla" class="son__promise js-son-promise" target="_blank">SEN DE SÖZ VER</a>
+          </div>
+          
+          <a href="#giris" class="son__replay js-son-replay">
+            <img src="./assets/img/son/button-replay.svg" alt="replay" />
+          </a>
+          <div class="intro__bottom-shadow"></div>
+        </div>
+      </section>
+      <!-- Son End -->
+    </div>
+    <audio class="music-player js-music-player" playsinline -webkit-playsinline loop>
+      <source src="./assets/audio/music.mp3" type="audio/mpeg">
+      Tarayıcınız bu özelliği desteklemiyor
+    </audio>
+    <audio class="music-player js-voice-player" playsinline -webkit-playsinline>
+      <source src="./assets/audio/1.mp3" type="audio/mpeg">
+      Tarayıcınız bu özelliği desteklemiyor
+    </audio>
+    <div class="hiddenLoader05"></div>
+    <div class="hiddenLoader08"></div>
+    <div class="hiddenLoader10"></div>
+    <div class="hiddenLoader11"></div>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.fullPage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script type="text/javascript" src="./assets/js/mainFull.js"></script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+@keyframes flamingosSlide11 {
+  0%   {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes plantLeft11 {
+  0%   {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes flamingosMove11 {
+  0%   {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  45% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+

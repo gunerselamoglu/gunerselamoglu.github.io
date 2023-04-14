@@ -1,0 +1,219 @@
+/* .page-08__lake {
+  display: none;
+  opacity: 0;
+}
+
+.page-08__cloud-right.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__cloud-left.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 40s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__mountains {
+  z-index: 2;
+}
+
+.page-08__houses {
+  z-index: 1;
+}
+
+.page-08__houses.slideLeft{
+  animation-name: housesSlide08;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__bridge {
+  z-index: 3;
+  right: -30px;
+}
+
+.page-08__bridge.slideLeft {
+  animation-name: bridgeSlide08;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__plants {
+  z-index: 5;
+  transform: translateX(20%);
+}
+
+.page-08__plants.slideLeft {
+  animation-name: plantsSlide08;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__branch {
+  z-index: 4;
+}
+
+.page-08__branch.slideLeft{
+  animation-name: branchSlide08;
+  animation-duration: 60s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__tuzlu {
+  z-index: 2;
+}
+
+.page-08__tuzlu.slideLeft {
+  animation-name: tuzluSlide08;
+  animation-duration: 65s;
+  animation-fill-mode: forwards;
+}
+
+.page-08__rabbit {
+  z-index: 5;
+  transform: translateX(20%);
+}
+
+.page-08__rabbit.slideLeft {
+  animation-name: rabbitSlide;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+} */
+
+
+.page-08__content {
+  position: absolute;
+  right:18.541666666666668%;
+  max-width:492px;
+  width: 70%;
+  top:14.351851851851851%;
+  z-index: 2;
+  font-size: 20px;
+  text-align: right;
+  opacity: 0;
+}
+
+.page-08__content font {
+  font-size: 25px;
+}
+
+.page-08__content.slideLeft {
+  animation-name: contentSlideLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@media (min-width:1921px) { 
+
+}
+
+@media (max-height:900px) { 
+
+}
+
+@media (max-width:1720px) { 
+  .page-08__content {
+    font-size: 18px;
+    max-width: 445px;
+  }
+
+  .page-08__content font{
+    font-size: 23px;
+  }
+}
+
+@media (max-width:1640px) { 
+  .page-08__content {
+    font-size: 14px;
+    max-width: 370px;
+  }
+
+  .page-08__content font{
+    font-size: 18px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .page-08__content {
+    display: none;
+  }
+
+  .page-08__lake {
+    display: block;
+  }
+
+  .page-08__sky,
+  .page-08__bridge {
+    position: absolute;
+    top:0;
+  }
+}
+
+.hiddenLoader08 {
+  visibility: hidden;
+  background-image: 
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_0.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_1.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_2.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_3.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_4.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_5.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_6.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_7.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_8.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_9.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_11.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_12.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_13.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_14.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_15.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_16.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_17.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_18.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_19.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_20.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_21.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_22.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_23.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_24.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_25.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_26.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_27.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_28.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_29.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_30.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_31.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_32.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_33.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_34.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_35.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_36.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_37.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_38.png'),
+  url('../img/page-08/tuzlu-bulut/tuzlu_bulut_39.png'),
+  url('../img/page-08/rabbit/rabbit_0.png'),
+  url('../img/page-08/rabbit/rabbit_1.png'),
+  url('../img/page-08/rabbit/rabbit_2.png'),
+  url('../img/page-08/rabbit/rabbit_3.png'),
+  url('../img/page-08/rabbit/rabbit_4.png'),
+  url('../img/page-08/rabbit/rabbit_5.png'),
+  url('../img/page-08/rabbit/rabbit_6.png'),
+  url('../img/page-08/rabbit/rabbit_7.png'),
+  url('../img/page-08/rabbit/rabbit_8.png'),
+  url('../img/page-08/rabbit/rabbit_9.png'),
+  url('../img/page-08/rabbit/rabbit_11.png'),
+  url('../img/page-08/rabbit/rabbit_12.png'),
+  url('../img/page-08/rabbit/rabbit_13.png'),
+  url('../img/page-08/rabbit/rabbit_14.png'),
+  url('../img/page-08/rabbit/rabbit_15.png'),
+  url('../img/page-08/rabbit/rabbit_16.png'),
+  url('../img/page-08/rabbit/rabbit_17.png'),
+  url('../img/page-08/rabbit/rabbit_18.png'),
+  url('../img/page-08/rabbit/rabbit_19.png'),
+  url('../img/page-08/rabbit/rabbit_20.png'),
+  url('../img/page-08/rabbit/rabbit_21.png'),
+  url('../img/page-08/rabbit/rabbit_22.png'),
+  url('../img/page-08/rabbit/rabbit_23.png');
+}

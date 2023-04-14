@@ -1,0 +1,82 @@
+@keyframes fadeInAspect {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftPage01 {
+  0%   {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cloudSlidePage01 {
+  0%   {
+    transform: translateX(3.5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftPage01PlantLeft {
+  0%   {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes slideLeftPage01PlantMiddle {
+  0%   {
+    margin-left:40px;
+  }
+  100% {
+    margin-left:0;
+  }
+}
+
+@keyframes slideLeftPage01PlantRight {
+  0%   {
+    right: -120px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slideLeftPage01Tuzlu {
+  0%   {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes slideLeftPage01Flamingos {
+  0%   {
+    right: -100px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes page01Content {
+  0%   {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

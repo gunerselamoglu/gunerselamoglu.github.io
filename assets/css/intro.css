@@ -1,0 +1,383 @@
+.intro-mobile.o-section__figure-wrapper {
+  height: 100vh;
+}
+
+section.intro {
+  background-color: #407fe8;
+  pointer-events:all;
+}
+
+.intro-content {
+  width:27.500000000000004%;
+  height: 22.962962962962962%;
+  left:50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 3;
+  top:30px;
+}
+
+.intro__ys-logo {
+  max-width: 168px;
+  margin: 0 auto 10px;
+  display: block;
+  opacity: 1;
+}
+
+.intro__tuzlu-title {
+  opacity: 1;
+  margin: auto;
+  width: auto;
+}
+
+.intro__gol-hikayesi {
+  max-width: 284px;
+  margin:auto;
+  opacity: 1;
+  display: block;
+}
+
+
+.intro__explanation {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 154.5%;
+  text-align: center;
+  color: #113B55;
+  max-width: 520px;
+  margin: 20px auto 0;
+  opacity: 1;
+}
+
+.intro__register-button {
+  position: absolute;
+  width: 314px;
+  height: 78px;
+  bottom:15.87037037037037%;
+  background: #0067B1;
+  border-radius: 106.071px;
+  font-size: 18px;
+  line-height: 120%;
+  color:#fff;
+  text-transform: uppercase;
+  transition: all .3s ease-out;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left:0;
+  right:0;
+  margin: auto;
+  z-index: 6;
+  opacity: 1;
+}
+
+.intro__register-button:hover{
+  background: #FFFFFF;
+  color: #0067B1;
+}
+
+.intro__start-button-wrapper {
+  position: absolute;
+  cursor: pointer;
+  width: 14.90625%;
+  height: 14.9065vw;
+  bottom:7.87037037037037%;
+  z-index: 6;
+  left:0;
+  right:0;
+  margin: auto;
+  opacity: 1;
+}
+
+.intro__start-big-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-name: bounced;
+  animation-duration: 1s;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+
+.intro__start-middle-circle {
+  position: absolute;
+  width: 69.28838951310861%;
+  height: 69.28838951310861%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin: auto;
+  animation-name: bounced;
+  animation-duration: 1s;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+
+.intro__start-blue-circle {
+  position: absolute;
+  width: 49.812734082397%;
+  height: 49.812734082397%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin: auto;
+  animation-name: bounced;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+
+.intro__arrow-bottom {
+  position: absolute;
+  width: 10.486891385767791%;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.intro__start-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  bottom: -20px;
+  width: 290px;
+}
+
+.intro__bottom-shadow {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 29.72222222222222%;
+  left: 0;
+  bottom:0;
+  background: linear-gradient(180deg, rgba(3, 10, 24, 0) 40.66%, rgba(19, 69, 105, 0.91) 149.65%);
+}
+
+/* .intro__sky {
+  transform: translateY(30%);
+} */
+
+
+.intro__cloud-right-top-blur {
+  opacity: 1;
+}
+
+
+.intro__lake {
+  margin-left: -15px;
+}
+
+.intro__cloud-left {
+  transform: translateY(0);
+  margin-left: -15px;
+}
+
+
+.intro__cloud-left-little {
+}
+
+
+.intro__cloud-right {
+
+}
+
+
+.intro__cloud-right-little {
+  transform: translateY(0);
+}
+
+.intro__light-effect,
+.intro__light-effect2,
+.intro__light-effect3 {
+
+}
+
+
+.intro__tuzlu {
+}
+
+
+.intro__fish-shadow {
+
+}
+
+
+.intro__fishes-shadow {
+
+}
+
+
+.intro__rock-left {
+
+}
+
+
+
+.intro__rock-right {
+
+}
+
+
+
+.intro__plant-blur {
+  z-index: 3;
+}
+
+.intro__fish-red {
+
+}
+
+
+.intro__mussel {
+
+}
+
+
+.intro__bubbles {
+
+}
+
+
+
+
+.intro__wave,
+.intro__water {
+  margin-left: -15px;
+}
+
+.intro__front-bug {
+
+}
+
+
+.intro__mountain {
+  margin-left: -15px;
+}
+
+.intro-mobile.o-section__figure-wrapper 
+.o-section__figure img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center;
+  -o-object-position: center;
+}
+
+@media (max-width:1720px) {
+  .intro__start-text {
+    left: -50px
+  }
+  .intro__grass-blur { 
+    bottom:42.7%;
+  }
+
+  .intro__explanation {
+    margin: 3vh auto 0;
+    font-size: 18px;
+  }
+  
+  .intro__start-button-wrapper {
+    width: 10.90625%;
+    height: 10.9065vw;
+  }
+
+  .intro__register-button {
+    height: 58px;
+    font-size: 16px;
+    width: 270px;
+  }
+}
+
+@media (max-width:1640px) {
+  .intro__explanation {
+    font-size:14px;
+  }
+
+  .intro__start-text {
+    left: -60px
+  }
+}
+
+.intro-mobile {
+  display: none;
+}
+
+@media (max-width:1023px) { 
+  .intro-mobile {
+    display: block;
+  }
+
+  .intro-desktop {
+    display: none;
+  }
+
+  .intro-content {
+    width: clamp(320px, 50vw, 650px);
+    top:80px;
+  }
+
+  .intro__tuzlu-title {
+    height: auto;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+  }
+  
+  .intro__ys-logo {
+    width: 50%;
+    max-width: 280px;
+  }
+
+  .intro__gol-hikayesi {
+    width: 100%;
+    max-width: 280px;
+    width: 60%;
+  }
+  
+  .intro__start-button-wrapper {
+    width: 11.90625%;
+    height: 11.9065vw;
+    bottom: 90px;
+  }
+
+  .intro__start-text {
+    width: 100%;
+    text-align: center;
+    left: auto;
+    font-size: 14px;
+  }
+
+  .intro__explanation {
+    line-height: 134.5%;
+    margin: 20px auto 0;
+    font-size: 18px;
+  }
+
+  .intro__tuzlu {
+    transform: translateY(100%);
+  }
+
+  .intro__start-button-wrapper {
+    width: 170px;
+    height: 170px;
+    bottom: 7vh;
+  }
+}
+
+@media (max-width:667px) {
+  .intro__explanation {
+    font-size: 14px;
+  }
+}

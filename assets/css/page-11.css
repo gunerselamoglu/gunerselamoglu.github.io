@@ -1,0 +1,227 @@
+/* .page-11__clouds {
+  top:-10px;
+}
+
+.page-11__clouds.slideLeft{
+  animation-name: slideToMinus;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__wave {
+  z-index: 2;
+}
+
+.page-11__tuzlu {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__tuzlu.slideLeft{
+  animation-name: slideToZero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__wave-line {
+  z-index: 2;
+}
+
+.page-11__flamingos {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__flamingos.slideLeft{
+  animation-name: slideToZero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__flamingos.move {
+  animation-name: flamingosMove11;
+  animation-duration: 8s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: infinite;
+}
+
+.page-11__plant-left {
+  z-index: 2;
+}
+
+.page-11__plant-left.slideLeft{
+  animation-name: slideToMinus;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__plant-right {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__plant-right.slideLeft{
+  animation-name: slideToZero;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__karides {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__karides.slideLeft{
+  animation-name: slideToZero;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__balik {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__balik.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__bubble4,
+.page-11__bubble5 {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__bubble4.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__bubble5.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+.page-11__baliklar {
+  z-index: 2;
+  transform: translateX(100px);
+}
+
+.page-11__baliklar.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+} */
+
+.page-11__content {
+  position: absolute;
+  z-index: 2;
+  max-width: 604px;
+  width: 70%;
+  font-size: 20px;
+  right: 14.166666666666666%;
+  top:17.12962962962963%;
+  opacity: 0;
+}
+
+.page-11__content font {
+  font-size: 25px;
+}
+
+.page-11__content.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width:1720px) { 
+  .page-11__content {
+    font-size:18px;
+    max-width: 500px;
+  }
+
+  .page-11__content font{
+    font-size:23px;
+  }
+}
+
+@media (max-width:1640px) { 
+  .page-11__content {
+    font-size:14px;
+    max-width: 386px;
+  }
+
+  .page-11__content font{
+    font-size:18px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .page-11__content {
+    display: none;
+  }
+
+  .page-11__boy-arm {
+    transform-origin: 30% 54%;
+  }
+}
+
+.hiddenLoader11 {
+  visibility: hidden;
+  background-image: 
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_0.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_1.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_2.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_3.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_4.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_5.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_6.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_7.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_8.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_9.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_11.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_12.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_13.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_14.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_15.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_16.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_17.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_18.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_19.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_20.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_21.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_22.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_23.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_24.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_25.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_26.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_27.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_28.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_29.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_30.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_31.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_32.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_33.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_34.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_35.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_36.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_37.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_38.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_39.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_40.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_41.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_42.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_43.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_44.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_45.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_46.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_47.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_48.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_49.png'),
+  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_50.png');
+}

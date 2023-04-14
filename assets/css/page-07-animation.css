@@ -1,0 +1,40 @@
+@keyframes rotaFadeIn {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotaFadeOut {
+  0%   {
+    opacity: 1;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+@keyframes linePaint {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes page07TuzluMove {
+  0%   {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

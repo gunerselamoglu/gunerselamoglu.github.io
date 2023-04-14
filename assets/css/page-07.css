@@ -1,0 +1,117 @@
+.page-07__boy {
+  z-index: 3;
+}
+/* 
+.page-07__boy.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__hand-left {
+  z-index: 1;
+}
+
+.page-07__hand-left.slideLeft { 
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__hand-left.opacity { 
+  animation-name: rotaFadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__hand-right {
+  z-index: 2;
+  opacity: 0;
+}
+
+.page-07__hand-right.opacity{ 
+  animation-name: rotaFadeIn;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__rota {
+  z-index: 1;
+  opacity: 0;
+}
+
+.page-07__rota.slideLeft {
+  animation-name: linePaint;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__tuzlu {
+  z-index: 1;
+  transform: translateX(100px);
+}
+
+.page-07__tuzlu.slideLeft {
+  animation-name: slideToZero;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__tuzlu.move {
+  animation-name: page07TuzluMove;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+} */
+
+.page-07__content {
+  position: absolute;
+  left:15.052083333333332%;
+  width:70%;
+  max-width: 529px;
+  top:20.462962962962962%;
+  z-index: 2;
+  font-size: 1.25em;
+  opacity: 0;
+}
+
+.page-07__content.slideLeft {
+  animation-name: contentSlideLeft;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.page-07__content font {
+  font-size:1.260em;
+}
+
+@media (max-width:1720px) { 
+  .page-07__content {
+    font-size: 18px;
+    max-width: 490px;
+  }
+
+  .page-07__content font{
+    font-size: 23px;
+  }
+}
+
+@media (max-width:1640px) { 
+  .page-07__content {
+    font-size: 14px;
+    max-width: 380px;
+  }
+
+  .page-07__content font{
+    font-size: 18px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .page-07__content {
+    display: none;
+  }
+}

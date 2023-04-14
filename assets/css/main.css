@@ -1,0 +1,327 @@
+﻿@charset "utf-8";
+@import 'reset.css';
+@import 'fonts.css';
+@import 'animations.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'map.css';
+@import 'sections.css';
+@import 'intro-animation.css';
+@import 'rotate-phone.css';
+@import 'loading.css';
+@import 'intro.css';
+@import 'skip-animation.css';
+@import 'page-01-animation.css';
+@import 'page-01.css';
+@import 'page-02-animation.css';
+@import 'page-02.css';
+@import 'page-03-animation.css';
+@import 'page-03.css';
+@import 'page-04.css';
+@import 'page-05-animation.css';
+@import 'page-05.css';
+@import 'page-06-animation.css';
+@import 'page-06.css';
+@import 'page-07-animation.css';
+@import 'page-07.css';
+@import 'page-08-animation.css';
+@import 'page-08.css';
+@import 'page-09-animation.css';
+@import 'page-09.css';
+@import 'page-10-animation.css';
+@import 'page-10.css';
+@import 'page-11-animation.css';
+@import 'page-11.css';
+@import 'son-animation.css';
+@import 'son.css';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.music-player {
+ position: fixed;
+ z-index: 10;
+ top:0;
+ left:0;
+}
+
+.o-section {
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility:hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.section.active{
+  z-index: 4;
+  opacity: 1;
+  visibility: visible;
+}
+
+.section.getFront {
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+}
+
+.o-section .o-wrapper {
+  height: 100%;
+}
+
+.o-wrapper {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.u-padding-bottom {
+  padding-bottom: 30px!important;
+}
+
+.u-align-center {
+  text-align: center!important;
+}
+
+/* section:nth-child(even).hide  */
+section.hide{
+  /* -webkit-mask: url("../img/nature-sprite.png");
+          mask: url("../img/nature-sprite.png"); */
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+          mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+          mask-size: 2300% 100%;
+  -webkit-animation: mask-play 2s steps(22) forwards;
+          animation: mask-play 2s steps(22) forwards;
+}
+
+section:nth-child(odd).hide {
+   /* -webkit-mask: url("../img/nature-sprite.png");
+          mask: url("../img/nature-sprite.png"); */
+   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+          mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+          mask-size: 2300% 100%;
+  -webkit-animation: mask-play 2s steps(22) forwards;
+          animation: mask-play 2s steps(22) forwards;
+}
+
+.show {
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+.showSlideToLeft {
+  animation-name: showSlideToLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+.hideSlideToRight {
+  animation-name: hideSlideToRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+
+.page-mobile-content {
+  padding: 50px 50px 30px 50px;
+  display: none;
+}
+
+.page-mobile-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.page-mobile-content p span,
+.page-mobile-content p font {
+  font-size: 22px;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  animation-name: hiddenAnimate;
+  animation-duration: .3s;
+  animation-delay: .3s;
+  animation-fill-mode: forwards; 
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  animation-name: visibleAnimate;
+  animation-duration: .3s;
+  animation-delay: .3s;
+  animation-fill-mode: forwards;
+}
+
+.section {
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: calc(var(--vh)*100);
+  /* -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; */
+  width: 100%;
+  /* visibility: hidden; */
+}
+
+
+.o-section__figure {
+  position: absolute;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  pointer-events: none;
+  margin-bottom: 0;
+  /* will-change: transform; */
+  top:0;
+  left: 0;
+}
+
+.o-section__figure div {
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+
+.o-section__figure img {
+  position: absolute;
+   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  font-family: "object-fit:cover;object-position:center center";
+  object-fit: cover; 
+  -o-object-position: center center;
+  object-position: center center;
+  /* -webkit-transform: translateZ(0);
+  transform: translateZ(0); */
+}
+
+.o-section__figure-wrapper {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+@keyframes hiddenAnimate {
+  0%   {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes visibleAnimate {
+  0%   {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width:1023px) { 
+  .section {
+    overflow: hidden;
+    position:relative;
+    top:0;
+    left:0;
+    width: 100%;
+    min-height: 100%;
+    visibility: visible;
+    height: auto!important;
+  }
+
+  .o-section__figure img {
+    -o-object-fit: contain;
+    font-family: "object-fit:contain;object-position:bottom center";
+    object-fit: contain; 
+    -o-object-position: top center;
+    object-position: top center;
+  }
+
+  .section.mobile {
+    display: block;
+    opacity: 1;
+  }
+
+  .section.getFront {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .page-mobile-content {
+    display: block;
+  }
+
+  .section .fp-tableCell {
+    height: auto!important;
+  }
+
+  .o-section__figure-wrapper {
+    position: relative;
+    height: auto;
+    width:auto;
+  }
+
+  .o-section__figure-wrapper::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 61.25%;
+  }
+
+
+  .intro-mobile.o-section__figure-wrapper::before {
+    padding-bottom: 100%;
+  }
+
+  .section.mobile .fp-tableCell {
+    height: auto!important;
+    padding-bottom: 0;
+  }
+
+  .o-section {
+    opacity: 1;
+  }
+}

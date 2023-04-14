@@ -1,0 +1,205 @@
+/* .page-06__cloud-left.slideLeft {
+  animation-name: slideCloud;
+  animation-duration: 200s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__cloud-right.slideLeft {
+  animation-name: slideCloud;
+  animation-duration: 200s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__tuzlu-right {
+  opacity: 0;
+} */
+/* 
+.page-06__tuzlu-right.slideLeft {
+  animation-name: tuzluRightMove;
+  animation-duration: 7s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.page-06__child.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__child-arm {
+  transform-origin: 25% center;
+}
+
+.page-06__child-arm.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__child-arm.move {
+  animation-name: armMove;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.page-06__child-eyes.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__child-eyes.move {
+  animation-name: eyesMove;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.page-06__child-eye-brow.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__child-eye-brow.move {
+  animation-name: eyeBrowMove;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.page-06__tuzlu-left {
+  opacity: 0;
+}
+
+.page-06__tuzlu-left.slideLeft {
+  animation-name: tuzluLeftMove;
+  animation-duration: 7s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.page-06__tuzlu-center.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__tuzlu-center.move {
+  animation-name: tuzluCenterMove;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+} */
+
+.page-06__content-1 {
+  position: absolute;
+  left:7.8125%;
+  width:70%;
+  max-width: 382px;
+  top:17.59259259259259%;
+  z-index: 2;
+  transform: translateX(40%);
+  font-size: 20px;
+  opacity: 0;
+}
+
+.page-06__content-1.slideLeft {
+  animation-name: contentSlideLeft;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.page-06__content-2 {
+  position: absolute;
+  right:10.260416666666666%;
+  width:70%;
+  max-width: 448px;
+  top:23.333333333333332%;
+  z-index: 2;
+  transform: translateX(40%);
+  font-size: 20px;
+  opacity: 0;
+}
+
+.page-06__content-2 font{
+  font-size: 25px;
+}
+
+.page-06__content-2.slideLeft {
+  animation-name: contentSlideLeft;
+  animation-duration: 2s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@media (min-width:1921px) { 
+
+}
+
+@media (max-width:1720px) { 
+  .page-06__content-1,
+  .page-06__content-2 {
+    font-size:18px;
+  }
+
+  .page-06__content-2 font {
+    font-size:23px;
+  }
+
+  .page-06__content-1 {
+    max-width: 347px;
+  }
+
+  .page-06__content-1 {
+    max-width: 380px;
+  }
+
+  .page-06__child-eye-brow {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width:1640px) { 
+  .page-06__content-1,
+  .page-06__content-2 {
+    font-size:14px;
+  }
+
+  .page-06__content-2 font {
+    font-size:18px;
+  }
+
+  .page-06__content-1 {
+    max-width: 270px;
+    top: 19.592593%;
+  }
+
+  .page-06__content-2 {
+    max-width: 305px;
+    top: 19.592593%;
+  }
+}
+
+@media (max-width:1023px) {
+  .page-06__sky img {
+    width:100%;
+    height:auto;
+  }
+
+  .page-06__content-1,
+  .page-06__content-2 {
+    display: none;
+  }
+
+  .page-06__child-arm.move,
+  .page-06__child-eye-brow.move,
+  .page-06__child-eyes.move {
+    left:20px;
+  }
+}

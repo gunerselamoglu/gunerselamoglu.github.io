@@ -1,0 +1,229 @@
+/* .page-02__cloud-left.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards; 
+}
+
+.page-02__cloud-top.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__flamingos {
+  z-index: 2;
+}
+
+/* .page-02__flamingos.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__tuzlu,
+.page-02__tuzlu-eyeball {
+  z-index: 2;
+}
+
+/* .page-02__tuzlu-eyeball.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__blow {
+  z-index: 2;
+  /* opacity: 0;
+  transform: translateX(-90); */
+}
+
+/* .page-02__blow.slideLeft {
+  animation-name: slideLeftPage02Blow;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; 
+}  */
+
+.page-02__decor {
+  z-index: 1;
+}
+
+/* .page-02__decor.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__firefly {
+  z-index: 1;
+}
+
+/* .page-02__firefly.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 4s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__firefly-light {
+  z-index: 1;
+}
+
+/* .page-02__firefly-light.slideLeft {
+  animation-name: Page02Light;
+  animation-duration: 5s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__cake {
+  z-index: 2;
+}
+
+/* .page-02__cake.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__flamingo-front-pink {
+  z-index: 2;
+}
+
+/* .page-02__flamingo-front-pink.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__bird-front-right {
+  z-index: 2;  
+}
+
+/* .page-02__bird-front-right.slideLeft{
+  animation-name: slideToMinus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__flamingo-front-black {
+  z-index: 2;
+}
+
+/* .page-02__flamingo-front-black.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration: 4s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__flamingo-right-pink {
+  z-index: 1;
+}
+
+/* .page-02__flamingo-right-pink.slideLeft {
+  animation-name: slideToMinus;
+  animation-duration:3.2s;
+  animation-fill-mode: forwards; 
+} */
+
+/* .page-02__bird-top-right {
+  z-index: 2;
+  transform: translateX(100px);
+} */
+
+/* .page-02__bird-top-right.slideLeft {
+  animation-name: slideToZero;
+  animation-duration:2s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__confeti-back,
+.page-02__confeti-front {
+  z-index: 2;
+  /* margin-top: -100%; */
+}
+
+/* .page-02__confeti-front.slideDown {
+  animation-name: slideDownPage02ConfetiFront;
+  animation-duration:1.7s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; 
+} */
+
+/* .page-02__confeti-back.slideDown {
+  animation-name: slideDownPage02ConfetiBack;
+  animation-duration:2.2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; 
+} */
+
+.page-02__content-1,
+.page-02__content-2 {
+  position: absolute;
+  z-index: 2;
+  right:5.572916666666667%;
+  top:30.185185185185187%;
+  color:#113B55;
+  font-size: 20px;
+  max-width: 470px;
+  width: 50%;
+  opacity: 0;
+}
+
+.page-02__content-2 font {
+  font-size:25px;
+}
+
+.page-02__content-1.slideLeft {
+  animation-name: slideLeftPage02Content;
+  animation-duration:2.5s;
+  animation-fill-mode: forwards; 
+}
+
+.page-02__content-2.slideLeft {
+  animation-name: slideLeftPage02Content;
+  animation-duration:2.8s;
+  animation-fill-mode: forwards; 
+}
+
+.page-02__content-2 {
+  top:44.148148148148145%;
+  width:50%;
+  max-width: 386px;
+}
+
+@media (min-width:1921px) { 
+
+}
+
+@media (max-width:1720px) {
+  .page-02__content-1,
+  .page-02__content-2 { 
+    font-size: 18px;
+  }
+
+  .page-02__content-2 font {
+    font-size: 23px;
+  }
+}
+
+@media (max-width:1640px) {
+  .page-02__content-1,
+  .page-02__content-2 { 
+    font-size: 14px;
+    max-width: 330px;
+  }
+
+  .page-02__content-2 {
+    max-width: 275px;
+  }
+
+  .page-02__content-2 font {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:1023px) { 
+  .page-02__content-1,
+  .page-02__content-2 {
+    display: none;
+  }
+}

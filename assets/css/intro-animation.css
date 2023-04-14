@@ -1,0 +1,325 @@
+@keyframes leftCloud {
+  0%   {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  25%  {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes rightCloud {
+  0%   {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes introLake {
+  0%   {
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes littleRightCloud {
+  0%   {
+    transform: translateY(5%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes introGrass {
+  0%   {
+    bottom:25%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    bottom: 35.7%;
+  }
+}
+
+@media (max-width:1720px) {
+  @keyframes introGrass {
+    0%   {
+      bottom:25%;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      bottom: 42.2%;
+    }
+  }
+}
+
+@keyframes introLightEffect {
+  0%   {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes introSky {
+  0%   {
+    transform: translateY(30%);
+  }
+  100% {
+    height: 100%;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes introTuzlu {
+  0%   {
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes swimming {
+  0%   {
+    transform: translateY(2.77777777777778%);
+    visibility: visible;
+  }
+  50%   {
+    transform: translateY(5.37777777777778%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(2.77777777777778%);
+    visibility: visible;
+  }
+}
+
+
+@keyframes introWaveWater {
+  0%   {
+    transform: translateY(70%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes introMussel {
+  0%   {
+    transform: translateY(50%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes introBubbles {
+  0%   {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes introShrimp {
+  0%   {
+    transform: translateY(50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes introFishRed {
+  0%   {
+    left: 0;
+    transform: translateY(50%);
+  }
+  30%   {
+    left: 0;
+    transform: translateY(0);
+  }
+  100% {
+    left:-30%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introFishes {
+  0%   {
+    right:-40%;
+  }
+  20%   {
+    right:-30%;
+  }
+  90%   {
+    opacity: 1;
+  }
+  100% {
+    right:3.406249999999996%;
+    opacity: 0;
+  }
+}
+
+@keyframes introFishShadow {
+  0%   {
+    right:-15%;
+  }
+  20%   {
+    right:-15%;
+  }
+  90%   {
+    opacity: 1;
+  }
+  100% {
+    right:20%;
+    opacity: 0;
+  }
+}
+
+@keyframes cloudLeftLittle {
+  0%   {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%);
+  }
+  30%   {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounced {
+  0%   {
+    transform: scale(1.2);
+  }
+  50%   {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes introMountains {
+  0%   {
+    transform: translateY(70%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@media (max-width:1023px) { 
+  @keyframes introTuzlu {
+    0%   {
+      transform: translateY(100%);
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(-2%);
+      visibility: visible;
+    }
+  }
+
+  @keyframes swimming {
+    0%   {
+      transform: translateY(-2.77777777777778%);
+      visibility: visible;
+    }
+    50%   {
+      transform: translateY(-0.37777777777778%);
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(-2.77777777777778%);
+      visibility: visible;
+    }
+  }
+
+  @keyframes introFishRed {
+    0%   {
+      left: 0;
+      transform: translateY(50%);
+    }
+    30%   {
+      left: 0;
+      transform: translateY(0);
+    }
+    100% {
+      left:-50%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes introFishes {
+    0%   {
+      right:-40%;
+    }
+    20%   {
+      right:-30%;
+    }
+    90%   {
+      opacity: 1;
+    }
+    100% {
+      right:3.406249999999996%;
+      opacity: 0;
+    }
+  }
+}
+
+
+
+
+

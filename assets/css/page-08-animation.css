@@ -1,0 +1,53 @@
+@keyframes rabbitSlide {
+  0%   {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes plantsSlide08 {
+  0%   {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bridgeSlide08 {
+  0%   {
+    right: -30px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes housesSlide08 {
+  0%   {
+    right: -3.8%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes branchSlide08 {
+  0%   {
+    right: -10%;
+  }
+  100% {
+    right: 20%;
+  }
+}
+
+@keyframes tuzluSlide08 {
+  0%   {
+    left: 0;
+  }
+  100% {
+    left: 80.114583333333332%;
+  }
+}
