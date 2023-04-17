@@ -61,9 +61,9 @@
   animation-fill-mode: forwards; 
 } */
 
-/* .page-01__flamingos {
-  right:-100px
-} */
+.page-01__flamingos {
+  left:100px;
+}
 
 /* .page-01__flamingos.slideLeft {
   animation-name: slideLeftPage01Flamingos;
