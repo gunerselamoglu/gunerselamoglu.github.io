@@ -37,6 +37,70 @@ const twitter = document.querySelector('.js-share-tw');
 const introSection = document.querySelector('.js-intro-section');
 let sound = true;
 
+// Animasyonları css'ten çıkardık bu sebeple SOLID prensiplerine uygun yeni fonksiyonlarımızı yazıyoruz.
+class SlideToZero {
+  constructor(options) {
+    this.element = options.selector;
+    this.duration = options.duration;
+    this.delay = options.delay || 0;
+  }
+
+  animate() {
+    $(this.element)
+			.css('left', '100px')
+			.delay(this.delay)
+      .animate({ left: 0 }, this.duration);
+  }
+}
+
+class SlideToMinus {
+  constructor(options) {
+    this.element = options.selector;
+    this.duration = options.duration;
+    this.delay = options.delay || 0;
+  }
+
+  animate() {
+    $(this.element)
+			.delay(this.delay)
+			.animate({ left: '-40px' }, { duration: this.duration});
+  }
+}
+
+class FadeInAnimation {
+  constructor(options) {
+    this.element = options.selector;
+    this.duration = options.duration;
+    this.delay = options.delay || 0;
+  }
+
+  animate() {
+    $(this.element)
+			.delay(this.delay)
+			.hide()
+			.fadeIn(this.duration);
+  }
+}
+
+class CustomAnimate {
+  constructor(options) {
+    this.element = options.selector;
+    this.duration = options.duration;
+		this.fromDirection = options.fromDirection;
+		this.fromValue = options.fromValue;
+		this.toDirection = options.toDirection;
+		this.toValue = options.toValue;
+    this.delay = options.delay || 0;
+  }
+
+  animate() {
+    $(this.element)
+			.css(this.fromDirection, this.fromValue)
+			.delay(this.delay)
+      .animate({ [this.toDirection] : [this.toValue] }, this.duration);
+  }
+}
+
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 		setTimeout(()=> {
@@ -269,6 +333,49 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
+	const cloudRight = new SlideToZero({
+		selector: page01CloudRight,
+		duration: 4500
+	});
+	cloudRight.animate();
+
+	const cloudSmall = new SlideToMinus({
+		selector: page01CloudSmall,
+		duration: 3500
+	});
+	cloudSmall.animate();
+
+	const tuzlu = new SlideToMinus({
+		selector: page01Tuzlu,
+		duration: 2000, 
+		delay: 300
+	});
+	tuzlu.animate();
+
+	const slideFlamingos = new SlideToZero({
+		selector: page01Flamingos,
+		duration: 2000,
+	});
+	slideFlamingos.animate();
+
+	const plantLeft = new SlideToMinus({
+		selector: page01PlantLeft,
+		duration: 1700,
+	});
+	plantLeft.animate();
+
+	const plantMiddle = new SlideToMinus({
+		selector: page01PlantMiddle,
+		duration: 1700,
+	});
+	plantMiddle.animate();
+
+	const plantRight = new SlideToZero({
+		selector: page01PlantRight,
+		duration: 1300,
+	});
+	plantRight.animate();
+
 	// new Parallax(page01CloudRight);
 	// new Parallax(page01CloudSmall);
 	// new Parallax(page01Flamingos);
@@ -290,6 +397,93 @@ const page2 = () => {
 		counter += 1;
 		counter > 59 ? clearInterval(sequenceInterval01) : yusufcuk.setAttribute('src', `./assets/img/page-01/yusufcuk/snk${counter}.png`)
 	}
+
+	function preloadImages(imageArray) {
+		const images = [];
+	
+		for (let i = 0; i < imageArray.length; i++) {
+			const img = new Image();
+			img.src = imageArray[i];
+			images.push(img);
+		}
+	
+		let index = 0;
+	
+		function nextImage() {
+			index = (index + 1) % images.length;
+			const img = images[index];
+			img.onload = function() {
+				setTimeout(nextImage, 1000 / 24); // 24 fps
+			};
+			yusufcuk.src = img.src;
+		}
+	
+		nextImage();
+	}
+
+	const imageArray = [
+		"./assets/img/page-01/yusufcuk/snk1.png",
+		"./assets/img/page-01/yusufcuk/snk2.png",
+		"./assets/img/page-01/yusufcuk/snk3.png",
+		"./assets/img/page-01/yusufcuk/snk4.png",
+		"./assets/img/page-01/yusufcuk/snk5.png",
+		// "./assets/img/page-01/yusufcuk/snk6.png",
+		// "./assets/img/page-01/yusufcuk/snk7.png",
+		// "./assets/img/page-01/yusufcuk/snk8.png",
+		// "./assets/img/page-01/yusufcuk/snk9.png",
+		// "./assets/img/page-01/yusufcuk/snk10.png",
+		// "./assets/img/page-01/yusufcuk/snk11.png",
+		// "./assets/img/page-01/yusufcuk/snk12.png",
+		// "./assets/img/page-01/yusufcuk/snk13.png",
+		// "./assets/img/page-01/yusufcuk/snk14.png",
+		// "./assets/img/page-01/yusufcuk/snk15.png",
+		// "./assets/img/page-01/yusufcuk/snk16.png",
+		// "./assets/img/page-01/yusufcuk/snk17.png",
+		// "./assets/img/page-01/yusufcuk/snk18.png",
+		// "./assets/img/page-01/yusufcuk/snk19.png",
+		// "./assets/img/page-01/yusufcuk/snk20.png",
+		// "./assets/img/page-01/yusufcuk/snk21.png",
+		// "./assets/img/page-01/yusufcuk/snk22.png",
+		// "./assets/img/page-01/yusufcuk/snk23.png",
+		// "./assets/img/page-01/yusufcuk/snk24.png",
+		// "./assets/img/page-01/yusufcuk/snk25.png",
+		// "./assets/img/page-01/yusufcuk/snk26.png",
+		// "./assets/img/page-01/yusufcuk/snk27.png",
+		// "./assets/img/page-01/yusufcuk/snk28.png",
+		// "./assets/img/page-01/yusufcuk/snk29.png",
+		// "./assets/img/page-01/yusufcuk/snk30.png",
+		// "./assets/img/page-01/yusufcuk/snk31.png",
+		// "./assets/img/page-01/yusufcuk/snk32.png",
+		// "./assets/img/page-01/yusufcuk/snk33.png",
+		// "./assets/img/page-01/yusufcuk/snk34.png",
+		// "./assets/img/page-01/yusufcuk/snk35.png",
+		// "./assets/img/page-01/yusufcuk/snk36.png",
+		// "./assets/img/page-01/yusufcuk/snk37.png",
+		// "./assets/img/page-01/yusufcuk/snk38.png",
+		// "./assets/img/page-01/yusufcuk/snk39.png",
+		// "./assets/img/page-01/yusufcuk/snk40.png",
+		// "./assets/img/page-01/yusufcuk/snk41.png",
+		// "./assets/img/page-01/yusufcuk/snk42.png",
+		// "./assets/img/page-01/yusufcuk/snk43.png",
+		// "./assets/img/page-01/yusufcuk/snk44.png",
+		// "./assets/img/page-01/yusufcuk/snk45.png",
+		// "./assets/img/page-01/yusufcuk/snk46.png",
+		// "./assets/img/page-01/yusufcuk/snk47.png",
+		// "./assets/img/page-01/yusufcuk/snk48.png",
+		// "./assets/img/page-01/yusufcuk/snk49.png",
+		// "./assets/img/page-01/yusufcuk/snk50.png",
+		// "./assets/img/page-01/yusufcuk/snk51.png",
+		// "./assets/img/page-01/yusufcuk/snk52.png",
+		// "./assets/img/page-01/yusufcuk/snk53.png",
+		// "./assets/img/page-01/yusufcuk/snk54.png",
+		// "./assets/img/page-01/yusufcuk/snk55.png",
+		// "./assets/img/page-01/yusufcuk/snk56.png",
+		// "./assets/img/page-01/yusufcuk/snk57.png",
+		// "./assets/img/page-01/yusufcuk/snk58.png",
+		// "./assets/img/page-01/yusufcuk/snk59.png"
+	];
+	
+	//preloadImages(imageArray);
 }
 
 const page3 = () => {
@@ -297,44 +491,122 @@ const page3 = () => {
 	const decor = document.querySelector('.js-page-02-decor');
 	const cake = document.querySelector('.js-page-02-cake');
 	const flamingos = document.querySelector('.js-page-02-flamingos');
-	const page02FlamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
-	const page02FlamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
-	const page02FlamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
-	const page02BirdFrontRight = document.querySelector('.js-page-02-bird-front-right');
-	const page02BirdTopRight = document.querySelector('.js-page-02-bird-top-right');
-	const page02FireFly = document.querySelector('.js-page-02-firefly');
+	const flamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
+	const flamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
+	const flamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
+	const birdFrontRight = document.querySelector('.js-page-02-bird-front-right');
+	const birdTopRight = document.querySelector('.js-page-02-bird-top-right');
+	const fireFly = document.querySelector('.js-page-02-firefly');
 	const fireflyLight = document.querySelector('.js-firefly-light');
-	const page02Content1 = document.querySelector('.js-page-02-content-1');
-	const page02Content2 = document.querySelector('.js-page-02-content-2');
-	const page02Blow = document.querySelector('.js-page-02-blow');
-	const page02ConfetiFront =  document.querySelector('.js-page-02-confeti-front');
-	const page02ConfetiBack =  document.querySelector('.js-page-02-confeti-back');
+	const confetiFront =  document.querySelector('.js-page-02-confeti-front');
+	const confetiBack =  document.querySelector('.js-page-02-confeti-back');
 	const cloudLeft = document.querySelector('.js-page-02-cloud-left');
 	const cloudTop = document.querySelector('.js-page-02-cloud-top');
 	const tuzlu = document.querySelector('.js-page-02-tuzlu');
 	const blow = document.querySelector('.js-page-02-blow');
 	const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
+	const content1 = document.querySelector('.js-page-02-content-1');
+	const content2 = document.querySelector('.js-page-02-content-2');
 
-	cloudLeft.classList.add('slideLeft');
-	cloudTop.classList.add('slideLeft');
-	decor.classList.add('slideLeft');
-	cake.classList.add('slideLeft');
-	page02FlamingoRightPink.classList.add('slideLeft');
-	page02FlamingoFrontPink.classList.add('slideLeft');
-	page02FlamingoFrontBlack.classList.add('slideLeft');
-	page02BirdFrontRight.classList.add('slideLeft');
-	page02BirdTopRight.classList.add('slideLeft');	
-	page02FireFly.classList.add('slideLeft');
-	fireflyLight.classList.add('slideLeft');
-	page02Content1.classList.add('slideLeft');
-	page02Content2.classList.add('slideLeft');
-	page02Blow.classList.add('slideLeft');
-	page02ConfetiFront.classList.add('slideDown');
-	page02ConfetiBack.classList.add('slideDown');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+	blow.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
+
+	const CloudLeft = new SlideToMinus({
+		selector: cloudLeft,
+		duration: 2500
+	});
+	CloudLeft.animate();
+
+	const CloudTop = new SlideToMinus({
+		selector: cloudTop,
+		duration: 3500
+	});
+	CloudTop.animate();
+
+	const Flamingos = new SlideToMinus({
+		selector: flamingos,
+		duration: 1500
+	});
+	Flamingos.animate();
+
+	const Cake = new SlideToMinus({
+		selector: cake,
+		duration: 3000
+	});
+	Cake.animate();
+
+	const Decor = new SlideToMinus({
+		selector: decor,
+		duration: 3000
+	});
+	Decor.animate();
+
+	const BirdTopRight = new SlideToMinus({
+		selector: birdTopRight,
+		duration: 2000
+	});
+	BirdTopRight.animate();
+
+	const FlamingoRightPink = new SlideToMinus({
+		selector: flamingoRightPink,
+		duration: 3200
+	});
+	FlamingoRightPink.animate();
+	
+	const FlamingoFrontPink = new SlideToMinus({
+		selector: flamingoFrontPink,
+		duration: 2500
+	});
+	FlamingoFrontPink.animate();
+
+	const FlamingoFrontBlack = new SlideToMinus({
+		selector: flamingoFrontBlack,
+		duration: 4000
+	});
+	FlamingoFrontBlack.animate();
+
+	const BirdFrontRight = new SlideToMinus({
+		selector: birdFrontRight,
+		duration: 2000
+	});
+	BirdFrontRight.animate();
+	
+	const FireFly = new SlideToMinus({
+		selector: fireFly,
+		duration: 2000
+	});
+	FireFly.animate();
+
+	$(fireflyLight)
+		.animate({ left: '-40px' }, { duration: 2000})
+		.animate({opacity : 0}, {duration:800});
+	
+	const ConfetiFront = new CustomAnimate({
+		selector: confetiFront,
+		duration: 1700,
+		fromDirection : 'margin-top',
+		fromValue: '-100%',
+		toDirection : 'margin-top',
+		toValue : '38%',
+		delay: 2000,
+	});
+	ConfetiFront.animate();
+
+	const ConfetiBack = new CustomAnimate({
+		selector: confetiBack,
+		duration: 2200,
+		fromDirection : 'margin-top',
+		fromValue: '-100%',
+		toDirection : 'margin-top',
+		toValue : '40%',
+		delay: 2000,
+	});
+	ConfetiBack.animate();
 
 	// new Parallax(lakeFloor);
 	new Parallax(tuzlu);
@@ -385,34 +657,157 @@ const page4 = () => {
 	const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
 	const content = document.querySelector('.js-page-03-content');
 	
-	tuzlu.classList.add('slideLeft');
-	rockLeft.classList.add('slideLeft');
-	rockRight.classList.add('slideLeft');
-	flamingoLeft.classList.add('slideLeft');
-	flamingoLeftGaga.classList.add('slideLeft');
-	flamingoRight.classList.add('slideLeft');
-	flamingoRightWing.classList.add('slideLeft');
-	plantLeft.classList.add('slideLeft');
-	plantRight.classList.add('slideLeft');
 	content.classList.add('slideLeft');
-	thunder.classList.add('flash');
-	rockLeftDark.classList.add('show');
-	flamingoLeftGagaDark.classList.add('show');
-	rockRightDark.classList.add('show');
-	flamingoRightWingDark.classList.add('show');
-	flamingoLeftDark.classList.add('show');
-	flamingoRightDark.classList.add('show');
-	plantLeftDark.classList.add('show');
-	plantRightDark.classList.add('show');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
+	function flashThunder() {
+		$(thunder)
+			.css({opacity: 0})
+			.animate({opacity: 0}, 500)
+			.animate({opacity: 0.9}, 100)
+			.animate({opacity: 0.7}, 200)
+			.animate({opacity: 0}, 150)
+			.animate({opacity: 0}, 180);
+	}
+	window.thunderInterval = setInterval(flashThunder, 6500);
+
+	$(flamingoRightWing).css("transform", "rotate(0)");
+	// Animasyonu çalıştıran fonksiyon
+	function rightWingAnime() {
+		$(flamingoRightWing).animate({
+			transform: "rotate(-1deg)"
+		}, {
+			duration: 5000,
+			easing: "linear",
+			queue: false,
+			step: function(now, fx) {
+				$(this).css("-webkit-transform", "rotate(" + now + "deg)");
+				$(this).css("-moz-transform", "rotate(" + now + "deg)");
+				$(this).css("-ms-transform", "rotate(" + now + "deg)");
+				$(this).css("-o-transform", "rotate(" + now + "deg)");
+				$(this).css("transform", "rotate(" + now + "deg)");
+			},
+			complete: function() {
+				rightWingAnime();
+			}
+		});
+	}
+	rightWingAnime();
+
+	const Cloud = new SlideToMinus({
+		selector: cloud,
+		duration: 3000
+	});
+	Cloud.animate();
+
+	const Tuzlu = new SlideToZero({
+		selector: tuzlu,
+		duration: 2000
+	});
+	Tuzlu.animate();
+
+	const RockLeft = new SlideToMinus({
+		selector: rockLeft,
+		duration: 3000,
+	});
+	RockLeft.animate();
+
+	const RockLeftDark = new SlideToMinus({
+		selector: rockLeftDark,
+		duration: 3000,
+	});
+	RockLeftDark.animate();
+
+	const RockRight = new SlideToZero({
+		selector: rockRight,
+		duration: 2000,
+	});
+	RockRight.animate();
+
+	const RockRightDark = new SlideToZero({
+		selector: rockRightDark,
+		duration: 2000,
+	});
+	RockRightDark.animate();
+
+	const FlamingoLeft = new SlideToMinus({
+		selector: flamingoLeft,
+		duration: 2000,
+	});
+	FlamingoLeft.animate();
+
+	const FlamingoLeftDark = new SlideToMinus({
+		selector: flamingoLeftDark,
+		duration: 2000,
+	});
+	FlamingoLeftDark.animate();
+
+	const FlamingoLeftGaga = new SlideToMinus({
+		selector: flamingoLeftGaga,
+		duration: 2000,
+	});
+	FlamingoLeftGaga.animate();
+
+	const FlamingoLeftGagaDark = new SlideToMinus({
+		selector: flamingoLeftGagaDark,
+		duration: 2000,
+	});
+	FlamingoLeftGagaDark.animate();
+
+	const FlamingoRight = new SlideToZero({
+		selector: flamingoRight,
+		duration: 2500,
+	});
+	FlamingoRight.animate();
+
+	const FlamingoRightDark = new SlideToZero({
+		selector: flamingoRightDark,
+		duration: 2500,
+	});
+	FlamingoRightDark.animate();
+
+	const FlamingoRightWing = new SlideToZero({
+		selector: flamingoRightWing,
+		duration: 2500,
+	});
+	FlamingoRightWing.animate();
+
+	const FlamingoRightWingDark = new SlideToZero({
+		selector: flamingoRightWingDark,
+		duration: 2500,
+	});
+	FlamingoRightWingDark.animate();
+
+	const PlantLeft = new SlideToMinus({
+		selector: plantLeft,
+		duration: 2000,
+	});
+	PlantLeft.animate();
+
+	const PlantLeftDark = new SlideToMinus({
+		selector: plantLeftDark,
+		duration: 2000,
+	});
+	PlantLeftDark.animate();
+
+	const PlantRight = new SlideToZero({
+		selector: plantRight,
+		duration: 2000,
+	});
+	PlantRight.animate();
+
+	const PlantRightDark = new SlideToZero({
+		selector: plantRightDark,
+		duration: 2000,
+	});
+	PlantRightDark.animate();
+		
 	setTimeout(() => {
 		flamingoRightWing.classList.remove('slideLeft');
 		flamingoRightWing.classList.add('HandMove');
-		flamingoLeftGaga.classList.remove('slideLeft');
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
@@ -526,17 +921,17 @@ const page6 = () => {
 	}, 3000);
 }
 
-let sequenceInterval05 = setInterval(changeSrc05, 55);
-let counterSequenceInterval05 = 0;
+// let sequenceInterval05 = setInterval(changeSrc05, 55);
+// let counterSequenceInterval05 = 0;
 
-function changeSrc05() {
-	counterSequenceInterval05 += 1;
-	counterSequenceInterval05 > 49 ? 
-		counterSequenceInterval05 = 0 : 
-		document
-			.querySelector('.js-tuzlu-image')
-			.setAttribute('src', `./assets/img/page-05/tuzlu-body/tuzlu_body_${counterSequenceInterval05}.png`);
-}
+// function changeSrc05() {
+// 	counterSequenceInterval05 += 1;
+// 	counterSequenceInterval05 > 49 ? 
+// 		counterSequenceInterval05 = 0 : 
+// 		document
+// 			.querySelector('.js-tuzlu-image')
+// 			.setAttribute('src', `./assets/img/page-05/tuzlu-body/tuzlu_body_${counterSequenceInterval05}.png`);
+// }
 
 const page7 = () => {
 	const tuzluLeft = document.querySelector('.js-page-06-tuzlu-left');
@@ -686,29 +1081,29 @@ const page9 = () => {
 	}, 1000);
 }
 
-let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
-let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
+// let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
+// let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
 	
-let counterTuzlu = 0;
-let counterEar = 0;
+// let counterTuzlu = 0;
+// let counterEar = 0;
 	
-function changeTuzluSrc08() {
-	counterTuzlu += 1;
-	counterTuzlu > 38 ? 
-	counterTuzlu = 0 : 
-		document
-			.querySelector('.js-tuzlu-bulut')
-			.setAttribute('src', `./assets/img/page-08/tuzlu-bulut/tuzlu_bulut_${counterTuzlu}.png`)
-}
+// function changeTuzluSrc08() {
+// 	counterTuzlu += 1;
+// 	counterTuzlu > 38 ? 
+// 	counterTuzlu = 0 : 
+// 		document
+// 			.querySelector('.js-tuzlu-bulut')
+// 			.setAttribute('src', `./assets/img/page-08/tuzlu-bulut/tuzlu_bulut_${counterTuzlu}.png`)
+// }
 
-function changeRabbitSrc() {
-	counterEar += 1;
-	counterEar > 22 ? 
-	counterEar = 0 : 
-		document
-			.querySelector('.js-rabbit-ear')
-			.setAttribute('src', `./assets/img/page-08/rabbit/rabbit_${counterEar}.png`)
-}
+// function changeRabbitSrc() {
+// 	counterEar += 1;
+// 	counterEar > 22 ? 
+// 	counterEar = 0 : 
+// 		document
+// 			.querySelector('.js-rabbit-ear')
+// 			.setAttribute('src', `./assets/img/page-08/rabbit/rabbit_${counterEar}.png`)
+// }
 
 const page10 = () => { 
 	const ayseTeyze = document.querySelector('.js-page-09-ayse-teyze');
@@ -778,13 +1173,13 @@ const page11 = () => {
 	}, 1000);
 }
 
-let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
-let counterTuzlu10 = 0;
+// let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
+// let counterTuzlu10 = 0;
 	
-function changeTuzluSrc10() {
-	counterTuzlu10 > 39 ? counterTuzlu10 = 0 : document.querySelector('.js-tuzlu-surf').setAttribute('src', `./assets/img/page-10/tuzlu-surf/tuzlu_surf_${counterTuzlu10}.png`);
-	counterTuzlu10 += 1;
-}
+// function changeTuzluSrc10() {
+// 	counterTuzlu10 > 39 ? counterTuzlu10 = 0 : document.querySelector('.js-tuzlu-surf').setAttribute('src', `./assets/img/page-10/tuzlu-surf/tuzlu_surf_${counterTuzlu10}.png`);
+// 	counterTuzlu10 += 1;
+// }
 
 const page12 = () => {
 	const lake = document.querySelector('.js-page-11-lake');
@@ -846,16 +1241,16 @@ const page12 = () => {
 	}, 1000);
 }
 
-let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
-let counterTuzlu11 = 0;
-function changeTuzluSrc11() {
-	counterTuzlu11 > 49 ? 
-	counterTuzlu11 = 0 : 
-		document
-			.querySelector('.js-page-11-tuzlu-bulut')
-			.setAttribute('src', `./assets/img/page-11/tuzlu_bulut/tuzlu_bulut_${counterTuzlu11}.png`);
-	counterTuzlu11 += 1;
-};
+// let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
+// let counterTuzlu11 = 0;
+// function changeTuzluSrc11() {
+// 	counterTuzlu11 > 49 ? 
+// 	counterTuzlu11 = 0 : 
+// 		document
+// 			.querySelector('.js-page-11-tuzlu-bulut')
+// 			.setAttribute('src', `./assets/img/page-11/tuzlu_bulut/tuzlu_bulut_${counterTuzlu11}.png`);
+// 	counterTuzlu11 += 1;
+// };
 
 const page13 = () => {
 	const lake = document.querySelector('.js-son-lake');
@@ -925,31 +1320,9 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			setTimeout(()=> {
-				const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
-				const move = document.querySelector('.getFront').querySelectorAll('.move');
-				const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
-				const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
-				const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
-				const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
-				const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
-				const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
-				const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
-				const show = document.querySelector('.getFront').querySelectorAll('.show');
-				const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
-				const talk = document.querySelector('.getFront').querySelectorAll('.talk');
-				slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
-				move?.forEach(elem => elem.classList.remove('move'));
-				fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
-				opacity?.forEach(elem => elem.classList.remove('opacity'));
-				headShake?.forEach(elem => elem.classList.remove('headShake'));
-				slideUp?.forEach(elem => elem.classList.remove('slideUp'));
-				swimming?.forEach(elem => elem.classList.remove('swimming'));
-				HandMove?.forEach(elem => elem.classList.remove('HandMove'));
-				slideDown?.forEach(elem => elem.classList.remove('slideDown'));
-				show?.forEach(elem => elem.classList.remove('show'));
-				flash?.forEach(elem => elem.classList.remove('show'));
-				talk?.forEach(elem => elem.classList.remove('talk'));
-			},1500)
+				const figure = document.querySelector('.getFront').querySelectorAll('figure');
+				figure?.forEach(elem => elem.removeAttribute('style'));
+			},1500);
 			
 			// Section durumunua göre section çemberini ve profil alanınının görünümünü değiştiriyoruz.
 			// if(destination > 1 && destination < 13) {
@@ -1110,83 +1483,83 @@ $(".js-header-profile, .header-profile__box").mouseout(function () {
 
 
 // Image preload
-function preloadImages(array) {
-	if (!preloadImages.list) {
-			preloadImages.list = [];
-	}
-	var list = preloadImages.list;
-	for (var i = 0; i < array.length; i++) {
-			var img = new Image();
-			img.onload = function() {
-					var index = list.indexOf(this);
-					if (index !== -1) {
-							// remove image from the array once it's loaded
-							// for memory consumption reasons
-							list.splice(index, 1);
-					}
-			}
-			list.push(img);
-			img.src = array[i];
-	}
-}
+// function preloadImages(array) {
+// 	if (!preloadImages.list) {
+// 			preloadImages.list = [];
+// 	}
+// 	var list = preloadImages.list;
+// 	for (var i = 0; i < array.length; i++) {
+// 			var img = new Image();
+// 			img.onload = function() {
+// 					var index = list.indexOf(this);
+// 					if (index !== -1) {
+// 							// remove image from the array once it's loaded
+// 							// for memory consumption reasons
+// 							list.splice(index, 1);
+// 					}
+// 			}
+// 			list.push(img);
+// 			img.src = array[i];
+// 	}
+// }
 
-preloadImages([
-	'./assets/img/page-01/yusufcuk/snk1.png',
-	'./assets/img/page-01/yusufcuk/snk2.png',
-	'./assets/img/page-01/yusufcuk/snk3.png',
-	'./assets/img/page-01/yusufcuk/snk4.png',
-	'./assets/img/page-01/yusufcuk/snk5.png',
-	'./assets/img/page-01/yusufcuk/snk6.png',
-	'./assets/img/page-01/yusufcuk/snk7.png',
-	'./assets/img/page-01/yusufcuk/snk8.png',
-	'./assets/img/page-01/yusufcuk/snk9.png',
-	'./assets/img/page-01/yusufcuk/snk11.png',
-	'./assets/img/page-01/yusufcuk/snk12.png',
-	'./assets/img/page-01/yusufcuk/snk13.png',
-	'./assets/img/page-01/yusufcuk/snk14.png',
-	'./assets/img/page-01/yusufcuk/snk15.png',
-	'./assets/img/page-01/yusufcuk/snk16.png',
-	'./assets/img/page-01/yusufcuk/snk17.png',
-	'./assets/img/page-01/yusufcuk/snk18.png',
-	'./assets/img/page-01/yusufcuk/snk19.png',
-	'./assets/img/page-01/yusufcuk/snk20.png',
-	'./assets/img/page-01/yusufcuk/snk21.png',
-	'./assets/img/page-01/yusufcuk/snk22.png',
-	'./assets/img/page-01/yusufcuk/snk23.png',
-	'./assets/img/page-01/yusufcuk/snk24.png',
-	'./assets/img/page-01/yusufcuk/snk25.png',
-	'./assets/img/page-01/yusufcuk/snk26.png',
-	'./assets/img/page-01/yusufcuk/snk27.png',
-	'./assets/img/page-01/yusufcuk/snk28.png',
-	'./assets/img/page-01/yusufcuk/snk29.png',
-	'./assets/img/page-01/yusufcuk/snk30.png',
-	'./assets/img/page-01/yusufcuk/snk31.png',
-	'./assets/img/page-01/yusufcuk/snk32.png',
-	'./assets/img/page-01/yusufcuk/snk33.png',
-	'./assets/img/page-01/yusufcuk/snk34.png',
-	'./assets/img/page-01/yusufcuk/snk35.png',
-	'./assets/img/page-01/yusufcuk/snk36.png',
-	'./assets/img/page-01/yusufcuk/snk37.png',
-	'./assets/img/page-01/yusufcuk/snk38.png',
-	'./assets/img/page-01/yusufcuk/snk39.png',
-	'./assets/img/page-01/yusufcuk/snk40.png',
-	'./assets/img/page-01/yusufcuk/snk41.png',
-	'./assets/img/page-01/yusufcuk/snk42.png',
-	'./assets/img/page-01/yusufcuk/snk43.png',
-	'./assets/img/page-01/yusufcuk/snk44.png',
-	'./assets/img/page-01/yusufcuk/snk45.png',
-	'./assets/img/page-01/yusufcuk/snk46.png',
-	'./assets/img/page-01/yusufcuk/snk47.png',
-	'./assets/img/page-01/yusufcuk/snk48.png',
-	'./assets/img/page-01/yusufcuk/snk49.png',
-	'./assets/img/page-01/yusufcuk/snk50.png',
-	'./assets/img/page-01/yusufcuk/snk51.png',
-	'./assets/img/page-01/yusufcuk/snk52.png',
-	'./assets/img/page-01/yusufcuk/snk53.png',
-	'./assets/img/page-01/yusufcuk/snk54.png',
-	'./assets/img/page-01/yusufcuk/snk55.png',
-	'./assets/img/page-01/yusufcuk/snk56.png',
-	'./assets/img/page-01/yusufcuk/snk57.png',
-	'./assets/img/page-01/yusufcuk/snk58.png',
-	'./assets/img/page-01/yusufcuk/snk59.png'
-]);
+// preloadImages([
+// 	'./assets/img/page-01/yusufcuk/snk1.png',
+// 	'./assets/img/page-01/yusufcuk/snk2.png',
+// 	'./assets/img/page-01/yusufcuk/snk3.png',
+// 	'./assets/img/page-01/yusufcuk/snk4.png',
+// 	'./assets/img/page-01/yusufcuk/snk5.png',
+// 	'./assets/img/page-01/yusufcuk/snk6.png',
+// 	'./assets/img/page-01/yusufcuk/snk7.png',
+// 	'./assets/img/page-01/yusufcuk/snk8.png',
+// 	'./assets/img/page-01/yusufcuk/snk9.png',
+// 	'./assets/img/page-01/yusufcuk/snk11.png',
+// 	'./assets/img/page-01/yusufcuk/snk12.png',
+// 	'./assets/img/page-01/yusufcuk/snk13.png',
+// 	'./assets/img/page-01/yusufcuk/snk14.png',
+// 	'./assets/img/page-01/yusufcuk/snk15.png',
+// 	'./assets/img/page-01/yusufcuk/snk16.png',
+// 	'./assets/img/page-01/yusufcuk/snk17.png',
+// 	'./assets/img/page-01/yusufcuk/snk18.png',
+// 	'./assets/img/page-01/yusufcuk/snk19.png',
+// 	'./assets/img/page-01/yusufcuk/snk20.png',
+// 	'./assets/img/page-01/yusufcuk/snk21.png',
+// 	'./assets/img/page-01/yusufcuk/snk22.png',
+// 	'./assets/img/page-01/yusufcuk/snk23.png',
+// 	'./assets/img/page-01/yusufcuk/snk24.png',
+// 	'./assets/img/page-01/yusufcuk/snk25.png',
+// 	'./assets/img/page-01/yusufcuk/snk26.png',
+// 	'./assets/img/page-01/yusufcuk/snk27.png',
+// 	'./assets/img/page-01/yusufcuk/snk28.png',
+// 	'./assets/img/page-01/yusufcuk/snk29.png',
+// 	'./assets/img/page-01/yusufcuk/snk30.png',
+// 	'./assets/img/page-01/yusufcuk/snk31.png',
+// 	'./assets/img/page-01/yusufcuk/snk32.png',
+// 	'./assets/img/page-01/yusufcuk/snk33.png',
+// 	'./assets/img/page-01/yusufcuk/snk34.png',
+// 	'./assets/img/page-01/yusufcuk/snk35.png',
+// 	'./assets/img/page-01/yusufcuk/snk36.png',
+// 	'./assets/img/page-01/yusufcuk/snk37.png',
+// 	'./assets/img/page-01/yusufcuk/snk38.png',
+// 	'./assets/img/page-01/yusufcuk/snk39.png',
+// 	'./assets/img/page-01/yusufcuk/snk40.png',
+// 	'./assets/img/page-01/yusufcuk/snk41.png',
+// 	'./assets/img/page-01/yusufcuk/snk42.png',
+// 	'./assets/img/page-01/yusufcuk/snk43.png',
+// 	'./assets/img/page-01/yusufcuk/snk44.png',
+// 	'./assets/img/page-01/yusufcuk/snk45.png',
+// 	'./assets/img/page-01/yusufcuk/snk46.png',
+// 	'./assets/img/page-01/yusufcuk/snk47.png',
+// 	'./assets/img/page-01/yusufcuk/snk48.png',
+// 	'./assets/img/page-01/yusufcuk/snk49.png',
+// 	'./assets/img/page-01/yusufcuk/snk50.png',
+// 	'./assets/img/page-01/yusufcuk/snk51.png',
+// 	'./assets/img/page-01/yusufcuk/snk52.png',
+// 	'./assets/img/page-01/yusufcuk/snk53.png',
+// 	'./assets/img/page-01/yusufcuk/snk54.png',
+// 	'./assets/img/page-01/yusufcuk/snk55.png',
+// 	'./assets/img/page-01/yusufcuk/snk56.png',
+// 	'./assets/img/page-01/yusufcuk/snk57.png',
+// 	'./assets/img/page-01/yusufcuk/snk58.png',
+// 	'./assets/img/page-01/yusufcuk/snk59.png'
+// ]);

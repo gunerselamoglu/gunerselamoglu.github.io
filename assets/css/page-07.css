@@ -1,7 +1,7 @@
 .page-07__boy {
   z-index: 3;
 }
-
+/* 
 .page-07__boy.slideLeft {
   animation-name: slideToMinus;
   animation-duration: 2s;
@@ -64,7 +64,7 @@
   animation-duration: 4s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}
+} */
 
 .page-07__content {
   position: absolute;

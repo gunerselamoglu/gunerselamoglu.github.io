@@ -4,84 +4,84 @@
 
 .page-04__rock {
   z-index: 2;
-  transform: translateX(100px);
+  /* transform: translateX(100px); */
 }
 
-.page-04__rock.slideLeft {
+/* .page-04__rock.slideLeft {
   animation-name: slideToZero;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__tuzlu {
+/* .page-04__tuzlu {
   z-index: 2;
   transform: translateX(100px);
-}
+} */
 
-.page-04__tuzlu.slideLeft {
+/* .page-04__tuzlu.slideLeft {
   animation-name: slideToZero;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__tuzlu-cloud {
+/* .page-04__tuzlu-cloud {
   transform: translateX(100px);
-}
+} */
 
-.page-04__tuzlu-cloud.fadeIn {
+/* .page-04__tuzlu-cloud.fadeIn {
   animation-name: slideToZero;
   animation-duration: 2.5s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__ball {
+/* .page-04__ball {
   transform: translateX(100px);
-}
+} */
 
-.page-04__ball.slideLeft {
+/* .page-04__ball.slideLeft {
   animation-name: slideToZero;
   animation-duration: 3s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__tuzlu-friend {
+/* .page-04__tuzlu-friend {
   transform: translateX(100px);
-}
+} */
 
-.page-04__tuzlu-friend.fadeIn {
+/* .page-04__tuzlu-friend.fadeIn {
   animation-name: slideToZero;
   animation-duration: 2.5s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__tuzlu-drink {
+/* .page-04__tuzlu-drink {
   transform: translateX(100px);
-}
+} */
 
-.page-04__tuzlu-drink.fadeIn {
+/* .page-04__tuzlu-drink.fadeIn {
   animation-name: slideToZero;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__tuzlu-drink {
+/* .page-04__tuzlu-drink {
   transform: translateX(100px);
-}
+} */
 
-.page-04__foot-print.slideLeft {
+/* .page-04__foot-print.slideLeft {
   animation-name: slideToZero;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__foot-print.slideLeft 
+/* .page-04__foot-print.slideLeft 
 .page-04__foot-print-1 {
   animation-name: slideToZero;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-}
+} */
 
-.page-04__foot-print.slideLeft 
+/* .page-04__foot-print.slideLeft 
 .page-04__foot-print-2 {
   animation-name: fadeIn;
   animation-duration: 2s;
@@ -129,8 +129,8 @@
   animation-duration: 1s;
   animation-delay: 2.1s;
   animation-fill-mode: forwards; 
-}
-
+} */
+/* 
 .page-04__foot-print-1,
 .page-04__foot-print-2,
 .page-04__foot-print-3,
@@ -140,7 +140,7 @@
 .page-04__foot-print-7,
 .page-04__foot-print-8 {
   opacity: 0;
-}
+} */
 
 .page-04__content-1 {
   position: absolute;

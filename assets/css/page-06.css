@@ -1,4 +1,4 @@
-.page-06__cloud-left.slideLeft {
+/* .page-06__cloud-left.slideLeft {
   animation-name: slideCloud;
   animation-duration: 200s;
   animation-fill-mode: forwards;
@@ -12,8 +12,8 @@
 
 .page-06__tuzlu-right {
   opacity: 0;
-}
-
+} */
+/* 
 .page-06__tuzlu-right.slideLeft {
   animation-name: tuzluRightMove;
   animation-duration: 7s;
@@ -94,7 +94,7 @@
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}
+} */
 
 .page-06__content-1 {
   position: absolute;
