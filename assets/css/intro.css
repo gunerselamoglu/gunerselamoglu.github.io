@@ -21,22 +21,42 @@ section.intro {
   max-width: 168px;
   margin: 0 auto 10px;
   display: block;
-  opacity: 1;
+  opacity: 0;
+}
+
+.intro__ys-logo.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 
 .intro__tuzlu-title {
-  opacity: 1;
+  opacity: 0;
   margin: auto;
   width: auto;
+}
+
+.intro__tuzlu-title.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
 }
 
 .intro__gol-hikayesi {
   max-width: 284px;
   margin:auto;
-  opacity: 1;
+  opacity: 0;
   display: block;
 }
 
+.intro__gol-hikayesi.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
 
 .intro__explanation {
   font-weight: 400;
@@ -46,7 +66,14 @@ section.intro {
   color: #113B55;
   max-width: 520px;
   margin: 20px auto 0;
-  opacity: 1;
+  opacity: 0;
+}
+
+.intro__explanation.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
 }
 
 .intro__register-button {
@@ -69,12 +96,20 @@ section.intro {
   right:0;
   margin: auto;
   z-index: 6;
-  opacity: 1;
+  opacity: 0;
 }
 
 .intro__register-button:hover{
   background: #FFFFFF;
   color: #0067B1;
+}
+
+.intro__register-button.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-direction:alternate;
 }
 
 .intro__start-button-wrapper {
@@ -87,7 +122,15 @@ section.intro {
   left:0;
   right:0;
   margin: auto;
-  opacity: 1;
+  opacity: 0;
+}
+
+.intro__start-button-wrapper.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  animation-direction:alternate;
 }
 
 .intro__start-big-circle {
@@ -170,101 +213,284 @@ section.intro {
   transform: translateY(30%);
 } */
 
-
-.intro__cloud-right-top-blur {
-  opacity: 1;
+.intro__sky.slideUp {
+  animation-name: introSky;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
+.intro__cloud-right-top-blur {
+  opacity: 0;
+}
+
+.intro__cloud-right-top-blur.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
 
 .intro__lake {
+  transform:translateY(100%);
+  visibility: hidden;
   margin-left: -15px;
+}
+
+.intro__lake.slideUp {
+  animation-name: introLake;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .intro__cloud-left {
-  transform: translateY(0);
+  transform: translateY(100%);
+  visibility: hidden;
   margin-left: -15px;
 }
 
+.intro__cloud-left.slideUp{
+  animation-name: leftCloud;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
 .intro__cloud-left-little {
+  transform: translateY(50%);
+  opacity: 0;
+  visibility: hidden;
 }
 
+.intro__cloud-left-little.slideUp {
+  animation-name: cloudLeftLittle;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
 
 .intro__cloud-right {
-
+  transform: translateY(100%);
+  visibility: hidden;
 }
 
+.intro__cloud-right.slideUp {
+  animation-name: rightCloud;
+  animation-duration: 2.4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
 .intro__cloud-right-little {
+  opacity: 0;
   transform: translateY(0);
+  visibility: hidden;
+}
+
+.intro__cloud-right-little.slideUp {
+  animation-name: littleRightCloud;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 .intro__light-effect,
 .intro__light-effect2,
 .intro__light-effect3 {
-
+  opacity: 0;
+  visibility: hidden;
 }
 
+.intro__light-effect.fadeIn,
+.intro__light-effect2.fadeIn,
+.intro__light-effect3.fadeIn {
+  animation-name: introLightEffect;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
 .intro__tuzlu {
+  transform: translateY(100%);
+  visibility: hidden;
 }
 
+.intro__tuzlu.slideUp {
+  animation-name: introTuzlu;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.intro__tuzlu.swimming{
+  animation-name: swimming;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
 
 .intro__fish-shadow {
-
+  right:-15%;
+  opacity: 0;
 }
 
+.intro__fish-shadow.slideLeft {
+  animation-name: introFishShadow;
+  animation-delay: 1.5s;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+}
 
 .intro__fishes-shadow {
-
+  right:-40%;
+  opacity: 0;
 }
 
+.intro__fishes-shadow.slideLeft {
+  animation-name: introFishes;
+  animation-delay: 1.5s;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+}
 
 .intro__rock-left {
-
+  transform: translateY(70%);
+  visibility: hidden;
+  margin-left: -15px;
 }
 
-
+.intro__rock-left.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
 .intro__rock-right {
-
+  transform: translateY(70%);
+  visibility: hidden;
 }
 
-
+.intro__rock-right.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
 .intro__plant-blur {
   z-index: 3;
+  visibility: hidden;
+  transform: translateY(50%);
 }
 
 .intro__fish-red {
-
+  transform: translateY(50%);
 }
 
+.intro__fish-red.slideLeft {
+  animation-name: introFishRed;
+  animation-delay: .5s;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+}
 
 .intro__mussel {
-
+  transform: translateY(50%);
+  visibility: hidden;
 }
 
+.intro__mussel.slideUp {
+  animation-name: introMussel;
+  animation-delay: 1.7s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 
 .intro__bubbles {
-
+  opacity: 0;
+  visibility: hidden;
 }
 
+.intro__bubbles.fadeIn {
+  animation-name: introBubbles;
+  animation-delay: 1.7s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 
+.intro__shrimp {
+  transform: translateY(50%);
+  visibility: hidden;
+}
 
+.intro__shrimp.slideUp {
+  animation-name: introShrimp;
+  animation-delay: 2.2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.intro__plant-blur.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.7s;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+.intro__plant-green {
+  transform: translateY(50%);
+  visibility: hidden;
+}
+
+.intro__plant-green.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
 
 .intro__wave,
 .intro__water {
+  transform: translateY(50%);
   margin-left: -15px;
+  visibility: hidden;
+}
+
+.intro__wave.slideUp,
+.intro__water.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .intro__front-bug {
-
+  transform: translateY(70%);
+  margin-left: -30px;
+  visibility: hidden;
 }
 
+.intro__front-bug.slideUp {
+  animation-name: introWaveWater;
+  animation-delay: 1.5s;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
 
 .intro__mountain {
+  transform: translateY(70%);
   margin-left: -15px;
+  visibility: hidden;
+}
+
+.intro__mountain.slideUp{
+  animation-name: introMountains;
+  animation-delay: 1.5s;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
 }
 
 .intro-mobile.o-section__figure-wrapper 

@@ -1,4 +1,4 @@
-/* .page-11__clouds {
+.page-11__clouds {
   top:-10px;
 }
 
@@ -115,7 +115,7 @@
   animation-name: slideToZero;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
-} */
+}
 
 .page-11__content {
   position: absolute;

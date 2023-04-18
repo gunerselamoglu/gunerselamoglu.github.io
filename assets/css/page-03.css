@@ -1,4 +1,4 @@
-/* .page-03__tuzlu {
+.page-03__tuzlu {
   transform: translateX(100px);
 }
 
@@ -6,7 +6,7 @@
   animation-name: slideToZero;
   animation-duration:2s;
   animation-fill-mode: forwards; 
-} */
+}
 
 .page-03__thunder-white {
   background-color: #fff;
@@ -19,166 +19,166 @@
   z-index: 2;
 }
 
-/* .page-03__cloud {
+.page-03__cloud {
   animation-name: slideToMinus;
   animation-duration: 3s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__thunder-white.flash{
+.page-03__thunder-white.flash{
   animation-name: Page03FlashThunder;
   animation-duration: 6s;
   animation-delay: .5s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__rock-left.slideLeft{
+.page-03__rock-left.slideLeft{
   animation-name: slideToMinus;
   animation-duration: 3s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__rock-left-dark {
+.page-03__rock-left-dark {
   opacity: 0;
   left:-40px;
-} */
+}
 
-/* .page-03__rock-left-dark.show {
+.page-03__rock-left-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
 
-/* .page-03__rock-right {
+.page-03__rock-right {
   transform: translateX(100px);
-} */
+}
 
-/* .page-03__rock-right.slideLeft {
+.page-03__rock-right.slideLeft {
   animation-name: slideToZero;
   animation-duration:2s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__rock-right-dark {
+.page-03__rock-right-dark {
   opacity: 0;
   transform: translateX(100px);
-} */
-/* 
+}
+
 .page-03__rock-right-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__flamingo-left.slideLeft{
+.page-03__flamingo-left.slideLeft{
   animation-name: slideToMinus;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-} */
+}
 
 .page-03__flamingo-left-gaga {
   transform-origin: 32% 7%;
 }
 
-/* .page-03__flamingo-left-gaga.slideLeft {
+.page-03__flamingo-left-gaga.slideLeft {
   animation-name: slideToMinus;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__flamingo-left-gaga.talk {
+.page-03__flamingo-left-gaga.talk {
   animation-name: Page03Talk;
   animation-duration: 1s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__flamingo-left-gaga-dark {
+.page-03__flamingo-left-gaga-dark {
   opacity: 0;
   transform-origin: 32% 7%;
   transform: rotate(-2deg) translateX(-40px);
-} */
+}
 
-/* .page-03__flamingo-left-gaga-dark.show{
+.page-03__flamingo-left-gaga-dark.show{
   animation: Page03Talk 1s , Page03Flash 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
   animation-delay: 2.45s, 0ms;
-} */
+}
 
-/* .page-03__flamingo-left-dark {
+.page-03__flamingo-left-dark {
   opacity: 0;
   transform: translateX(-40px);
-} */
+}
 
-/* .page-03__flamingo-left-dark.show {
+.page-03__flamingo-left-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__flamingo-right {
+.page-03__flamingo-right {
   transform: translateX(100px);
-} */
+}
 
-/* .page-03__flamingo-right.slideLeft {
+.page-03__flamingo-right.slideLeft {
   animation-name: slideToZero;
   animation-duration:2.5s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__flamingo-right-dark {
+.page-03__flamingo-right-dark {
   opacity: 0;
-} */
+}
 
-/* .page-03__flamingo-right-dark.show {
+.page-03__flamingo-right-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__flamingo-right-wing {
+.page-03__flamingo-right-wing {
   transform-origin: 65% 100%;
   transform: translateX(100px);
-} */
+}
 
-/* .page-03__flamingo-right-wing.slideLeft{
+.page-03__flamingo-right-wing.slideLeft{
   animation-name: slideToZero;
   animation-duration: 2.5s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-03__flamingo-right-wing.HandMove { 
+.page-03__flamingo-right-wing.HandMove { 
   animation-name: Page03FlamingoRightWing;
   animation-duration: 5s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
 .page-03__flamingo-right-wing-dark {
   opacity: 0;
   transform-origin: 65% 100%;
 }
 
-/* .page-03__flamingo-right-wing-dark.show{
+.page-03__flamingo-right-wing-dark.show{
   
   animation: Page03FlamingoRightWing 5s, Page03Flash 6s;
   animation-delay: 2.5s, 0ms ;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__plant-left.slideLeft {
+.page-03__plant-left.slideLeft {
   animation-name: slideToMinus;
   animation-duration: 2s;
   animation-fill-mode: forwards; 
-} */
+}
 
 .page-03__plant-left-dark {
   opacity: 0;
@@ -186,14 +186,14 @@
   z-index: 2;
 }
 
-/* .page-03__plant-left-dark.show {
+.page-03__plant-left-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
-/* .page-03__plant-right {
+.page-03__plant-right {
   transform: translateX(100px);
 }
 
@@ -201,19 +201,19 @@
   animation-name: slideToZero;
   animation-duration:2s;
   animation-fill-mode: forwards; 
-} */
+}
 
 .page-03__plant-right-dark {
   opacity: 0;
   z-index: 2;
 }
 
-/* .page-03__plant-right-dark.show {
+.page-03__plant-right-dark.show {
   animation-name: Page03Flash;
   animation-duration: 6s;
   animation-fill-mode: forwards; 
   animation-iteration-count: infinite;
-} */
+}
 
 .page-03__content {
   position: absolute;

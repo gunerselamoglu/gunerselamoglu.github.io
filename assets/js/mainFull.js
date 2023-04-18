@@ -37,51 +37,6 @@ const twitter = document.querySelector('.js-share-tw');
 const introSection = document.querySelector('.js-intro-section');
 let sound = true;
 
-// Animasyonları css'ten çıkardık bu sebeple SOLID prensiplerine uygun yeni fonksiyonlarımızı yazıyoruz.
-class slideToZero {
-  constructor(options) {
-    this.element = options.selector;
-    this.duration = options.duration;
-    this.delay = options.delay || 0;
-  }
-
-  animate() {
-    $(this.element)
-			.css('left', '100px')
-			.delay(this.delay)
-      .animate({ left: 0 }, this.duration);
-  }
-}
-
-class SlideToMinus {
-  constructor(options) {
-    this.element = options.selector;
-    this.duration = options.duration;
-    this.delay = options.delay || 0;
-  }
-
-  animate() {
-    $(this.element)
-			.delay(this.delay)
-			.animate({ left: '-40px' }, { duration: this.duration});
-  }
-}
-
-class FadeInAnimation {
-  constructor(options) {
-    this.element = options.selector;
-    this.duration = options.duration;
-    this.delay = options.delay || 0;
-  }
-
-  animate() {
-    $(this.element)
-			.delay(this.delay)
-			.hide()
-			.fadeIn(this.duration);
-  }
-}
-
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 		setTimeout(()=> {
@@ -314,49 +269,6 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	const cloudRight = new slideToZero({
-		selector: page01CloudRight,
-		duration: 4500
-	});
-	cloudRight.animate();
-
-	const cloudSmall = new SlideToMinus({
-		selector: page01CloudSmall,
-		duration: 3500
-	});
-	cloudSmall.animate();
-
-	const tuzlu = new SlideToMinus({
-		selector: page01Tuzlu,
-		duration: 2000, 
-		delay: 300
-	});
-	tuzlu.animate();
-
-	const slideFlamingos = new slideToZero({
-		selector: page01Flamingos,
-		duration: 2000,
-	});
-	slideFlamingos.animate();
-
-	const plantLeft = new SlideToMinus({
-		selector: page01PlantLeft,
-		duration: 1700,
-	});
-	plantLeft.animate();
-
-	const plantMiddle = new SlideToMinus({
-		selector: page01PlantMiddle,
-		duration: 1700,
-	});
-	plantMiddle.animate();
-
-	const plantRight = new slideToZero({
-		selector: page01PlantRight,
-		duration: 1300,
-	});
-	plantRight.animate();
-
 	// new Parallax(page01CloudRight);
 	// new Parallax(page01CloudSmall);
 	// new Parallax(page01Flamingos);
@@ -385,12 +297,12 @@ const page3 = () => {
 	const decor = document.querySelector('.js-page-02-decor');
 	const cake = document.querySelector('.js-page-02-cake');
 	const flamingos = document.querySelector('.js-page-02-flamingos');
-	const flamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
-	const flamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
-	const flamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
-	const birdFrontRight = document.querySelector('.js-page-02-bird-front-right');
-	const birdTopRight = document.querySelector('.js-page-02-bird-top-right');
-	const fireFly = document.querySelector('.js-page-02-firefly');
+	const page02FlamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
+	const page02FlamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
+	const page02FlamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
+	const page02BirdFrontRight = document.querySelector('.js-page-02-bird-front-right');
+	const page02BirdTopRight = document.querySelector('.js-page-02-bird-top-right');
+	const page02FireFly = document.querySelector('.js-page-02-firefly');
 	const fireflyLight = document.querySelector('.js-firefly-light');
 	const page02Content1 = document.querySelector('.js-page-02-content-1');
 	const page02Content2 = document.querySelector('.js-page-02-content-2');
@@ -407,12 +319,12 @@ const page3 = () => {
 	cloudTop.classList.add('slideLeft');
 	decor.classList.add('slideLeft');
 	cake.classList.add('slideLeft');
-	flamingoRightPink.classList.add('slideLeft');
-	flamingoFrontPink.classList.add('slideLeft');
-	flamingoFrontBlack.classList.add('slideLeft');
-	birdTopRight.classList.add('slideLeft');
-	birdTopRight.classList.add('slideLeft');	
-	fireFly.classList.add('slideLeft');
+	page02FlamingoRightPink.classList.add('slideLeft');
+	page02FlamingoFrontPink.classList.add('slideLeft');
+	page02FlamingoFrontBlack.classList.add('slideLeft');
+	page02BirdFrontRight.classList.add('slideLeft');
+	page02BirdTopRight.classList.add('slideLeft');	
+	page02FireFly.classList.add('slideLeft');
 	fireflyLight.classList.add('slideLeft');
 	page02Content1.classList.add('slideLeft');
 	page02Content2.classList.add('slideLeft');
@@ -423,80 +335,6 @@ const page3 = () => {
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
-
-	const CloudLeft = new SlideToMinus({
-		selector: cloudLeft,
-		duration: 2500
-	});
-	CloudLeft.animate();
-
-	const CloudTop = new SlideToMinus({
-		selector: cloudTop,
-		duration: 3500
-	});
-	CloudTop.animate();
-
-	const Flamingos = new SlideToMinus({
-		selector: flamingos,
-		duration: 1500
-	});
-	Flamingos.animate();
-
-	const Cake = new SlideToMinus({
-		selector: cake,
-		duration: 3000
-	});
-	Cake.animate();
-
-	const Decor = new SlideToMinus({
-		selector: decor,
-		duration: 3000
-	});
-	Decor.animate();
-
-	const BirdTopRight = new SlideToMinus({
-		selector: birdTopRight,
-		duration: 2000
-	});
-	BirdTopRight.animate();
-
-	const FlamingoRightPink = new SlideToMinus({
-		selector: flamingoRightPink,
-		duration: 3200
-	});
-	FlamingoRightPink.animate();
-	
-	const FlamingoFrontPink = new SlideToMinus({
-		selector: flamingoFrontPink,
-		duration: 2500
-	});
-	FlamingoFrontPink.animate();
-
-	const FlamingoFrontBlack = new SlideToMinus({
-		selector: flamingoFrontBlack,
-		duration: 4000
-	});
-	FlamingoFrontBlack.animate();
-
-	const BirdFrontRight = new SlideToMinus({
-		selector: birdFrontRight,
-		duration: 2000
-	});
-	BirdFrontRight.animate();
-	
-	const FireFly = new SlideToMinus({
-		selector: fireFly,
-		duration: 2000
-	});
-	FireFly.animate();
-
-	const FireflyLight = new SlideToMinus({
-		selector: fireflyLight,
-		duration: 2000
-	});
-	FireflyLight.animate();
-	
-
 
 	// new Parallax(lakeFloor);
 	new Parallax(tuzlu);
@@ -1087,9 +925,31 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			setTimeout(()=> {
-				const figure = document.querySelector('.getFront').querySelectorAll('figure');
-				figure?.forEach(elem => elem.removeAttribute('style'));
-			},1500);
+				const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
+				const move = document.querySelector('.getFront').querySelectorAll('.move');
+				const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
+				const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
+				const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
+				const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
+				const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
+				const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
+				const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
+				const show = document.querySelector('.getFront').querySelectorAll('.show');
+				const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
+				const talk = document.querySelector('.getFront').querySelectorAll('.talk');
+				slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
+				move?.forEach(elem => elem.classList.remove('move'));
+				fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
+				opacity?.forEach(elem => elem.classList.remove('opacity'));
+				headShake?.forEach(elem => elem.classList.remove('headShake'));
+				slideUp?.forEach(elem => elem.classList.remove('slideUp'));
+				swimming?.forEach(elem => elem.classList.remove('swimming'));
+				HandMove?.forEach(elem => elem.classList.remove('HandMove'));
+				slideDown?.forEach(elem => elem.classList.remove('slideDown'));
+				show?.forEach(elem => elem.classList.remove('show'));
+				flash?.forEach(elem => elem.classList.remove('show'));
+				talk?.forEach(elem => elem.classList.remove('talk'));
+			},1500)
 			
 			// Section durumunua göre section çemberini ve profil alanınının görünümünü değiştiriyoruz.
 			// if(destination > 1 && destination < 13) {
