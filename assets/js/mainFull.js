@@ -8,7 +8,7 @@ const mapOpen = document.querySelector('.js-open-map');
 const map = document.querySelector('.js-map');
 const sectionsClose = document.querySelector('.js-close-sections');
 const sectionsOpen = document.querySelector('.js-open-sections');
-//const sections = document.querySelector('.js-sections');
+const sections = document.querySelector('.js-sections');
 const sectionsList = document.querySelectorAll('.sections__list-li');
 const sectionMobile = document.querySelectorAll('.section.mobile');
 const sectionsMobile = document.querySelectorAll('.mobile.sections__list-li');
@@ -36,9 +36,6 @@ const facebook = document.querySelector('.js-share-fb');
 const twitter = document.querySelector('.js-share-tw');
 const introSection = document.querySelector('.js-intro-section');
 let sound = true;
-
-const sections = document.querySelectorAll('.o-section');
-    let activeSection = document.querySelector('.active');
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
@@ -907,53 +904,7 @@ const page13 = () => {
 }
 
 function initialization(){
-	debugger;
-  let timeoutId = null;
-    let isBlocked = false;
-
-    function showSection(section) {
-			console.log('section :', section);
-      if (section !== activeSection && !isBlocked) {
-        clearTimeout(timeoutId);
-        activeSection.classList.remove('active');
-        section.classList.add('active');
-        //console.log(`Active section changed to ${section.getAttribute('data-index')}`);
-
-				eval(`page${section.getAttribute('data-index')}()`);
-
-        activeSection = section;
-        isBlocked = true;
-        setTimeout(() => {
-          isBlocked = false;
-        }, 2000);
-      }
-    }
-
-    window.addEventListener('wheel', (event) => {
-      event.preventDefault();
-      const delta = Math.sign(event.deltaY);
-      const index = Array.from(sections).indexOf(activeSection);
-      const newIndex = Math.max(0, Math.min(index + delta, sections.length - 1));
-      const newSection = sections[newIndex];
-      if (newSection !== activeSection) {
-        clearTimeout(timeoutId);
-        showSection(newSection);
-      }
-    }, { passive: false });
-
-    window.addEventListener('keydown', (event) => {
-      event.preventDefault();
-      const delta = (event.key === 'ArrowDown') ? 1 : (event.key === 'ArrowUp') ? -1 : 0;
-      const index = Array.from(sections).indexOf(activeSection);
-      const newIndex = Math.max(0, Math.min(index + delta, sections.length - 1));
-      const newSection = sections[newIndex];
-      if (newSection !== activeSection) {
-        clearTimeout(timeoutId);
-        showSection(newSection);
-      }
-    });  
-	return false;
-	let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
+let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
 
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
