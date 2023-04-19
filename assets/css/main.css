@@ -103,23 +103,23 @@ html {
 section.hide{
   /* -webkit-mask: url("../img/nature-sprite.png");
           mask: url("../img/nature-sprite.png"); */
-  /* -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
           mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
           mask-size: 2300% 100%;
   -webkit-animation: mask-play 2s steps(22) forwards;
-          animation: mask-play 2s steps(22) forwards; */
+          animation: mask-play 2s steps(22) forwards;
 }
 
 section:nth-child(odd).hide {
    /* -webkit-mask: url("../img/nature-sprite.png");
           mask: url("../img/nature-sprite.png"); */
-   /* -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
           mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
           mask-size: 2300% 100%;
   -webkit-animation: mask-play 2s steps(22) forwards;
-          animation: mask-play 2s steps(22) forwards; */
+          animation: mask-play 2s steps(22) forwards;
 }
 
 .show {
@@ -186,7 +186,7 @@ section:nth-child(odd).hide {
   top: 0;
   left: 0;
   height: 100vh;
-  height: calc(var(--vh)*100);
+  /* height: calc(var(--vh)*100); */
   /* -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;

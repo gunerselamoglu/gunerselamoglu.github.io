@@ -1,4 +1,4 @@
-/* .page-10__sun {
+.page-10__sun {
   z-index: 2;
 }
 
@@ -61,7 +61,7 @@
   animation-name: slideLeft10Tuzlu;
   animation-duration: 150s;
   animation-fill-mode: forwards;
-} */
+}
 
 .page-10__content-1 {
   position: absolute;

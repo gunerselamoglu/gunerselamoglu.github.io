@@ -4,7 +4,7 @@
   animation-fill-mode: forwards;
 }
 
-/* .page-01__cloud-right {
+.page-01__cloud-right {
   transform: translateX(3.5%);
 }
 
@@ -12,9 +12,9 @@
   animation-name: cloudSlidePage01;
   animation-duration: 3.5s;
   animation-fill-mode: forwards;
-} */
+}
 
-/* .page-01__cloud-small {
+.page-01__cloud-small {
   transform: translateX(3.5%);
 }
 
@@ -22,55 +22,55 @@
   animation-name: cloudSlidePage01;
   animation-duration: 3.5s;
   animation-fill-mode: forwards;
-} */
+}
 
-/* .page-01__plant-left.slideLeft {
+.page-01__plant-left.slideLeft {
   animation-name: slideLeftPage01PlantLeft;
   animation-duration: 1.7s;
   animation-fill-mode: forwards;  
-} */
+}
 
 .page-01__plant-middle {
   margin-left:40px;
 }
 
-/* .page-01__plant-middle.slideLeft {
+.page-01__plant-middle.slideLeft {
   animation-name: slideLeftPage01PlantMiddle;
   animation-duration: 1.7s;
   animation-fill-mode: forwards;  
-} */
+}
 
-/* .page-01__plant-right {
+.page-01__plant-right {
   right:-120px;
-} */
+}
 
-/* .page-01__plant-right.slideLeft {
+.page-01__plant-right.slideLeft {
   animation-name: slideLeftPage01PlantRight;
   animation-duration: 1.3s;
   animation-fill-mode: forwards; 
-} */
+}
 
-/* .page-01__tuzlu {
+.page-01__tuzlu {
   transform: translateX(0);
-} */
+}
 
-/* .page-01__tuzlu.slideLeft {
+.page-01__tuzlu.slideLeft {
   animation-name: slideLeftPage01Tuzlu;
   animation-duration: 2.2s;
   animation-delay: .3s;
   animation-fill-mode: forwards; 
-} */
-
-.page-01__flamingos {
-  left:100px;
 }
 
-/* .page-01__flamingos.slideLeft {
+.page-01__flamingos {
+  right:-100px
+}
+
+.page-01__flamingos.slideLeft {
   animation-name: slideLeftPage01Flamingos;
   animation-duration: 3s;
   animation-delay: .5s;
   animation-fill-mode: forwards; 
-} */
+}
 
 .page-01__yusufcuk {
   position: absolute;
