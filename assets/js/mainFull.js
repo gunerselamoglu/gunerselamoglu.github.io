@@ -218,23 +218,7 @@ const page1 = () => {
 	new Parallax(introLightEffect);
 	new Parallax(introLightEffect2);
 	new Parallax(introLightEffect3);
-	new Parallax(cloudLeft[0]);
-	new Parallax(cloudLeftLittle[0]);
-	new Parallax(cloudRight[0]);
-	new Parallax(cloudRightLittle[0]);
 	new Parallax(introTuzlu[0]);
-	new Parallax(introWave[0]);
-	new Parallax(introWater[0]);
-	new Parallax(introLake[0]);
-	new Parallax(introRockLeft);
-	new Parallax(introMountain[0]);
-	new Parallax(introFrontBug);
-	new Parallax(introRockRight[0]);
-	new Parallax(introShrimp[0]);
-	new Parallax(introPlantBlur[0]);
-	new Parallax(introPlantGreen[0]);
-	new Parallax(introMussel);
-	new Parallax(introBubbles[0]);
 	
 	voicePlayer.src = './assets/audio/1.mp3';
 
@@ -269,13 +253,7 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(page01CloudRight);
-	new Parallax(page01CloudSmall);
-	new Parallax(page01Flamingos);
 	new Parallax(page01Tuzlu);
-	new Parallax(page01PlantLeft);
-	new Parallax(page01PlantMiddle);
-	new Parallax(page01PlantRight);
 
 	voicePlayer.src = './assets/audio/2.mp3';
 
@@ -336,24 +314,8 @@ const page3 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(lakeFloor);
 	new Parallax(tuzlu);
-	new Parallax(blow);
 	new Parallax(tuzluEyeBall);
-	new Parallax(decor);
-	new Parallax(cake);
-	new Parallax(cloudLeft);
-	new Parallax(cloudTop);
-	new Parallax(page02FlamingoFrontBlack);
-	new Parallax(page02FlamingoFrontPink);
-	new Parallax(page02ConfetiFront);
-	new Parallax(page02ConfetiBack);
-	new Parallax(page02BirdTopRight);
-	new Parallax(page02BirdFrontRight);
-	new Parallax(page02FireFly);
-	new Parallax(fireflyLight);
-	new Parallax(flamingos);
-	new Parallax(page02FlamingoRightPink);
 
 	voicePlayer.src = './assets/audio/3.mp3';
 
@@ -416,25 +378,7 @@ const page4 = () => {
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
-	new Parallax(lakeFloor);
 	new Parallax(tuzlu);
-	new Parallax(cloud);
-	new Parallax(flamingoLeft);
-	new Parallax(flamingoLeftDark);
-	new Parallax(flamingoLeftGaga);
-	new Parallax(flamingoLeftGagaDark);
-	new Parallax(flamingoRight);
-	new Parallax(flamingoRightDark);
-	new Parallax(flamingoRightWing);
-	new Parallax(flamingoRightWingDark);
-	new Parallax(rockLeft);
-	new Parallax(rockLeftDark);
-	new Parallax(rockRight);
-	new Parallax(rockRightDark);
-	new Parallax(plantLeft);
-	new Parallax(plantLeftDark);
-	new Parallax(plantRight);
-	new Parallax(plantRightDark);
 
 	voicePlayer.src = './assets/audio/4.mp3';
 
@@ -472,11 +416,6 @@ const page5 = () => {
 
 	new Parallax(tuzlu);
 	new Parallax(rock);
-	new Parallax(tuzluCloud);
-	new Parallax(tuzluFriend);
-	new Parallax(ball);
-	new Parallax(tuzluDrink);
-	new Parallax(footPrint);
 	
 	voicePlayer.src = './assets/audio/5.mp3';
 
@@ -511,13 +450,7 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(lake);
 	new Parallax(tuzlu);
-	new Parallax(children);
-	new Parallax(cloudTopBig);
-	new Parallax(cloudTopLittle);
-	new Parallax(cloudBottom);
-	new Parallax(plant);
 
 	voicePlayer.src = './assets/audio/6.mp3';
 
@@ -579,18 +512,10 @@ const page7 = () => {
 	content1.classList.add('slideLeft');
 	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
-
-	if (windowWidth > 1024) {
-		new Parallax(child);
-		new Parallax(childArm);
-		new Parallax(childEyes);
-		new Parallax(eyeBrow);
-		new Parallax(tuzluLeft);
-		new Parallax(tuzluCenter);
-		new Parallax(tuzluRight);
-		new Parallax(cloudLeft);
-		new Parallax(cloudRight);
-	}
+	
+	new Parallax(tuzluLeft);
+	new Parallax(tuzluCenter);
+	new Parallax(tuzluRight);
 
 	voicePlayer.src = './assets/audio/7.mp3';
 
@@ -618,13 +543,8 @@ const page8 = () => {
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
-
-	new Parallax(beach);
+	
 	new Parallax(tuzlu);
-	new Parallax(boy);
-	new Parallax(handLeft);
-	new Parallax(handRight);
-	new Parallax(rota);
 
 	setTimeout(() => {
 		tuzlu.classList.remove('slideLeft');
@@ -669,15 +589,7 @@ const page9 = () => {
 	footer.classList.add('fadeIn');
 
 	new Parallax(tuzlu);
-	new Parallax(rabbit);
-	new Parallax(plants);
-	new Parallax(bridge);
-	new Parallax(houses);
-	new Parallax(branch);
 	new Parallax(tuzluBulut);
-	new Parallax(cloudLeft);
-	new Parallax(cloudRight);
-	new Parallax(mountines);
 
 	voicePlayer.src = './assets/audio/9.mp3';
 
@@ -763,13 +675,7 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(clouds);
 	new Parallax(tuzlu);
-	new Parallax(flamingosLittle);
-	new Parallax(flamingosBack);
-	new Parallax(flamingosMiddle);
-	new Parallax(flamingosFront);
-	new Parallax(sun);
 		
 	voicePlayer.src = './assets/audio/11.mp3';
 
@@ -819,20 +725,7 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	new Parallax(lake);
-	new Parallax(sun);
-	new Parallax(clouds);
 	new Parallax(tuzlu);
-	new Parallax(flamingos);
-	new Parallax(balik);
-	new Parallax(baliklar);
-	new Parallax(karides);
-	new Parallax(plantRight);
-	new Parallax(plantLeft);
-	new Parallax(vaweLine);
-	new Parallax(wave);
-	new Parallax(bubble4);
-	new Parallax(bubble5);
 
 	setTimeout(() => {
 		flamingos.classList.remove('slideLeft');
@@ -895,17 +788,11 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(boy[0]);
 	new Parallax(tuzlu[0]);
-	new Parallax(shine);
-	new Parallax(shine2);
-	new Parallax(shine3);
-	new Parallax(lake);
 }
 
 function initialization(){
-let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
-
+	let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
 		responsiveWidth: 1024,
@@ -918,7 +805,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
         counter -= 0.1;
         counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer.pause() + (voicePlayer.currentTime = 0) : voicePlayer.volume = counter;
       }
-
+			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			eval(`page${destination}()`);
 
@@ -949,27 +836,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				flash?.forEach(elem => elem.classList.remove('show'));
 				talk?.forEach(elem => elem.classList.remove('talk'));
 			},1500)
-			
-			// Section durumunua göre section çemberini ve profil alanınının görünümünü değiştiriyoruz.
-			// if(destination > 1 && destination < 13) {
-			// 	sectionsOpen.classList.add('visible');
-			// 	sectionsOpen.classList.remove('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// 	headerPorfile.classList.remove('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	pressKitButton.classList.remove('visible');
-			// 	footerLeft.classList.add('hidden');
-			// 	footerLeft.classList.remove('visible');	
-			// } else {
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');	
-			// }
 
 			// Section çemberi animasyonu
 			sectionsList.forEach(elem => elem.classList.remove('active'));
@@ -984,88 +850,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
         ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
 				:  elem.classList.remove('getFront', 'hide')
 			});
-			// if (anchorLink == 'giris') {
-			// 	intro();
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');	
-			// }
-			// else {
-			// 	sectionsOpen.classList.add('visible');
-			// 	sectionsOpen.classList.remove('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// 	headerPorfile.classList.remove('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	pressKitButton.classList.remove('visible');
-			// 	footerLeft.classList.add('hidden');
-			// 	footerLeft.classList.remove('visible');	
-			// }
-			// if (anchorLink == 'merhaba') {
-			// 	page01();
-			// }
-			// if (anchorLink == 'dogum-gunu') {
-			// 	page02();
-			// }
-			// if (anchorLink == 'birsey-duydum') {
-			// 	page03();
-			// }
-			// if (anchorLink == 'golde-yuruyus') {
-			// 	page04();
-			// }
-			// if (anchorLink == 'bir-planimiz-var') {
-			// 	page05();
-			// 	sequenceInterval05 = setInterval(changeSrc05, 55);
-			// }
-			// else {
-			// 	clearInterval(sequenceInterval05);
-			// }
-			// if (anchorLink == 'yola-koyulduk') {
-			// 	page06();
-			// }
-			// if (anchorLink == 'tasarruf-zamani') {
-			// 	page07();
-			// }
-			// if (anchorLink == 'keyifli-bir-yaz') {
-			// 	page08();
-			// 	 tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
- 			// 	 rabbitInterval08 = setInterval(changeRabbitSrc, 30);
-			// } else {
-			// 	clearInterval(tuzluInterval08);
-			// 	clearInterval(rabbitInterval08);
-			// }
-			// if (anchorLink == 'tasarruf-ettik') {
-			// 	page09();
-			// }
-			// if (anchorLink == 'iyilik-bulasicidir') {
-			// 	page10();
-			// 	tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
-			// }
-			// else {
-			// 	clearInterval(tuzluInterval10);
-			// }
-			// if (anchorLink == 'benim-mirasim-su') {
-			// 	page11();
-			// 	tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
-			// }
-			// else {
-			// 	clearInterval(tuzluInterval11);
-			// }
-			// if (anchorLink == 'son') {
-			// 	son();
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');
-			// }
 		}
 	});
 }
@@ -1077,7 +861,6 @@ $(".js-header-profile, .header-profile__box").mouseover(function () {
 $(".js-header-profile, .header-profile__box").mouseout(function () {
     $(".header-profile__box").removeClass("header-profile__box--show");
 });
-
 
 // pressKitButton.addEventListener('click', () => {
 // 	dataLayer.push({'event': 'tuzlu_print'});
@@ -1106,7 +889,6 @@ $(".js-header-profile, .header-profile__box").mouseout(function () {
 // twitter.addEventListener('click', () => {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
-
 
 // Image preload
 function preloadImages(array) {
