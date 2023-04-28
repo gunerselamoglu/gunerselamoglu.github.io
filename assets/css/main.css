@@ -67,19 +67,6 @@ html {
   visibility: hidden; */
 }
 
-.section.active{
-  z-index: 4;
-  opacity: 1;
-  visibility: visible;
-  display: block;
-}
-
-.section.getFront {
-  z-index: 5;
-  opacity: 1;
-  visibility: visible;
-}
-
 .o-section .o-wrapper {
   height: 100%;
 }
@@ -187,10 +174,24 @@ section:nth-child(odd).hide {
   top: 0;
   left: 0;
   height: 100vh;
-  display: none;
+  /* display: none; */
   width: 100%;
+  visibility: hidden;
+  opacity: 0;
 }
 
+.section.active{
+  z-index: 4;
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
+}
+
+.section.getFront {
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+}
 
 .o-section__figure {
   position: absolute;

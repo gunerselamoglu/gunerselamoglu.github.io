@@ -41,7 +41,7 @@
 
 .page-03__rock-left-dark {
   opacity: 0;
-  left:-40px;
+  margin-left:-40px;
 }
 
 .page-03__rock-left-dark.show {
@@ -112,7 +112,7 @@
 
 .page-03__flamingo-left-dark {
   opacity: 0;
-  transform: translateX(-40px);
+  margin-left: -40px;
 }
 
 .page-03__flamingo-left-dark.show {
@@ -182,7 +182,7 @@
 
 .page-03__plant-left-dark {
   opacity: 0;
-  transform: translateX(-40px);
+  margin-left: -40px;
   z-index: 2;
 }
 
