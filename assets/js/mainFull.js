@@ -283,7 +283,7 @@ const page2 = () => {
 		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
 	},1000);
 
-	const sequenceInterval01 = setInterval(changeSrc, 70);
+	// const sequenceInterval01 = setInterval(changeSrc, 70);
 	let counter = 0;
 	
 	function changeSrc() {
@@ -472,11 +472,11 @@ const page5 = () => {
 
 	new Parallax(tuzlu);
 	new Parallax(rock);
-	// new Parallax(tuzluCloud);
-	// new Parallax(tuzluFriend);
-	// new Parallax(ball);
-	// new Parallax(tuzluDrink);
-	// new Parallax(footPrint);
+	new Parallax(tuzluCloud);
+	new Parallax(tuzluFriend);
+	new Parallax(ball);
+	new Parallax(tuzluDrink);
+	new Parallax(footPrint);
 	
 	voicePlayer.src = './assets/audio/5.mp3';
 
@@ -511,13 +511,13 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(lake);
+	new Parallax(lake);
 	new Parallax(tuzlu);
-	// new Parallax(children);
-	// new Parallax(cloudTopBig);
-	// new Parallax(cloudTopLittle);
-	// new Parallax(cloudBottom);
-	// new Parallax(plant);
+	new Parallax(children);
+	new Parallax(cloudTopBig);
+	new Parallax(cloudTopLittle);
+	new Parallax(cloudBottom);
+	new Parallax(plant);
 
 	voicePlayer.src = './assets/audio/6.mp3';
 
@@ -526,7 +526,7 @@ const page6 = () => {
 	}, 3000);
 }
 
-let sequenceInterval05 = setInterval(changeSrc05, 55);
+// let sequenceInterval05 = setInterval(changeSrc05, 55);
 let counterSequenceInterval05 = 0;
 
 function changeSrc05() {
@@ -580,17 +580,15 @@ const page7 = () => {
 	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 
-	if (windowWidth > 1024) {
-		// new Parallax(child);
-		// new Parallax(childArm);
-		// new Parallax(childEyes);
-		// new Parallax(eyeBrow);
-		new Parallax(tuzluLeft);
-		new Parallax(tuzluCenter);
-		new Parallax(tuzluRight);
-		// new Parallax(cloudLeft);
-		// new Parallax(cloudRight);
-	}
+	new Parallax(child);
+	new Parallax(childArm);
+	new Parallax(childEyes);
+	new Parallax(eyeBrow);
+	new Parallax(tuzluLeft);
+	new Parallax(tuzluCenter);
+	new Parallax(tuzluRight);
+	new Parallax(cloudLeft);
+	new Parallax(cloudRight);
 
 	voicePlayer.src = './assets/audio/7.mp3';
 
@@ -619,12 +617,12 @@ const page8 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(beach);
+	new Parallax(beach);
 	new Parallax(tuzlu);
-	// new Parallax(boy);
-	// new Parallax(handLeft);
-	// new Parallax(handRight);
-	// new Parallax(rota);
+	new Parallax(boy);
+	new Parallax(handLeft);
+	new Parallax(handRight);
+	new Parallax(rota);
 
 	setTimeout(() => {
 		tuzlu.classList.remove('slideLeft');
@@ -669,15 +667,15 @@ const page9 = () => {
 	footer.classList.add('fadeIn');
 
 	new Parallax(tuzlu);
-	// new Parallax(rabbit);
-	// new Parallax(plants);
-	// new Parallax(bridge);
-	// new Parallax(houses);
-	// new Parallax(branch);
+	new Parallax(rabbit);
+	new Parallax(plants);
+	new Parallax(bridge);
+	new Parallax(houses);
+	new Parallax(branch);
 	new Parallax(tuzluBulut);
-	// new Parallax(cloudLeft);
-	// new Parallax(cloudRight);
-	// new Parallax(mountines);
+	new Parallax(cloudLeft);
+	new Parallax(cloudRight);
+	new Parallax(mountines);
 
 	voicePlayer.src = './assets/audio/9.mp3';
 
@@ -686,8 +684,8 @@ const page9 = () => {
 	}, 1000);
 }
 
-let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
-let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
+// let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
+// let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
 	
 let counterTuzlu = 0;
 let counterEar = 0;
@@ -763,13 +761,13 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(clouds);
+	new Parallax(clouds);
 	new Parallax(tuzlu);
-	// new Parallax(flamingosLittle);
-	// new Parallax(flamingosBack);
-	// new Parallax(flamingosMiddle);
-	// new Parallax(flamingosFront);
-	// new Parallax(sun);
+	new Parallax(flamingosLittle);
+	new Parallax(flamingosBack);
+	new Parallax(flamingosMiddle);
+	new Parallax(flamingosFront);
+	new Parallax(sun);
 		
 	voicePlayer.src = './assets/audio/11.mp3';
 
@@ -778,7 +776,7 @@ const page11 = () => {
 	}, 1000);
 }
 
-let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
+// let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
 let counterTuzlu10 = 0;
 	
 function changeTuzluSrc10() {
@@ -819,20 +817,20 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	// new Parallax(lake);
-	// new Parallax(sun);
-	// new Parallax(clouds);
+	new Parallax(lake);
+	new Parallax(sun);
+	new Parallax(clouds);
 	new Parallax(tuzlu);
-	// new Parallax(flamingos);
-	// new Parallax(balik);
-	// new Parallax(baliklar);
-	// new Parallax(karides);
-	// new Parallax(plantRight);
-	// new Parallax(plantLeft);
-	// new Parallax(vaweLine);
-	// new Parallax(wave);
-	// new Parallax(bubble4);
-	// new Parallax(bubble5);
+	new Parallax(flamingos);
+	new Parallax(balik);
+	new Parallax(baliklar);
+	new Parallax(karides);
+	new Parallax(plantRight);
+	new Parallax(plantLeft);
+	new Parallax(vaweLine);
+	new Parallax(wave);
+	new Parallax(bubble4);
+	new Parallax(bubble5);
 
 	setTimeout(() => {
 		flamingos.classList.remove('slideLeft');
@@ -846,7 +844,7 @@ const page12 = () => {
 	}, 1000);
 }
 
-let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
+// let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
 let counterTuzlu11 = 0;
 function changeTuzluSrc11() {
 	counterTuzlu11 > 49 ? 
@@ -895,12 +893,12 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(boy[0]);
+	new Parallax(boy[0]);
 	new Parallax(tuzlu[0]);
-	// new Parallax(shine);
-	// new Parallax(shine2);
-	// new Parallax(shine3);
-	// new Parallax(lake);
+	new Parallax(shine);
+	new Parallax(shine2);
+	new Parallax(shine3);
+	new Parallax(lake);
 }
 
 function initialization(){
@@ -950,27 +948,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				flash?.forEach(elem => elem.classList.remove('show'));
 				talk?.forEach(elem => elem.classList.remove('talk'));
 			},1500)
-			
-			// Section durumunua göre section çemberini ve profil alanınının görünümünü değiştiriyoruz.
-			// if(destination > 1 && destination < 13) {
-			// 	sectionsOpen.classList.add('visible');
-			// 	sectionsOpen.classList.remove('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// 	headerPorfile.classList.remove('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	pressKitButton.classList.remove('visible');
-			// 	footerLeft.classList.add('hidden');
-			// 	footerLeft.classList.remove('visible');	
-			// } else {
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');	
-			// }
 
 			// Section çemberi animasyonu
 			sectionsList.forEach(elem => elem.classList.remove('active'));
@@ -979,94 +956,12 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
-			var activetime;
+			let activetime;
 			sectionList.forEach((elem, indexInner) => {
 				indexInner == index - 1
         ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
 				:  elem.classList.remove('getFront', 'hide')
 			});
-			// if (anchorLink == 'giris') {
-			// 	intro();
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');	
-			// }
-			// else {
-			// 	sectionsOpen.classList.add('visible');
-			// 	sectionsOpen.classList.remove('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// 	headerPorfile.classList.remove('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	pressKitButton.classList.remove('visible');
-			// 	footerLeft.classList.add('hidden');
-			// 	footerLeft.classList.remove('visible');	
-			// }
-			// if (anchorLink == 'merhaba') {
-			// 	page01();
-			// }
-			// if (anchorLink == 'dogum-gunu') {
-			// 	page02();
-			// }
-			// if (anchorLink == 'birsey-duydum') {
-			// 	page03();
-			// }
-			// if (anchorLink == 'golde-yuruyus') {
-			// 	page04();
-			// }
-			// if (anchorLink == 'bir-planimiz-var') {
-			// 	page05();
-			// 	sequenceInterval05 = setInterval(changeSrc05, 55);
-			// }
-			// else {
-			// 	clearInterval(sequenceInterval05);
-			// }
-			// if (anchorLink == 'yola-koyulduk') {
-			// 	page06();
-			// }
-			// if (anchorLink == 'tasarruf-zamani') {
-			// 	page07();
-			// }
-			// if (anchorLink == 'keyifli-bir-yaz') {
-			// 	page08();
-			// 	 tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
- 			// 	 rabbitInterval08 = setInterval(changeRabbitSrc, 30);
-			// } else {
-			// 	clearInterval(tuzluInterval08);
-			// 	clearInterval(rabbitInterval08);
-			// }
-			// if (anchorLink == 'tasarruf-ettik') {
-			// 	page09();
-			// }
-			// if (anchorLink == 'iyilik-bulasicidir') {
-			// 	page10();
-			// 	tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
-			// }
-			// else {
-			// 	clearInterval(tuzluInterval10);
-			// }
-			// if (anchorLink == 'benim-mirasim-su') {
-			// 	page11();
-			// 	tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
-			// }
-			// else {
-			// 	clearInterval(tuzluInterval11);
-			// }
-			// if (anchorLink == 'son') {
-			// 	son();
-			// 	sectionsOpen.classList.add('hidden');
-			// 	sectionsOpen.classList.remove('visible');
-			// 	headerPorfile.classList.add('visible');
-			// 	headerPorfile.classList.remove('hidden');
-			// 	pressKitButton.classList.add('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	footerLeft.classList.add('visible');
-			// 	footerLeft.classList.remove('hidden');
-			// }
 		}
 	});
 }
