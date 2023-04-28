@@ -188,13 +188,7 @@ section:nth-child(odd).hide {
   left: 0;
   height: 100vh;
   display: none;
-  /* height: calc(var(--vh)*100); */
-  /* -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; */
   width: 100%;
-  /* visibility: hidden; */
 }
 
 
@@ -204,7 +198,6 @@ section:nth-child(odd).hide {
   height: calc(100% + 40px);
   pointer-events: none;
   margin-bottom: 0;
-  /* will-change: transform; */
   top:0;
   left: 0;
 }
@@ -226,8 +219,6 @@ section:nth-child(odd).hide {
   object-fit: cover; 
   -o-object-position: center center;
   object-position: center center;
-  /*-webkit-transform: translateZ(0);
-  transform: translateZ(0); */
 }
 
 .o-section__figure-wrapper {
