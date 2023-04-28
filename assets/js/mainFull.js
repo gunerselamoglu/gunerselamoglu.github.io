@@ -598,8 +598,8 @@ const page9 = () => {
 	}, 1000);
 }
 
-let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
-let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
+// let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
+// let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
 	
 let counterTuzlu = 0;
 let counterEar = 0;
@@ -684,7 +684,7 @@ const page11 = () => {
 	}, 1000);
 }
 
-let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
+// let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
 let counterTuzlu10 = 0;
 	
 function changeTuzluSrc10() {
@@ -739,7 +739,7 @@ const page12 = () => {
 	}, 1000);
 }
 
-let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
+// let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
 let counterTuzlu11 = 0;
 function changeTuzluSrc11() {
 	counterTuzlu11 > 49 ? 
