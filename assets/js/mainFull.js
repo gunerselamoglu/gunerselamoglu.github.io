@@ -459,7 +459,7 @@ const page6 = () => {
 	}, 3000);
 }
 
-let sequenceInterval05 = setInterval(changeSrc05, 55);
+// let sequenceInterval05 = setInterval(changeSrc05, 55);
 let counterSequenceInterval05 = 0;
 
 function changeSrc05() {
