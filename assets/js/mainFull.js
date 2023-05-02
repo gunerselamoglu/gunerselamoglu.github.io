@@ -215,26 +215,26 @@ const page1 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(introLightEffect);
-	// new Parallax(introLightEffect2);
-	// new Parallax(introLightEffect3);
-	// new Parallax(cloudLeft[0]);
-	// new Parallax(cloudLeftLittle[0]);
-	// new Parallax(cloudRight[0]);
-	// new Parallax(cloudRightLittle[0]);
-	// new Parallax(introTuzlu[0]);
-	// new Parallax(introWave[0]);
-	// new Parallax(introWater[0]);
-	// new Parallax(introLake[0]);
-	// new Parallax(introRockLeft);
-	// new Parallax(introMountain[0]);
-	// new Parallax(introFrontBug);
-	// new Parallax(introRockRight[0]);
-	// new Parallax(introShrimp[0]);
-	// new Parallax(introPlantBlur[0]);
-	// new Parallax(introPlantGreen[0]);
-	// new Parallax(introMussel);
-	// new Parallax(introBubbles[0]);
+	new Parallax(introLightEffect);
+	new Parallax(introLightEffect2);
+	new Parallax(introLightEffect3);
+	new Parallax(cloudLeft[0]);
+	new Parallax(cloudLeftLittle[0]);
+	new Parallax(cloudRight[0]);
+	new Parallax(cloudRightLittle[0]);
+	new Parallax(introTuzlu[0]);
+	new Parallax(introWave[0]);
+	new Parallax(introWater[0]);
+	new Parallax(introLake[0]);
+	new Parallax(introRockLeft);
+	new Parallax(introMountain[0]);
+	new Parallax(introFrontBug);
+	new Parallax(introRockRight[0]);
+	new Parallax(introShrimp[0]);
+	new Parallax(introPlantBlur[0]);
+	new Parallax(introPlantGreen[0]);
+	new Parallax(introMussel);
+	new Parallax(introBubbles[0]);
 	
 	voicePlayer.src = './assets/audio/1.mp3';
 
@@ -269,13 +269,13 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(page01CloudRight);
-	// new Parallax(page01CloudSmall);
-	// new Parallax(page01Flamingos);
-	// new Parallax(page01Tuzlu);
-	// new Parallax(page01PlantLeft);
-	// new Parallax(page01PlantMiddle);
-	// new Parallax(page01PlantRight);
+	new Parallax(page01CloudRight);
+	new Parallax(page01CloudSmall);
+	new Parallax(page01Flamingos);
+	new Parallax(page01Tuzlu);
+	new Parallax(page01PlantLeft);
+	new Parallax(page01PlantMiddle);
+	new Parallax(page01PlantRight);
 
 	voicePlayer.src = './assets/audio/2.mp3';
 
@@ -347,24 +347,24 @@ const page3 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(lakeFloor);
-	// new Parallax(tuzlu);
-	// new Parallax(blow);
-	// new Parallax(tuzluEyeBall);
-	// new Parallax(decor);
-	// new Parallax(cake);
-	// new Parallax(cloudLeft);
-	// new Parallax(cloudTop);
-	// new Parallax(page02FlamingoFrontBlack);
-	// new Parallax(page02FlamingoFrontPink);
-	// new Parallax(page02ConfetiFront);
-	// new Parallax(page02ConfetiBack);
-	// new Parallax(page02BirdTopRight);
-	// new Parallax(page02BirdFrontRight);
-	// new Parallax(page02FireFly);
-	// new Parallax(fireflyLight);
-	// new Parallax(flamingos);
-	// new Parallax(page02FlamingoRightPink);
+	new Parallax(lakeFloor);
+	new Parallax(tuzlu);
+	new Parallax(blow);
+	new Parallax(tuzluEyeBall);
+	new Parallax(decor);
+	new Parallax(cake);
+	new Parallax(cloudLeft);
+	new Parallax(cloudTop);
+	new Parallax(page02FlamingoFrontBlack);
+	new Parallax(page02FlamingoFrontPink);
+	new Parallax(page02ConfetiFront);
+	new Parallax(page02ConfetiBack);
+	new Parallax(page02BirdTopRight);
+	new Parallax(page02BirdFrontRight);
+	new Parallax(page02FireFly);
+	new Parallax(fireflyLight);
+	new Parallax(flamingos);
+	new Parallax(page02FlamingoRightPink);
 
 	voicePlayer.src = './assets/audio/3.mp3';
 
@@ -427,25 +427,25 @@ const page4 = () => {
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
-	// new Parallax(lakeFloor);
-	// new Parallax(tuzlu);
-	// new Parallax(cloud);
-	// new Parallax(flamingoLeft);
-	// new Parallax(flamingoLeftDark);
-	// new Parallax(flamingoLeftGaga);
-	// new Parallax(flamingoLeftGagaDark);
-	// new Parallax(flamingoRight);
-	// new Parallax(flamingoRightDark);
-	// new Parallax(flamingoRightWing);
-	// new Parallax(flamingoRightWingDark);
-	// new Parallax(rockLeft);
-	// new Parallax(rockLeftDark);
-	// new Parallax(rockRight);
-	// new Parallax(rockRightDark);
-	// new Parallax(plantLeft);
-	// new Parallax(plantLeftDark);
-	// new Parallax(plantRight);
-	// new Parallax(plantRightDark);
+	new Parallax(lakeFloor);
+	new Parallax(tuzlu);
+	new Parallax(cloud);
+	new Parallax(flamingoLeft);
+	new Parallax(flamingoLeftDark);
+	new Parallax(flamingoLeftGaga);
+	new Parallax(flamingoLeftGagaDark);
+	new Parallax(flamingoRight);
+	new Parallax(flamingoRightDark);
+	new Parallax(flamingoRightWing);
+	new Parallax(flamingoRightWingDark);
+	new Parallax(rockLeft);
+	new Parallax(rockLeftDark);
+	new Parallax(rockRight);
+	new Parallax(rockRightDark);
+	new Parallax(plantLeft);
+	new Parallax(plantLeftDark);
+	new Parallax(plantRight);
+	new Parallax(plantRightDark);
 
 	voicePlayer.src = './assets/audio/4.mp3';
 
@@ -481,13 +481,13 @@ const page5 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(tuzlu);
-	// new Parallax(rock);
-	// new Parallax(tuzluCloud);
-	// new Parallax(tuzluFriend);
-	// new Parallax(ball);
-	// new Parallax(tuzluDrink);
-	// new Parallax(footPrint);
+	new Parallax(tuzlu);
+	new Parallax(rock);
+	new Parallax(tuzluCloud);
+	new Parallax(tuzluFriend);
+	new Parallax(ball);
+	new Parallax(tuzluDrink);
+	new Parallax(footPrint);
 	
 	voicePlayer.src = './assets/audio/5.mp3';
 
@@ -522,13 +522,13 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(lake);
-	// new Parallax(tuzlu);
-	// new Parallax(children);
-	// new Parallax(cloudTopBig);
-	// new Parallax(cloudTopLittle);
-	// new Parallax(cloudBottom);
-	// new Parallax(plant);
+	new Parallax(lake);
+	new Parallax(tuzlu);
+	new Parallax(children);
+	new Parallax(cloudTopBig);
+	new Parallax(cloudTopLittle);
+	new Parallax(cloudBottom);
+	new Parallax(plant);
 
 	voicePlayer.src = './assets/audio/6.mp3';
 
@@ -591,15 +591,15 @@ const page7 = () => {
 	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 
-	// new Parallax(child);
-	// new Parallax(childArm);
-	// new Parallax(childEyes);
-	// new Parallax(eyeBrow);
-	// new Parallax(tuzluLeft);
-	// new Parallax(tuzluCenter);
-	// new Parallax(tuzluRight);
-	// new Parallax(cloudLeft);
-	// new Parallax(cloudRight);
+	new Parallax(child);
+	new Parallax(childArm);
+	new Parallax(childEyes);
+	new Parallax(eyeBrow);
+	new Parallax(tuzluLeft);
+	new Parallax(tuzluCenter);
+	new Parallax(tuzluRight);
+	new Parallax(cloudLeft);
+	new Parallax(cloudRight);
 
 	voicePlayer.src = './assets/audio/7.mp3';
 
@@ -628,12 +628,12 @@ const page8 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(beach);
-	// new Parallax(tuzlu);
-	// new Parallax(boy);
-	// new Parallax(handLeft);
-	// new Parallax(handRight);
-	// new Parallax(rota);
+	new Parallax(beach);
+	new Parallax(tuzlu);
+	new Parallax(boy);
+	new Parallax(handLeft);
+	new Parallax(handRight);
+	new Parallax(rota);
 
 	setTimeout(() => {
 		tuzlu.classList.remove('slideLeft');
@@ -677,16 +677,16 @@ const page9 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(tuzlu);
-	// new Parallax(rabbit);
-	// new Parallax(plants);
-	// new Parallax(bridge);
-	// new Parallax(houses);
-	// new Parallax(branch);
-	// new Parallax(tuzluBulut);
-	// new Parallax(cloudLeft);
-	// new Parallax(cloudRight);
-	// new Parallax(mountines);
+	new Parallax(tuzlu);
+	new Parallax(rabbit);
+	new Parallax(plants);
+	new Parallax(bridge);
+	new Parallax(houses);
+	new Parallax(branch);
+	new Parallax(tuzluBulut);
+	new Parallax(cloudLeft);
+	new Parallax(cloudRight);
+	new Parallax(mountines);
 
 	voicePlayer.src = './assets/audio/9.mp3';
 
@@ -738,9 +738,9 @@ const page10 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(ayseTeyze);
-	// new Parallax(hasanAmca);
-	// new Parallax(rasimAmca);
+	new Parallax(ayseTeyze);
+	new Parallax(hasanAmca);
+	new Parallax(rasimAmca);
 	
 	voicePlayer.src = './assets/audio/10.mp3';
 
@@ -772,13 +772,13 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(clouds);
-	// new Parallax(tuzlu);
-	// new Parallax(flamingosLittle);
-	// new Parallax(flamingosBack);
-	// new Parallax(flamingosMiddle);
-	// new Parallax(flamingosFront);
-	// new Parallax(sun);
+	new Parallax(clouds);
+	new Parallax(tuzlu);
+	new Parallax(flamingosLittle);
+	new Parallax(flamingosBack);
+	new Parallax(flamingosMiddle);
+	new Parallax(flamingosFront);
+	new Parallax(sun);
 		
 	voicePlayer.src = './assets/audio/11.mp3';
 
@@ -828,20 +828,20 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	// new Parallax(lake);
-	// new Parallax(sun);
-	// new Parallax(clouds);
-	// new Parallax(tuzlu);
-	// new Parallax(flamingos);
-	// new Parallax(balik);
-	// new Parallax(baliklar);
-	// new Parallax(karides);
-	// new Parallax(plantRight);
-	// new Parallax(plantLeft);
-	// new Parallax(vaweLine);
-	// new Parallax(wave);
-	// new Parallax(bubble4);
-	// new Parallax(bubble5);
+	new Parallax(lake);
+	new Parallax(sun);
+	new Parallax(clouds);
+	new Parallax(tuzlu);
+	new Parallax(flamingos);
+	new Parallax(balik);
+	new Parallax(baliklar);
+	new Parallax(karides);
+	new Parallax(plantRight);
+	new Parallax(plantLeft);
+	new Parallax(vaweLine);
+	new Parallax(wave);
+	new Parallax(bubble4);
+	new Parallax(bubble5);
 
 	setTimeout(() => {
 		flamingos.classList.remove('slideLeft');
@@ -904,12 +904,12 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// new Parallax(boy[0]);
-	// new Parallax(tuzlu[0]);
-	// new Parallax(shine);
-	// new Parallax(shine2);
-	// new Parallax(shine3);
-	// new Parallax(lake);
+	new Parallax(boy[0]);
+	new Parallax(tuzlu[0]);
+	new Parallax(shine);
+	new Parallax(shine2);
+	new Parallax(shine3);
+	new Parallax(lake);
 }
 
 function initialization(){
