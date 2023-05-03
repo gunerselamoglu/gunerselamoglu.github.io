@@ -209,10 +209,6 @@ section.intro {
   background: linear-gradient(180deg, rgba(3, 10, 24, 0) 40.66%, rgba(19, 69, 105, 0.91) 149.65%);
 }
 
-/* .intro__sky {
-  transform: translateY(30%);
-} */
-
 .intro__sky.slideUp {
   animation-name: introSky;
   animation-duration: 2s;

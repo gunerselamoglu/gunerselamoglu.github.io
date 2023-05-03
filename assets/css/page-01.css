@@ -80,6 +80,13 @@
   bottom: 0;
 }
 
+.page-01__yusufcuk img {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .page-01__content {
   position: absolute;
   color:#113B55;

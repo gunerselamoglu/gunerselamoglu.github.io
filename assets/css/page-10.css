@@ -57,6 +57,13 @@
   z-index: 2;
 }
 
+.page-10__tuzlu img {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .page-10__tuzlu.slideLeft {
   animation-name: slideLeft10Tuzlu;
   animation-duration: 150s;
@@ -154,49 +161,4 @@
   .page-10__content-2 {
     display: none;
   }
-}
-
-.hiddenLoader10 {
-  visibility: hidden;
-  background-image: 
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_0.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_1.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_2.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_3.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_4.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_5.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_6.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_7.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_8.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_9.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_11.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_12.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_13.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_14.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_15.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_16.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_17.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_18.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_19.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_20.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_21.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_22.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_23.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_24.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_25.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_26.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_27.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_28.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_29.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_30.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_31.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_32.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_33.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_34.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_35.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_36.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_37.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_38.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_39.png'),
-  url('../img/page-10/tuzlu-surf/tuzlu_surf_40.png');
 }

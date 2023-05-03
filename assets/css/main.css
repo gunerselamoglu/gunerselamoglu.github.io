@@ -150,8 +150,6 @@ section:nth-child(odd).hide {
 }
 
 .hidden {
-  opacity: 0;
-  visibility: hidden;
   animation-name: hiddenAnimate;
   animation-duration: .3s;
   animation-delay: .3s;
@@ -159,8 +157,6 @@ section:nth-child(odd).hide {
 }
 
 .visible {
-  opacity: 1;
-  visibility: visible;
   animation-name: visibleAnimate;
   animation-duration: .3s;
   animation-delay: .3s;

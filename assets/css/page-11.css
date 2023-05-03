@@ -17,6 +17,13 @@
   transform: translateX(100px);
 }
 
+.page-11__tuzlu img {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .page-11__tuzlu.slideLeft{
   animation-name: slideToZero;
   animation-duration: 2s;
@@ -169,59 +176,4 @@
   .page-11__boy-arm {
     transform-origin: 30% 54%;
   }
-}
-
-.hiddenLoader11 {
-  visibility: hidden;
-  background-image: 
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_0.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_1.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_2.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_3.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_4.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_5.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_6.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_7.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_8.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_9.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_11.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_12.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_13.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_14.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_15.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_16.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_17.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_18.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_19.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_20.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_21.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_22.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_23.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_24.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_25.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_26.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_27.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_28.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_29.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_30.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_31.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_32.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_33.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_34.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_35.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_36.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_37.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_38.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_39.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_40.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_41.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_42.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_43.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_44.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_45.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_46.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_47.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_48.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_49.png'),
-  url('../img/page-11/tuzlu_bulut/tuzlu_bulut_50.png');
 }

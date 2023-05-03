@@ -13,7 +13,7 @@ const sectionsList = document.querySelectorAll('.sections__list-li');
 const sectionMobile = document.querySelectorAll('.section.mobile');
 const sectionsMobile = document.querySelectorAll('.mobile.sections__list-li');
 const musicPlayer = document.querySelector('.js-music-player');
-const voicePlayer = document.querySelector('.js-voice-player');
+const voicePlayer = document.querySelectorAll('.js-voice-player');
 const soundControl = document.querySelector('.js-sound-control');
 const pageOrder = document.querySelector('.js-pages-index');
 const startSound = document.querySelector('.js-start-sound');
@@ -36,6 +36,7 @@ const facebook = document.querySelector('.js-share-fb');
 const twitter = document.querySelector('.js-share-tw');
 const introSection = document.querySelector('.js-intro-section');
 let sound = true;
+let activeSection = 0;
 
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
@@ -76,7 +77,7 @@ document.onreadystatechange = () => {
 };
 
 soundControl?.addEventListener('click', () => {
-	musicPlayer.paused && voicePlayer.paused ? musicPlayer.play() + voicePlayer.play() + soundControl.classList.add('play') + (sound = true) : musicPlayer.pause() + voicePlayer.pause() + soundControl.classList.remove('play') + (sound = false);
+	musicPlayer.paused ? musicPlayer.play() + voicePlayer[activeSection - 1].play() + (voicePlayer[activeSection - 1].volume = 1) + soundControl.classList.add('play') + (sound = true) : musicPlayer.pause() + voicePlayer.forEach(player => player.pause()) + soundControl.classList.remove('play') + (sound = false);
 });
 
 mapClose?.addEventListener('click', event => {
@@ -235,11 +236,9 @@ const page1 = () => {
 	new Parallax(introPlantGreen[0]);
 	new Parallax(introMussel);
 	new Parallax(introBubbles[0]);
-	
-	voicePlayer.src = './assets/audio/1.mp3';
 
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
 	},2500);
 }
 
@@ -253,7 +252,7 @@ const page2 = () => {
 	const page01Tuzlu = document.querySelector('.js-page-01-tuzlu');
 	const page01Flamingos = document.querySelector('.js-page-01-flamingos');
 	const page01Content = document.querySelector('.js-page-01-content');
-	const yusufcuk = document.querySelector('.js-page-01-yusufcuk');
+	const yusufcuk = document.querySelectorAll('.js-page-01-yusufcuk');
 	
 	page01Lake.classList.add('slideLeft');
 	page01PlantLeft.classList.add('slideLeft');
@@ -277,29 +276,16 @@ const page2 = () => {
 	new Parallax(page01PlantMiddle);
 	new Parallax(page01PlantRight);
 
-	voicePlayer.src = './assets/audio/2.mp3';
-
-	const images = [];
-	for (let i = 1; i <= 59; i++) {
-		const img = new Image();
-		img.src = `./assets/img/page-01/yusufcuk/snk${i}.png`;
-		images.push(img);
-	}
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
 	},1000);
 
 	const sequenceInterval01 = setInterval(changeSrc, 70);
 	let counter = 0;
-
+	
 	function changeSrc() {
 		counter += 1;
-		if (counter > 59) {
-			clearInterval(sequenceInterval01);
-		} else {
-			yusufcuk.setAttribute('src', images[counter].src);
-		}
+		counter > 58 ? clearInterval(sequenceInterval01) : (yusufcuk[counter].style.visibility = 'visible') + (yusufcuk[counter - 1].style.visibility = 'hidden')
 	}
 }
 
@@ -366,10 +352,8 @@ const page3 = () => {
 	new Parallax(flamingos);
 	new Parallax(page02FlamingoRightPink);
 
-	voicePlayer.src = './assets/audio/3.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false;
 	},1000);
 }
 
@@ -447,10 +431,8 @@ const page4 = () => {
 	new Parallax(plantRight);
 	new Parallax(plantRightDark);
 
-	voicePlayer.src = './assets/audio/4.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false;
 	},1000);
 }
 
@@ -488,17 +470,16 @@ const page5 = () => {
 	new Parallax(ball);
 	new Parallax(tuzluDrink);
 	new Parallax(footPrint);
-	
-	voicePlayer.src = './assets/audio/5.mp3';
 
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
-	}, 5500);
+		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false;
+	}, 1500);
 }
 
 const page6 = () => {
 	const lake = document.querySelector('.js-page-05-lake');
 	const tuzlu = document.querySelector('.js-page-05-tuzlu');
+	const tuzluBody = document.querySelectorAll('.js-tuzlu-image');
 	const children = document.querySelector('.js-page-05-children');
 	const plant = document.querySelector('.js-page-05-plant');
 	const cloudTopBig = document.querySelector('.js-page-05-cloud-top-big');
@@ -530,23 +511,24 @@ const page6 = () => {
 	new Parallax(cloudBottom);
 	new Parallax(plant);
 
-	voicePlayer.src = './assets/audio/6.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
-	}, 3000);
-}
+		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
+	}, 1000);
 
-// let sequenceInterval05 = setInterval(changeSrc05, 55);
-let counterSequenceInterval05 = 0;
-
-function changeSrc05() {
-	counterSequenceInterval05 += 1;
-	counterSequenceInterval05 > 49 ? 
-		counterSequenceInterval05 = 0 : 
-		document
-			.querySelector('.js-tuzlu-image')
-			.setAttribute('src', `./assets/img/page-05/tuzlu-body/tuzlu_body_${counterSequenceInterval05}.png`);
+	const sequenceInterval = setInterval(changeSrc, 55);
+	let counter = 0;
+	
+	function changeSrc() {
+		counter += 1;
+		if(counter > 50) {
+			tuzluBody[50].style.visibility = 'hidden';
+			tuzluBody[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluBody[counter].style.visibility = 'visible';
+			tuzluBody[counter - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page7 = () => {
@@ -601,10 +583,8 @@ const page7 = () => {
 	new Parallax(cloudLeft);
 	new Parallax(cloudRight);
 
-	voicePlayer.src = './assets/audio/7.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false;
 	}, 2000);
 }
 
@@ -643,11 +623,9 @@ const page8 = () => {
 		handLeft.classList.add('opacity');
 	}, 2500);
 
-	voicePlayer.src = './assets/audio/8.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
-	}, 3000);
+		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
+	}, 1000);
 }
 
 const page9 = () => { 
@@ -662,6 +640,8 @@ const page9 = () => {
 	const cloudLeft = document.querySelector('.js-page-08-cloud-right');
 	const cloudRight = document.querySelector('.js-page-08-cloud-left')
 	const mountines = document.querySelector('.js-page-08-mountains');
+	const tuzlubBulut = document.querySelectorAll('.js-tuzlu-bulut');
+	const rabbitEar = document.querySelectorAll('.js-rabbit-ear');
 
 	rabbit.classList.add('slideLeft');
 	plants.classList.add('slideLeft');
@@ -688,35 +668,39 @@ const page9 = () => {
 	new Parallax(cloudRight);
 	new Parallax(mountines);
 
-	voicePlayer.src = './assets/audio/9.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
 	}, 1000);
-}
 
-// let tuzluInterval08 = setInterval(changeTuzluSrc08, 30);
-// let rabbitInterval08 = setInterval(changeRabbitSrc, 30);
-	
-let counterTuzlu = 0;
-let counterEar = 0;
-	
-function changeTuzluSrc08() {
-	counterTuzlu += 1;
-	counterTuzlu > 38 ? 
-	counterTuzlu = 0 : 
-		document
-			.querySelector('.js-tuzlu-bulut')
-			.setAttribute('src', `./assets/img/page-08/tuzlu-bulut/tuzlu_bulut_${counterTuzlu}.png`)
-}
+	const tuzluInterval = setInterval(changetTuzluSrc, 30);
+	const rabbitInterval = setInterval(changetRabbitSrc, 30);
 
-function changeRabbitSrc() {
-	counterEar += 1;
-	counterEar > 22 ? 
-	counterEar = 0 : 
-		document
-			.querySelector('.js-rabbit-ear')
-			.setAttribute('src', `./assets/img/page-08/rabbit/rabbit_${counterEar}.png`)
+	let counterTuzlu = 0;
+	let counterRabbit = 0;
+
+	function changetTuzluSrc() {
+		counterTuzlu += 1;
+		if(counterTuzlu > 39) {
+			tuzlubBulut[39].style.visibility = 'hidden';
+			tuzlubBulut[0].style.visibility = 'visible';
+			counterTuzlu = 0;
+		} else {
+			tuzlubBulut[counterTuzlu].style.visibility = 'visible';
+			tuzlubBulut[counterTuzlu - 1].style.visibility = 'hidden';
+		}
+	}
+
+	function changetRabbitSrc() {
+		counterRabbit += 1;
+		if(counterRabbit > 23) {
+			rabbitEar[23].style.visibility = 'hidden';
+			rabbitEar[0].style.visibility = 'visible';
+			counterRabbit = 0;
+		} else {
+			rabbitEar[counterRabbit].style.visibility = 'visible';
+			rabbitEar[counterRabbit - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page10 = () => { 
@@ -741,11 +725,9 @@ const page10 = () => {
 	new Parallax(ayseTeyze);
 	new Parallax(hasanAmca);
 	new Parallax(rasimAmca);
-	
-	voicePlayer.src = './assets/audio/10.mp3';
 
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false;
 	}, 1000);
 }
 
@@ -759,6 +741,7 @@ const page11 = () => {
 	const flamingosFront = document.querySelector('.js-page-10-flamingos-front');
 	const content1 = document.querySelector('.js-page-10-content-1');
 	const content2 = document.querySelector('.js-page-10-content-2');
+	const tuzluSurf = document.querySelectorAll('.js-tuzlu-surf');
 
 	tuzlu.classList.add('slideLeft');
 	flamingosLittle.classList.add('slideLeft');
@@ -779,20 +762,25 @@ const page11 = () => {
 	new Parallax(flamingosMiddle);
 	new Parallax(flamingosFront);
 	new Parallax(sun);
-		
-	voicePlayer.src = './assets/audio/11.mp3';
 
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
 	}, 1000);
-}
 
-// let tuzluInterval10 = setInterval(changeTuzluSrc10, 30);
-let counterTuzlu10 = 0;
-	
-function changeTuzluSrc10() {
-	counterTuzlu10 > 39 ? counterTuzlu10 = 0 : document.querySelector('.js-tuzlu-surf').setAttribute('src', `./assets/img/page-10/tuzlu-surf/tuzlu_surf_${counterTuzlu10}.png`);
-	counterTuzlu10 += 1;
+	let tuzluInterval = setInterval(changeSrc, 30);
+	let counter = 0;
+
+	function changeSrc() {
+		counter += 1;
+		if(counter > 40) {
+			tuzluSurf[40].style.visibility = 'hidden';
+			tuzluSurf[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluSurf[counter].style.visibility = 'visible';
+			tuzluSurf[counter - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page12 = () => {
@@ -811,6 +799,7 @@ const page12 = () => {
 	const bubble5 = document.querySelector('.js-page-11-bubble-5');
 	const vaweLine = document.querySelector('.js-page-11-wave-line');
 	const wave = document.querySelector('.js-page-11-wave');
+	const tuzluBulut = document.querySelectorAll('.js-page-11-tuzlu-bulut');
 
 	clouds.classList.add('slideLeft');
 	flamingos.classList.add('slideLeft');
@@ -848,23 +837,25 @@ const page12 = () => {
 		flamingos.classList.add('move');
 	}	, 2000);
 
-	voicePlayer.src = './assets/audio/12.mp3';
-
 	setTimeout(() => {
-		sound ? voicePlayer.play() + (voicePlayer.volume = 1) : false;
+		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
 	}, 1000);
-}
 
-// let tuzluInterval11 = setInterval(changeTuzluSrc11, 30);
-let counterTuzlu11 = 0;
-function changeTuzluSrc11() {
-	counterTuzlu11 > 49 ? 
-	counterTuzlu11 = 0 : 
-		document
-			.querySelector('.js-page-11-tuzlu-bulut')
-			.setAttribute('src', `./assets/img/page-11/tuzlu_bulut/tuzlu_bulut_${counterTuzlu11}.png`);
-	counterTuzlu11 += 1;
-};
+	let tuzluInterval = setInterval(changeSrc, 30);
+	let counter = 0;
+
+	function changeSrc() {
+		counter += 1;
+		if(counter > 48) {
+			tuzluBulut[48].style.visibility = 'hidden';
+			tuzluBulut[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluBulut[counter].style.visibility = 'visible';
+			tuzluBulut[counter - 1].style.visibility = 'hidden';
+		}
+	}
+}
 
 const page13 = () => {
 	const lake = document.querySelector('.js-son-lake');
@@ -918,18 +909,26 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
 		responsiveWidth: 1024,
-		onLeave: function(origin, destination, direction){
+		onLeave: function(origin, destination, direction){	
 			sectionList[origin - 1].classList.add('hide');
-      const soundInterval = setInterval(changeSrc, 100);
-      let counter = 1;
+
+      // const soundInterval = setInterval(muteSlide, 100);
+      // let counter = 1;
       
-      function changeSrc() {
-        counter -= 0.1;
-        counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer.pause() + (voicePlayer.currentTime = 0) : voicePlayer.volume = counter;
-      }
+      // function muteSlide() {
+      //   counter -= 0.1;
+      //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
+      // }
 			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			eval(`page${destination}()`);
+
+			// Section menü görünümünü ayarlıyoruz
+			if(destination == 1 || destination == 13) {
+				sectionsOpen.classList.remove('visible');
+			} else {
+				sectionsOpen.classList.add('visible');
+			}
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			setTimeout(()=> {
@@ -957,7 +956,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				show?.forEach(elem => elem.classList.remove('show'));
 				flash?.forEach(elem => elem.classList.remove('show'));
 				talk?.forEach(elem => elem.classList.remove('talk'));
-			},1700)
+			},1700);
 
 			// Section çemberi animasyonu
 			sectionsList.forEach(elem => elem.classList.remove('active'));
@@ -966,6 +965,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
+			activeSection = index;
 			let activetime;
 			sectionList.forEach((elem, indexInner) => {
 				indexInner == index - 1
@@ -1012,86 +1012,3 @@ $(".js-header-profile, .header-profile__box").mouseout(function () {
 // twitter.addEventListener('click', () => {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
-
-
-// Image preload
-function preloadImages(array) {
-	if (!preloadImages.list) {
-			preloadImages.list = [];
-	}
-	var list = preloadImages.list;
-	for (var i = 0; i < array.length; i++) {
-			var img = new Image();
-			img.onload = function() {
-					var index = list.indexOf(this);
-					if (index !== -1) {
-							// remove image from the array once it's loaded
-							// for memory consumption reasons
-							list.splice(index, 1);
-					}
-			}
-			list.push(img);
-			img.src = array[i];
-	}
-}
-
-preloadImages([
-	'./assets/img/page-01/yusufcuk/snk1.png',
-	'./assets/img/page-01/yusufcuk/snk2.png',
-	'./assets/img/page-01/yusufcuk/snk3.png',
-	'./assets/img/page-01/yusufcuk/snk4.png',
-	'./assets/img/page-01/yusufcuk/snk5.png',
-	'./assets/img/page-01/yusufcuk/snk6.png',
-	'./assets/img/page-01/yusufcuk/snk7.png',
-	'./assets/img/page-01/yusufcuk/snk8.png',
-	'./assets/img/page-01/yusufcuk/snk9.png',
-	'./assets/img/page-01/yusufcuk/snk11.png',
-	'./assets/img/page-01/yusufcuk/snk12.png',
-	'./assets/img/page-01/yusufcuk/snk13.png',
-	'./assets/img/page-01/yusufcuk/snk14.png',
-	'./assets/img/page-01/yusufcuk/snk15.png',
-	'./assets/img/page-01/yusufcuk/snk16.png',
-	'./assets/img/page-01/yusufcuk/snk17.png',
-	'./assets/img/page-01/yusufcuk/snk18.png',
-	'./assets/img/page-01/yusufcuk/snk19.png',
-	'./assets/img/page-01/yusufcuk/snk20.png',
-	'./assets/img/page-01/yusufcuk/snk21.png',
-	'./assets/img/page-01/yusufcuk/snk22.png',
-	'./assets/img/page-01/yusufcuk/snk23.png',
-	'./assets/img/page-01/yusufcuk/snk24.png',
-	'./assets/img/page-01/yusufcuk/snk25.png',
-	'./assets/img/page-01/yusufcuk/snk26.png',
-	'./assets/img/page-01/yusufcuk/snk27.png',
-	'./assets/img/page-01/yusufcuk/snk28.png',
-	'./assets/img/page-01/yusufcuk/snk29.png',
-	'./assets/img/page-01/yusufcuk/snk30.png',
-	'./assets/img/page-01/yusufcuk/snk31.png',
-	'./assets/img/page-01/yusufcuk/snk32.png',
-	'./assets/img/page-01/yusufcuk/snk33.png',
-	'./assets/img/page-01/yusufcuk/snk34.png',
-	'./assets/img/page-01/yusufcuk/snk35.png',
-	'./assets/img/page-01/yusufcuk/snk36.png',
-	'./assets/img/page-01/yusufcuk/snk37.png',
-	'./assets/img/page-01/yusufcuk/snk38.png',
-	'./assets/img/page-01/yusufcuk/snk39.png',
-	'./assets/img/page-01/yusufcuk/snk40.png',
-	'./assets/img/page-01/yusufcuk/snk41.png',
-	'./assets/img/page-01/yusufcuk/snk42.png',
-	'./assets/img/page-01/yusufcuk/snk43.png',
-	'./assets/img/page-01/yusufcuk/snk44.png',
-	'./assets/img/page-01/yusufcuk/snk45.png',
-	'./assets/img/page-01/yusufcuk/snk46.png',
-	'./assets/img/page-01/yusufcuk/snk47.png',
-	'./assets/img/page-01/yusufcuk/snk48.png',
-	'./assets/img/page-01/yusufcuk/snk49.png',
-	'./assets/img/page-01/yusufcuk/snk50.png',
-	'./assets/img/page-01/yusufcuk/snk51.png',
-	'./assets/img/page-01/yusufcuk/snk52.png',
-	'./assets/img/page-01/yusufcuk/snk53.png',
-	'./assets/img/page-01/yusufcuk/snk54.png',
-	'./assets/img/page-01/yusufcuk/snk55.png',
-	'./assets/img/page-01/yusufcuk/snk56.png',
-	'./assets/img/page-01/yusufcuk/snk57.png',
-	'./assets/img/page-01/yusufcuk/snk58.png',
-	'./assets/img/page-01/yusufcuk/snk59.png'
-]);
