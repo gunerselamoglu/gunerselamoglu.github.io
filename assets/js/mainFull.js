@@ -926,8 +926,12 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// Section menü görünümünü ayarlıyoruz
 			if(destination == 1 || destination == 13) {
 				sectionsOpen.classList.remove('visible');
+				pressKitButton.classList.remove('hidden');
+				headerPorfile.classList.remove('hidden');
 			} else {
 				sectionsOpen.classList.add('visible');
+				pressKitButton.classList.add('hidden');
+				headerPorfile.classList.add('hidden');
 			}
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
@@ -976,13 +980,33 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 	});
 }
 
-$(".js-header-profile, .header-profile__box").mouseover(function () {
+if(windowWidth > 1023) {
+	$(".js-header-profile, .header-profile__box").mouseover(function () {
     $(".header-profile__box").addClass("header-profile__box--show");
-});
+		$(".js-mobile-menu-open-icon").hide();
+		$(".js-mobile-menu-close-icon").show();		
+	});
 
-$(".js-header-profile, .header-profile__box").mouseout(function () {
-    $(".header-profile__box").removeClass("header-profile__box--show");
-});
+	$(".js-header-profile, .header-profile__box").mouseout(function () {
+			$(".header-profile__box").removeClass("header-profile__box--show");
+			$(".js-mobile-menu-open-icon").show();
+			$(".js-mobile-menu-close-icon").hide();
+	});
+} else {
+	$(".js-mobile-menu-open-icon").click(function(){
+		$(".header-profile__box").addClass("header-profile__box--show");
+		$(".js-mobile-menu-open-icon").hide();
+		$(".js-mobile-menu-close-icon").show();
+		$(".header-profile").addClass('active');
+	});
+
+	$(".js-mobile-menu-close-icon").click(function(){
+			$(".header-profile__box").removeClass("header-profile__box--show");
+			$(".js-mobile-menu-open-icon").show();
+			$(".js-mobile-menu-close-icon").hide();
+			$(".header-profile").removeClass('active');
+	});
+}
 
 
 // pressKitButton.addEventListener('click', () => {

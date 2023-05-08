@@ -537,12 +537,51 @@ section.intro {
 }
 
 @media (max-width:1023px) { 
+  .intro-content {
+    width: 55%;
+    max-width: 340px;
+  }
+  .intro__tuzlu {
+    transform: translateY(100%);
+  }
+
+  .intro__start-button-wrapper {
+    width: 130px;
+    height: 130px;
+    bottom: 26vh;
+  }
+
+  .intro__ys-logo {
+    max-width: 110px;
+  }
+
+  .intro__tuzlu-title {
+    max-width: 150px;
+    width: 80%;
+    display: block;
+
+  }
+
+  .intro__gol-hikayesi {
+    max-width: 135px;
+  }
+
+  .intro.section .fp-tableCell{
+    height: 100vh!important;
+  }
+}
+
+@media (max-width:667px) {
   .intro-mobile {
     display: block;
   }
 
   .intro-desktop {
     display: none;
+  }
+
+  .intro__start-button-wrapper {
+    bottom:8vh;
   }
 
   .intro-content {
@@ -567,12 +606,6 @@ section.intro {
     max-width: 280px;
     width: 60%;
   }
-  
-  .intro__start-button-wrapper {
-    width: 11.90625%;
-    height: 11.9065vw;
-    bottom: 90px;
-  }
 
   .intro__start-text {
     width: 100%;
@@ -584,22 +617,6 @@ section.intro {
   .intro__explanation {
     line-height: 134.5%;
     margin: 20px auto 0;
-    font-size: 18px;
-  }
-
-  .intro__tuzlu {
-    transform: translateY(100%);
-  }
-
-  .intro__start-button-wrapper {
-    width: 170px;
-    height: 170px;
-    bottom: 7vh;
-  }
-}
-
-@media (max-width:667px) {
-  .intro__explanation {
     font-size: 14px;
   }
 }

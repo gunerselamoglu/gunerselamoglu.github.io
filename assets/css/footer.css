@@ -2,9 +2,9 @@
 .footers {
   position: fixed;
   width:100%;
-  height: 124px!important;
+  height: 80px!important;
   left:0;
-  padding: 0 60px;
+  padding: 0 60px 48px;
   z-index: 11;
   bottom: 0; 
   display: flex;
@@ -39,12 +39,12 @@
   transition: all .3s ease-out;
 }
 
-.footers__left a {
-  margin-right: 24px;
+.footers__right a {
   display: inline-block;
+  margin-left: 32px;
 }
 
-.footers__left a:nth-child(1) img{
+.footers__right a:nth-child(1) img{
   width:28px;
 }
 
@@ -54,12 +54,14 @@
   margin-left: auto;
 }
 
-.footers__right a {
+.footers__right a,
+.footers__left a {
   cursor: pointer;
   transition: all .3s ease-out;
 }
 
-.footers__right a:hover {
+.footers__right a:hover,
+.footers__left a:hover {
   transform: scale(1.12);
 }
 
@@ -243,21 +245,30 @@
   }
 
   .footers {
-    height:70px!important;
+    height:60px!important;
   }
 
   .footers__map-button,
   .footers__map-button svg,
   .sound-control {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (max-width:1023px) { 
   .footers {
-    padding: 0 20px 0;
-    height:50px!important;
+    padding: 0 20px 23px;
+    height:83px!important;
+  }
+
+  .footers__right {
+    display: none;
+  }
+
+  .footers__left {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .footers__left a {
@@ -267,8 +278,8 @@
   .footers__map-button,
   .footers__map-button svg,
   .sound-control {
-    width: 35px;
-    height: 35px;
+    width: 57px;
+    height: 57px;
   }
 
   .footers__map-button {
