@@ -64,6 +64,8 @@
   animation-delay: 1s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  display: block;
+  margin: auto;
 }
 
 .loading-screen__hello {

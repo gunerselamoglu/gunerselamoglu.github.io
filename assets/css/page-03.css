@@ -264,12 +264,14 @@
     display: none;
   }
 
-  .page-03__flamingo-left-dark {
-    left:-20px;
+  .page-03__flamingo-left-dark,
+  .page-03__rock-left-dark,
+  .page-03__plant-left-dark {
+    margin-left:-20px;
   }
 
   .page-03__flamingo-left-gaga-dark.show,
   .page-03__flamingo-left-gaga.talk {
-    left:20px;
+    margin-left:20px;
   }
 }

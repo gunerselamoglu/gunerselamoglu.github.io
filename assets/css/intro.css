@@ -497,6 +497,10 @@ section.intro {
   -o-object-position: center;
 }
 
+.intro-mobile {
+  display: none;
+}
+
 @media (max-width:1720px) {
   .intro__start-text {
     left: -50px
@@ -532,11 +536,26 @@ section.intro {
   }
 }
 
-.intro-mobile {
-  display: none;
+@media (max-width:1439px) { 
+  .intro__start-button-wrapper {
+    width: 17.90625%;
+  }
+
+  .intro__start-text {
+    left: 0;
+    width: 100%;
+  }
 }
 
 @media (max-width:1023px) { 
+  .intro-mobile {
+    display: block;
+  }
+
+  .intro-desktop {
+    display: none;
+  }
+
   .intro-content {
     width: 55%;
     max-width: 340px;
@@ -571,15 +590,45 @@ section.intro {
   }
 }
 
-@media (max-width:667px) {
-  .intro-mobile {
-    display: block;
+@media only screen and (max-width: 1023px) and (min-height: 640px) {
+  .intro-content {
+    width: 100%;
+    max-width: 420px;
   }
 
-  .intro-desktop {
+  .intro__start-button-wrapper {
+    bottom:6vh;
+  }
+
+  .intro-content {
+    top:100px;
+  }
+
+  .intro__explanation {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .intro__tuzlu-title {
+    max-width: 300px;
+  }
+
+  .intro__gol-hikayesi {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (max-height: 639px) {
+  .intro-mobile {
     display: none;
   }
 
+  .intro-desktop {
+    display: block;
+  }
+}
+
+@media (max-width:667px) {
   .intro__start-button-wrapper {
     bottom:8vh;
   }

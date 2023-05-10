@@ -58,6 +58,7 @@
   width: 30px;
   padding: 0;
   margin: 10px 0 0 0;
+  display: none;
 }
 
 .header-profile__mobile-toggle-close-icon {
@@ -383,6 +384,10 @@ img.header-profile__user-arrow {
   .header__download,
   .header-profile__user {
     display: none;
+  }
+
+  .header-profile__mobile-toggle {
+    display: block;
   }
 
   .finish-logo {

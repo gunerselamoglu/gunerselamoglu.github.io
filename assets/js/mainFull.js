@@ -38,6 +38,9 @@ const introSection = document.querySelector('.js-intro-section');
 let sound = true;
 let activeSection = 0;
 
+let sequenceInterval;
+let sequenceInterval2;
+
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 		setTimeout(()=> {
@@ -488,6 +491,14 @@ const page6 = () => {
 	const content1 = document.querySelector('.js-page-05-content-1');
 	const content2 = document.querySelector('.js-page-05-content-2');
 	const content3 = document.querySelector('.js-page-05-content-3');
+
+	tuzluBody.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 	
 	tuzlu.classList.add('slideLeft');
 	plant.classList.add('slideLeft');
@@ -515,7 +526,7 @@ const page6 = () => {
 		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
 	}, 1000);
 
-	const sequenceInterval = setInterval(changeSrc, 55);
+	sequenceInterval = setInterval(changeSrc, 55);
 	let counter = 0;
 	
 	function changeSrc() {
@@ -643,6 +654,22 @@ const page9 = () => {
 	const tuzlubBulut = document.querySelectorAll('.js-tuzlu-bulut');
 	const rabbitEar = document.querySelectorAll('.js-rabbit-ear');
 
+	tuzlubBulut.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
+
+	rabbitEar.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
+
 	rabbit.classList.add('slideLeft');
 	plants.classList.add('slideLeft');
 	bridge.classList.add('slideLeft');
@@ -672,8 +699,8 @@ const page9 = () => {
 		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
 	}, 1000);
 
-	const tuzluInterval = setInterval(changetTuzluSrc, 30);
-	const rabbitInterval = setInterval(changetRabbitSrc, 30);
+	sequenceInterval = setInterval(changetTuzluSrc, 30);
+	sequenceInterval2 = setInterval(changetRabbitSrc, 30);
 
 	let counterTuzlu = 0;
 	let counterRabbit = 0;
@@ -743,6 +770,14 @@ const page11 = () => {
 	const content2 = document.querySelector('.js-page-10-content-2');
 	const tuzluSurf = document.querySelectorAll('.js-tuzlu-surf');
 
+	tuzluSurf.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
+
 	tuzlu.classList.add('slideLeft');
 	flamingosLittle.classList.add('slideLeft');
 	flamingosBack.classList.add('slideLeft');
@@ -767,7 +802,7 @@ const page11 = () => {
 		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
 	}, 1000);
 
-	let tuzluInterval = setInterval(changeSrc, 30);
+	sequenceInterval = setInterval(changeSrc, 30);
 	let counter = 0;
 
 	function changeSrc() {
@@ -800,6 +835,14 @@ const page12 = () => {
 	const vaweLine = document.querySelector('.js-page-11-wave-line');
 	const wave = document.querySelector('.js-page-11-wave');
 	const tuzluBulut = document.querySelectorAll('.js-page-11-tuzlu-bulut');
+
+	tuzluBulut.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 
 	clouds.classList.add('slideLeft');
 	flamingos.classList.add('slideLeft');
@@ -841,7 +884,7 @@ const page12 = () => {
 		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
 	}, 1000);
 
-	let tuzluInterval = setInterval(changeSrc, 30);
+	sequenceInterval = setInterval(changeSrc, 30);
 	let counter = 0;
 
 	function changeSrc() {
@@ -911,7 +954,8 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 		responsiveWidth: 1024,
 		onLeave: function(origin, destination, direction){	
 			sectionList[origin - 1].classList.add('hide');
-
+			clearInterval(sequenceInterval);
+			clearInterval(sequenceInterval2);
       // const soundInterval = setInterval(muteSlide, 100);
       // let counter = 1;
       
@@ -921,7 +965,9 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       // }
 			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
-			eval(`page${destination}()`);
+			windowWidth > 1023 && eval(`page${destination}()`);
+
+			console.log('origin :', origin);
 
 			// Section menü görünümünü ayarlıyoruz
 			if(destination == 1 || destination == 13) {
@@ -935,33 +981,34 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			}
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
-			setTimeout(()=> {
-				const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
-				const move = document.querySelector('.getFront').querySelectorAll('.move');
-				const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
-				const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
-				const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
-				const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
-				const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
-				const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
-				const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
-				const show = document.querySelector('.getFront').querySelectorAll('.show');
-				const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
-				const talk = document.querySelector('.getFront').querySelectorAll('.talk');
-				slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
-				move?.forEach(elem => elem.classList.remove('move'));
-				fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
-				opacity?.forEach(elem => elem.classList.remove('opacity'));
-				headShake?.forEach(elem => elem.classList.remove('headShake'));
-				slideUp?.forEach(elem => elem.classList.remove('slideUp'));
-				swimming?.forEach(elem => elem.classList.remove('swimming'));
-				HandMove?.forEach(elem => elem.classList.remove('HandMove'));
-				slideDown?.forEach(elem => elem.classList.remove('slideDown'));
-				show?.forEach(elem => elem.classList.remove('show'));
-				flash?.forEach(elem => elem.classList.remove('show'));
-				talk?.forEach(elem => elem.classList.remove('talk'));
-			},1700);
-
+			if(windowWidth > 1023) {
+				setTimeout(()=> {
+					const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
+					const move = document.querySelector('.getFront').querySelectorAll('.move');
+					const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
+					const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
+					const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
+					const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
+					const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
+					const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
+					const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
+					const show = document.querySelector('.getFront').querySelectorAll('.show');
+					const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
+					const talk = document.querySelector('.getFront').querySelectorAll('.talk');
+					slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
+					move?.forEach(elem => elem.classList.remove('move'));
+					fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
+					opacity?.forEach(elem => elem.classList.remove('opacity'));
+					headShake?.forEach(elem => elem.classList.remove('headShake'));
+					slideUp?.forEach(elem => elem.classList.remove('slideUp'));
+					swimming?.forEach(elem => elem.classList.remove('swimming'));
+					HandMove?.forEach(elem => elem.classList.remove('HandMove'));
+					slideDown?.forEach(elem => elem.classList.remove('slideDown'));
+					show?.forEach(elem => elem.classList.remove('show'));
+					flash?.forEach(elem => elem.classList.remove('show'));
+					talk?.forEach(elem => elem.classList.remove('talk'));
+				},1700);
+			}
 			// Section çemberi animasyonu
 			sectionsList.forEach(elem => elem.classList.remove('active'));
 			sectionsList[destination - 1].classList.add('active');
@@ -970,12 +1017,15 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 		},
 		afterLoad: function (anchorLink, index, origin) {
 			activeSection = index;
+			console.log('index :', index);
 			let activetime;
 			sectionList.forEach((elem, indexInner) => {
 				indexInner == index - 1
         ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
 				:  elem.classList.remove('getFront', 'hide')
 			});
+
+			windowWidth < 1023 && eval(`page${index}()`);
 		}
 	});
 }
@@ -1007,6 +1057,21 @@ if(windowWidth > 1023) {
 			$(".header-profile").removeClass('active');
 	});
 }
+
+let currentWidth = window.innerWidth;
+let isMobile = currentWidth < 1024;
+
+window.addEventListener('resize', function() {
+  var width = window.innerWidth;
+
+  if (width < 1024 && !isMobile) {
+    location.reload();
+    isMobile = true;
+  } else if (width >= 1024 && isMobile) {
+    location.reload();
+    isMobile = false;
+  }
+});
 
 
 // pressKitButton.addEventListener('click', () => {
