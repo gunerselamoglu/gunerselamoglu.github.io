@@ -967,8 +967,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			windowWidth > 1023 && eval(`page${destination}()`);
 
-			console.log('origin :', origin);
-
 			// Section menü görünümünü ayarlıyoruz
 			if(destination == 1 || destination == 13) {
 				sectionsOpen.classList.remove('visible');
