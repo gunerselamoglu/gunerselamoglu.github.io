@@ -963,6 +963,8 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       //   counter -= 0.1;
       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
       // }
+
+			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0})
 			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			windowWidth > 1023 && eval(`page${destination}()`);
@@ -1015,7 +1017,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 		},
 		afterLoad: function (anchorLink, index, origin) {
 			activeSection = index;
-			console.log('index :', index);
 			let activetime;
 			sectionList.forEach((elem, indexInner) => {
 				indexInner == index - 1
