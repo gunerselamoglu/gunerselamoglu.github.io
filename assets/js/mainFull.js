@@ -963,8 +963,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       //   counter -= 0.1;
       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
       // }
-
-			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0})
 			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			windowWidth > 1023 && eval(`page${destination}()`);
@@ -1023,6 +1021,8 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
         ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
 				:  elem.classList.remove('getFront', 'hide')
 			});
+
+			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
 			windowWidth < 1023 && eval(`page${index}()`);
 		}
