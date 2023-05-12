@@ -51,31 +51,31 @@ document.onreadystatechange = () => {
 			soundOpen.classList.add('fadeIn');
 		}, 3000);
 		
-		startSound.addEventListener('click', () => {
-			introSection.classList.remove('hide');
-			sound = true;
-			initialization();
-			loadingScreen.classList.add("fadeOut");
-			setTimeout(() => {
-				loadingScreen.remove();
-				page1();
+		// startSound.addEventListener('click', () => {
+		// 	introSection.classList.remove('hide');
+		// 	sound = true;
+		// 	initialization();
+		// 	loadingScreen.classList.add("fadeOut");
+		// 	setTimeout(() => {
+		// 		loadingScreen.remove();
+		// 		page1();
 
-				musicPlayer.play();
-				soundControl.classList.add('play');
-				location.href = '#giris';
-			}, 1000);
-		});
+		// 		musicPlayer.play();
+		// 		soundControl.classList.add('play');
+		// 		location.href = '#giris';
+		// 	}, 1000);
+		// });
 
-		startMute.addEventListener('click', () => {
-			introSection.classList.remove('hide');
-			sound = false;
-			initialization();
-			loadingScreen.classList.add("fadeOut");
-			setTimeout(() => {
-				page1();
-				loadingScreen.remove();
-			}, 1000);
-		});
+		// startMute.addEventListener('click', () => {
+		// 	introSection.classList.remove('hide');
+		// 	sound = false;
+		// 	initialization();
+		// 	loadingScreen.classList.add("fadeOut");
+		// 	setTimeout(() => {
+		// 		page1();
+		// 		loadingScreen.remove();
+		// 	}, 1000);
+		// });
 	}
 };
 
@@ -1060,17 +1060,17 @@ if(windowWidth > 1023) {
 let currentWidth = window.innerWidth;
 let isMobile = currentWidth < 1024;
 
-window.addEventListener('resize', function() {
-  var width = window.innerWidth;
+// window.addEventListener('resize', function() {
+//   var width = window.innerWidth;
 
-  if (width < 1024 && !isMobile) {
-    location.reload();
-    isMobile = true;
-  } else if (width >= 1024 && isMobile) {
-    location.reload();
-    isMobile = false;
-  }
-});
+//   if (width < 1024 && !isMobile) {
+//     location.reload();
+//     isMobile = true;
+//   } else if (width >= 1024 && isMobile) {
+//     location.reload();
+//     isMobile = false;
+//   }
+// });
 
 
 // pressKitButton.addEventListener('click', () => {
