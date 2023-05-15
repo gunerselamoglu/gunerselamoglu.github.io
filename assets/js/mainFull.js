@@ -60,7 +60,18 @@ document.onreadystatechange = () => {
 				loadingScreen.remove();
 				page1();
 
-				musicPlayer.play();
+				var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+				var audioElement = document.querySelector('.music-player');
+				var source = audioContext.createMediaElementSource(audioElement);
+				
+				// Ses çalmaya başlamadan önce durdurun ve sıfırlayın
+				audioElement.pause();
+				audioElement.currentTime = 0;
+				
+				// Ses çalma
+				source.connect(audioContext.destination);
+				audioElement.play();
+
 				soundControl.classList.add('play');
 				location.href = '#giris';
 			}, 1000);
@@ -1081,6 +1092,7 @@ console.log('currentWidth :', currentWidth);
 // }
 
 window.addEventListener('orientationchange', function() {
+	console.log('burayada mı giriyor');
 	location.reload();
 });
 
