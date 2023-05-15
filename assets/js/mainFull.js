@@ -1061,17 +1061,18 @@ if(windowWidth > 1023) {
 // let currentWidth = window.innerWidth;
 // let isMobile = currentWidth < 1024;
 
-// window.addEventListener('resize', function() {
-//   var width = window.innerWidth;
+window.addEventListener('resize', function() {
+	console.log('resize');
+  // var width = window.innerWidth;
 
-//   if (width < 1024 && !isMobile) {
-//     location.reload();
-//     isMobile = true;
-//   } else if (width >= 1024 && isMobile) {
-//     location.reload();
-//     isMobile = false;
-//   }
-// });
+  // if (width < 1024 && !isMobile) {
+  //   location.reload();
+  //   isMobile = true;
+  // } else if (width >= 1024 && isMobile) {
+  //   location.reload();
+  //   isMobile = false;
+  // }
+});
 
 
 // pressKitButton.addEventListener('click', () => {
