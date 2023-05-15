@@ -1061,22 +1061,24 @@ if(windowWidth > 1023) {
 let currentWidth = window.innerWidth;
 let resizeTimeout;
 
-if(currentWidth > 1023) {
-	window.addEventListener('resize', function() {
-    clearTimeout(resizeTimeout);
+console.log('currentWidth :', currentWidth);
 
-    resizeTimeout = setTimeout(function() {
-        let windowHeight = window.innerHeight;
-        let windowWidth = window.innerWidth;
+// if(currentWidth > 1023) {
+// 	window.addEventListener('resize', function() {
+//     clearTimeout(resizeTimeout);
 
-        let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+//     resizeTimeout = setTimeout(function() {
+//         let windowHeight = window.innerHeight;
+//         let windowWidth = window.innerWidth;
 
-        if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
-            location.reload();
-        }
-    }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
-	});
-}
+//         let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+
+//         if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
+//             location.reload();
+//         }
+//     }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
+// 	});
+// }
 
 window.addEventListener('orientationchange', function() {
 	location.reload();
