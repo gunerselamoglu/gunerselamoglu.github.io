@@ -1015,17 +1015,17 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
-			// activeSection = index;
-			// let activetime;
-			// sectionList.forEach((elem, indexInner) => {
-			// 	indexInner == index - 1
-      //   ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
-			// 	:  elem.classList.remove('getFront', 'hide')
-			// });
+			activeSection = index;
+			let activetime;
+			sectionList.forEach((elem, indexInner) => {
+				indexInner == index - 1
+        ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
+				:  elem.classList.remove('getFront', 'hide')
+			});
 
-			// voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
+			//voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-			// windowWidth < 1023 && eval(`page${index}()`);
+			//windowWidth < 1023 && eval(`page${index}()`);
 		}
 	});
 }
@@ -1043,19 +1043,19 @@ if(windowWidth > 1023) {
 			$(".js-mobile-menu-close-icon").hide();
 	});
 } else {
-	// $(".js-mobile-menu-open-icon").click(function(){
-	// 	$(".header-profile__box").addClass("header-profile__box--show");
-	// 	$(".js-mobile-menu-open-icon").hide();
-	// 	$(".js-mobile-menu-close-icon").show();
-	// 	$(".header-profile").addClass('active');
-	// });
+	$(".js-mobile-menu-open-icon").click(function(){
+		$(".header-profile__box").addClass("header-profile__box--show");
+		$(".js-mobile-menu-open-icon").hide();
+		$(".js-mobile-menu-close-icon").show();
+		$(".header-profile").addClass('active');
+	});
 
-	// $(".js-mobile-menu-close-icon").click(function(){
-	// 		$(".header-profile__box").removeClass("header-profile__box--show");
-	// 		$(".js-mobile-menu-open-icon").show();
-	// 		$(".js-mobile-menu-close-icon").hide();
-	// 		$(".header-profile").removeClass('active');
-	// });
+	$(".js-mobile-menu-close-icon").click(function(){
+			$(".header-profile__box").removeClass("header-profile__box--show");
+			$(".js-mobile-menu-open-icon").show();
+			$(".js-mobile-menu-close-icon").hide();
+			$(".header-profile").removeClass('active');
+	});
 }
 
 // let currentWidth = window.innerWidth;
