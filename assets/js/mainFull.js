@@ -1058,20 +1058,28 @@ if(windowWidth > 1023) {
 	});
 }
 
-// let currentWidth = window.innerWidth;
-// let isMobile = currentWidth < 1024;
+let currentWidth = window.innerWidth;
+let resizeTimeout;
 
-window.addEventListener('resize', function() {
-	console.log('resize');
-  // var width = window.innerWidth;
+if(currentWidth > 1023) {
+	window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
 
-  // if (width < 1024 && !isMobile) {
-  //   location.reload();
-  //   isMobile = true;
-  // } else if (width >= 1024 && isMobile) {
-  //   location.reload();
-  //   isMobile = false;
-  // }
+    resizeTimeout = setTimeout(function() {
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
+
+        let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+
+        if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
+            location.reload();
+        }
+    }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
+	});
+}
+
+window.addEventListener('orientationchange', function() {
+	location.reload();
 });
 
 
