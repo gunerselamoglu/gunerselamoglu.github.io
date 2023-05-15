@@ -965,19 +965,18 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       // }
 			
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
-			// debugger;
-			// windowWidth > 1023 && eval(`page${destination}()`);
+			windowWidth > 1023 && eval(`page${destination}()`);
 
-			// // Section menü görünümünü ayarlıyoruz
-			// if(destination == 1 || destination == 13) {
-			// 	sectionsOpen.classList.remove('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	headerPorfile.classList.remove('hidden');
-			// } else {
-			// 	sectionsOpen.classList.add('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// }
+			// Section menü görünümünü ayarlıyoruz
+			if(destination == 1 || destination == 13) {
+				sectionsOpen.classList.remove('visible');
+				pressKitButton.classList.remove('hidden');
+				headerPorfile.classList.remove('hidden');
+			} else {
+				sectionsOpen.classList.add('visible');
+				pressKitButton.classList.add('hidden');
+				headerPorfile.classList.add('hidden');
+			}
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			if(windowWidth > 1023) {
@@ -1008,11 +1007,11 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 					talk?.forEach(elem => elem.classList.remove('talk'));
 				},1700);
 			}
-			// Section çemberi animasyonu
-			// sectionsList.forEach(elem => elem.classList.remove('active'));
-			// sectionsList[destination - 1].classList.add('active');
-			// pageOrder.innerHTML = destination - 1;
-			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
+			//Section çemberi animasyonu
+			sectionsList.forEach(elem => elem.classList.remove('active'));
+			sectionsList[destination - 1].classList.add('active');
+			pageOrder.innerHTML = destination - 1;
+			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
 			activeSection = index;
@@ -1023,7 +1022,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				:  elem.classList.remove('getFront', 'hide')
 			});
 
-			//voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
+			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
 			//windowWidth < 1023 && eval(`page${index}()`);
 		}
@@ -1058,32 +1057,32 @@ if(windowWidth > 1023) {
 	});
 }
 
-// let currentWidth = window.innerWidth;
-// let resizeTimeout;
+let currentWidth = window.innerWidth;
+let resizeTimeout;
 
-// console.log('currentWidth :', currentWidth);
+console.log('currentWidth :', currentWidth);
 
-// if(currentWidth > 1023) {
-// 	window.addEventListener('resize', function() {
-//     clearTimeout(resizeTimeout);
+if(currentWidth > 1023) {
+	window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
 
-//     resizeTimeout = setTimeout(function() {
-//         let windowHeight = window.innerHeight;
-//         let windowWidth = window.innerWidth;
+    resizeTimeout = setTimeout(function() {
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
 
-//         let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+        let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
 
-//         if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
-//             location.reload();
-//         }
-//     }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
-// 	});
-// }
+        if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
+            location.reload();
+        }
+    }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
+	});
+}
 
-// window.addEventListener('orientationchange', function() {
-// 	console.log('burayada mı giriyor');
-// 	location.reload();
-// });
+window.addEventListener('orientationchange', function() {
+	console.log('burayada mı giriyor');
+	location.reload();
+});
 
 
 // pressKitButton.addEventListener('click', () => {
