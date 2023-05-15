@@ -66,16 +66,16 @@ document.onreadystatechange = () => {
 		// 	}, 1000);
 		// });
 
-		// startMute.addEventListener('click', () => {
-		// 	introSection.classList.remove('hide');
-		// 	sound = false;
-		// 	initialization();
-		// 	loadingScreen.classList.add("fadeOut");
-		// 	setTimeout(() => {
-		// 		page1();
-		// 		loadingScreen.remove();
-		// 	}, 1000);
-		// });
+		startMute.addEventListener('click', () => {
+			introSection.classList.remove('hide');
+			sound = false;
+			initialization();
+			loadingScreen.classList.add("fadeOut");
+			setTimeout(() => {
+				page1();
+				loadingScreen.remove();
+			}, 1000);
+		});
 	}
 };
 
