@@ -951,7 +951,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
-		responsiveWidth: 1024,
+		responsiveWidth: 1023,
 		onLeave: function(origin, destination, direction){	
 			sectionList[origin - 1].classList.add('hide');
 			clearInterval(sequenceInterval);
@@ -1024,7 +1024,47 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-			//windowWidth < 1023 && eval(`page${index}()`);
+			if(windowWidth < 1024) {
+				if (anchorLink == 'giris') {
+					page1();
+				}
+				if (anchorLink == 'merhaba') {
+					page2();
+				}
+				if (anchorLink == 'dogum-gunu') {
+					page3();
+				}
+				if (anchorLink == 'birsey-duydum') {
+					page4();
+				}
+				if (anchorLink == 'golde-yuruyus') {
+					page5();
+				}
+				if (anchorLink == 'bir-planimiz-var') {
+					page6();
+				}
+				if (anchorLink == 'yola-koyulduk') {
+					page7();
+				}
+				if (anchorLink == 'tasarruf-zamani') {
+					page8();
+				}
+				if (anchorLink == 'keyifli-bir-yaz') {
+					page9();
+				}
+				if (anchorLink == 'tasarruf-ettik') {
+					page10();
+				}
+				if (anchorLink == 'iyilik-bulasicidir') {
+					page11();
+				}
+				if (anchorLink == 'benim-mirasim-su') {
+					page12();
+				}
+				if (anchorLink == 'son') {
+					page13();
+				}
+			}
 		}
 	});
 }
@@ -1080,7 +1120,6 @@ if(currentWidth > 1023) {
 }
 
 window.addEventListener('orientationchange', function() {
-	console.log('burayada mı giriyor');
 	location.reload();
 });
 
