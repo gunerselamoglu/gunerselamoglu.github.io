@@ -963,7 +963,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       //   counter -= 0.1;
       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
       // }
-			
+			console.log('windowWidth: ', windowWidth);
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			windowWidth > 1023 && eval(`page${destination}()`);
 
@@ -980,7 +980,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			if(windowWidth > 1023) {
-				setTimeout(()=> {
+				setTimeout(() => {
 					const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
 					const move = document.querySelector('.getFront').querySelectorAll('.move');
 					const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
@@ -1103,6 +1103,7 @@ let resizeTimeout;
 console.log('currentWidth :', currentWidth);
 
 if(currentWidth > 1023) {
+	console.log('reload 1');
 	window.addEventListener('resize', function() {
     clearTimeout(resizeTimeout);
 
@@ -1120,6 +1121,7 @@ if(currentWidth > 1023) {
 }
 
 window.addEventListener('orientationchange', function() {
+	console.log('reload 2');
 	location.reload();
 });
 
