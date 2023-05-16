@@ -979,34 +979,34 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// }
 
 			// Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
-			if(windowWidth > 1023) {
-				setTimeout(() => {
-					const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
-					const move = document.querySelector('.getFront').querySelectorAll('.move');
-					const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
-					const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
-					const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
-					const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
-					const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
-					const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
-					const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
-					const show = document.querySelector('.getFront').querySelectorAll('.show');
-					const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
-					const talk = document.querySelector('.getFront').querySelectorAll('.talk');
-					slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
-					move?.forEach(elem => elem.classList.remove('move'));
-					fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
-					opacity?.forEach(elem => elem.classList.remove('opacity'));
-					headShake?.forEach(elem => elem.classList.remove('headShake'));
-					slideUp?.forEach(elem => elem.classList.remove('slideUp'));
-					swimming?.forEach(elem => elem.classList.remove('swimming'));
-					HandMove?.forEach(elem => elem.classList.remove('HandMove'));
-					slideDown?.forEach(elem => elem.classList.remove('slideDown'));
-					show?.forEach(elem => elem.classList.remove('show'));
-					flash?.forEach(elem => elem.classList.remove('show'));
-					talk?.forEach(elem => elem.classList.remove('talk'));
-				},1700);
-			}
+			// if(windowWidth > 1023) {
+			// 	setTimeout(() => {
+			// 		const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
+			// 		const move = document.querySelector('.getFront').querySelectorAll('.move');
+			// 		const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
+			// 		const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
+			// 		const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
+			// 		const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
+			// 		const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
+			// 		const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
+			// 		const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
+			// 		const show = document.querySelector('.getFront').querySelectorAll('.show');
+			// 		const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
+			// 		const talk = document.querySelector('.getFront').querySelectorAll('.talk');
+			// 		slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
+			// 		move?.forEach(elem => elem.classList.remove('move'));
+			// 		fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
+			// 		opacity?.forEach(elem => elem.classList.remove('opacity'));
+			// 		headShake?.forEach(elem => elem.classList.remove('headShake'));
+			// 		slideUp?.forEach(elem => elem.classList.remove('slideUp'));
+			// 		swimming?.forEach(elem => elem.classList.remove('swimming'));
+			// 		HandMove?.forEach(elem => elem.classList.remove('HandMove'));
+			// 		slideDown?.forEach(elem => elem.classList.remove('slideDown'));
+			// 		show?.forEach(elem => elem.classList.remove('show'));
+			// 		flash?.forEach(elem => elem.classList.remove('show'));
+			// 		talk?.forEach(elem => elem.classList.remove('talk'));
+			// 	},1700);
+			// }
 			//Section çemberi animasyonu
 			// sectionsList.forEach(elem => elem.classList.remove('active'));
 			// sectionsList[destination - 1].classList.add('active');
@@ -1014,13 +1014,13 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
-			activeSection = index;
-			let activetime;
-			sectionList.forEach((elem, indexInner) => {
-				indexInner == index - 1
-        ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
-				:  elem.classList.remove('getFront', 'hide')
-			});
+			// activeSection = index;
+			// let activetime;
+			// sectionList.forEach((elem, indexInner) => {
+			// 	indexInner == index - 1
+      //   ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
+			// 	:  elem.classList.remove('getFront', 'hide')
+			// });
 
 			// voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
