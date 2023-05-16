@@ -1024,47 +1024,47 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-			if(windowWidth < 1024) {
-				if (anchorLink == 'giris') {
-					page1();
-				}
-				if (anchorLink == 'merhaba') {
-					page2();
-				}
-				if (anchorLink == 'dogum-gunu') {
-					page3();
-				}
-				if (anchorLink == 'birsey-duydum') {
-					page4();
-				}
-				if (anchorLink == 'golde-yuruyus') {
-					page5();
-				}
-				if (anchorLink == 'bir-planimiz-var') {
-					page6();
-				}
-				if (anchorLink == 'yola-koyulduk') {
-					page7();
-				}
-				if (anchorLink == 'tasarruf-zamani') {
-					page8();
-				}
-				if (anchorLink == 'keyifli-bir-yaz') {
-					page9();
-				}
-				if (anchorLink == 'tasarruf-ettik') {
-					page10();
-				}
-				if (anchorLink == 'iyilik-bulasicidir') {
-					page11();
-				}
-				if (anchorLink == 'benim-mirasim-su') {
-					page12();
-				}
-				if (anchorLink == 'son') {
-					page13();
-				}
-			}
+			// if(windowWidth < 1024) {
+			// 	if (anchorLink == 'giris') {
+			// 		page1();
+			// 	}
+			// 	if (anchorLink == 'merhaba') {
+			// 		page2();
+			// 	}
+			// 	if (anchorLink == 'dogum-gunu') {
+			// 		page3();
+			// 	}
+			// 	if (anchorLink == 'birsey-duydum') {
+			// 		page4();
+			// 	}
+			// 	if (anchorLink == 'golde-yuruyus') {
+			// 		page5();
+			// 	}
+			// 	if (anchorLink == 'bir-planimiz-var') {
+			// 		page6();
+			// 	}
+			// 	if (anchorLink == 'yola-koyulduk') {
+			// 		page7();
+			// 	}
+			// 	if (anchorLink == 'tasarruf-zamani') {
+			// 		page8();
+			// 	}
+			// 	if (anchorLink == 'keyifli-bir-yaz') {
+			// 		page9();
+			// 	}
+			// 	if (anchorLink == 'tasarruf-ettik') {
+			// 		page10();
+			// 	}
+			// 	if (anchorLink == 'iyilik-bulasicidir') {
+			// 		page11();
+			// 	}
+			// 	if (anchorLink == 'benim-mirasim-su') {
+			// 		page12();
+			// 	}
+			// 	if (anchorLink == 'son') {
+			// 		page13();
+			// 	}
+			// }
 		}
 	});
 }
