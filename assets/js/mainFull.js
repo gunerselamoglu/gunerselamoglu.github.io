@@ -951,8 +951,9 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
-		responsiveWidth: 1023,
+		responsiveWidth: 1024,
 		onLeave: function(origin, destination, direction){	
+			console.log('Çıktı');
 			// sectionList[origin - 1].classList.add('hide');
 			// clearInterval(sequenceInterval);
 			// clearInterval(sequenceInterval2);
@@ -963,7 +964,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       //   counter -= 0.1;
       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
       // }
-			console.log('windowWidth: ', windowWidth);
+			//console.log('windowWidth: ', windowWidth);
 			// Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			// windowWidth > 1023 && eval(`page${destination}()`);
 
@@ -1014,6 +1015,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
+			console.log('Yüklendi');
 			// activeSection = index;
 			// let activetime;
 			// sectionList.forEach((elem, indexInner) => {
@@ -1069,38 +1071,38 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 	});
 }
 
-if(windowWidth > 1023) {
-	$(".js-header-profile, .header-profile__box").mouseover(function () {
-    $(".header-profile__box").addClass("header-profile__box--show");
-		$(".js-mobile-menu-open-icon").hide();
-		$(".js-mobile-menu-close-icon").show();		
-	});
+// if(windowWidth > 1023) {
+// 	$(".js-header-profile, .header-profile__box").mouseover(function () {
+//     $(".header-profile__box").addClass("header-profile__box--show");
+// 		$(".js-mobile-menu-open-icon").hide();
+// 		$(".js-mobile-menu-close-icon").show();		
+// 	});
 
-	$(".js-header-profile, .header-profile__box").mouseout(function () {
-			$(".header-profile__box").removeClass("header-profile__box--show");
-			$(".js-mobile-menu-open-icon").show();
-			$(".js-mobile-menu-close-icon").hide();
-	});
-} else {
-	// $(".js-mobile-menu-open-icon").click(function(){
-	// 	$(".header-profile__box").addClass("header-profile__box--show");
-	// 	$(".js-mobile-menu-open-icon").hide();
-	// 	$(".js-mobile-menu-close-icon").show();
-	// 	$(".header-profile").addClass('active');
-	// });
+// 	$(".js-header-profile, .header-profile__box").mouseout(function () {
+// 			$(".header-profile__box").removeClass("header-profile__box--show");
+// 			$(".js-mobile-menu-open-icon").show();
+// 			$(".js-mobile-menu-close-icon").hide();
+// 	});
+// } else {
+// 	$(".js-mobile-menu-open-icon").click(function(){
+// 		$(".header-profile__box").addClass("header-profile__box--show");
+// 		$(".js-mobile-menu-open-icon").hide();
+// 		$(".js-mobile-menu-close-icon").show();
+// 		$(".header-profile").addClass('active');
+// 	});
 
-	// $(".js-mobile-menu-close-icon").click(function(){
-	// 		$(".header-profile__box").removeClass("header-profile__box--show");
-	// 		$(".js-mobile-menu-open-icon").show();
-	// 		$(".js-mobile-menu-close-icon").hide();
-	// 		$(".header-profile").removeClass('active');
-	// });
-}
+// 	$(".js-mobile-menu-close-icon").click(function(){
+// 			$(".header-profile__box").removeClass("header-profile__box--show");
+// 			$(".js-mobile-menu-open-icon").show();
+// 			$(".js-mobile-menu-close-icon").hide();
+// 			$(".header-profile").removeClass('active');
+// 	});
+// }
 
-let currentWidth = window.innerWidth;
-let resizeTimeout;
+// let currentWidth = window.innerWidth;
+// let resizeTimeout;
 
-console.log('currentWidth :', currentWidth);
+// console.log('currentWidth :', currentWidth);
 
 // if(currentWidth > 1023) {
 // 	console.log('reload 1');
