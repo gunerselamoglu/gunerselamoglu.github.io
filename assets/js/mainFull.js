@@ -973,15 +973,15 @@
 // }
 
 function initialization(){
-//let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
+let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
 
 	let fullPage = $('#tuzlu').fullpage({
-		// anchors: anchors,
-		// responsiveWidth: 1024,
-		// onLeave: function(origin, destination, direction){	
-		// 	sectionList[origin - 1].classList.add('hide');
-		// 	clearInterval(sequenceInterval);
-		// 	clearInterval(sequenceInterval2);
+		anchors: anchors,
+		responsiveWidth: 1024,
+		onLeave: function(origin, destination, direction){	
+			// sectionList[origin - 1].classList.add('hide');
+			// clearInterval(sequenceInterval);
+			// clearInterval(sequenceInterval2);
       
 			// const soundInterval = setInterval(muteSlide, 100);
       // let counter = 1;
@@ -992,7 +992,7 @@ function initialization(){
       // }
 
 			//Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
-			// windowWidth > 1023 && eval(`page${destination}()`);
+			//windowWidth > 1023 && eval(`page${destination}()`);
 
 			// Section menü görünümünü ayarlıyoruz
 			// if(destination == 1 || destination == 13) {
@@ -1179,4 +1179,4 @@ function initialization(){
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.4');
+console.log('updat 8.5');
