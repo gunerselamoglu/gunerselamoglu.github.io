@@ -1,83 +1,82 @@
 // Güner Selamoğlu HavasCX 2022
 // Yarının Suyu Tuzlu
-// let windowWidth = $(window).width()
-// let windowHeight = $(window).height();
+let windowWidth = $(window).width()
+let windowHeight = $(window).height();
 
-// const mapClose = document.querySelector('.js-close-map');
-// const mapOpen = document.querySelector('.js-open-map');
-// const map = document.querySelector('.js-map');
-// const sectionsClose = document.querySelector('.js-close-sections');
-// const sectionsOpen = document.querySelector('.js-open-sections');
-// const sections = document.querySelector('.js-sections');
-// const sectionsList = document.querySelectorAll('.sections__list-li');
-// const sectionMobile = document.querySelectorAll('.section.mobile');
-// const sectionsMobile = document.querySelectorAll('.mobile.sections__list-li');
-// const musicPlayer = document.querySelector('.js-music-player');
-// const voicePlayer = document.querySelectorAll('.js-voice-player');
-// const soundControl = document.querySelector('.js-sound-control');
-// const pageOrder = document.querySelector('.js-pages-index');
-// const startSound = document.querySelector('.js-start-sound');
-// const startMute = document.querySelector('.js-start-mute');
-// const pressKitButton = document.querySelector('.js-download-press-kit');
-// const sectionList = document.querySelectorAll('.section');
-// const loadingScreen = document.querySelector('.js-loading');
-// const loadingContent = document.querySelector(".js-loading-content");
-// const soundOpen = document.querySelector('.js-sound-open');
-// const footerLeft = document.querySelector('.js-footers-left');
-// const ysLogoHeader = document.querySelector('.js-header-ys-logo');
-// const registerButton = document.querySelector('.js-intro-register-button');
-// const header = document.querySelector('.js-header');
-// const footer = document.querySelector('.js-footer');
-// const sectionsCircle = document.querySelector('.js-sections-circle');
-// const headerPorfile =  document.querySelector('.js-header-profile');
-// const promise = document.querySelector('.js-son-promise');
-// const instagram = document.querySelector('.js-instagram-btn');
-// const facebook = document.querySelector('.js-share-fb');
-// const twitter = document.querySelector('.js-share-tw');
-// const introSection = document.querySelector('.js-intro-section');
-// let sound = true;
-// let activeSection = 0;
+const mapClose = document.querySelector('.js-close-map');
+const mapOpen = document.querySelector('.js-open-map');
+const map = document.querySelector('.js-map');
+const sectionsClose = document.querySelector('.js-close-sections');
+const sectionsOpen = document.querySelector('.js-open-sections');
+const sections = document.querySelector('.js-sections');
+const sectionsList = document.querySelectorAll('.sections__list-li');
+const sectionMobile = document.querySelectorAll('.section.mobile');
+const sectionsMobile = document.querySelectorAll('.mobile.sections__list-li');
+const musicPlayer = document.querySelector('.js-music-player');
+const voicePlayer = document.querySelectorAll('.js-voice-player');
+const soundControl = document.querySelector('.js-sound-control');
+const pageOrder = document.querySelector('.js-pages-index');
+const startSound = document.querySelector('.js-start-sound');
+const startMute = document.querySelector('.js-start-mute');
+const pressKitButton = document.querySelector('.js-download-press-kit');
+const sectionList = document.querySelectorAll('.section');
+const loadingScreen = document.querySelector('.js-loading');
+const loadingContent = document.querySelector(".js-loading-content");
+const soundOpen = document.querySelector('.js-sound-open');
+const footerLeft = document.querySelector('.js-footers-left');
+const ysLogoHeader = document.querySelector('.js-header-ys-logo');
+const registerButton = document.querySelector('.js-intro-register-button');
+const header = document.querySelector('.js-header');
+const footer = document.querySelector('.js-footer');
+const sectionsCircle = document.querySelector('.js-sections-circle');
+const headerPorfile =  document.querySelector('.js-header-profile');
+const promise = document.querySelector('.js-son-promise');
+const instagram = document.querySelector('.js-instagram-btn');
+const facebook = document.querySelector('.js-share-fb');
+const twitter = document.querySelector('.js-share-tw');
+const introSection = document.querySelector('.js-intro-section');
+let sound = true;
+let activeSection = 0;
 
-// let sequenceInterval;
-// let sequenceInterval2;
+let sequenceInterval;
+let sequenceInterval2;
 
-// document.onreadystatechange = () => {
-//   if (document.readyState === 'complete') {
-// 		setTimeout(()=> {
-// 			loadingContent.classList.add("fadeOut");
-// 		}, 2000);
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+		setTimeout(()=> {
+			loadingContent.classList.add("fadeOut");
+		}, 2000);
 		
-// 		setTimeout(()=> {
-// 			soundOpen.classList.add('fadeIn');
-// 		}, 3000);
+		setTimeout(()=> {
+			soundOpen.classList.add('fadeIn');
+		}, 3000);
 		
-// 		startSound.addEventListener('click', () => {
-// 			introSection.classList.remove('hide');
-// 			sound = true;
-// 			initialization();
-// 			loadingScreen.classList.add("fadeOut");
-// 			setTimeout(() => {
-// 				loadingScreen.remove();
-// 				page1();
+		startSound.addEventListener('click', () => {
+			introSection.classList.remove('hide');
+			sound = true;
+			initialization();
+			loadingScreen.classList.add("fadeOut");
+			setTimeout(() => {
+				loadingScreen.remove();
+				//page1();
 
-// 				musicPlayer.play();
-// 				soundControl.classList.add('play');
-// 				location.href = '#giris';
-// 			}, 1000);
-// 		});
+				musicPlayer.play();
+				soundControl.classList.add('play');
+			}, 1000);
+		});
 
-// 		startMute.addEventListener('click', () => {
-// 			introSection.classList.remove('hide');
-// 			sound = false;
-// 			initialization();
-// 			loadingScreen.classList.add("fadeOut");
-// 			setTimeout(() => {
-// 				page1();
-// 				loadingScreen.remove();
-// 			}, 1000);
-// 		});
-// 	}
-// };
+		startMute.addEventListener('click', () => {
+			introSection.classList.remove('hide');
+			sound = false;
+			initialization();
+			loadingScreen.classList.add("fadeOut");
+			setTimeout(() => {
+				//page1();
+				loadingScreen.remove();
+			}, 1000);
+		});
+	}
+};
 
 // soundControl?.addEventListener('click', () => {
 // 	musicPlayer.paused ? musicPlayer.play() + voicePlayer[activeSection - 1].play() + (voicePlayer[activeSection - 1].volume = 1) + soundControl.classList.add('play') + (sound = true) : musicPlayer.pause() + voicePlayer.forEach(player => player.pause()) + soundControl.classList.remove('play') + (sound = false);
@@ -1179,4 +1178,4 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.5');
+console.log('updat 8.6');
