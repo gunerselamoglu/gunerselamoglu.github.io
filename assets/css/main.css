@@ -35,6 +35,11 @@
 @import 'son-animation.css';
 @import 'son.css';
 
+#tuzlu {
+  overflow: scroll;
+    height: 100vh;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -257,8 +262,11 @@ section:nth-child(odd).hide {
     left:0;
     width: 100%;
     min-height: 100%;
-    visibility: visible;
+    visibility: visible!important;
     height: auto!important;
+    overflow: auto!important;
+    opacity: 1!important;
+    display: block!important;
   }
 
   .o-section__figure img {

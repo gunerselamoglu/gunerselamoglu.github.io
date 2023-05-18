@@ -1179,4 +1179,4 @@
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.1');
+console.log('updat 8.2');
