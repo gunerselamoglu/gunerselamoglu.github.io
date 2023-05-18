@@ -127,122 +127,124 @@ sectionsOpen?.addEventListener('click', event => {
 });
 
 const page1 = () => {
-	const ysLogo = document.querySelector('.js-ys-logo');
-	const tuzluTitle = document.querySelectorAll('.js-tuzlu-title');
-	const golHikayesi = document.querySelectorAll('.js-gol-hikayesi');
-	const introExplan = document.querySelectorAll('.js-intro-explanation');
-	// const introSky = document.querySelector('.js-intro-sky');
-	const cloudLeft = document.querySelectorAll('.js-intro-cloud-left');
-	const cloudRight = document.querySelectorAll('.js-intro-cloud-right');
-	const introLake = document.querySelectorAll('.js-intro-lake');
-	const cloudRightLittle = document.querySelectorAll('.js-intro-cloud-right-little');
-	const introLightEffect = document.querySelector('.js-intro-light-effect');
-	const introLightEffect2 = document.querySelector('.js-intro-light-effect2');
-	const introLightEffect3 = document.querySelector('.js-intro-light-effect3');
-	const introTuzlu =  document.querySelectorAll('.js-intro-tuzlu');
-	const introWave = document.querySelectorAll('.js-intro-wave');
-	const introWater = document.querySelectorAll('.js-intro-water');
-	const introPlantGreen = document.querySelectorAll('.js-intro-plant-green');
-	const introRockRight = document.querySelectorAll('.js-intro-rock-right');
-	const introPlantBlur = document.querySelectorAll('.js-plant-blur');
-	const introRockLeft = document.querySelector('.js-intro-rock-left');
-	const introFrontBug = document.querySelector('.js-intro-front-bug');
-	const introMussel = document.querySelector('.js-intro-mussel');
-	const introBubbles = document.querySelectorAll('.js-intro-bubbles');
-	const introShrimp = document.querySelectorAll('.js-intro-shrimp');
-	const introFishRed  = document.querySelectorAll('.js-intro-fish-red');
-	const introFishes = document.querySelectorAll('.js-intro-fishes');
-	const introFishShadow = document.querySelectorAll('.js-intro-fish-shadow');
-	const cloudLeftLittle = document.querySelectorAll('.js-intro-cloud-left-little');
-	const startButton = document.querySelectorAll('.js-intro-start-button');
-	const introMountain = document.querySelectorAll('.js-intro-mountain');
+	// const ysLogo = document.querySelector('.js-ys-logo');
+	// const tuzluTitle = document.querySelectorAll('.js-tuzlu-title');
+	// const golHikayesi = document.querySelectorAll('.js-gol-hikayesi');
+	// const introExplan = document.querySelectorAll('.js-intro-explanation');
+	// // const introSky = document.querySelector('.js-intro-sky');
+	// const cloudLeft = document.querySelectorAll('.js-intro-cloud-left');
+	// const cloudRight = document.querySelectorAll('.js-intro-cloud-right');
+	// const introLake = document.querySelectorAll('.js-intro-lake');
+	// const cloudRightLittle = document.querySelectorAll('.js-intro-cloud-right-little');
+	// const introLightEffect = document.querySelector('.js-intro-light-effect');
+	// const introLightEffect2 = document.querySelector('.js-intro-light-effect2');
+	// const introLightEffect3 = document.querySelector('.js-intro-light-effect3');
+	// const introTuzlu =  document.querySelectorAll('.js-intro-tuzlu');
+	// const introWave = document.querySelectorAll('.js-intro-wave');
+	// const introWater = document.querySelectorAll('.js-intro-water');
+	// const introPlantGreen = document.querySelectorAll('.js-intro-plant-green');
+	// const introRockRight = document.querySelectorAll('.js-intro-rock-right');
+	// const introPlantBlur = document.querySelectorAll('.js-plant-blur');
+	// const introRockLeft = document.querySelector('.js-intro-rock-left');
+	// const introFrontBug = document.querySelector('.js-intro-front-bug');
+	// const introMussel = document.querySelector('.js-intro-mussel');
+	// const introBubbles = document.querySelectorAll('.js-intro-bubbles');
+	// const introShrimp = document.querySelectorAll('.js-intro-shrimp');
+	// const introFishRed  = document.querySelectorAll('.js-intro-fish-red');
+	// const introFishes = document.querySelectorAll('.js-intro-fishes');
+	// const introFishShadow = document.querySelectorAll('.js-intro-fish-shadow');
+	// const cloudLeftLittle = document.querySelectorAll('.js-intro-cloud-left-little');
+	// const startButton = document.querySelectorAll('.js-intro-start-button');
+	// const introMountain = document.querySelectorAll('.js-intro-mountain');
 
-	ysLogo.classList.add('fadeIn');
-	tuzluTitle[0].classList.add('fadeIn');
-	tuzluTitle[1].classList.add('fadeIn');
-	golHikayesi[0].classList.add('fadeIn');
-	golHikayesi[1].classList.add('fadeIn');
-	introExplan[0].classList.add('fadeIn');
-	introExplan[1].classList.add('fadeIn');
-	cloudLeft[0].classList.add('slideUp');
-	cloudLeft[1].classList.add('slideUp');
-	cloudRight[0].classList.add('slideUp');
-	cloudRight[1].classList.add('slideUp');
-	introLake[0].classList.add('slideUp');
-	introLake[1].classList.add('slideUp');
-	cloudRightLittle[0].classList.add('slideUp');
-	cloudRightLittle[1].classList.add('slideUp');
-	introLightEffect.classList.add('fadeIn');
-	introLightEffect2.classList.add('fadeIn');
-	introLightEffect3.classList.add('fadeIn');
-	// introSky.classList.add('slideUp');
-	introTuzlu[0].classList.add('slideUp');
-	introTuzlu[1].classList.add('slideUp');
-	introMountain[0].classList.add('slideUp');
-	introMountain[1].classList.add('slideUp');
+	// ysLogo.classList.add('fadeIn');
+	// tuzluTitle[0].classList.add('fadeIn');
+	// tuzluTitle[1].classList.add('fadeIn');
+	// golHikayesi[0].classList.add('fadeIn');
+	// golHikayesi[1].classList.add('fadeIn');
+	// introExplan[0].classList.add('fadeIn');
+	// introExplan[1].classList.add('fadeIn');
+	// cloudLeft[0].classList.add('slideUp');
+	// cloudLeft[1].classList.add('slideUp');
+	// cloudRight[0].classList.add('slideUp');
+	// cloudRight[1].classList.add('slideUp');
+	// introLake[0].classList.add('slideUp');
+	// introLake[1].classList.add('slideUp');
+	// cloudRightLittle[0].classList.add('slideUp');
+	// cloudRightLittle[1].classList.add('slideUp');
+	// introLightEffect.classList.add('fadeIn');
+	// introLightEffect2.classList.add('fadeIn');
+	// introLightEffect3.classList.add('fadeIn');
+	// // introSky.classList.add('slideUp');
+	// introTuzlu[0].classList.add('slideUp');
+	// introTuzlu[1].classList.add('slideUp');
+	// introMountain[0].classList.add('slideUp');
+	// introMountain[1].classList.add('slideUp');
 
-	setTimeout(() => {
-		introTuzlu[0].classList.remove('slideUp');
-		introTuzlu[1].classList.remove('slideUp');
-		introTuzlu[0].classList.add('swimming');
-		introTuzlu[1].classList.add('swimming');
-	}, 3000);
+	// setTimeout(() => {
+	// 	introTuzlu[0].classList.remove('slideUp');
+	// 	introTuzlu[1].classList.remove('slideUp');
+	// 	introTuzlu[0].classList.add('swimming');
+	// 	introTuzlu[1].classList.add('swimming');
+	// }, 3000);
 
-	introWave[0].classList.add('slideUp');
-	introWave[1].classList.add('slideUp');
-	introWater[0].classList.add('slideUp');
-	introWater[1].classList.add('slideUp');
-	introPlantGreen[0].classList.add('slideUp');
-	introPlantGreen[1].classList.add('slideUp');
-	introRockRight[0].classList.add('slideUp');
-	introRockRight[1].classList.add('slideUp');
-	introPlantBlur[0].classList.add('slideUp');
-	introPlantBlur[1].classList.add('slideUp');
-	introRockLeft.classList.add('slideUp');
-	introFrontBug.classList.add('slideUp');
-	introMussel.classList.add('slideUp');
-	introBubbles[0].classList.add('fadeIn');
-	introBubbles[1].classList.add('fadeIn');
-	introShrimp[0].classList.add('slideUp');
-	introShrimp[1].classList.add('slideUp');
-	introFishRed[0].classList.add('slideLeft');
-	introFishRed[1].classList.add('slideLeft');
-	introFishes[0].classList.add('slideLeft');
-	introFishes[1].classList.add('slideLeft');
-	introFishShadow[0].classList.add('slideLeft');
-	introFishShadow[1].classList.add('slideLeft');
-	cloudLeftLittle[0].classList.add('slideUp');
-	cloudLeftLittle[1].classList.add('slideUp');
-	startButton[0].classList.add('fadeIn');
-	startButton[1].classList.add('fadeIn');
-	ysLogoHeader.classList.remove('fadeIn');
-	header.classList.add('fadeIn');
-	footer.classList.add('fadeIn');
+	// introWave[0].classList.add('slideUp');
+	// introWave[1].classList.add('slideUp');
+	// introWater[0].classList.add('slideUp');
+	// introWater[1].classList.add('slideUp');
+	// introPlantGreen[0].classList.add('slideUp');
+	// introPlantGreen[1].classList.add('slideUp');
+	// introRockRight[0].classList.add('slideUp');
+	// introRockRight[1].classList.add('slideUp');
+	// introPlantBlur[0].classList.add('slideUp');
+	// introPlantBlur[1].classList.add('slideUp');
+	// introRockLeft.classList.add('slideUp');
+	// introFrontBug.classList.add('slideUp');
+	// introMussel.classList.add('slideUp');
+	// introBubbles[0].classList.add('fadeIn');
+	// introBubbles[1].classList.add('fadeIn');
+	// introShrimp[0].classList.add('slideUp');
+	// introShrimp[1].classList.add('slideUp');
+	// introFishRed[0].classList.add('slideLeft');
+	// introFishRed[1].classList.add('slideLeft');
+	// introFishes[0].classList.add('slideLeft');
+	// introFishes[1].classList.add('slideLeft');
+	// introFishShadow[0].classList.add('slideLeft');
+	// introFishShadow[1].classList.add('slideLeft');
+	// cloudLeftLittle[0].classList.add('slideUp');
+	// cloudLeftLittle[1].classList.add('slideUp');
+	// startButton[0].classList.add('fadeIn');
+	// startButton[1].classList.add('fadeIn');
+	// ysLogoHeader.classList.remove('fadeIn');
+	// header.classList.add('fadeIn');
+	// footer.classList.add('fadeIn');
 
-	new Parallax(introLightEffect);
-	new Parallax(introLightEffect2);
-	new Parallax(introLightEffect3);
-	new Parallax(cloudLeft[0]);
-	new Parallax(cloudLeftLittle[0]);
-	new Parallax(cloudRight[0]);
-	new Parallax(cloudRightLittle[0]);
-	new Parallax(introTuzlu[0]);
-	new Parallax(introWave[0]);
-	new Parallax(introWater[0]);
-	new Parallax(introLake[0]);
-	new Parallax(introRockLeft);
-	new Parallax(introMountain[0]);
-	new Parallax(introFrontBug);
-	new Parallax(introRockRight[0]);
-	new Parallax(introShrimp[0]);
-	new Parallax(introPlantBlur[0]);
-	new Parallax(introPlantGreen[0]);
-	new Parallax(introMussel);
-	new Parallax(introBubbles[0]);
+	// if(windowWidth > 1023) {
+	// 	new Parallax(introLightEffect);
+	// 	new Parallax(introLightEffect2);
+	// 	new Parallax(introLightEffect3);
+	// 	new Parallax(cloudLeft[0]);
+	// 	new Parallax(cloudLeftLittle[0]);
+	// 	new Parallax(cloudRight[0]);
+	// 	new Parallax(cloudRightLittle[0]);
+	// 	new Parallax(introTuzlu[0]);
+	// 	new Parallax(introWave[0]);
+	// 	new Parallax(introWater[0]);
+	// 	new Parallax(introLake[0]);
+	// 	new Parallax(introRockLeft);
+	// 	new Parallax(introMountain[0]);
+	// 	new Parallax(introFrontBug);
+	// 	new Parallax(introRockRight[0]);
+	// 	new Parallax(introShrimp[0]);
+	// 	new Parallax(introPlantBlur[0]);
+	// 	new Parallax(introPlantGreen[0]);
+	// 	new Parallax(introMussel);
+	// 	new Parallax(introBubbles[0]);
+	// }
 
-	setTimeout(() => {
-		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
-	},2500);
+	// setTimeout(() => {
+	// 	sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
+	// },2500);
 }
 
 const page2 = () => {
@@ -271,13 +273,15 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(page01CloudRight);
-	new Parallax(page01CloudSmall);
-	new Parallax(page01Flamingos);
-	new Parallax(page01Tuzlu);
-	new Parallax(page01PlantLeft);
-	new Parallax(page01PlantMiddle);
-	new Parallax(page01PlantRight);
+	if(windowWidth > 1023) {
+		new Parallax(page01CloudRight);
+		new Parallax(page01CloudSmall);
+		new Parallax(page01Flamingos);
+		new Parallax(page01Tuzlu);
+		new Parallax(page01PlantLeft);
+		new Parallax(page01PlantMiddle);
+		new Parallax(page01PlantRight);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
@@ -336,24 +340,26 @@ const page3 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(lakeFloor);
-	new Parallax(tuzlu);
-	new Parallax(blow);
-	new Parallax(tuzluEyeBall);
-	new Parallax(decor);
-	new Parallax(cake);
-	new Parallax(cloudLeft);
-	new Parallax(cloudTop);
-	new Parallax(page02FlamingoFrontBlack);
-	new Parallax(page02FlamingoFrontPink);
-	new Parallax(page02ConfetiFront);
-	new Parallax(page02ConfetiBack);
-	new Parallax(page02BirdTopRight);
-	new Parallax(page02BirdFrontRight);
-	new Parallax(page02FireFly);
-	new Parallax(fireflyLight);
-	new Parallax(flamingos);
-	new Parallax(page02FlamingoRightPink);
+	if(windowWidth > 1023) {
+		new Parallax(lakeFloor);
+		new Parallax(tuzlu);
+		new Parallax(blow);
+		new Parallax(tuzluEyeBall);
+		new Parallax(decor);
+		new Parallax(cake);
+		new Parallax(cloudLeft);
+		new Parallax(cloudTop);
+		new Parallax(page02FlamingoFrontBlack);
+		new Parallax(page02FlamingoFrontPink);
+		new Parallax(page02ConfetiFront);
+		new Parallax(page02ConfetiBack);
+		new Parallax(page02BirdTopRight);
+		new Parallax(page02BirdFrontRight);
+		new Parallax(page02FireFly);
+		new Parallax(fireflyLight);
+		new Parallax(flamingos);
+		new Parallax(page02FlamingoRightPink);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false;
@@ -414,25 +420,27 @@ const page4 = () => {
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
-	new Parallax(lakeFloor);
-	new Parallax(tuzlu);
-	new Parallax(cloud);
-	new Parallax(flamingoLeft);
-	new Parallax(flamingoLeftDark);
-	new Parallax(flamingoLeftGaga);
-	new Parallax(flamingoLeftGagaDark);
-	new Parallax(flamingoRight);
-	new Parallax(flamingoRightDark);
-	new Parallax(flamingoRightWing);
-	new Parallax(flamingoRightWingDark);
-	new Parallax(rockLeft);
-	new Parallax(rockLeftDark);
-	new Parallax(rockRight);
-	new Parallax(rockRightDark);
-	new Parallax(plantLeft);
-	new Parallax(plantLeftDark);
-	new Parallax(plantRight);
-	new Parallax(plantRightDark);
+	if(windowWidth > 1023) {
+		new Parallax(lakeFloor);
+		new Parallax(tuzlu);
+		new Parallax(cloud);
+		new Parallax(flamingoLeft);
+		new Parallax(flamingoLeftDark);
+		new Parallax(flamingoLeftGaga);
+		new Parallax(flamingoLeftGagaDark);
+		new Parallax(flamingoRight);
+		new Parallax(flamingoRightDark);
+		new Parallax(flamingoRightWing);
+		new Parallax(flamingoRightWingDark);
+		new Parallax(rockLeft);
+		new Parallax(rockLeftDark);
+		new Parallax(rockRight);
+		new Parallax(rockRightDark);
+		new Parallax(plantLeft);
+		new Parallax(plantLeftDark);
+		new Parallax(plantRight);
+		new Parallax(plantRightDark);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false;
@@ -465,14 +473,16 @@ const page5 = () => {
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
-
-	new Parallax(tuzlu);
-	new Parallax(rock);
-	new Parallax(tuzluCloud);
-	new Parallax(tuzluFriend);
-	new Parallax(ball);
-	new Parallax(tuzluDrink);
-	new Parallax(footPrint);
+	
+	if(windowWidth > 1023) {
+		new Parallax(tuzlu);
+		new Parallax(rock);
+		new Parallax(tuzluCloud);
+		new Parallax(tuzluFriend);
+		new Parallax(ball);
+		new Parallax(tuzluDrink);
+		new Parallax(footPrint);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false;
@@ -514,13 +524,15 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(lake);
-	new Parallax(tuzlu);
-	new Parallax(children);
-	new Parallax(cloudTopBig);
-	new Parallax(cloudTopLittle);
-	new Parallax(cloudBottom);
-	new Parallax(plant);
+	if(windowWidth > 1023) {
+		new Parallax(lake);
+		new Parallax(tuzlu);
+		new Parallax(children);
+		new Parallax(cloudTopBig);
+		new Parallax(cloudTopLittle);
+		new Parallax(cloudBottom);
+		new Parallax(plant);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
@@ -584,15 +596,17 @@ const page7 = () => {
 	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 
-	new Parallax(child);
-	new Parallax(childArm);
-	new Parallax(childEyes);
-	new Parallax(eyeBrow);
-	new Parallax(tuzluLeft);
-	new Parallax(tuzluCenter);
-	new Parallax(tuzluRight);
-	new Parallax(cloudLeft);
-	new Parallax(cloudRight);
+	if(windowWidth > 1023) {
+		new Parallax(child);
+		new Parallax(childArm);
+		new Parallax(childEyes);
+		new Parallax(eyeBrow);
+		new Parallax(tuzluLeft);
+		new Parallax(tuzluCenter);
+		new Parallax(tuzluRight);
+		new Parallax(cloudLeft);
+		new Parallax(cloudRight);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false;
@@ -619,12 +633,14 @@ const page8 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(beach);
-	new Parallax(tuzlu);
-	new Parallax(boy);
-	new Parallax(handLeft);
-	new Parallax(handRight);
-	new Parallax(rota);
+	if(windowWidth > 1023) {
+		new Parallax(beach);
+		new Parallax(tuzlu);
+		new Parallax(boy);
+		new Parallax(handLeft);
+		new Parallax(handRight);
+		new Parallax(rota);
+	}
 
 	setTimeout(() => {
 		tuzlu.classList.remove('slideLeft');
@@ -684,16 +700,18 @@ const page9 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(tuzlu);
-	new Parallax(rabbit);
-	new Parallax(plants);
-	new Parallax(bridge);
-	new Parallax(houses);
-	new Parallax(branch);
-	new Parallax(tuzluBulut);
-	new Parallax(cloudLeft);
-	new Parallax(cloudRight);
-	new Parallax(mountines);
+	if(windowWidth > 1023) {
+		new Parallax(tuzlu);
+		new Parallax(rabbit);
+		new Parallax(plants);
+		new Parallax(bridge);
+		new Parallax(houses);
+		new Parallax(branch);
+		new Parallax(tuzluBulut);
+		new Parallax(cloudLeft);
+		new Parallax(cloudRight);
+		new Parallax(mountines);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
@@ -749,9 +767,11 @@ const page10 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(ayseTeyze);
-	new Parallax(hasanAmca);
-	new Parallax(rasimAmca);
+	if(windowWidth > 1023) {
+		new Parallax(ayseTeyze);
+		new Parallax(hasanAmca);
+		new Parallax(rasimAmca);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false;
@@ -790,13 +810,15 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(clouds);
-	new Parallax(tuzlu);
-	new Parallax(flamingosLittle);
-	new Parallax(flamingosBack);
-	new Parallax(flamingosMiddle);
-	new Parallax(flamingosFront);
-	new Parallax(sun);
+	if(windowWidth > 1023) {
+		new Parallax(clouds);
+		new Parallax(tuzlu);
+		new Parallax(flamingosLittle);
+		new Parallax(flamingosBack);
+		new Parallax(flamingosMiddle);
+		new Parallax(flamingosFront);
+		new Parallax(sun);
+	}
 
 	setTimeout(() => {
 		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
@@ -860,20 +882,22 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	new Parallax(lake);
-	new Parallax(sun);
-	new Parallax(clouds);
-	new Parallax(tuzlu);
-	new Parallax(flamingos);
-	new Parallax(balik);
-	new Parallax(baliklar);
-	new Parallax(karides);
-	new Parallax(plantRight);
-	new Parallax(plantLeft);
-	new Parallax(vaweLine);
-	new Parallax(wave);
-	new Parallax(bubble4);
-	new Parallax(bubble5);
+	if(windowWidth > 1023) {
+		new Parallax(lake);
+		new Parallax(sun);
+		new Parallax(clouds);
+		new Parallax(tuzlu);
+		new Parallax(flamingos);
+		new Parallax(balik);
+		new Parallax(baliklar);
+		new Parallax(karides);
+		new Parallax(plantRight);
+		new Parallax(plantLeft);
+		new Parallax(vaweLine);
+		new Parallax(wave);
+		new Parallax(bubble4);
+		new Parallax(bubble5);
+	}
 
 	setTimeout(() => {
 		flamingos.classList.remove('slideLeft');
@@ -938,12 +962,14 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	new Parallax(boy[0]);
-	new Parallax(tuzlu[0]);
-	new Parallax(shine);
-	new Parallax(shine2);
-	new Parallax(shine3);
-	new Parallax(lake);
+	if(windowWidth > 1023) {
+		new Parallax(boy[0]);
+		new Parallax(tuzlu[0]);
+		new Parallax(shine);
+		new Parallax(shine2);
+		new Parallax(shine3);
+		new Parallax(lake);
+	}
 }
 
 function initialization(){
@@ -964,6 +990,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       //   counter -= 0.1;
       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
       // }
+
 			//Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
 			windowWidth > 1023 && eval(`page${destination}()`);
 
@@ -1014,7 +1041,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
-			console.log('updat 7.9');
+			console.log('updat 8.0');
 			activeSection = index;
 			let activetime;
 			sectionList.forEach((elem, indexInner) => {
