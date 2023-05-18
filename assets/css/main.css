@@ -35,11 +35,6 @@
 @import 'son-animation.css';
 @import 'son.css';
 
-#tuzlu {
-  overflow: scroll;
-    height: 100vh;
-}
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

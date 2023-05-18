@@ -972,130 +972,130 @@
 // 	}
 // }
 
-// function initialization(){
-// let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
+function initialization(){
+//let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus', 'bir-planimiz-var', 'yola-koyulduk', 'tasarruf-zamani', 'keyifli-bir-yaz', 'tasarruf-ettik', 'iyilik-bulasicidir', 'benim-mirasim-su', 'son'];
 
-// 	let fullPage = $('#tuzlu').fullpage({
-// 		anchors: anchors,
-// 		responsiveWidth: 1024,
-// 		onLeave: function(origin, destination, direction){	
-// 			sectionList[origin - 1].classList.add('hide');
-// 			clearInterval(sequenceInterval);
-// 			clearInterval(sequenceInterval2);
+	let fullPage = $('#tuzlu').fullpage({
+		// anchors: anchors,
+		// responsiveWidth: 1024,
+		// onLeave: function(origin, destination, direction){	
+		// 	sectionList[origin - 1].classList.add('hide');
+		// 	clearInterval(sequenceInterval);
+		// 	clearInterval(sequenceInterval2);
       
-// 			// const soundInterval = setInterval(muteSlide, 100);
-//       // let counter = 1;
+			// const soundInterval = setInterval(muteSlide, 100);
+      // let counter = 1;
       
-//       // function muteSlide() {
-//       //   counter -= 0.1;
-//       //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
-//       // }
+      // function muteSlide() {
+      //   counter -= 0.1;
+      //   counter < 0.1 ? clearInterval(soundInterval)  + voicePlayer[origin].pause() + (voicePlayer[0].currentTime = 0) : voicePlayer[0].volume = counter;
+      // }
 
-// 			//Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
-// 			windowWidth > 1023 && eval(`page${destination}()`);
+			//Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
+			// windowWidth > 1023 && eval(`page${destination}()`);
 
-// 			// Section menü görünümünü ayarlıyoruz
-// 			if(destination == 1 || destination == 13) {
-// 				sectionsOpen.classList.remove('visible');
-// 				pressKitButton.classList.remove('hidden');
-// 				headerPorfile.classList.remove('hidden');
-// 			} else {
-// 				sectionsOpen.classList.add('visible');
-// 				pressKitButton.classList.add('hidden');
-// 				headerPorfile.classList.add('hidden');
-// 			}
+			// Section menü görünümünü ayarlıyoruz
+			// if(destination == 1 || destination == 13) {
+			// 	sectionsOpen.classList.remove('visible');
+			// 	pressKitButton.classList.remove('hidden');
+			// 	headerPorfile.classList.remove('hidden');
+			// } else {
+			// 	sectionsOpen.classList.add('visible');
+			// 	pressKitButton.classList.add('hidden');
+			// 	headerPorfile.classList.add('hidden');
+			// }
 
-// 			//Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
-// 			if(windowWidth > 1023) {
-// 				setTimeout(() => {
-// 					const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
-// 					const move = document.querySelector('.getFront').querySelectorAll('.move');
-// 					const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
-// 					const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
-// 					const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
-// 					const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
-// 					const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
-// 					const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
-// 					const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
-// 					const show = document.querySelector('.getFront').querySelectorAll('.show');
-// 					const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
-// 					const talk = document.querySelector('.getFront').querySelectorAll('.talk');
-// 					slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
-// 					move?.forEach(elem => elem.classList.remove('move'));
-// 					fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
-// 					opacity?.forEach(elem => elem.classList.remove('opacity'));
-// 					headShake?.forEach(elem => elem.classList.remove('headShake'));
-// 					slideUp?.forEach(elem => elem.classList.remove('slideUp'));
-// 					swimming?.forEach(elem => elem.classList.remove('swimming'));
-// 					HandMove?.forEach(elem => elem.classList.remove('HandMove'));
-// 					slideDown?.forEach(elem => elem.classList.remove('slideDown'));
-// 					show?.forEach(elem => elem.classList.remove('show'));
-// 					flash?.forEach(elem => elem.classList.remove('show'));
-// 					talk?.forEach(elem => elem.classList.remove('talk'));
-// 				},1700);
-// 			}
-// 			// Section çemberi animasyonu
-// 			sectionsList.forEach(elem => elem.classList.remove('active'));
-// 			sectionsList[destination - 1].classList.add('active');
-// 			pageOrder.innerHTML = destination - 1;
-// 			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
-// 		},
-// 		afterLoad: function (anchorLink, index, origin) {
-// 			console.log('updat 8.0');
-// 			activeSection = index;
-// 			let activetime;
-// 			sectionList.forEach((elem, indexInner) => {
-// 				indexInner == index - 1
-//         ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
-// 				:  elem.classList.remove('getFront', 'hide')
-// 			});
+			//Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
+			// if(windowWidth > 1023) {
+			// 	setTimeout(() => {
+			// 		const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
+			// 		const move = document.querySelector('.getFront').querySelectorAll('.move');
+			// 		const fadeIn = document.querySelector('.getFront').querySelectorAll('.fadeIn');
+			// 		const opacity = document.querySelector('.getFront').querySelectorAll('.opacity');
+			// 		const headShake = document.querySelector('.getFront').querySelectorAll('.headShake');
+			// 		const slideUp = document.querySelector('.getFront').querySelectorAll('.slideUp');
+			// 		const swimming = document.querySelector('.getFront').querySelectorAll('.swimming');
+			// 		const slideDown = document.querySelector('.getFront').querySelectorAll('.slideDown');
+			// 		const HandMove = document.querySelector('.getFront').querySelectorAll('.HandMove');
+			// 		const show = document.querySelector('.getFront').querySelectorAll('.show');
+			// 		const flash	= document.querySelector('.getFront').querySelectorAll('.flash');
+			// 		const talk = document.querySelector('.getFront').querySelectorAll('.talk');
+			// 		slideLeft?.forEach(elem => elem.classList.remove('slideLeft'));
+			// 		move?.forEach(elem => elem.classList.remove('move'));
+			// 		fadeIn?.forEach(elem => elem.classList.remove('fadeIn'));
+			// 		opacity?.forEach(elem => elem.classList.remove('opacity'));
+			// 		headShake?.forEach(elem => elem.classList.remove('headShake'));
+			// 		slideUp?.forEach(elem => elem.classList.remove('slideUp'));
+			// 		swimming?.forEach(elem => elem.classList.remove('swimming'));
+			// 		HandMove?.forEach(elem => elem.classList.remove('HandMove'));
+			// 		slideDown?.forEach(elem => elem.classList.remove('slideDown'));
+			// 		show?.forEach(elem => elem.classList.remove('show'));
+			// 		flash?.forEach(elem => elem.classList.remove('show'));
+			// 		talk?.forEach(elem => elem.classList.remove('talk'));
+			// 	},1700);
+			// }
+			// Section çemberi animasyonu
+			// sectionsList.forEach(elem => elem.classList.remove('active'));
+			// sectionsList[destination - 1].classList.add('active');
+			// pageOrder.innerHTML = destination - 1;
+			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
+		},
+		afterLoad: function (anchorLink, index, origin) {
+			// console.log('updat 8.0');
+			// activeSection = index;
+			// let activetime;
+			// sectionList.forEach((elem, indexInner) => {
+			// 	indexInner == index - 1
+      //   ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
+			// 	:  elem.classList.remove('getFront', 'hide')
+			// });
 
-// 			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
+			// voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-// 			if(windowWidth < 1024) {
-// 				if (anchorLink == 'giris') {
-// 					page1();
-// 				}
-// 				if (anchorLink == 'merhaba') {
-// 					page2();
-// 				}
-// 				if (anchorLink == 'dogum-gunu') {
-// 					page3();
-// 				}
-// 				if (anchorLink == 'birsey-duydum') {
-// 					page4();
-// 				}
-// 				if (anchorLink == 'golde-yuruyus') {
-// 					page5();
-// 				}
-// 				if (anchorLink == 'bir-planimiz-var') {
-// 					page6();
-// 				}
-// 				if (anchorLink == 'yola-koyulduk') {
-// 					page7();
-// 				}
-// 				if (anchorLink == 'tasarruf-zamani') {
-// 					page8();
-// 				}
-// 				if (anchorLink == 'keyifli-bir-yaz') {
-// 					page9();
-// 				}
-// 				if (anchorLink == 'tasarruf-ettik') {
-// 					page10();
-// 				}
-// 				if (anchorLink == 'iyilik-bulasicidir') {
-// 					page11();
-// 				}
-// 				if (anchorLink == 'benim-mirasim-su') {
-// 					page12();
-// 				}
-// 				if (anchorLink == 'son') {
-// 					page13();
-// 				}
-// 			}
-// 		}
-// 	});
-// }
+			// if(windowWidth < 1024) {
+			// 	if (anchorLink == 'giris') {
+			// 		page1();
+			// 	}
+			// 	if (anchorLink == 'merhaba') {
+			// 		page2();
+			// 	}
+			// 	if (anchorLink == 'dogum-gunu') {
+			// 		page3();
+			// 	}
+			// 	if (anchorLink == 'birsey-duydum') {
+			// 		page4();
+			// 	}
+			// 	if (anchorLink == 'golde-yuruyus') {
+			// 		page5();
+			// 	}
+			// 	if (anchorLink == 'bir-planimiz-var') {
+			// 		page6();
+			// 	}
+			// 	if (anchorLink == 'yola-koyulduk') {
+			// 		page7();
+			// 	}
+			// 	if (anchorLink == 'tasarruf-zamani') {
+			// 		page8();
+			// 	}
+			// 	if (anchorLink == 'keyifli-bir-yaz') {
+			// 		page9();
+			// 	}
+			// 	if (anchorLink == 'tasarruf-ettik') {
+			// 		page10();
+			// 	}
+			// 	if (anchorLink == 'iyilik-bulasicidir') {
+			// 		page11();
+			// 	}
+			// 	if (anchorLink == 'benim-mirasim-su') {
+			// 		page12();
+			// 	}
+			// 	if (anchorLink == 'son') {
+			// 		page13();
+			// 	}
+			// }
+		}
+	});
+}
 
 // if(windowWidth > 1023) {
 // 	$(".js-header-profile, .header-profile__box").mouseover(function () {
@@ -1179,4 +1179,4 @@
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.3.1');
+console.log('updat 8.4');
