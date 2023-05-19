@@ -78,52 +78,52 @@ document.onreadystatechange = () => {
 	}
 };
 
-// soundControl?.addEventListener('click', () => {
-// 	musicPlayer.paused ? musicPlayer.play() + voicePlayer[activeSection - 1].play() + (voicePlayer[activeSection - 1].volume = 1) + soundControl.classList.add('play') + (sound = true) : musicPlayer.pause() + voicePlayer.forEach(player => player.pause()) + soundControl.classList.remove('play') + (sound = false);
-// });
+soundControl?.addEventListener('click', () => {
+	musicPlayer.paused ? musicPlayer.play() + voicePlayer[activeSection - 1].play() + (voicePlayer[activeSection - 1].volume = 1) + soundControl.classList.add('play') + (sound = true) : musicPlayer.pause() + voicePlayer.forEach(player => player.pause()) + soundControl.classList.remove('play') + (sound = false);
+});
 
-// mapClose?.addEventListener('click', event => {
-// 	event.preventDefault();
-// 	map.classList.add('hide');
-// 	mapOpen.classList.remove('active');
-// 	map.classList.remove('show');
-// });
+mapClose?.addEventListener('click', event => {
+	event.preventDefault();
+	map.classList.add('hide');
+	mapOpen.classList.remove('active');
+	map.classList.remove('show');
+});
 
-// mapOpen?.addEventListener('click', event => {
-// 	event.preventDefault();
-// 	mapOpen.classList.contains('active') ? 
+mapOpen?.addEventListener('click', event => {
+	event.preventDefault();
+	mapOpen.classList.contains('active') ? 
 	
-// 	mapOpen.classList.remove('active') +
-// 	map.classList.remove('show') +
-// 	map.classList.add('hide') :
+	mapOpen.classList.remove('active') +
+	map.classList.remove('show') +
+	map.classList.add('hide') :
 
-// 	mapOpen.classList.add('active') +
-// 	map.classList.add('show') +
-// 	map.classList.remove('hide')
-// });
+	mapOpen.classList.add('active') +
+	map.classList.add('show') +
+	map.classList.remove('hide')
+});
 
-// sectionsClose?.addEventListener('click', event => {
-// 	event.preventDefault();
-// 	sections.classList.add('hideSlideToRight');
-// 	sections.classList.remove('showSlideToLeft');
+sectionsClose?.addEventListener('click', event => {
+	event.preventDefault();
+	sections.classList.add('hideSlideToRight');
+	sections.classList.remove('showSlideToLeft');
 	
-// 	setTimeout(() => {
-// 		document.querySelector('.js-white-overlay').remove();
-// 	}, 700);
-// });
+	setTimeout(() => {
+		document.querySelector('.js-white-overlay').remove();
+	}, 700);
+});
 
-// sectionsOpen?.addEventListener('click', event => {
-// 	event.preventDefault();
-// 	sections.classList.add('showSlideToLeft');
-// 	sections.classList.remove('hideSlideToRight');
+sectionsOpen?.addEventListener('click', event => {
+	event.preventDefault();
+	sections.classList.add('showSlideToLeft');
+	sections.classList.remove('hideSlideToRight');
 	
-// 	setTimeout(() => {
-// 		const overlay = document.createElement("div");
-// 		overlay.classList.add('js-white-overlay');
-// 		overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;opacity:.5;z-index:10'
-// 		document.body.appendChild(overlay);
-// 	}, 500);
-// });
+	setTimeout(() => {
+		const overlay = document.createElement("div");
+		overlay.classList.add('js-white-overlay');
+		overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;opacity:.5;z-index:10'
+		document.body.appendChild(overlay);
+	}, 500);
+});
 
 // const page1 = () => {
 // 	// const ysLogo = document.querySelector('.js-ys-logo');
@@ -1178,4 +1178,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.7');
+console.log('updat 8.8');
