@@ -1096,58 +1096,58 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 	});
 }
 
-// if(windowWidth > 1023) {
-// 	$(".js-header-profile, .header-profile__box").mouseover(function () {
-//     $(".header-profile__box").addClass("header-profile__box--show");
-// 		$(".js-mobile-menu-open-icon").hide();
-// 		$(".js-mobile-menu-close-icon").show();		
-// 	});
+if(windowWidth > 1023) {
+	$(".js-header-profile, .header-profile__box").mouseover(function () {
+    $(".header-profile__box").addClass("header-profile__box--show");
+		$(".js-mobile-menu-open-icon").hide();
+		$(".js-mobile-menu-close-icon").show();		
+	});
 
-// 	$(".js-header-profile, .header-profile__box").mouseout(function () {
-// 			$(".header-profile__box").removeClass("header-profile__box--show");
-// 			$(".js-mobile-menu-open-icon").show();
-// 			$(".js-mobile-menu-close-icon").hide();
-// 	});
-// } else {
-// 	$(".js-mobile-menu-open-icon").click(function(){
-// 		$(".header-profile__box").addClass("header-profile__box--show");
-// 		$(".js-mobile-menu-open-icon").hide();
-// 		$(".js-mobile-menu-close-icon").show();
-// 		$(".header-profile").addClass('active');
-// 	});
+	$(".js-header-profile, .header-profile__box").mouseout(function () {
+			$(".header-profile__box").removeClass("header-profile__box--show");
+			$(".js-mobile-menu-open-icon").show();
+			$(".js-mobile-menu-close-icon").hide();
+	});
+} else {
+	$(".js-mobile-menu-open-icon").click(function(){
+		$(".header-profile__box").addClass("header-profile__box--show");
+		$(".js-mobile-menu-open-icon").hide();
+		$(".js-mobile-menu-close-icon").show();
+		$(".header-profile").addClass('active');
+	});
 
-// 	$(".js-mobile-menu-close-icon").click(function(){
-// 			$(".header-profile__box").removeClass("header-profile__box--show");
-// 			$(".js-mobile-menu-open-icon").show();
-// 			$(".js-mobile-menu-close-icon").hide();
-// 			$(".header-profile").removeClass('active');
-// 	});
-// }
+	$(".js-mobile-menu-close-icon").click(function(){
+			$(".header-profile__box").removeClass("header-profile__box--show");
+			$(".js-mobile-menu-open-icon").show();
+			$(".js-mobile-menu-close-icon").hide();
+			$(".header-profile").removeClass('active');
+	});
+}
 
-// let currentWidth = window.innerWidth;
-// let resizeTimeout;
+let currentWidth = window.innerWidth;
+let resizeTimeout;
 
-// if(currentWidth > 1023) {
-// 	console.log('reload 1');
-// 	window.addEventListener('resize', function() {
-//     clearTimeout(resizeTimeout);
+if(currentWidth > 1023) {
+	console.log('reload 1');
+	window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
 
-//     resizeTimeout = setTimeout(function() {
-//         let windowHeight = window.innerHeight;
-//         let windowWidth = window.innerWidth;
+    resizeTimeout = setTimeout(function() {
+        let windowHeight = window.innerHeight;
+        let windowWidth = window.innerWidth;
 
-//         let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+        let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
 
-//         if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
-//             location.reload();
-//         }
-//     }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
-// 	});
-// }
+        if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
+            location.reload();
+        }
+    }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
+	});
+}
 
-// window.addEventListener('orientationchange', function() {
-// 	location.reload();
-// });
+window.addEventListener('orientationchange', function() {
+	location.reload();
+});
 
 
 // pressKitButton.addEventListener('click', () => {
@@ -1178,4 +1178,4 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.6');
+console.log('updat 8.7');
