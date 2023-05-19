@@ -1033,11 +1033,12 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// 		talk?.forEach(elem => elem.classList.remove('talk'));
 			// 	},1700);
 			// }
+			
 			// Section çemberi animasyonu
-			// sectionsList.forEach(elem => elem.classList.remove('active'));
-			// sectionsList[destination - 1].classList.add('active');
-			// pageOrder.innerHTML = destination - 1;
-			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
+			sectionsList.forEach(elem => elem.classList.remove('active'));
+			sectionsList[destination - 1].classList.add('active');
+			pageOrder.innerHTML = destination - 1;
+			sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
 			activeSection = index;
@@ -1050,47 +1051,47 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-			// if(windowWidth < 1024) {
-			// 	if (anchorLink == 'giris') {
-			// 		page1();
-			// 	}
-			// 	if (anchorLink == 'merhaba') {
-			// 		page2();
-			// 	}
-			// 	if (anchorLink == 'dogum-gunu') {
-			// 		page3();
-			// 	}
-			// 	if (anchorLink == 'birsey-duydum') {
-			// 		page4();
-			// 	}
-			// 	if (anchorLink == 'golde-yuruyus') {
-			// 		page5();
-			// 	}
-			// 	if (anchorLink == 'bir-planimiz-var') {
-			// 		page6();
-			// 	}
-			// 	if (anchorLink == 'yola-koyulduk') {
-			// 		page7();
-			// 	}
-			// 	if (anchorLink == 'tasarruf-zamani') {
-			// 		page8();
-			// 	}
-			// 	if (anchorLink == 'keyifli-bir-yaz') {
-			// 		page9();
-			// 	}
-			// 	if (anchorLink == 'tasarruf-ettik') {
-			// 		page10();
-			// 	}
-			// 	if (anchorLink == 'iyilik-bulasicidir') {
-			// 		page11();
-			// 	}
-			// 	if (anchorLink == 'benim-mirasim-su') {
-			// 		page12();
-			// 	}
-			// 	if (anchorLink == 'son') {
-			// 		page13();
-			// 	}
-			// }
+			if(windowWidth < 1024) {
+				if (anchorLink == 'giris') {
+					page1();
+				}
+				if (anchorLink == 'merhaba') {
+					page2();
+				}
+				if (anchorLink == 'dogum-gunu') {
+					page3();
+				}
+				if (anchorLink == 'birsey-duydum') {
+					page4();
+				}
+				if (anchorLink == 'golde-yuruyus') {
+					page5();
+				}
+				if (anchorLink == 'bir-planimiz-var') {
+					page6();
+				}
+				if (anchorLink == 'yola-koyulduk') {
+					page7();
+				}
+				if (anchorLink == 'tasarruf-zamani') {
+					page8();
+				}
+				if (anchorLink == 'keyifli-bir-yaz') {
+					page9();
+				}
+				if (anchorLink == 'tasarruf-ettik') {
+					page10();
+				}
+				if (anchorLink == 'iyilik-bulasicidir') {
+					page11();
+				}
+				if (anchorLink == 'benim-mirasim-su') {
+					page12();
+				}
+				if (anchorLink == 'son') {
+					page13();
+				}
+			}
 		}
 	});
 }
@@ -1176,4 +1177,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.9');
+console.log('updat 9.0');
