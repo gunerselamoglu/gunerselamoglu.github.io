@@ -978,9 +978,9 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 		anchors: anchors,
 		responsiveWidth: 1024,
 		onLeave: function(origin, destination, direction){	
-			// sectionList[origin - 1].classList.add('hide');
-			// clearInterval(sequenceInterval);
-			// clearInterval(sequenceInterval2);
+			sectionList[origin - 1].classList.add('hide');
+			clearInterval(sequenceInterval);
+			clearInterval(sequenceInterval2);
       
 			// const soundInterval = setInterval(muteSlide, 100);
       // let counter = 1;
@@ -994,15 +994,15 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			//windowWidth > 1023 && eval(`page${destination}()`);
 
 			// Section menü görünümünü ayarlıyoruz
-			// if(destination == 1 || destination == 13) {
-			// 	sectionsOpen.classList.remove('visible');
-			// 	pressKitButton.classList.remove('hidden');
-			// 	headerPorfile.classList.remove('hidden');
-			// } else {
-			// 	sectionsOpen.classList.add('visible');
-			// 	pressKitButton.classList.add('hidden');
-			// 	headerPorfile.classList.add('hidden');
-			// }
+			if(destination == 1 || destination == 13) {
+				sectionsOpen.classList.remove('visible');
+				pressKitButton.classList.remove('hidden');
+				headerPorfile.classList.remove('hidden');
+			} else {
+				sectionsOpen.classList.add('visible');
+				pressKitButton.classList.add('hidden');
+				headerPorfile.classList.add('hidden');
+			}
 
 			//Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
 			// if(windowWidth > 1023) {
@@ -1177,4 +1177,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 9.2');
+console.log('updat 9.3');
