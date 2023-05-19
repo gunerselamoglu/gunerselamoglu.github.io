@@ -1040,16 +1040,15 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			// sectionsCircle.style.cssText = `stroke-dasharray : ${(destination - 1) * 8.9}px , 108.389px`;
 		},
 		afterLoad: function (anchorLink, index, origin) {
-			// console.log('updat 8.0');
-			// activeSection = index;
-			// let activetime;
-			// sectionList.forEach((elem, indexInner) => {
-			// 	indexInner == index - 1
-      //   ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
-			// 	:  elem.classList.remove('getFront', 'hide')
-			// });
+			activeSection = index;
+			let activetime;
+			sectionList.forEach((elem, indexInner) => {
+				indexInner == index - 1
+        ?  clearTimeout(activetime) + (activetime = setTimeout(() => sectionList[index - 1].classList.add('getFront'), 100))
+				:  elem.classList.remove('getFront', 'hide')
+			});
 
-			// voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
+			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
 			// if(windowWidth < 1024) {
 			// 	if (anchorLink == 'giris') {
@@ -1128,7 +1127,6 @@ let currentWidth = window.innerWidth;
 let resizeTimeout;
 
 if(currentWidth > 1023) {
-	console.log('reload 1');
 	window.addEventListener('resize', function() {
     clearTimeout(resizeTimeout);
 
@@ -1178,4 +1176,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 8.8');
+console.log('updat 8.9');
