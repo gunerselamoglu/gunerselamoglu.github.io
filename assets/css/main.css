@@ -265,9 +265,9 @@ section:nth-child(odd).hide {
   }
 
   .o-section__figure img {
-    -o-object-fit: contain;
-    font-family: "object-fit:contain;object-position:bottom center";
-    object-fit: contain; 
+    -o-object-fit: cover;
+    font-family: "object-fit:cover;object-position:bottom center";
+    object-fit: cover; 
     -o-object-position: top center;
     object-position: top center;
   }
