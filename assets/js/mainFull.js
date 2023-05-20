@@ -126,35 +126,34 @@ sectionsOpen?.addEventListener('click', event => {
 });
 
 const page1 = () => {
-	// const ysLogo = document.querySelector('.js-ys-logo');
-	// const tuzluTitle = document.querySelectorAll('.js-tuzlu-title');
-	// const golHikayesi = document.querySelectorAll('.js-gol-hikayesi');
-	// const introExplan = document.querySelectorAll('.js-intro-explanation');
-	// // const introSky = document.querySelector('.js-intro-sky');
-	// const cloudLeft = document.querySelectorAll('.js-intro-cloud-left');
-	// const cloudRight = document.querySelectorAll('.js-intro-cloud-right');
-	// const introLake = document.querySelectorAll('.js-intro-lake');
-	// const cloudRightLittle = document.querySelectorAll('.js-intro-cloud-right-little');
-	// const introLightEffect = document.querySelector('.js-intro-light-effect');
-	// const introLightEffect2 = document.querySelector('.js-intro-light-effect2');
-	// const introLightEffect3 = document.querySelector('.js-intro-light-effect3');
-	// const introTuzlu =  document.querySelectorAll('.js-intro-tuzlu');
-	// const introWave = document.querySelectorAll('.js-intro-wave');
-	// const introWater = document.querySelectorAll('.js-intro-water');
-	// const introPlantGreen = document.querySelectorAll('.js-intro-plant-green');
-	// const introRockRight = document.querySelectorAll('.js-intro-rock-right');
-	// const introPlantBlur = document.querySelectorAll('.js-plant-blur');
-	// const introRockLeft = document.querySelector('.js-intro-rock-left');
-	// const introFrontBug = document.querySelector('.js-intro-front-bug');
-	// const introMussel = document.querySelector('.js-intro-mussel');
-	// const introBubbles = document.querySelectorAll('.js-intro-bubbles');
-	// const introShrimp = document.querySelectorAll('.js-intro-shrimp');
-	// const introFishRed  = document.querySelectorAll('.js-intro-fish-red');
-	// const introFishes = document.querySelectorAll('.js-intro-fishes');
-	// const introFishShadow = document.querySelectorAll('.js-intro-fish-shadow');
-	// const cloudLeftLittle = document.querySelectorAll('.js-intro-cloud-left-little');
-	// const startButton = document.querySelectorAll('.js-intro-start-button');
-	// const introMountain = document.querySelectorAll('.js-intro-mountain');
+	const ysLogo = document.querySelector('.js-ys-logo');
+	const tuzluTitle = document.querySelectorAll('.js-tuzlu-title');
+	const golHikayesi = document.querySelectorAll('.js-gol-hikayesi');
+	const introExplan = document.querySelectorAll('.js-intro-explanation');
+	const cloudLeft = document.querySelectorAll('.js-intro-cloud-left');
+	const cloudRight = document.querySelectorAll('.js-intro-cloud-right');
+	const introLake = document.querySelectorAll('.js-intro-lake');
+	const cloudRightLittle = document.querySelectorAll('.js-intro-cloud-right-little');
+	const introLightEffect = document.querySelector('.js-intro-light-effect');
+	const introLightEffect2 = document.querySelector('.js-intro-light-effect2');
+	const introLightEffect3 = document.querySelector('.js-intro-light-effect3');
+	const introTuzlu =  document.querySelectorAll('.js-intro-tuzlu');
+	const introWave = document.querySelectorAll('.js-intro-wave');
+	const introWater = document.querySelectorAll('.js-intro-water');
+	const introPlantGreen = document.querySelectorAll('.js-intro-plant-green');
+	const introRockRight = document.querySelectorAll('.js-intro-rock-right');
+	const introPlantBlur = document.querySelectorAll('.js-plant-blur');
+	const introRockLeft = document.querySelector('.js-intro-rock-left');
+	const introFrontBug = document.querySelector('.js-intro-front-bug');
+	const introMussel = document.querySelector('.js-intro-mussel');
+	const introBubbles = document.querySelectorAll('.js-intro-bubbles');
+	const introShrimp = document.querySelectorAll('.js-intro-shrimp');
+	const introFishRed  = document.querySelectorAll('.js-intro-fish-red');
+	const introFishes = document.querySelectorAll('.js-intro-fishes');
+	const introFishShadow = document.querySelectorAll('.js-intro-fish-shadow');
+	const cloudLeftLittle = document.querySelectorAll('.js-intro-cloud-left-little');
+	const startButton = document.querySelectorAll('.js-intro-start-button');
+	const introMountain = document.querySelectorAll('.js-intro-mountain');
 
 	// ysLogo.classList.add('fadeIn');
 	// tuzluTitle[0].classList.add('fadeIn');
@@ -218,45 +217,45 @@ const page1 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(introLightEffect);
-	// 	new Parallax(introLightEffect2);
-	// 	new Parallax(introLightEffect3);
-	// 	new Parallax(cloudLeft[0]);
-	// 	new Parallax(cloudLeftLittle[0]);
-	// 	new Parallax(cloudRight[0]);
-	// 	new Parallax(cloudRightLittle[0]);
-	// 	new Parallax(introTuzlu[0]);
-	// 	new Parallax(introWave[0]);
-	// 	new Parallax(introWater[0]);
-	// 	new Parallax(introLake[0]);
-	// 	new Parallax(introRockLeft);
-	// 	new Parallax(introMountain[0]);
-	// 	new Parallax(introFrontBug);
-	// 	new Parallax(introRockRight[0]);
-	// 	new Parallax(introShrimp[0]);
-	// 	new Parallax(introPlantBlur[0]);
-	// 	new Parallax(introPlantGreen[0]);
-	// 	new Parallax(introMussel);
-	// 	new Parallax(introBubbles[0]);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(introLightEffect);
+		new Parallax(introLightEffect2);
+		new Parallax(introLightEffect3);
+		new Parallax(cloudLeft[0]);
+		new Parallax(cloudLeftLittle[0]);
+		new Parallax(cloudRight[0]);
+		new Parallax(cloudRightLittle[0]);
+		new Parallax(introTuzlu[0]);
+		new Parallax(introWave[0]);
+		new Parallax(introWater[0]);
+		new Parallax(introLake[0]);
+		new Parallax(introRockLeft);
+		new Parallax(introMountain[0]);
+		new Parallax(introFrontBug);
+		new Parallax(introRockRight[0]);
+		new Parallax(introShrimp[0]);
+		new Parallax(introPlantBlur[0]);
+		new Parallax(introPlantGreen[0]);
+		new Parallax(introMussel);
+		new Parallax(introBubbles[0]);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
-	// },2500);
+	setTimeout(() => {
+		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
+	},2500);
 }
 
 const page2 = () => {
-	// const page01Lake = document.querySelector('.js-page-01-lake');
-	// const page01CloudRight = document.querySelector('.js-page-01-cloud-right');
-	// const page01CloudSmall = document.querySelector('.js-page-01-cloud-small');
-	// const page01PlantLeft = document.querySelector('.js-page-01-plant-left');
-	// const page01PlantMiddle = document.querySelector('.js-page-01-plant-middle');
-	// const page01PlantRight = document.querySelector('.js-page-01-plant-right');
-	// const page01Tuzlu = document.querySelector('.js-page-01-tuzlu');
-	// const page01Flamingos = document.querySelector('.js-page-01-flamingos');
-	// const page01Content = document.querySelector('.js-page-01-content');
-	// const yusufcuk = document.querySelectorAll('.js-page-01-yusufcuk');
+	const page01Lake = document.querySelector('.js-page-01-lake');
+	const page01CloudRight = document.querySelector('.js-page-01-cloud-right');
+	const page01CloudSmall = document.querySelector('.js-page-01-cloud-small');
+	const page01PlantLeft = document.querySelector('.js-page-01-plant-left');
+	const page01PlantMiddle = document.querySelector('.js-page-01-plant-middle');
+	const page01PlantRight = document.querySelector('.js-page-01-plant-right');
+	const page01Tuzlu = document.querySelector('.js-page-01-tuzlu');
+	const page01Flamingos = document.querySelector('.js-page-01-flamingos');
+	const page01Content = document.querySelector('.js-page-01-content');
+	const yusufcuk = document.querySelectorAll('.js-page-01-yusufcuk');
 	
 	// page01Lake.classList.add('slideLeft');
 	// page01PlantLeft.classList.add('slideLeft');
@@ -272,19 +271,19 @@ const page2 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(page01CloudRight);
-	// 	new Parallax(page01CloudSmall);
-	// 	new Parallax(page01Flamingos);
-	// 	new Parallax(page01Tuzlu);
-	// 	new Parallax(page01PlantLeft);
-	// 	new Parallax(page01PlantMiddle);
-	// 	new Parallax(page01PlantRight);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(page01CloudRight);
+		new Parallax(page01CloudSmall);
+		new Parallax(page01Flamingos);
+		new Parallax(page01Tuzlu);
+		new Parallax(page01PlantLeft);
+		new Parallax(page01PlantMiddle);
+		new Parallax(page01PlantRight);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
-	// },1000);
+	setTimeout(() => {
+		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
+	},1000);
 
 	// const sequenceInterval01 = setInterval(changeSrc, 70);
 	// let counter = 0;
@@ -296,27 +295,27 @@ const page2 = () => {
 }
 
 const page3 = () => {
-	// const lakeFloor = document.querySelector('.js-page-02-lake-floor');
-	// const decor = document.querySelector('.js-page-02-decor');
-	// const cake = document.querySelector('.js-page-02-cake');
-	// const flamingos = document.querySelector('.js-page-02-flamingos');
-	// const page02FlamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
-	// const page02FlamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
-	// const page02FlamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
-	// const page02BirdFrontRight = document.querySelector('.js-page-02-bird-front-right');
-	// const page02BirdTopRight = document.querySelector('.js-page-02-bird-top-right');
-	// const page02FireFly = document.querySelector('.js-page-02-firefly');
-	// const fireflyLight = document.querySelector('.js-firefly-light');
-	// const page02Content1 = document.querySelector('.js-page-02-content-1');
-	// const page02Content2 = document.querySelector('.js-page-02-content-2');
-	// const page02Blow = document.querySelector('.js-page-02-blow');
-	// const page02ConfetiFront =  document.querySelector('.js-page-02-confeti-front');
-	// const page02ConfetiBack =  document.querySelector('.js-page-02-confeti-back');
-	// const cloudLeft = document.querySelector('.js-page-02-cloud-left');
-	// const cloudTop = document.querySelector('.js-page-02-cloud-top');
-	// const tuzlu = document.querySelector('.js-page-02-tuzlu');
-	// const blow = document.querySelector('.js-page-02-blow');
-	// const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
+	const lakeFloor = document.querySelector('.js-page-02-lake-floor');
+	const decor = document.querySelector('.js-page-02-decor');
+	const cake = document.querySelector('.js-page-02-cake');
+	const flamingos = document.querySelector('.js-page-02-flamingos');
+	const page02FlamingoRightPink = document.querySelector('.js-page-02-flamingo-right-pink');
+	const page02FlamingoFrontPink = document.querySelector('.js-page-02-flamingo-front-pink');
+	const page02FlamingoFrontBlack = document.querySelector('.js-page-02-flamingo-front-black');
+	const page02BirdFrontRight = document.querySelector('.js-page-02-bird-front-right');
+	const page02BirdTopRight = document.querySelector('.js-page-02-bird-top-right');
+	const page02FireFly = document.querySelector('.js-page-02-firefly');
+	const fireflyLight = document.querySelector('.js-firefly-light');
+	const page02Content1 = document.querySelector('.js-page-02-content-1');
+	const page02Content2 = document.querySelector('.js-page-02-content-2');
+	const page02Blow = document.querySelector('.js-page-02-blow');
+	const page02ConfetiFront =  document.querySelector('.js-page-02-confeti-front');
+	const page02ConfetiBack =  document.querySelector('.js-page-02-confeti-back');
+	const cloudLeft = document.querySelector('.js-page-02-cloud-left');
+	const cloudTop = document.querySelector('.js-page-02-cloud-top');
+	const tuzlu = document.querySelector('.js-page-02-tuzlu');
+	const blow = document.querySelector('.js-page-02-blow');
+	const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
 
 	// cloudLeft.classList.add('slideLeft');
 	// cloudTop.classList.add('slideLeft');
@@ -339,54 +338,54 @@ const page3 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(lakeFloor);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(blow);
-	// 	new Parallax(tuzluEyeBall);
-	// 	new Parallax(decor);
-	// 	new Parallax(cake);
-	// 	new Parallax(cloudLeft);
-	// 	new Parallax(cloudTop);
-	// 	new Parallax(page02FlamingoFrontBlack);
-	// 	new Parallax(page02FlamingoFrontPink);
-	// 	new Parallax(page02ConfetiFront);
-	// 	new Parallax(page02ConfetiBack);
-	// 	new Parallax(page02BirdTopRight);
-	// 	new Parallax(page02BirdFrontRight);
-	// 	new Parallax(page02FireFly);
-	// 	new Parallax(fireflyLight);
-	// 	new Parallax(flamingos);
-	// 	new Parallax(page02FlamingoRightPink);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(lakeFloor);
+		new Parallax(tuzlu);
+		new Parallax(blow);
+		new Parallax(tuzluEyeBall);
+		new Parallax(decor);
+		new Parallax(cake);
+		new Parallax(cloudLeft);
+		new Parallax(cloudTop);
+		new Parallax(page02FlamingoFrontBlack);
+		new Parallax(page02FlamingoFrontPink);
+		new Parallax(page02ConfetiFront);
+		new Parallax(page02ConfetiBack);
+		new Parallax(page02BirdTopRight);
+		new Parallax(page02BirdFrontRight);
+		new Parallax(page02FireFly);
+		new Parallax(fireflyLight);
+		new Parallax(flamingos);
+		new Parallax(page02FlamingoRightPink);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false;
-	// },1000);
+	setTimeout(() => {
+		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false;
+	},1000);
 }
 
 const page4 = () => {
-	// const tuzlu = document.querySelector('.js-page-03-tuzlu');
-	// const lakeFloor = document.querySelector('.js-page-03-lake-floor');
-	// const thunder = document.querySelector('.js-page-03-thunder');
-	// const cloud = document.querySelector('.js-page-03-cloud');
-	// const rockLeft = document.querySelector('.js-page-03-rock-left');
-	// const rockLeftDark = document.querySelector('.js-page-03-rock-left-dark');
-	// const rockRight = document.querySelector('.js-page-03-rock-right');
-	// const rockRightDark = document.querySelector('.js-page-03-rock-right-dark');
-	// const flamingoLeft = document.querySelector('.js-page-03-flamingo-left');
-	// const flamingoLeftGaga = document.querySelector('.js-page-03-flamingo-left-gaga');
-	// const flamingoLeftGagaDark = document.querySelector('.js-page-03-flamingo-left-gaga-dark');
-	// const flamingoLeftDark = document.querySelector('.js-page-03-flamingo-left-dark');
-	// const flamingoRight = document.querySelector('.js-page-03-flamingo-right');
-	// const flamingoRightDark = document.querySelector('.js-page-03-flamingo-right-dark');
-	// const flamingoRightWing = document.querySelector('.js-page-03-flamingo-right-wing');
-	// const flamingoRightWingDark = document.querySelector('.js-page-03-flamingo-right-wing-dark');
-	// const plantLeft = document.querySelector('.js-page-03-plant-left');
-	// const plantLeftDark = document.querySelector('.js-page-03-plant-left-dark');
-	// const plantRight = document.querySelector('.js-page-03-plant-right');
-	// const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
-	// const content = document.querySelector('.js-page-03-content');
+	const tuzlu = document.querySelector('.js-page-03-tuzlu');
+	const lakeFloor = document.querySelector('.js-page-03-lake-floor');
+	const thunder = document.querySelector('.js-page-03-thunder');
+	const cloud = document.querySelector('.js-page-03-cloud');
+	const rockLeft = document.querySelector('.js-page-03-rock-left');
+	const rockLeftDark = document.querySelector('.js-page-03-rock-left-dark');
+	const rockRight = document.querySelector('.js-page-03-rock-right');
+	const rockRightDark = document.querySelector('.js-page-03-rock-right-dark');
+	const flamingoLeft = document.querySelector('.js-page-03-flamingo-left');
+	const flamingoLeftGaga = document.querySelector('.js-page-03-flamingo-left-gaga');
+	const flamingoLeftGagaDark = document.querySelector('.js-page-03-flamingo-left-gaga-dark');
+	const flamingoLeftDark = document.querySelector('.js-page-03-flamingo-left-dark');
+	const flamingoRight = document.querySelector('.js-page-03-flamingo-right');
+	const flamingoRightDark = document.querySelector('.js-page-03-flamingo-right-dark');
+	const flamingoRightWing = document.querySelector('.js-page-03-flamingo-right-wing');
+	const flamingoRightWingDark = document.querySelector('.js-page-03-flamingo-right-wing-dark');
+	const plantLeft = document.querySelector('.js-page-03-plant-left');
+	const plantLeftDark = document.querySelector('.js-page-03-plant-left-dark');
+	const plantRight = document.querySelector('.js-page-03-plant-right');
+	const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
+	const content = document.querySelector('.js-page-03-content');
 	
 	// tuzlu.classList.add('slideLeft');
 	// rockLeft.classList.add('slideLeft');
@@ -419,44 +418,44 @@ const page4 = () => {
 	// 	flamingoLeftGaga.classList.add('talk');
 	// },2500);
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(lakeFloor);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(cloud);
-	// 	new Parallax(flamingoLeft);
-	// 	new Parallax(flamingoLeftDark);
-	// 	new Parallax(flamingoLeftGaga);
-	// 	new Parallax(flamingoLeftGagaDark);
-	// 	new Parallax(flamingoRight);
-	// 	new Parallax(flamingoRightDark);
-	// 	new Parallax(flamingoRightWing);
-	// 	new Parallax(flamingoRightWingDark);
-	// 	new Parallax(rockLeft);
-	// 	new Parallax(rockLeftDark);
-	// 	new Parallax(rockRight);
-	// 	new Parallax(rockRightDark);
-	// 	new Parallax(plantLeft);
-	// 	new Parallax(plantLeftDark);
-	// 	new Parallax(plantRight);
-	// 	new Parallax(plantRightDark);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(lakeFloor);
+		new Parallax(tuzlu);
+		new Parallax(cloud);
+		new Parallax(flamingoLeft);
+		new Parallax(flamingoLeftDark);
+		new Parallax(flamingoLeftGaga);
+		new Parallax(flamingoLeftGagaDark);
+		new Parallax(flamingoRight);
+		new Parallax(flamingoRightDark);
+		new Parallax(flamingoRightWing);
+		new Parallax(flamingoRightWingDark);
+		new Parallax(rockLeft);
+		new Parallax(rockLeftDark);
+		new Parallax(rockRight);
+		new Parallax(rockRightDark);
+		new Parallax(plantLeft);
+		new Parallax(plantLeftDark);
+		new Parallax(plantRight);
+		new Parallax(plantRightDark);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false;
-	// },1000);
+	setTimeout(() => {
+		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false;
+	},1000);
 }
 
 const page5 = () => {
-	// const tuzlu = document.querySelector('.js-page-04-tuzlu');
-	// const rock = document.querySelector('.js-page-04-rock');
-	// const tuzluCloud = document.querySelector('.js-page-04-tuzlu-cloud');
-	// const tuzluFriend = document.querySelector('.js-page-04-tuzlu-friend');
-	// const ball = document.querySelector('.js-page-04-ball');
-	// const content1 = document.querySelector('.js-page-04-content-1');
-	// const content2 = document.querySelector('.js-page-04-content-2');
-	// const content3 = document.querySelector('.js-page-04-content-3');
-	// const footPrint = document.querySelector('.js-page-04-foot-print');
-	// const tuzluDrink = document.querySelector('.js-page-04-tuzlu-drink');
+	const tuzlu = document.querySelector('.js-page-04-tuzlu');
+	const rock = document.querySelector('.js-page-04-rock');
+	const tuzluCloud = document.querySelector('.js-page-04-tuzlu-cloud');
+	const tuzluFriend = document.querySelector('.js-page-04-tuzlu-friend');
+	const ball = document.querySelector('.js-page-04-ball');
+	const content1 = document.querySelector('.js-page-04-content-1');
+	const content2 = document.querySelector('.js-page-04-content-2');
+	const content3 = document.querySelector('.js-page-04-content-3');
+	const footPrint = document.querySelector('.js-page-04-foot-print');
+	const tuzluDrink = document.querySelector('.js-page-04-tuzlu-drink');
 
 	// rock.classList.add('slideLeft');
 	// tuzlu.classList.add('slideLeft');
@@ -473,33 +472,33 @@ const page5 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 	
-	// if(windowWidth > 1023) {
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(rock);
-	// 	new Parallax(tuzluCloud);
-	// 	new Parallax(tuzluFriend);
-	// 	new Parallax(ball);
-	// 	new Parallax(tuzluDrink);
-	// 	new Parallax(footPrint);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(tuzlu);
+		new Parallax(rock);
+		new Parallax(tuzluCloud);
+		new Parallax(tuzluFriend);
+		new Parallax(ball);
+		new Parallax(tuzluDrink);
+		new Parallax(footPrint);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false;
-	// }, 1500);
+	setTimeout(() => {
+		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false;
+	}, 1500);
 }
 
 const page6 = () => {
-	// const lake = document.querySelector('.js-page-05-lake');
-	// const tuzlu = document.querySelector('.js-page-05-tuzlu');
-	// const tuzluBody = document.querySelectorAll('.js-tuzlu-image');
-	// const children = document.querySelector('.js-page-05-children');
-	// const plant = document.querySelector('.js-page-05-plant');
-	// const cloudTopBig = document.querySelector('.js-page-05-cloud-top-big');
-	// const cloudTopLittle = document.querySelector('.js-page-05-cloud-top-little');
-	// const cloudBottom = document.querySelector('.js-page-05-cloud-bottom');
-	// const content1 = document.querySelector('.js-page-05-content-1');
-	// const content2 = document.querySelector('.js-page-05-content-2');
-	// const content3 = document.querySelector('.js-page-05-content-3');
+	const lake = document.querySelector('.js-page-05-lake');
+	const tuzlu = document.querySelector('.js-page-05-tuzlu');
+	const tuzluBody = document.querySelectorAll('.js-tuzlu-image');
+	const children = document.querySelector('.js-page-05-children');
+	const plant = document.querySelector('.js-page-05-plant');
+	const cloudTopBig = document.querySelector('.js-page-05-cloud-top-big');
+	const cloudTopLittle = document.querySelector('.js-page-05-cloud-top-little');
+	const cloudBottom = document.querySelector('.js-page-05-cloud-bottom');
+	const content1 = document.querySelector('.js-page-05-content-1');
+	const content2 = document.querySelector('.js-page-05-content-2');
+	const content3 = document.querySelector('.js-page-05-content-3');
 
 	// tuzluBody.forEach((elem, index) => {
 	// 	if (index === 0) {
@@ -523,19 +522,19 @@ const page6 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(lake);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(children);
-	// 	new Parallax(cloudTopBig);
-	// 	new Parallax(cloudTopLittle);
-	// 	new Parallax(cloudBottom);
-	// 	new Parallax(plant);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(lake);
+		new Parallax(tuzlu);
+		new Parallax(children);
+		new Parallax(cloudTopBig);
+		new Parallax(cloudTopLittle);
+		new Parallax(cloudBottom);
+		new Parallax(plant);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
+	}, 1000);
 
 	// sequenceInterval = setInterval(changeSrc, 55);
 	// let counter = 0;
@@ -554,17 +553,17 @@ const page6 = () => {
 }
 
 const page7 = () => {
-	// const tuzluLeft = document.querySelector('.js-page-06-tuzlu-left');
-	// const tuzluCenter = document.querySelector('.js-page-06-tuzlu-center');
-	// const tuzluRight = document.querySelector('.js-page-06-tuzlu-right');
-	// const cloudLeft = document.querySelector('.js-page-06-cloud-left');
-	// const cloudRight = document.querySelector('.js-page-06-cloud-right');
-	// const child = document.querySelector('.js-page-06-child');
-	// const childEyes = document.querySelector('.js-page-06-child-eyes');
-	// const eyeBrow = document.querySelector('.js-page-06-child-eye-brow');
-	// const childArm = document.querySelector('.js-page-06-child-arm');
-	// const content1 = document.querySelector('.js-page-06-content-1');
-	// const content2 = document.querySelector('.js-page-06-content-2');
+	const tuzluLeft = document.querySelector('.js-page-06-tuzlu-left');
+	const tuzluCenter = document.querySelector('.js-page-06-tuzlu-center');
+	const tuzluRight = document.querySelector('.js-page-06-tuzlu-right');
+	const cloudLeft = document.querySelector('.js-page-06-cloud-left');
+	const cloudRight = document.querySelector('.js-page-06-cloud-right');
+	const child = document.querySelector('.js-page-06-child');
+	const childEyes = document.querySelector('.js-page-06-child-eyes');
+	const eyeBrow = document.querySelector('.js-page-06-child-eye-brow');
+	const childArm = document.querySelector('.js-page-06-child-arm');
+	const content1 = document.querySelector('.js-page-06-content-1');
+	const content2 = document.querySelector('.js-page-06-content-2');
 
 	// child.classList.add('slideLeft');
 	// childEyes.classList.add('slideLeft');
@@ -595,31 +594,31 @@ const page7 = () => {
 	// content2.classList.add('slideLeft');
 	// sectionsOpen.classList.remove('blue');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(child);
-	// 	new Parallax(childArm);
-	// 	new Parallax(childEyes);
-	// 	new Parallax(eyeBrow);
-	// 	new Parallax(tuzluLeft);
-	// 	new Parallax(tuzluCenter);
-	// 	new Parallax(tuzluRight);
-	// 	new Parallax(cloudLeft);
-	// 	new Parallax(cloudRight);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(child);
+		new Parallax(childArm);
+		new Parallax(childEyes);
+		new Parallax(eyeBrow);
+		new Parallax(tuzluLeft);
+		new Parallax(tuzluCenter);
+		new Parallax(tuzluRight);
+		new Parallax(cloudLeft);
+		new Parallax(cloudRight);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false;
-	// }, 2000);
+	setTimeout(() => {
+		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false;
+	}, 2000);
 }
 
 const page8 = () => {
-	// const beach = document.querySelector('.js-beach');
-	// const tuzlu = document.querySelector('.js-page-07-tuzlu');
-	// const boy = document.querySelector('.js-page-07-boy');
-	// const handLeft = document.querySelector('.js-page-07-hand-left');
-	// const handRight = document.querySelector('.js-page-07-hand-right');
-	// const content = document.querySelector('.js-page-07-content');
-	// const rota = document.querySelector('.js-page-07-rota');
+	const beach = document.querySelector('.js-beach');
+	const tuzlu = document.querySelector('.js-page-07-tuzlu');
+	const boy = document.querySelector('.js-page-07-boy');
+	const handLeft = document.querySelector('.js-page-07-hand-left');
+	const handRight = document.querySelector('.js-page-07-hand-right');
+	const content = document.querySelector('.js-page-07-content');
+	const rota = document.querySelector('.js-page-07-rota');
 
 	// tuzlu.classList.add('slideLeft');
 	// handLeft.classList.add('slideLeft');
@@ -632,14 +631,14 @@ const page8 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(beach);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(boy);
-	// 	new Parallax(handLeft);
-	// 	new Parallax(handRight);
-	// 	new Parallax(rota);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(beach);
+		new Parallax(tuzlu);
+		new Parallax(boy);
+		new Parallax(handLeft);
+		new Parallax(handRight);
+		new Parallax(rota);
+	}
 
 	// setTimeout(() => {
 	// 	tuzlu.classList.remove('slideLeft');
@@ -655,19 +654,19 @@ const page8 = () => {
 }
 
 const page9 = () => { 
-	// const tuzlu = document.querySelector('.js-page-08-tuzlu');
-	// const rabbit = document.querySelector('.js-page-08-rabbit');
-	// const plants = document.querySelector('.js-page-08-plants');
-	// const bridge = document.querySelector('.js-page-08-bridge');
-	// const houses = document.querySelector('.js-page-08-houses');
-	// const branch = document.querySelector('.js-page-08-branch');
-	// const content = document.querySelector('.js-page-08-content');
-	// const tuzluBulut = document.querySelector('.js-tuzlu-bulut');
-	// const cloudLeft = document.querySelector('.js-page-08-cloud-right');
-	// const cloudRight = document.querySelector('.js-page-08-cloud-left')
-	// const mountines = document.querySelector('.js-page-08-mountains');
-	// const tuzlubBulut = document.querySelectorAll('.js-tuzlu-bulut');
-	// const rabbitEar = document.querySelectorAll('.js-rabbit-ear');
+	const tuzlu = document.querySelector('.js-page-08-tuzlu');
+	const rabbit = document.querySelector('.js-page-08-rabbit');
+	const plants = document.querySelector('.js-page-08-plants');
+	const bridge = document.querySelector('.js-page-08-bridge');
+	const houses = document.querySelector('.js-page-08-houses');
+	const branch = document.querySelector('.js-page-08-branch');
+	const content = document.querySelector('.js-page-08-content');
+	const tuzluBulut = document.querySelector('.js-tuzlu-bulut');
+	const cloudLeft = document.querySelector('.js-page-08-cloud-right');
+	const cloudRight = document.querySelector('.js-page-08-cloud-left')
+	const mountines = document.querySelector('.js-page-08-mountains');
+	const tuzlubBulut = document.querySelectorAll('.js-tuzlu-bulut');
+	const rabbitEar = document.querySelectorAll('.js-rabbit-ear');
 
 	// tuzlubBulut.forEach((elem, index) => {
 	// 	if (index === 0) {
@@ -699,22 +698,22 @@ const page9 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(rabbit);
-	// 	new Parallax(plants);
-	// 	new Parallax(bridge);
-	// 	new Parallax(houses);
-	// 	new Parallax(branch);
-	// 	new Parallax(tuzluBulut);
-	// 	new Parallax(cloudLeft);
-	// 	new Parallax(cloudRight);
-	// 	new Parallax(mountines);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(tuzlu);
+		new Parallax(rabbit);
+		new Parallax(plants);
+		new Parallax(bridge);
+		new Parallax(houses);
+		new Parallax(branch);
+		new Parallax(tuzluBulut);
+		new Parallax(cloudLeft);
+		new Parallax(cloudRight);
+		new Parallax(mountines);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
+	}, 1000);
 
 	// sequenceInterval = setInterval(changetTuzluSrc, 30);
 	// sequenceInterval2 = setInterval(changetRabbitSrc, 30);
@@ -748,12 +747,12 @@ const page9 = () => {
 }
 
 const page10 = () => { 
-	// const ayseTeyze = document.querySelector('.js-page-09-ayse-teyze');
-	// const hasanAmca = document.querySelector('.js-page-09-hasan-amca');
-	// const rasimAmca = document.querySelector('.js-page-09-rasim-amca');
-	// const ayseTeyzeContent = document.querySelector('.js-page-09-ayse-teyze-content');
-	// const hasanAmcaContent = document.querySelector('.js-page-09-hasan-amca-content');
-	// const rasimAmcaContent = document.querySelector('.js-page-09-rasim-amca-content');
+	const ayseTeyze = document.querySelector('.js-page-09-ayse-teyze');
+	const hasanAmca = document.querySelector('.js-page-09-hasan-amca');
+	const rasimAmca = document.querySelector('.js-page-09-rasim-amca');
+	const ayseTeyzeContent = document.querySelector('.js-page-09-ayse-teyze-content');
+	const hasanAmcaContent = document.querySelector('.js-page-09-hasan-amca-content');
+	const rasimAmcaContent = document.querySelector('.js-page-09-rasim-amca-content');
 
 	// ayseTeyze.classList.add('fadeIn');
 	// hasanAmca.classList.add('fadeIn');
@@ -766,28 +765,28 @@ const page10 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(ayseTeyze);
-	// 	new Parallax(hasanAmca);
-	// 	new Parallax(rasimAmca);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(ayseTeyze);
+		new Parallax(hasanAmca);
+		new Parallax(rasimAmca);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false;
+	}, 1000);
 }
 
 const page11 = () => {
-	// const clouds = document.querySelector('.js-page-10-clouds');
-	// const tuzlu = document.querySelector('.js-page-10-tuzlu');
-	// const sun = document.querySelector('.js-page-10-sun');
-	// const flamingosLittle = document.querySelector('.js-page-10-flamingos-little');
-	// const flamingosBack = document.querySelector('.js-page-10-flamingos-back');
-	// const flamingosMiddle = document.querySelector('.js-page-10-flamingos-middle');
-	// const flamingosFront = document.querySelector('.js-page-10-flamingos-front');
-	// const content1 = document.querySelector('.js-page-10-content-1');
-	// const content2 = document.querySelector('.js-page-10-content-2');
-	// const tuzluSurf = document.querySelectorAll('.js-tuzlu-surf');
+	const clouds = document.querySelector('.js-page-10-clouds');
+	const tuzlu = document.querySelector('.js-page-10-tuzlu');
+	const sun = document.querySelector('.js-page-10-sun');
+	const flamingosLittle = document.querySelector('.js-page-10-flamingos-little');
+	const flamingosBack = document.querySelector('.js-page-10-flamingos-back');
+	const flamingosMiddle = document.querySelector('.js-page-10-flamingos-middle');
+	const flamingosFront = document.querySelector('.js-page-10-flamingos-front');
+	const content1 = document.querySelector('.js-page-10-content-1');
+	const content2 = document.querySelector('.js-page-10-content-2');
+	const tuzluSurf = document.querySelectorAll('.js-tuzlu-surf');
 
 	// tuzluSurf.forEach((elem, index) => {
 	// 	if (index === 0) {
@@ -809,19 +808,19 @@ const page11 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(clouds);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(flamingosLittle);
-	// 	new Parallax(flamingosBack);
-	// 	new Parallax(flamingosMiddle);
-	// 	new Parallax(flamingosFront);
-	// 	new Parallax(sun);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(clouds);
+		new Parallax(tuzlu);
+		new Parallax(flamingosLittle);
+		new Parallax(flamingosBack);
+		new Parallax(flamingosMiddle);
+		new Parallax(flamingosFront);
+		new Parallax(sun);
+	}
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
+	}, 1000);
 
 	// sequenceInterval = setInterval(changeSrc, 30);
 	// let counter = 0;
@@ -840,22 +839,22 @@ const page11 = () => {
 }
 
 const page12 = () => {
-	// const lake = document.querySelector('.js-page-11-lake');
-	// const clouds = document.querySelector('.js-page-11-clouds');
-	// const flamingos = document.querySelector('.js-page-11-flamingos');
-	// const sun = document.querySelector('.page-11-sun');
-	// const plantRight = document.querySelector('.js-page-11-plant-right');
-	// const plantLeft = document.querySelector('.js-page-11-plant-left');
-	// const tuzlu = document.querySelector('.js-page-11-tuzlu');
-	// const content = document.querySelector('.js-page-11-content');
-	// const balik = document.querySelector('.js-page-11-balik');
-	// const karides = document.querySelector('.js-page-11-karides');
-	// const baliklar = document.querySelector('.js-page-11-baliklar');
-	// const bubble4 = document.querySelector('.js-page-11-bubble-4');
-	// const bubble5 = document.querySelector('.js-page-11-bubble-5');
-	// const vaweLine = document.querySelector('.js-page-11-wave-line');
-	// const wave = document.querySelector('.js-page-11-wave');
-	// const tuzluBulut = document.querySelectorAll('.js-page-11-tuzlu-bulut');
+	const lake = document.querySelector('.js-page-11-lake');
+	const clouds = document.querySelector('.js-page-11-clouds');
+	const flamingos = document.querySelector('.js-page-11-flamingos');
+	const sun = document.querySelector('.page-11-sun');
+	const plantRight = document.querySelector('.js-page-11-plant-right');
+	const plantLeft = document.querySelector('.js-page-11-plant-left');
+	const tuzlu = document.querySelector('.js-page-11-tuzlu');
+	const content = document.querySelector('.js-page-11-content');
+	const balik = document.querySelector('.js-page-11-balik');
+	const karides = document.querySelector('.js-page-11-karides');
+	const baliklar = document.querySelector('.js-page-11-baliklar');
+	const bubble4 = document.querySelector('.js-page-11-bubble-4');
+	const bubble5 = document.querySelector('.js-page-11-bubble-5');
+	const vaweLine = document.querySelector('.js-page-11-wave-line');
+	const wave = document.querySelector('.js-page-11-wave');
+	const tuzluBulut = document.querySelectorAll('.js-page-11-tuzlu-bulut');
 
 	// tuzluBulut.forEach((elem, index) => {
 	// 	if (index === 0) {
@@ -881,31 +880,31 @@ const page12 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 	
-	// if(windowWidth > 1023) {
-	// 	new Parallax(lake);
-	// 	new Parallax(sun);
-	// 	new Parallax(clouds);
-	// 	new Parallax(tuzlu);
-	// 	new Parallax(flamingos);
-	// 	new Parallax(balik);
-	// 	new Parallax(baliklar);
-	// 	new Parallax(karides);
-	// 	new Parallax(plantRight);
-	// 	new Parallax(plantLeft);
-	// 	new Parallax(vaweLine);
-	// 	new Parallax(wave);
-	// 	new Parallax(bubble4);
-	// 	new Parallax(bubble5);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(lake);
+		new Parallax(sun);
+		new Parallax(clouds);
+		new Parallax(tuzlu);
+		new Parallax(flamingos);
+		new Parallax(balik);
+		new Parallax(baliklar);
+		new Parallax(karides);
+		new Parallax(plantRight);
+		new Parallax(plantLeft);
+		new Parallax(vaweLine);
+		new Parallax(wave);
+		new Parallax(bubble4);
+		new Parallax(bubble5);
+	}
 
 	// setTimeout(() => {
 	// 	flamingos.classList.remove('slideLeft');
 	// 	flamingos.classList.add('move');
 	// }	, 2000);
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
+	}, 1000);
 
 	// sequenceInterval = setInterval(changeSrc, 30);
 	// let counter = 0;
@@ -924,18 +923,18 @@ const page12 = () => {
 }
 
 const page13 = () => {
-	// const lake = document.querySelector('.js-son-lake');
-	// const tuzlu = document.querySelectorAll('.js-son-tuzlu');
-	// const boy = document.querySelectorAll('.js-son-boy');
-	// const ysLogo = document.querySelectorAll('.js-son-ys-logo');
-	// const tuzluTitle = document.querySelectorAll('.js-son-tuzlu-title');
-	// const explan = document.querySelectorAll('.js-son-explanation');
-	// const shine = document.querySelector('.js-son-shine');
-	// const shine2 = document.querySelector('.js-son-shine2');
-	// const shine3 = document.querySelector('.js-son-shine3');
-	// const social = document.querySelectorAll('.js-son-social');
-	// const replay = document.querySelectorAll('.js-son-replay');
-	// const promise = document.querySelectorAll('.js-son-promise');
+	const lake = document.querySelector('.js-son-lake');
+	const tuzlu = document.querySelectorAll('.js-son-tuzlu');
+	const boy = document.querySelectorAll('.js-son-boy');
+	const ysLogo = document.querySelectorAll('.js-son-ys-logo');
+	const tuzluTitle = document.querySelectorAll('.js-son-tuzlu-title');
+	const explan = document.querySelectorAll('.js-son-explanation');
+	const shine = document.querySelector('.js-son-shine');
+	const shine2 = document.querySelector('.js-son-shine2');
+	const shine3 = document.querySelector('.js-son-shine3');
+	const social = document.querySelectorAll('.js-son-social');
+	const replay = document.querySelectorAll('.js-son-replay');
+	const promise = document.querySelectorAll('.js-son-promise');
 
 	// lake.classList.add('slideUp');
 	// tuzlu[0].classList.add('slideUp');
@@ -961,14 +960,14 @@ const page13 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// if(windowWidth > 1023) {
-	// 	new Parallax(boy[0]);
-	// 	new Parallax(tuzlu[0]);
-	// 	new Parallax(shine);
-	// 	new Parallax(shine2);
-	// 	new Parallax(shine3);
-	// 	new Parallax(lake);
-	// }
+	if(windowWidth > 1023) {
+		new Parallax(boy[0]);
+		new Parallax(tuzlu[0]);
+		new Parallax(shine);
+		new Parallax(shine2);
+		new Parallax(shine3);
+		new Parallax(lake);
+	}
 }
 
 function initialization(){
@@ -1177,4 +1176,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 9.6');
+console.log('updat 9.7');
