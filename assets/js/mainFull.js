@@ -931,25 +931,25 @@ const page13 = () => {
 	const replay = document.querySelectorAll('.js-son-replay');
 	const promise = document.querySelectorAll('.js-son-promise');
 
-	// lake.classList.add('slideUp');
-	// tuzlu[0].classList.add('slideUp');
-	// tuzlu[1].classList.add('slideUp');
-	// boy[0].classList.add('slideUp');
-	// boy[1].classList.add('slideUp');
-	// shine.classList.add('fadeIn');
-	// shine2.classList.add('fadeIn');
-	// shine3.classList.add('fadeIn');
-	// ysLogo[0].classList.add('fadeIn');
-	// tuzluTitle[0].classList.add('fadeIn');
-	// tuzluTitle[1].classList.add('fadeIn');
-	// explan[0].classList.add('fadeIn');
-	// explan[1].classList.add('fadeIn');
-	// social[0].classList.add('fadeIn');
-	// social[1].classList.add('fadeIn');
-	// replay[0].classList.add('fadeIn');
-	// replay[1].classList.add('fadeIn');
-	// promise[0].classList.add('fadeIn');
-	// promise[1].classList.add('fadeIn');
+	lake.classList.add('slideUp');
+	tuzlu[0].classList.add('slideUp');
+	tuzlu[1].classList.add('slideUp');
+	boy[0].classList.add('slideUp');
+	boy[1].classList.add('slideUp');
+	shine.classList.add('fadeIn');
+	shine2.classList.add('fadeIn');
+	shine3.classList.add('fadeIn');
+	ysLogo[0].classList.add('fadeIn');
+	tuzluTitle[0].classList.add('fadeIn');
+	tuzluTitle[1].classList.add('fadeIn');
+	explan[0].classList.add('fadeIn');
+	explan[1].classList.add('fadeIn');
+	social[0].classList.add('fadeIn');
+	social[1].classList.add('fadeIn');
+	replay[0].classList.add('fadeIn');
+	replay[1].classList.add('fadeIn');
+	promise[0].classList.add('fadeIn');
+	promise[1].classList.add('fadeIn');
 
 	ysLogoHeader.classList.remove('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 10.0');
+console.log('updat 10.1');
