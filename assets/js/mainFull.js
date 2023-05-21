@@ -253,15 +253,15 @@ const page2 = () => {
 	const page01Content = document.querySelector('.js-page-01-content');
 	const yusufcuk = document.querySelectorAll('.js-page-01-yusufcuk');
 	
-	// page01Lake.classList.add('slideLeft');
-	// page01PlantLeft.classList.add('slideLeft');
-	// page01PlantMiddle.classList.add('slideLeft');
-	// page01PlantRight.classList.add('slideLeft');
-	// page01Tuzlu.classList.add('slideLeft');
-	// page01Flamingos.classList.add('slideLeft');
-	// page01Content.classList.add('slideLeft');
-	// page01CloudRight.classList.add('slideLeft');
-	// page01CloudSmall.classList.add('slideLeft');
+	page01Lake.classList.add('slideLeft');
+	page01PlantLeft.classList.add('slideLeft');
+	page01PlantMiddle.classList.add('slideLeft');
+	page01PlantRight.classList.add('slideLeft');
+	page01Tuzlu.classList.add('slideLeft');
+	page01Flamingos.classList.add('slideLeft');
+	page01Content.classList.add('slideLeft');
+	page01CloudRight.classList.add('slideLeft');
+	page01CloudSmall.classList.add('slideLeft');
 	ysLogoHeader.classList.add('fadeIn');
 	sectionsOpen.classList.remove('blue');
 	header.classList.add('fadeIn');
@@ -313,22 +313,22 @@ const page3 = () => {
 	const blow = document.querySelector('.js-page-02-blow');
 	const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
 
-	// cloudLeft.classList.add('slideLeft');
-	// cloudTop.classList.add('slideLeft');
-	// decor.classList.add('slideLeft');
-	// cake.classList.add('slideLeft');
-	// page02FlamingoRightPink.classList.add('slideLeft');
-	// page02FlamingoFrontPink.classList.add('slideLeft');
-	// page02FlamingoFrontBlack.classList.add('slideLeft');
-	// page02BirdFrontRight.classList.add('slideLeft');
-	// page02BirdTopRight.classList.add('slideLeft');	
-	// page02FireFly.classList.add('slideLeft');
-	// fireflyLight.classList.add('slideLeft');
-	// page02Content1.classList.add('slideLeft');
-	// page02Content2.classList.add('slideLeft');
-	// page02Blow.classList.add('slideLeft');
-	// page02ConfetiFront.classList.add('slideDown');
-	// page02ConfetiBack.classList.add('slideDown');
+	cloudLeft.classList.add('slideLeft');
+	cloudTop.classList.add('slideLeft');
+	decor.classList.add('slideLeft');
+	cake.classList.add('slideLeft');
+	page02FlamingoRightPink.classList.add('slideLeft');
+	page02FlamingoFrontPink.classList.add('slideLeft');
+	page02FlamingoFrontBlack.classList.add('slideLeft');
+	page02BirdFrontRight.classList.add('slideLeft');
+	page02BirdTopRight.classList.add('slideLeft');	
+	page02FireFly.classList.add('slideLeft');
+	fireflyLight.classList.add('slideLeft');
+	page02Content1.classList.add('slideLeft');
+	page02Content2.classList.add('slideLeft');
+	page02Blow.classList.add('slideLeft');
+	page02ConfetiFront.classList.add('slideDown');
+	page02ConfetiBack.classList.add('slideDown');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -383,25 +383,25 @@ const page4 = () => {
 	const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
 	const content = document.querySelector('.js-page-03-content');
 	
-	// tuzlu.classList.add('slideLeft');
-	// rockLeft.classList.add('slideLeft');
-	// rockRight.classList.add('slideLeft');
-	// flamingoLeft.classList.add('slideLeft');
-	// flamingoLeftGaga.classList.add('slideLeft');
-	// flamingoRight.classList.add('slideLeft');
-	// flamingoRightWing.classList.add('slideLeft');
-	// plantLeft.classList.add('slideLeft');
-	// plantRight.classList.add('slideLeft');
-	// content.classList.add('slideLeft');
-	// thunder.classList.add('flash');
-	// rockLeftDark.classList.add('show');
-	// flamingoLeftGagaDark.classList.add('show');
-	// rockRightDark.classList.add('show');
-	// flamingoRightWingDark.classList.add('show');
-	// flamingoLeftDark.classList.add('show');
-	// flamingoRightDark.classList.add('show');
-	// plantLeftDark.classList.add('show');
-	// plantRightDark.classList.add('show');
+	tuzlu.classList.add('slideLeft');
+	rockLeft.classList.add('slideLeft');
+	rockRight.classList.add('slideLeft');
+	flamingoLeft.classList.add('slideLeft');
+	flamingoLeftGaga.classList.add('slideLeft');
+	flamingoRight.classList.add('slideLeft');
+	flamingoRightWing.classList.add('slideLeft');
+	plantLeft.classList.add('slideLeft');
+	plantRight.classList.add('slideLeft');
+	content.classList.add('slideLeft');
+	thunder.classList.add('flash');
+	rockLeftDark.classList.add('show');
+	flamingoLeftGagaDark.classList.add('show');
+	rockRightDark.classList.add('show');
+	flamingoRightWingDark.classList.add('show');
+	flamingoLeftDark.classList.add('show');
+	flamingoRightDark.classList.add('show');
+	plantLeftDark.classList.add('show');
+	plantRightDark.classList.add('show');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -453,16 +453,16 @@ const page5 = () => {
 	const footPrint = document.querySelector('.js-page-04-foot-print');
 	const tuzluDrink = document.querySelector('.js-page-04-tuzlu-drink');
 
-	// rock.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// tuzluCloud.classList.add('fadeIn');
-	// tuzluFriend.classList.add('fadeIn');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
-	// content3.classList.add('slideLeft');
-	// footPrint.classList.add('slideLeft');
-	// tuzluDrink.classList.add('fadeIn');
-	// ball.classList.add('slideLeft');
+	rock.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	tuzluCloud.classList.add('fadeIn');
+	tuzluFriend.classList.add('fadeIn');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+	content3.classList.add('slideLeft');
+	footPrint.classList.add('slideLeft');
+	tuzluDrink.classList.add('fadeIn');
+	ball.classList.add('slideLeft');
 	sectionsOpen.classList.add('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -504,15 +504,15 @@ const page6 = () => {
 	// 	}
 	// });
 	
-	// tuzlu.classList.add('slideLeft');
-	// plant.classList.add('slideLeft');
-	// children.classList.add('slideLeft');
-	// cloudTopBig.classList.add('slideLeft');
-	// cloudTopLittle.classList.add('slideLeft');
-	// cloudBottom.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
-	// content3.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	plant.classList.add('slideLeft');
+	children.classList.add('slideLeft');
+	cloudTopBig.classList.add('slideLeft');
+	cloudTopLittle.classList.add('slideLeft');
+	cloudBottom.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+	content3.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -561,12 +561,12 @@ const page7 = () => {
 	const content1 = document.querySelector('.js-page-06-content-1');
 	const content2 = document.querySelector('.js-page-06-content-2');
 
-	// child.classList.add('slideLeft');
-	// childEyes.classList.add('slideLeft');
-	// eyeBrow.classList.add('slideLeft');
-	// childArm.classList.add('slideLeft');
-	// tuzluLeft.classList.add('slideLeft');
-	// tuzluCenter.classList.add('slideLeft');
+	child.classList.add('slideLeft');
+	childEyes.classList.add('slideLeft');
+	eyeBrow.classList.add('slideLeft');
+	childArm.classList.add('slideLeft');
+	tuzluLeft.classList.add('slideLeft');
+	tuzluCenter.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -583,11 +583,11 @@ const page7 = () => {
 	// 	childEyes.classList.add('move');
 	// }, 2000);
 
-	// tuzluRight.classList.add('slideLeft');
-	// cloudLeft.classList.add('slideLeft');
-	// cloudRight.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
+	tuzluRight.classList.add('slideLeft');
+	cloudLeft.classList.add('slideLeft');
+	cloudRight.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -615,12 +615,12 @@ const page8 = () => {
 	const content = document.querySelector('.js-page-07-content');
 	const rota = document.querySelector('.js-page-07-rota');
 
-	// tuzlu.classList.add('slideLeft');
-	// handLeft.classList.add('slideLeft');
-	// boy.classList.add('slideLeft');
-	// handRight.classList.add('opacity');
-	// content.classList.add('slideLeft');
-	// rota.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	handLeft.classList.add('slideLeft');
+	boy.classList.add('slideLeft');
+	handRight.classList.add('opacity');
+	content.classList.add('slideLeft');
+	rota.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -679,15 +679,15 @@ const page9 = () => {
 	// 	}
 	// });
 
-	// rabbit.classList.add('slideLeft');
-	// plants.classList.add('slideLeft');
-	// bridge.classList.add('slideLeft');
-	// houses.classList.add('slideLeft');
-	// branch.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// content.classList.add('slideLeft');
-	// cloudLeft.classList.add('slideLeft');
-	// cloudRight.classList.add('slideLeft');
+	rabbit.classList.add('slideLeft');
+	plants.classList.add('slideLeft');
+	bridge.classList.add('slideLeft');
+	houses.classList.add('slideLeft');
+	branch.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	content.classList.add('slideLeft');
+	cloudLeft.classList.add('slideLeft');
+	cloudRight.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -749,12 +749,12 @@ const page10 = () => {
 	const hasanAmcaContent = document.querySelector('.js-page-09-hasan-amca-content');
 	const rasimAmcaContent = document.querySelector('.js-page-09-rasim-amca-content');
 
-	// ayseTeyze.classList.add('fadeIn');
-	// hasanAmca.classList.add('fadeIn');
-	// rasimAmca.classList.add('fadeIn');
-	// ayseTeyzeContent.classList.add('fadeIn');
-	// hasanAmcaContent.classList.add('fadeIn');
-	// rasimAmcaContent.classList.add('fadeIn');
+	ayseTeyze.classList.add('fadeIn');
+	hasanAmca.classList.add('fadeIn');
+	rasimAmca.classList.add('fadeIn');
+	ayseTeyzeContent.classList.add('fadeIn');
+	hasanAmcaContent.classList.add('fadeIn');
+	rasimAmcaContent.classList.add('fadeIn');
 	sectionsOpen.classList.add('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -791,13 +791,13 @@ const page11 = () => {
 	// 	}
 	// });
 
-	// tuzlu.classList.add('slideLeft');
-	// flamingosLittle.classList.add('slideLeft');
-	// flamingosBack.classList.add('slideLeft');
-	// flamingosMiddle.classList.add('slideLeft');
-	// flamingosFront.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	flamingosLittle.classList.add('slideLeft');
+	flamingosBack.classList.add('slideLeft');
+	flamingosMiddle.classList.add('slideLeft');
+	flamingosFront.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -859,17 +859,17 @@ const page12 = () => {
 	// 	}
 	// });
 
-	// clouds.classList.add('slideLeft');
-	// flamingos.classList.add('slideLeft');
-	// plantRight.classList.add('slideLeft');
-	// plantLeft.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// content.classList.add('fadeIn');
-	// balik.classList.add('slideLeft');
-	// baliklar.classList.add('slideLeft');
-	// karides.classList.add('slideLeft');
-	// bubble4.classList.add('slideLeft');
-	// bubble5.classList.add('slideLeft');
+	clouds.classList.add('slideLeft');
+	flamingos.classList.add('slideLeft');
+	plantRight.classList.add('slideLeft');
+	plantLeft.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	content.classList.add('fadeIn');
+	balik.classList.add('slideLeft');
+	baliklar.classList.add('slideLeft');
+	karides.classList.add('slideLeft');
+	bubble4.classList.add('slideLeft');
+	bubble5.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -931,25 +931,25 @@ const page13 = () => {
 	const replay = document.querySelectorAll('.js-son-replay');
 	const promise = document.querySelectorAll('.js-son-promise');
 
-	// lake.classList.add('slideUp');
-	// tuzlu[0].classList.add('slideUp');
-	// tuzlu[1].classList.add('slideUp');
-	// boy[0].classList.add('slideUp');
-	// boy[1].classList.add('slideUp');
-	// shine.classList.add('fadeIn');
-	// shine2.classList.add('fadeIn');
-	// shine3.classList.add('fadeIn');
-	// ysLogo[0].classList.add('fadeIn');
-	// tuzluTitle[0].classList.add('fadeIn');
-	// tuzluTitle[1].classList.add('fadeIn');
-	// explan[0].classList.add('fadeIn');
-	// explan[1].classList.add('fadeIn');
-	// social[0].classList.add('fadeIn');
-	// social[1].classList.add('fadeIn');
-	// replay[0].classList.add('fadeIn');
-	// replay[1].classList.add('fadeIn');
-	// promise[0].classList.add('fadeIn');
-	// promise[1].classList.add('fadeIn');
+	lake.classList.add('slideUp');
+	tuzlu[0].classList.add('slideUp');
+	tuzlu[1].classList.add('slideUp');
+	boy[0].classList.add('slideUp');
+	boy[1].classList.add('slideUp');
+	shine.classList.add('fadeIn');
+	shine2.classList.add('fadeIn');
+	shine3.classList.add('fadeIn');
+	ysLogo[0].classList.add('fadeIn');
+	tuzluTitle[0].classList.add('fadeIn');
+	tuzluTitle[1].classList.add('fadeIn');
+	explan[0].classList.add('fadeIn');
+	explan[1].classList.add('fadeIn');
+	social[0].classList.add('fadeIn');
+	social[1].classList.add('fadeIn');
+	replay[0].classList.add('fadeIn');
+	replay[1].classList.add('fadeIn');
+	promise[0].classList.add('fadeIn');
+	promise[1].classList.add('fadeIn');
 
 	ysLogoHeader.classList.remove('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 9.8');
+console.log('updat 9.9');
