@@ -33,6 +33,10 @@
   animation-iteration-count: infinite;
 }
 
+.page-03__rock-left {
+  margin-left:-40px;
+}
+
 .page-03__rock-left.slideLeft{
   animation-name: slideToMinus;
   animation-duration: 3s;

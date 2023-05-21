@@ -58,8 +58,6 @@ document.onreadystatechange = () => {
 			loadingScreen.classList.add("fadeOut");
 			setTimeout(() => {
 				loadingScreen.remove();
-				//page1();
-
 				musicPlayer.play();
 				soundControl.classList.add('play');
 			}, 1000);
@@ -71,7 +69,6 @@ document.onreadystatechange = () => {
 			initialization();
 			loadingScreen.classList.add("fadeOut");
 			setTimeout(() => {
-				//page1();
 				loadingScreen.remove();
 			}, 1000);
 		});
@@ -155,7 +152,7 @@ const page1 = () => {
 	const startButton = document.querySelectorAll('.js-intro-start-button');
 	const introMountain = document.querySelectorAll('.js-intro-mountain');
 
-	// ysLogo.classList.add('fadeIn');
+	ysLogo.classList.add('fadeIn');
 	// tuzluTitle[0].classList.add('fadeIn');
 	// tuzluTitle[1].classList.add('fadeIn');
 	// golHikayesi[0].classList.add('fadeIn');
@@ -173,7 +170,6 @@ const page1 = () => {
 	// introLightEffect.classList.add('fadeIn');
 	// introLightEffect2.classList.add('fadeIn');
 	// introLightEffect3.classList.add('fadeIn');
-	// // introSky.classList.add('slideUp');
 	// introTuzlu[0].classList.add('slideUp');
 	// introTuzlu[1].classList.add('slideUp');
 	// introMountain[0].classList.add('slideUp');
@@ -213,9 +209,9 @@ const page1 = () => {
 	// cloudLeftLittle[1].classList.add('slideUp');
 	// startButton[0].classList.add('fadeIn');
 	// startButton[1].classList.add('fadeIn');
-	// ysLogoHeader.classList.remove('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	ysLogoHeader.classList.remove('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(introLightEffect);
@@ -266,10 +262,10 @@ const page2 = () => {
 	// page01Content.classList.add('slideLeft');
 	// page01CloudRight.classList.add('slideLeft');
 	// page01CloudSmall.classList.add('slideLeft');
-	// ysLogoHeader.classList.add('fadeIn');
-	// sectionsOpen.classList.remove('blue');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	ysLogoHeader.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(page01CloudRight);
@@ -333,10 +329,10 @@ const page3 = () => {
 	// page02Blow.classList.add('slideLeft');
 	// page02ConfetiFront.classList.add('slideDown');
 	// page02ConfetiBack.classList.add('slideDown');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(lakeFloor);
@@ -406,10 +402,10 @@ const page4 = () => {
 	// flamingoRightDark.classList.add('show');
 	// plantLeftDark.classList.add('show');
 	// plantRightDark.classList.add('show');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	// setTimeout(() => {
 	// 	flamingoRightWing.classList.remove('slideLeft');
@@ -467,10 +463,10 @@ const page5 = () => {
 	// footPrint.classList.add('slideLeft');
 	// tuzluDrink.classList.add('fadeIn');
 	// ball.classList.add('slideLeft');
-	// sectionsOpen.classList.add('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.add('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 	
 	if(windowWidth > 1023) {
 		new Parallax(tuzlu);
@@ -517,10 +513,10 @@ const page6 = () => {
 	// content1.classList.add('slideLeft');
 	// content2.classList.add('slideLeft');
 	// content3.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(lake);
@@ -571,10 +567,10 @@ const page7 = () => {
 	// childArm.classList.add('slideLeft');
 	// tuzluLeft.classList.add('slideLeft');
 	// tuzluCenter.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	// setTimeout(() => {
 	// 	tuzluCenter.classList.remove('slideLeft');
@@ -592,7 +588,6 @@ const page7 = () => {
 	// cloudRight.classList.add('slideLeft');
 	// content1.classList.add('slideLeft');
 	// content2.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -626,10 +621,10 @@ const page8 = () => {
 	// handRight.classList.add('opacity');
 	// content.classList.add('slideLeft');
 	// rota.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(beach);
@@ -693,10 +688,10 @@ const page9 = () => {
 	// content.classList.add('slideLeft');
 	// cloudLeft.classList.add('slideLeft');
 	// cloudRight.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(tuzlu);
@@ -760,10 +755,10 @@ const page10 = () => {
 	// ayseTeyzeContent.classList.add('fadeIn');
 	// hasanAmcaContent.classList.add('fadeIn');
 	// rasimAmcaContent.classList.add('fadeIn');
-	// sectionsOpen.classList.add('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.add('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(ayseTeyze);
@@ -803,10 +798,10 @@ const page11 = () => {
 	// flamingosFront.classList.add('slideLeft');
 	// content1.classList.add('slideLeft');
 	// content2.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(clouds);
@@ -875,10 +870,10 @@ const page12 = () => {
 	// karides.classList.add('slideLeft');
 	// bubble4.classList.add('slideLeft');
 	// bubble5.classList.add('slideLeft');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 	
 	if(windowWidth > 1023) {
 		new Parallax(lake);
@@ -956,9 +951,9 @@ const page13 = () => {
 	// promise[0].classList.add('fadeIn');
 	// promise[1].classList.add('fadeIn');
 
-	// ysLogoHeader.classList.remove('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	ysLogoHeader.classList.remove('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	if(windowWidth > 1023) {
 		new Parallax(boy[0]);
@@ -1176,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 9.7');
+console.log('updat 9.8');
