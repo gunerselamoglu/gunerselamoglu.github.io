@@ -383,29 +383,29 @@ const page4 = () => {
 	const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
 	const content = document.querySelector('.js-page-03-content');
 	
-	tuzlu.classList.add('slideLeft');
-	rockLeft.classList.add('slideLeft');
-	rockRight.classList.add('slideLeft');
-	flamingoLeft.classList.add('slideLeft');
-	flamingoLeftGaga.classList.add('slideLeft');
-	flamingoRight.classList.add('slideLeft');
-	flamingoRightWing.classList.add('slideLeft');
-	plantLeft.classList.add('slideLeft');
-	plantRight.classList.add('slideLeft');
-	content.classList.add('slideLeft');
-	thunder.classList.add('flash');
-	rockLeftDark.classList.add('show');
-	flamingoLeftGagaDark.classList.add('show');
-	rockRightDark.classList.add('show');
-	flamingoRightWingDark.classList.add('show');
-	flamingoLeftDark.classList.add('show');
-	flamingoRightDark.classList.add('show');
-	plantLeftDark.classList.add('show');
-	plantRightDark.classList.add('show');
-	sectionsOpen.classList.remove('blue');
-	ysLogoHeader.classList.add('fadeIn');
-	header.classList.add('fadeIn');
-	footer.classList.add('fadeIn');
+	// tuzlu.classList.add('slideLeft');
+	// rockLeft.classList.add('slideLeft');
+	// rockRight.classList.add('slideLeft');
+	// flamingoLeft.classList.add('slideLeft');
+	// flamingoLeftGaga.classList.add('slideLeft');
+	// flamingoRight.classList.add('slideLeft');
+	// flamingoRightWing.classList.add('slideLeft');
+	// plantLeft.classList.add('slideLeft');
+	// plantRight.classList.add('slideLeft');
+	// content.classList.add('slideLeft');
+	// thunder.classList.add('flash');
+	// rockLeftDark.classList.add('show');
+	// flamingoLeftGagaDark.classList.add('show');
+	// rockRightDark.classList.add('show');
+	// flamingoRightWingDark.classList.add('show');
+	// flamingoLeftDark.classList.add('show');
+	// flamingoRightDark.classList.add('show');
+	// plantLeftDark.classList.add('show');
+	// plantRightDark.classList.add('show');
+	// sectionsOpen.classList.remove('blue');
+	// ysLogoHeader.classList.add('fadeIn');
+	// header.classList.add('fadeIn');
+	// footer.classList.add('fadeIn');
 
 	// setTimeout(() => {
 	// 	flamingoRightWing.classList.remove('slideLeft');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.3');
+console.log('update 11.4');

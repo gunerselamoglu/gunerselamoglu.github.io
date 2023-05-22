@@ -584,10 +584,6 @@ section.intro {
   .intro__gol-hikayesi {
     max-width: 135px;
   }
-
-  .intro.section .fp-tableCell{
-    height: 100vh!important;
-  }
 }
 
 @media only screen and (max-width: 1023px) and (min-height: 640px) {
@@ -629,6 +625,10 @@ section.intro {
 }
 
 @media (max-width:667px) {
+  .intro.section .fp-tableCell{
+    height: 100vh!important;
+  }
+  
   .intro__start-button-wrapper {
     bottom:8vh;
   }
