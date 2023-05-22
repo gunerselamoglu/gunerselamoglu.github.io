@@ -221,7 +221,7 @@
   }
 }
 
-@media (max-width:1023px) { 
+@media (max-width:660px) { 
   .page-02__content-1,
   .page-02__content-2 {
     display: none;

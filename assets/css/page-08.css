@@ -143,7 +143,7 @@
   }
 }
 
-@media (max-width:1023px) { 
+@media (max-width:660px) { 
   .page-08__content {
     display: none;
   }

@@ -547,7 +547,7 @@ section.intro {
   }
 }
 
-@media (max-width:1023px) { 
+@media (max-width:660px) { 
   .intro-mobile {
     display: block;
   }
@@ -586,7 +586,7 @@ section.intro {
   }
 }
 
-@media only screen and (max-width: 1023px) and (min-height: 640px) {
+@media only screen and (max-width: 660px) and (min-height: 640px) {
   .intro-content {
     width: 100%;
     max-width: 420px;
@@ -614,7 +614,7 @@ section.intro {
   }
 }
 
-@media only screen and (max-width: 1023px) and (max-height: 639px) {
+@media only screen and (max-width: 660px) and (max-height: 639px) {
   .intro-mobile {
     display: none;
   }
@@ -624,11 +624,11 @@ section.intro {
   }
 }
 
-@media (max-width:667px) {
+@media (max-width:669px) {
   .intro.section .fp-tableCell{
     height: 100vh!important;
   }
-  
+
   .intro__start-button-wrapper {
     bottom:8vh;
   }
