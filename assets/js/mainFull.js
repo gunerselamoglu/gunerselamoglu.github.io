@@ -749,12 +749,12 @@ const page10 = () => {
 	const hasanAmcaContent = document.querySelector('.js-page-09-hasan-amca-content');
 	const rasimAmcaContent = document.querySelector('.js-page-09-rasim-amca-content');
 
-	// ayseTeyze.classList.add('fadeIn');
-	// hasanAmca.classList.add('fadeIn');
-	// rasimAmca.classList.add('fadeIn');
-	// ayseTeyzeContent.classList.add('fadeIn');
-	// hasanAmcaContent.classList.add('fadeIn');
-	// rasimAmcaContent.classList.add('fadeIn');
+	ayseTeyze.classList.add('fadeIn');
+	hasanAmca.classList.add('fadeIn');
+	rasimAmca.classList.add('fadeIn');
+	ayseTeyzeContent.classList.add('fadeIn');
+	hasanAmcaContent.classList.add('fadeIn');
+	rasimAmcaContent.classList.add('fadeIn');
 	sectionsOpen.classList.add('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -791,13 +791,13 @@ const page11 = () => {
 	// 	}
 	// });
 
-	// tuzlu.classList.add('slideLeft');
-	// flamingosLittle.classList.add('slideLeft');
-	// flamingosBack.classList.add('slideLeft');
-	// flamingosMiddle.classList.add('slideLeft');
-	// flamingosFront.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	flamingosLittle.classList.add('slideLeft');
+	flamingosBack.classList.add('slideLeft');
+	flamingosMiddle.classList.add('slideLeft');
+	flamingosFront.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 10.2');
+console.log('update 10.3');
