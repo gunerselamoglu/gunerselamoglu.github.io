@@ -567,6 +567,12 @@ const page7 = () => {
 	childArm.classList.add('slideLeft');
 	tuzluLeft.classList.add('slideLeft');
 	tuzluCenter.classList.add('slideLeft');
+	tuzluRight.classList.add('slideLeft');
+	cloudLeft.classList.add('slideLeft');
+	cloudRight.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -582,12 +588,6 @@ const page7 = () => {
 	// 	childEyes.classList.remove('slideLeft');
 	// 	childEyes.classList.add('move');
 	// }, 2000);
-
-	// tuzluRight.classList.add('slideLeft');
-	// cloudLeft.classList.add('slideLeft');
-	// cloudRight.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 10.7');
+console.log('update 10.8');
