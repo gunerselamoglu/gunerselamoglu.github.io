@@ -253,15 +253,15 @@ const page2 = () => {
 	const page01Content = document.querySelector('.js-page-01-content');
 	const yusufcuk = document.querySelectorAll('.js-page-01-yusufcuk');
 	
-	page01Lake.classList.add('slideLeft');
-	page01PlantLeft.classList.add('slideLeft');
-	page01PlantMiddle.classList.add('slideLeft');
-	page01PlantRight.classList.add('slideLeft');
-	page01Tuzlu.classList.add('slideLeft');
-	page01Flamingos.classList.add('slideLeft');
-	page01Content.classList.add('slideLeft');
-	page01CloudRight.classList.add('slideLeft');
-	page01CloudSmall.classList.add('slideLeft');
+	// page01Lake.classList.add('slideLeft');
+	// page01PlantLeft.classList.add('slideLeft');
+	// page01PlantMiddle.classList.add('slideLeft');
+	// page01PlantRight.classList.add('slideLeft');
+	// page01Tuzlu.classList.add('slideLeft');
+	// page01Flamingos.classList.add('slideLeft');
+	// page01Content.classList.add('slideLeft');
+	// page01CloudRight.classList.add('slideLeft');
+	// page01CloudSmall.classList.add('slideLeft');
 	ysLogoHeader.classList.add('fadeIn');
 	sectionsOpen.classList.remove('blue');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.2');
+console.log('update 11.3');
