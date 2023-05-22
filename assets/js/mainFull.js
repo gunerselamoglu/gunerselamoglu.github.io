@@ -453,16 +453,16 @@ const page5 = () => {
 	const footPrint = document.querySelector('.js-page-04-foot-print');
 	const tuzluDrink = document.querySelector('.js-page-04-tuzlu-drink');
 
-	// rock.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// tuzluCloud.classList.add('fadeIn');
-	// tuzluFriend.classList.add('fadeIn');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
-	// content3.classList.add('slideLeft');
-	// footPrint.classList.add('slideLeft');
-	// tuzluDrink.classList.add('fadeIn');
-	// ball.classList.add('slideLeft');
+	rock.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	tuzluCloud.classList.add('fadeIn');
+	tuzluFriend.classList.add('fadeIn');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+	content3.classList.add('slideLeft');
+	footPrint.classList.add('slideLeft');
+	tuzluDrink.classList.add('fadeIn');
+	ball.classList.add('slideLeft');
 	sectionsOpen.classList.add('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -504,15 +504,15 @@ const page6 = () => {
 	// 	}
 	// });
 	
-	// tuzlu.classList.add('slideLeft');
-	// plant.classList.add('slideLeft');
-	// children.classList.add('slideLeft');
-	// cloudTopBig.classList.add('slideLeft');
-	// cloudTopLittle.classList.add('slideLeft');
-	// cloudBottom.classList.add('slideLeft');
-	// content1.classList.add('slideLeft');
-	// content2.classList.add('slideLeft');
-	// content3.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	plant.classList.add('slideLeft');
+	children.classList.add('slideLeft');
+	cloudTopBig.classList.add('slideLeft');
+	cloudTopLittle.classList.add('slideLeft');
+	cloudBottom.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
+	content3.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -561,12 +561,12 @@ const page7 = () => {
 	const content1 = document.querySelector('.js-page-06-content-1');
 	const content2 = document.querySelector('.js-page-06-content-2');
 
-	// child.classList.add('slideLeft');
-	// childEyes.classList.add('slideLeft');
-	// eyeBrow.classList.add('slideLeft');
-	// childArm.classList.add('slideLeft');
-	// tuzluLeft.classList.add('slideLeft');
-	// tuzluCenter.classList.add('slideLeft');
+	child.classList.add('slideLeft');
+	childEyes.classList.add('slideLeft');
+	eyeBrow.classList.add('slideLeft');
+	childArm.classList.add('slideLeft');
+	tuzluLeft.classList.add('slideLeft');
+	tuzluCenter.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -615,12 +615,12 @@ const page8 = () => {
 	const content = document.querySelector('.js-page-07-content');
 	const rota = document.querySelector('.js-page-07-rota');
 
-	// tuzlu.classList.add('slideLeft');
-	// handLeft.classList.add('slideLeft');
-	// boy.classList.add('slideLeft');
-	// handRight.classList.add('opacity');
-	// content.classList.add('slideLeft');
-	// rota.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	handLeft.classList.add('slideLeft');
+	boy.classList.add('slideLeft');
+	handRight.classList.add('opacity');
+	content.classList.add('slideLeft');
+	rota.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -679,15 +679,15 @@ const page9 = () => {
 	// 	}
 	// });
 
-	// rabbit.classList.add('slideLeft');
-	// plants.classList.add('slideLeft');
-	// bridge.classList.add('slideLeft');
-	// houses.classList.add('slideLeft');
-	// branch.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// content.classList.add('slideLeft');
-	// cloudLeft.classList.add('slideLeft');
-	// cloudRight.classList.add('slideLeft');
+	rabbit.classList.add('slideLeft');
+	plants.classList.add('slideLeft');
+	bridge.classList.add('slideLeft');
+	houses.classList.add('slideLeft');
+	branch.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	content.classList.add('slideLeft');
+	cloudLeft.classList.add('slideLeft');
+	cloudRight.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 10.3');
+console.log('update 10.4');
