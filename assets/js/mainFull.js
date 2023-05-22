@@ -453,16 +453,16 @@ const page5 = () => {
 	const footPrint = document.querySelector('.js-page-04-foot-print');
 	const tuzluDrink = document.querySelector('.js-page-04-tuzlu-drink');
 
-	rock.classList.add('slideLeft');
-	tuzlu.classList.add('slideLeft');
-	tuzluCloud.classList.add('fadeIn');
-	tuzluFriend.classList.add('fadeIn');
-	content1.classList.add('slideLeft');
-	content2.classList.add('slideLeft');
-	content3.classList.add('slideLeft');
-	footPrint.classList.add('slideLeft');
-	tuzluDrink.classList.add('fadeIn');
-	ball.classList.add('slideLeft');
+	// rock.classList.add('slideLeft');
+	// tuzlu.classList.add('slideLeft');
+	// tuzluCloud.classList.add('fadeIn');
+	// tuzluFriend.classList.add('fadeIn');
+	// content1.classList.add('slideLeft');
+	// content2.classList.add('slideLeft');
+	// content3.classList.add('slideLeft');
+	// footPrint.classList.add('slideLeft');
+	// tuzluDrink.classList.add('fadeIn');
+	// ball.classList.add('slideLeft');
 	sectionsOpen.classList.add('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -583,11 +583,11 @@ const page7 = () => {
 	// 	childEyes.classList.add('move');
 	// }, 2000);
 
-	tuzluRight.classList.add('slideLeft');
-	cloudLeft.classList.add('slideLeft');
-	cloudRight.classList.add('slideLeft');
-	content1.classList.add('slideLeft');
-	content2.classList.add('slideLeft');
+	// tuzluRight.classList.add('slideLeft');
+	// cloudLeft.classList.add('slideLeft');
+	// cloudRight.classList.add('slideLeft');
+	// content1.classList.add('slideLeft');
+	// content2.classList.add('slideLeft');
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 10.6');
+console.log('update 10.7');
