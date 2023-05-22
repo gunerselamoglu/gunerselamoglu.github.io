@@ -213,7 +213,7 @@ const page1 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(introLightEffect);
 		new Parallax(introLightEffect2);
 		new Parallax(introLightEffect3);
@@ -267,7 +267,7 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(page01CloudRight);
 		new Parallax(page01CloudSmall);
 		new Parallax(page01Flamingos);
@@ -334,7 +334,7 @@ const page3 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(lakeFloor);
 		new Parallax(tuzlu);
 		new Parallax(blow);
@@ -414,7 +414,7 @@ const page4 = () => {
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(lakeFloor);
 		new Parallax(tuzlu);
 		new Parallax(cloud);
@@ -468,7 +468,7 @@ const page5 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(tuzlu);
 		new Parallax(rock);
 		new Parallax(tuzluCloud);
@@ -518,7 +518,7 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(lake);
 		new Parallax(tuzlu);
 		new Parallax(children);
@@ -589,7 +589,7 @@ const page7 = () => {
 		childEyes.classList.add('move');
 	}, 2000);
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(child);
 		new Parallax(childArm);
 		new Parallax(childEyes);
@@ -626,7 +626,7 @@ const page8 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(beach);
 		new Parallax(tuzlu);
 		new Parallax(boy);
@@ -693,7 +693,7 @@ const page9 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(tuzlu);
 		new Parallax(rabbit);
 		new Parallax(plants);
@@ -760,7 +760,7 @@ const page10 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(ayseTeyze);
 		new Parallax(hasanAmca);
 		new Parallax(rasimAmca);
@@ -803,7 +803,7 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(clouds);
 		new Parallax(tuzlu);
 		new Parallax(flamingosLittle);
@@ -875,7 +875,7 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(lake);
 		new Parallax(sun);
 		new Parallax(clouds);
@@ -955,7 +955,7 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 660) {
+	if(windowWidth > 1023) {
 		new Parallax(boy[0]);
 		new Parallax(tuzlu[0]);
 		new Parallax(shine);
@@ -970,7 +970,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 	let fullPage = $('#tuzlu').fullpage({
 		anchors: anchors,
-		responsiveWidth: 660,
+		responsiveWidth: 1024,
 		onLeave: function(origin, destination, direction){	
 			sectionList[origin - 1].classList.add('hide');
 			clearInterval(sequenceInterval);
@@ -985,7 +985,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
       // }
 
 			//Sayfadan ayrıldığında hangi sayfaya gittiğini kontrol ederek ilgili animasyonu çağırıyoruz.
-			windowWidth > 660 && eval(`page${destination}()`);
+			windowWidth > 1023 && eval(`page${destination}()`);
 
 			// Section menü görünümünü ayarlıyoruz
 			if(destination == 1 || destination == 13) {
@@ -999,7 +999,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 			}
 
 			//Sayfadan ayrıldığında ayrıldığı sayfanın animasyonunu resetliyoruz böylece kullanıcı bu sayfaya tekrar geldiğinde animasyon yeniden başlıyor olacak
-			if(windowWidth > 660) {
+			if(windowWidth > 1023) {
 				setTimeout(() => {
 					const slideLeft = document.querySelector('.getFront').querySelectorAll('.slideLeft');
 					const move = document.querySelector('.getFront').querySelectorAll('.move');
@@ -1045,7 +1045,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 
 			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 
-			if(windowWidth < 660) {
+			if(windowWidth < 1024) {
 				if (anchorLink == 'giris') {
 					page1();
 				}
@@ -1090,7 +1090,7 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 	});
 }
 
-if(windowWidth > 660) {
+if(windowWidth > 1023) {
 	$(".js-header-profile, .header-profile__box").mouseover(function () {
     $(".header-profile__box").addClass("header-profile__box--show");
 		$(".js-mobile-menu-open-icon").hide();
@@ -1121,7 +1121,7 @@ if(windowWidth > 660) {
 let currentWidth = window.innerWidth;
 let resizeTimeout;
 
-if(currentWidth > 660) {
+if(currentWidth > 1023) {
 	window.addEventListener('resize', function() {
     clearTimeout(resizeTimeout);
 
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.9');
+console.log('update 12.0');
