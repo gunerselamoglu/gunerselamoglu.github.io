@@ -859,17 +859,17 @@ const page12 = () => {
 	// 	}
 	// });
 
-	// clouds.classList.add('slideLeft');
-	// flamingos.classList.add('slideLeft');
-	// plantRight.classList.add('slideLeft');
-	// plantLeft.classList.add('slideLeft');
-	// tuzlu.classList.add('slideLeft');
-	// content.classList.add('fadeIn');
-	// balik.classList.add('slideLeft');
-	// baliklar.classList.add('slideLeft');
-	// karides.classList.add('slideLeft');
-	// bubble4.classList.add('slideLeft');
-	// bubble5.classList.add('slideLeft');
+	clouds.classList.add('slideLeft');
+	flamingos.classList.add('slideLeft');
+	plantRight.classList.add('slideLeft');
+	plantLeft.classList.add('slideLeft');
+	tuzlu.classList.add('slideLeft');
+	content.classList.add('fadeIn');
+	balik.classList.add('slideLeft');
+	baliklar.classList.add('slideLeft');
+	karides.classList.add('slideLeft');
+	bubble4.classList.add('slideLeft');
+	bubble5.classList.add('slideLeft');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 10.1');
+console.log('update 10.2');
