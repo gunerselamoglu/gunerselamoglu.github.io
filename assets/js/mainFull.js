@@ -175,12 +175,12 @@ const page1 = () => {
 	// introMountain[0].classList.add('slideUp');
 	// introMountain[1].classList.add('slideUp');
 
-	setTimeout(() => {
-		introTuzlu[0].classList.remove('slideUp');
-		introTuzlu[1].classList.remove('slideUp');
-		introTuzlu[0].classList.add('swimming');
-		introTuzlu[1].classList.add('swimming');
-	}, 3000);
+	// setTimeout(() => {
+	// 	introTuzlu[0].classList.remove('slideUp');
+	// 	introTuzlu[1].classList.remove('slideUp');
+	// 	introTuzlu[0].classList.add('swimming');
+	// 	introTuzlu[1].classList.add('swimming');
+	// }, 3000);
 
 	// introWave[0].classList.add('slideUp');
 	// introWave[1].classList.add('slideUp');
@@ -407,12 +407,12 @@ const page4 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	setTimeout(() => {
-		flamingoRightWing.classList.remove('slideLeft');
-		flamingoRightWing.classList.add('HandMove');
-		flamingoLeftGaga.classList.remove('slideLeft');
-		flamingoLeftGaga.classList.add('talk');
-	},2500);
+	// setTimeout(() => {
+	// 	flamingoRightWing.classList.remove('slideLeft');
+	// 	flamingoRightWing.classList.add('HandMove');
+	// 	flamingoLeftGaga.classList.remove('slideLeft');
+	// 	flamingoLeftGaga.classList.add('talk');
+	// },2500);
 
 	if(windowWidth > 1023) {
 		new Parallax(lakeFloor);
@@ -578,16 +578,16 @@ const page7 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	setTimeout(() => {
-		tuzluCenter.classList.remove('slideLeft');
-		tuzluCenter.classList.add('move');
-		childArm.classList.remove('slideLeft');
-		childArm.classList.add('move');
-		eyeBrow.classList.remove('slideLeft');
-		eyeBrow.classList.add('move');
-		childEyes.classList.remove('slideLeft');
-		childEyes.classList.add('move');
-	}, 2000);
+	// setTimeout(() => {
+	// 	tuzluCenter.classList.remove('slideLeft');
+	// 	tuzluCenter.classList.add('move');
+	// 	childArm.classList.remove('slideLeft');
+	// 	childArm.classList.add('move');
+	// 	eyeBrow.classList.remove('slideLeft');
+	// 	eyeBrow.classList.add('move');
+	// 	childEyes.classList.remove('slideLeft');
+	// 	childEyes.classList.add('move');
+	// }, 2000);
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 12.0');
+console.log('update 12.1');
