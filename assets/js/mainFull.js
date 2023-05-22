@@ -153,27 +153,27 @@ const page1 = () => {
 	const introMountain = document.querySelectorAll('.js-intro-mountain');
 
 	ysLogo.classList.add('fadeIn');
-	tuzluTitle[0].classList.add('fadeIn');
-	tuzluTitle[1].classList.add('fadeIn');
-	golHikayesi[0].classList.add('fadeIn');
-	golHikayesi[1].classList.add('fadeIn');
-	introExplan[0].classList.add('fadeIn');
-	introExplan[1].classList.add('fadeIn');
-	cloudLeft[0].classList.add('slideUp');
-	cloudLeft[1].classList.add('slideUp');
-	cloudRight[0].classList.add('slideUp');
-	cloudRight[1].classList.add('slideUp');
-	introLake[0].classList.add('slideUp');
-	introLake[1].classList.add('slideUp');
-	cloudRightLittle[0].classList.add('slideUp');
-	cloudRightLittle[1].classList.add('slideUp');
-	introLightEffect.classList.add('fadeIn');
-	introLightEffect2.classList.add('fadeIn');
-	introLightEffect3.classList.add('fadeIn');
-	introTuzlu[0].classList.add('slideUp');
-	introTuzlu[1].classList.add('slideUp');
-	introMountain[0].classList.add('slideUp');
-	introMountain[1].classList.add('slideUp');
+	// tuzluTitle[0].classList.add('fadeIn');
+	// tuzluTitle[1].classList.add('fadeIn');
+	// golHikayesi[0].classList.add('fadeIn');
+	// golHikayesi[1].classList.add('fadeIn');
+	// introExplan[0].classList.add('fadeIn');
+	// introExplan[1].classList.add('fadeIn');
+	// cloudLeft[0].classList.add('slideUp');
+	// cloudLeft[1].classList.add('slideUp');
+	// cloudRight[0].classList.add('slideUp');
+	// cloudRight[1].classList.add('slideUp');
+	// introLake[0].classList.add('slideUp');
+	// introLake[1].classList.add('slideUp');
+	// cloudRightLittle[0].classList.add('slideUp');
+	// cloudRightLittle[1].classList.add('slideUp');
+	// introLightEffect.classList.add('fadeIn');
+	// introLightEffect2.classList.add('fadeIn');
+	// introLightEffect3.classList.add('fadeIn');
+	// introTuzlu[0].classList.add('slideUp');
+	// introTuzlu[1].classList.add('slideUp');
+	// introMountain[0].classList.add('slideUp');
+	// introMountain[1].classList.add('slideUp');
 
 	setTimeout(() => {
 		introTuzlu[0].classList.remove('slideUp');
@@ -182,33 +182,33 @@ const page1 = () => {
 		introTuzlu[1].classList.add('swimming');
 	}, 3000);
 
-	introWave[0].classList.add('slideUp');
-	introWave[1].classList.add('slideUp');
-	introWater[0].classList.add('slideUp');
-	introWater[1].classList.add('slideUp');
-	introPlantGreen[0].classList.add('slideUp');
-	introPlantGreen[1].classList.add('slideUp');
-	introRockRight[0].classList.add('slideUp');
-	introRockRight[1].classList.add('slideUp');
-	introPlantBlur[0].classList.add('slideUp');
-	introPlantBlur[1].classList.add('slideUp');
-	introRockLeft.classList.add('slideUp');
-	introFrontBug.classList.add('slideUp');
-	introMussel.classList.add('slideUp');
-	introBubbles[0].classList.add('fadeIn');
-	introBubbles[1].classList.add('fadeIn');
-	introShrimp[0].classList.add('slideUp');
-	introShrimp[1].classList.add('slideUp');
-	introFishRed[0].classList.add('slideLeft');
-	introFishRed[1].classList.add('slideLeft');
-	introFishes[0].classList.add('slideLeft');
-	introFishes[1].classList.add('slideLeft');
-	introFishShadow[0].classList.add('slideLeft');
-	introFishShadow[1].classList.add('slideLeft');
-	cloudLeftLittle[0].classList.add('slideUp');
-	cloudLeftLittle[1].classList.add('slideUp');
-	startButton[0].classList.add('fadeIn');
-	startButton[1].classList.add('fadeIn');
+	// introWave[0].classList.add('slideUp');
+	// introWave[1].classList.add('slideUp');
+	// introWater[0].classList.add('slideUp');
+	// introWater[1].classList.add('slideUp');
+	// introPlantGreen[0].classList.add('slideUp');
+	// introPlantGreen[1].classList.add('slideUp');
+	// introRockRight[0].classList.add('slideUp');
+	// introRockRight[1].classList.add('slideUp');
+	// introPlantBlur[0].classList.add('slideUp');
+	// introPlantBlur[1].classList.add('slideUp');
+	// introRockLeft.classList.add('slideUp');
+	// introFrontBug.classList.add('slideUp');
+	// introMussel.classList.add('slideUp');
+	// introBubbles[0].classList.add('fadeIn');
+	// introBubbles[1].classList.add('fadeIn');
+	// introShrimp[0].classList.add('slideUp');
+	// introShrimp[1].classList.add('slideUp');
+	// introFishRed[0].classList.add('slideLeft');
+	// introFishRed[1].classList.add('slideLeft');
+	// introFishes[0].classList.add('slideLeft');
+	// introFishes[1].classList.add('slideLeft');
+	// introFishShadow[0].classList.add('slideLeft');
+	// introFishShadow[1].classList.add('slideLeft');
+	// cloudLeftLittle[0].classList.add('slideUp');
+	// cloudLeftLittle[1].classList.add('slideUp');
+	// startButton[0].classList.add('fadeIn');
+	// startButton[1].classList.add('fadeIn');
 	ysLogoHeader.classList.remove('fadeIn');
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
@@ -407,12 +407,12 @@ const page4 = () => {
 	// header.classList.add('fadeIn');
 	// footer.classList.add('fadeIn');
 
-	// setTimeout(() => {
-	// 	flamingoRightWing.classList.remove('slideLeft');
-	// 	flamingoRightWing.classList.add('HandMove');
-	// 	flamingoLeftGaga.classList.remove('slideLeft');
-	// 	flamingoLeftGaga.classList.add('talk');
-	// },2500);
+	setTimeout(() => {
+		flamingoRightWing.classList.remove('slideLeft');
+		flamingoRightWing.classList.add('HandMove');
+		flamingoLeftGaga.classList.remove('slideLeft');
+		flamingoLeftGaga.classList.add('talk');
+	},2500);
 
 	if(windowWidth > 1023) {
 		new Parallax(lakeFloor);
@@ -643,9 +643,9 @@ const page8 = () => {
 	// 	handLeft.classList.add('opacity');
 	// }, 2500);
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
+	}, 1000);
 }
 
 const page9 = () => { 
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.6');
+console.log('update 11.7');
