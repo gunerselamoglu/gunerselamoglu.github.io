@@ -578,16 +578,16 @@ const page7 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	// setTimeout(() => {
-	// 	tuzluCenter.classList.remove('slideLeft');
-	// 	tuzluCenter.classList.add('move');
-	// 	childArm.classList.remove('slideLeft');
-	// 	childArm.classList.add('move');
-	// 	eyeBrow.classList.remove('slideLeft');
-	// 	eyeBrow.classList.add('move');
-	// 	childEyes.classList.remove('slideLeft');
-	// 	childEyes.classList.add('move');
-	// }, 2000);
+	setTimeout(() => {
+		tuzluCenter.classList.remove('slideLeft');
+		tuzluCenter.classList.add('move');
+		childArm.classList.remove('slideLeft');
+		childArm.classList.add('move');
+		eyeBrow.classList.remove('slideLeft');
+		eyeBrow.classList.add('move');
+		childEyes.classList.remove('slideLeft');
+		childEyes.classList.add('move');
+	}, 2000);
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -892,10 +892,10 @@ const page12 = () => {
 		new Parallax(bubble5);
 	}
 
-	// setTimeout(() => {
-	// 	flamingos.classList.remove('slideLeft');
-	// 	flamingos.classList.add('move');
-	// }	, 2000);
+	setTimeout(() => {
+		flamingos.classList.remove('slideLeft');
+		flamingos.classList.add('move');
+	} ,2000);
 
 	setTimeout(() => {
 		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.4');
+console.log('update 11.5');
