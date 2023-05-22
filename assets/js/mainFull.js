@@ -313,22 +313,22 @@ const page3 = () => {
 	const blow = document.querySelector('.js-page-02-blow');
 	const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
 
-	// cloudLeft.classList.add('slideLeft');
-	// cloudTop.classList.add('slideLeft');
-	// decor.classList.add('slideLeft');
-	// cake.classList.add('slideLeft');
-	// page02FlamingoRightPink.classList.add('slideLeft');
-	// page02FlamingoFrontPink.classList.add('slideLeft');
-	// page02FlamingoFrontBlack.classList.add('slideLeft');
-	// page02BirdFrontRight.classList.add('slideLeft');
-	// page02BirdTopRight.classList.add('slideLeft');	
-	// page02FireFly.classList.add('slideLeft');
-	// fireflyLight.classList.add('slideLeft');
-	// page02Content1.classList.add('slideLeft');
-	// page02Content2.classList.add('slideLeft');
-	// page02Blow.classList.add('slideLeft');
-	// page02ConfetiFront.classList.add('slideDown');
-	// page02ConfetiBack.classList.add('slideDown');
+	cloudLeft.classList.add('slideLeft');
+	cloudTop.classList.add('slideLeft');
+	decor.classList.add('slideLeft');
+	cake.classList.add('slideLeft');
+	page02FlamingoRightPink.classList.add('slideLeft');
+	page02FlamingoFrontPink.classList.add('slideLeft');
+	page02FlamingoFrontBlack.classList.add('slideLeft');
+	page02BirdFrontRight.classList.add('slideLeft');
+	page02BirdTopRight.classList.add('slideLeft');	
+	page02FireFly.classList.add('slideLeft');
+	fireflyLight.classList.add('slideLeft');
+	page02Content1.classList.add('slideLeft');
+	page02Content2.classList.add('slideLeft');
+	page02Blow.classList.add('slideLeft');
+	page02ConfetiFront.classList.add('slideDown');
+	page02ConfetiBack.classList.add('slideDown');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 11.0');
+console.log('update 11.1');
