@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 12.4 css animasyonları iptal edildi js ler aktif');
+console.log('updat 12.5 css animasyonları iptal edildi js ler aktif');
