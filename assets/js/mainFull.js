@@ -281,13 +281,13 @@ const page2 = () => {
 		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
 	},1000);
 
-	// const sequenceInterval01 = setInterval(changeSrc, 70);
-	// let counter = 0;
+	const sequenceInterval01 = setInterval(changeSrc, 70);
+	let counter = 0;
 	
-	// function changeSrc() {
-	// 	counter += 1;
-	// 	counter > 58 ? clearInterval(sequenceInterval01) : (yusufcuk[counter].style.visibility = 'visible') + (yusufcuk[counter - 1].style.visibility = 'hidden')
-	// }
+	function changeSrc() {
+		counter += 1;
+		counter > 58 ? clearInterval(sequenceInterval01) : (yusufcuk[counter].style.visibility = 'visible') + (yusufcuk[counter - 1].style.visibility = 'hidden')
+	}
 }
 
 const page3 = () => {
@@ -496,13 +496,13 @@ const page6 = () => {
 	const content2 = document.querySelector('.js-page-05-content-2');
 	const content3 = document.querySelector('.js-page-05-content-3');
 
-	// tuzluBody.forEach((elem, index) => {
-	// 	if (index === 0) {
-	// 		elem.style.visibility = 'visible';
-	// 	} else {
-	// 		elem.style.visibility = 'hidden';
-	// 	}
-	// });
+	tuzluBody.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 	
 	tuzlu.classList.add('slideLeft');
 	plant.classList.add('slideLeft');
@@ -532,20 +532,20 @@ const page6 = () => {
 		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
 	}, 1000);
 
-	// sequenceInterval = setInterval(changeSrc, 55);
-	// let counter = 0;
+	sequenceInterval = setInterval(changeSrc, 55);
+	let counter = 0;
 	
-	// function changeSrc() {
-	// 	counter += 1;
-	// 	if(counter > 50) {
-	// 		tuzluBody[50].style.visibility = 'hidden';
-	// 		tuzluBody[0].style.visibility = 'visible';
-	// 		counter = 0;
-	// 	} else {
-	// 		tuzluBody[counter].style.visibility = 'visible';
-	// 		tuzluBody[counter - 1].style.visibility = 'hidden';
-	// 	}
-	// }
+	function changeSrc() {
+		counter += 1;
+		if(counter > 50) {
+			tuzluBody[50].style.visibility = 'hidden';
+			tuzluBody[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluBody[counter].style.visibility = 'visible';
+			tuzluBody[counter - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page7 = () => {
@@ -635,17 +635,17 @@ const page8 = () => {
 		new Parallax(rota);
 	}
 
-	// setTimeout(() => {
-	// 	tuzlu.classList.remove('slideLeft');
-	// 	tuzlu.classList.add('move');
+	setTimeout(() => {
+		tuzlu.classList.remove('slideLeft');
+		tuzlu.classList.add('move');
 		
-	// 	handLeft.classList.remove('slideLeft');
-	// 	handLeft.classList.add('opacity');
-	// }, 2500);
+		handLeft.classList.remove('slideLeft');
+		handLeft.classList.add('opacity');
+	}, 2500);
 
-	// setTimeout(() => {
-	// 	sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
-	// }, 1000);
+	setTimeout(() => {
+		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
+	}, 1000);
 }
 
 const page9 = () => { 
@@ -663,21 +663,21 @@ const page9 = () => {
 	const tuzlubBulut = document.querySelectorAll('.js-tuzlu-bulut');
 	const rabbitEar = document.querySelectorAll('.js-rabbit-ear');
 
-	// tuzlubBulut.forEach((elem, index) => {
-	// 	if (index === 0) {
-	// 		elem.style.visibility = 'visible';
-	// 	} else {
-	// 		elem.style.visibility = 'hidden';
-	// 	}
-	// });
+	tuzlubBulut.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 
-	// rabbitEar.forEach((elem, index) => {
-	// 	if (index === 0) {
-	// 		elem.style.visibility = 'visible';
-	// 	} else {
-	// 		elem.style.visibility = 'hidden';
-	// 	}
-	// });
+	rabbitEar.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 
 	rabbit.classList.add('slideLeft');
 	plants.classList.add('slideLeft');
@@ -710,35 +710,35 @@ const page9 = () => {
 		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
 	}, 1000);
 
-	// sequenceInterval = setInterval(changetTuzluSrc, 30);
-	// sequenceInterval2 = setInterval(changetRabbitSrc, 30);
+	sequenceInterval = setInterval(changetTuzluSrc, 30);
+	sequenceInterval2 = setInterval(changetRabbitSrc, 30);
 
-	// let counterTuzlu = 0;
-	// let counterRabbit = 0;
+	let counterTuzlu = 0;
+	let counterRabbit = 0;
 
-	// function changetTuzluSrc() {
-	// 	counterTuzlu += 1;
-	// 	if(counterTuzlu > 39) {
-	// 		tuzlubBulut[39].style.visibility = 'hidden';
-	// 		tuzlubBulut[0].style.visibility = 'visible';
-	// 		counterTuzlu = 0;
-	// 	} else {
-	// 		tuzlubBulut[counterTuzlu].style.visibility = 'visible';
-	// 		tuzlubBulut[counterTuzlu - 1].style.visibility = 'hidden';
-	// 	}
-	// }
+	function changetTuzluSrc() {
+		counterTuzlu += 1;
+		if(counterTuzlu > 39) {
+			tuzlubBulut[39].style.visibility = 'hidden';
+			tuzlubBulut[0].style.visibility = 'visible';
+			counterTuzlu = 0;
+		} else {
+			tuzlubBulut[counterTuzlu].style.visibility = 'visible';
+			tuzlubBulut[counterTuzlu - 1].style.visibility = 'hidden';
+		}
+	}
 
-	// function changetRabbitSrc() {
-	// 	counterRabbit += 1;
-	// 	if(counterRabbit > 23) {
-	// 		rabbitEar[23].style.visibility = 'hidden';
-	// 		rabbitEar[0].style.visibility = 'visible';
-	// 		counterRabbit = 0;
-	// 	} else {
-	// 		rabbitEar[counterRabbit].style.visibility = 'visible';
-	// 		rabbitEar[counterRabbit - 1].style.visibility = 'hidden';
-	// 	}
-	// }
+	function changetRabbitSrc() {
+		counterRabbit += 1;
+		if(counterRabbit > 23) {
+			rabbitEar[23].style.visibility = 'hidden';
+			rabbitEar[0].style.visibility = 'visible';
+			counterRabbit = 0;
+		} else {
+			rabbitEar[counterRabbit].style.visibility = 'visible';
+			rabbitEar[counterRabbit - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page10 = () => { 
@@ -783,13 +783,13 @@ const page11 = () => {
 	const content2 = document.querySelector('.js-page-10-content-2');
 	const tuzluSurf = document.querySelectorAll('.js-tuzlu-surf');
 
-	// tuzluSurf.forEach((elem, index) => {
-	// 	if (index === 0) {
-	// 		elem.style.visibility = 'visible';
-	// 	} else {
-	// 		elem.style.visibility = 'hidden';
-	// 	}
-	// });
+	tuzluSurf.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 
 	tuzlu.classList.add('slideLeft');
 	flamingosLittle.classList.add('slideLeft');
@@ -817,20 +817,20 @@ const page11 = () => {
 		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
 	}, 1000);
 
-	// sequenceInterval = setInterval(changeSrc, 30);
-	// let counter = 0;
+	sequenceInterval = setInterval(changeSrc, 30);
+	let counter = 0;
 
-	// function changeSrc() {
-	// 	counter += 1;
-	// 	if(counter > 40) {
-	// 		tuzluSurf[40].style.visibility = 'hidden';
-	// 		tuzluSurf[0].style.visibility = 'visible';
-	// 		counter = 0;
-	// 	} else {
-	// 		tuzluSurf[counter].style.visibility = 'visible';
-	// 		tuzluSurf[counter - 1].style.visibility = 'hidden';
-	// 	}
-	// }
+	function changeSrc() {
+		counter += 1;
+		if(counter > 40) {
+			tuzluSurf[40].style.visibility = 'hidden';
+			tuzluSurf[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluSurf[counter].style.visibility = 'visible';
+			tuzluSurf[counter - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page12 = () => {
@@ -851,13 +851,13 @@ const page12 = () => {
 	const wave = document.querySelector('.js-page-11-wave');
 	const tuzluBulut = document.querySelectorAll('.js-page-11-tuzlu-bulut');
 
-	// tuzluBulut.forEach((elem, index) => {
-	// 	if (index === 0) {
-	// 		elem.style.visibility = 'visible';
-	// 	} else {
-	// 		elem.style.visibility = 'hidden';
-	// 	}
-	// });
+	tuzluBulut.forEach((elem, index) => {
+		if (index === 0) {
+			elem.style.visibility = 'visible';
+		} else {
+			elem.style.visibility = 'hidden';
+		}
+	});
 
 	clouds.classList.add('slideLeft');
 	flamingos.classList.add('slideLeft');
@@ -901,20 +901,20 @@ const page12 = () => {
 		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
 	}, 1000);
 
-	// sequenceInterval = setInterval(changeSrc, 30);
-	// let counter = 0;
+	sequenceInterval = setInterval(changeSrc, 30);
+	let counter = 0;
 
-	// function changeSrc() {
-	// 	counter += 1;
-	// 	if(counter > 48) {
-	// 		tuzluBulut[48].style.visibility = 'hidden';
-	// 		tuzluBulut[0].style.visibility = 'visible';
-	// 		counter = 0;
-	// 	} else {
-	// 		tuzluBulut[counter].style.visibility = 'visible';
-	// 		tuzluBulut[counter - 1].style.visibility = 'hidden';
-	// 	}
-	// }
+	function changeSrc() {
+		counter += 1;
+		if(counter > 48) {
+			tuzluBulut[48].style.visibility = 'hidden';
+			tuzluBulut[0].style.visibility = 'visible';
+			counter = 0;
+		} else {
+			tuzluBulut[counter].style.visibility = 'visible';
+			tuzluBulut[counter - 1].style.visibility = 'hidden';
+		}
+	}
 }
 
 const page13 = () => {
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 12.5 css animasyonları iptal edildi js ler aktif');
+console.log('updat 12.6 css animasyonları iptal js tamamen aktif');
