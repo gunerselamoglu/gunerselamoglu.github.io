@@ -246,7 +246,7 @@ const page1 = () => {
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1);
 	},2500);
 
 	
@@ -1231,4 +1231,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 12.7 dış ses ile ilgili mobil çalışma yapıldı');
+console.log('update 12.9 dış ses ile ilgili mobil çalışma yapıldı');
