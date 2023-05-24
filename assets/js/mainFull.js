@@ -14,6 +14,7 @@ const sectionMobile = document.querySelectorAll('.section.mobile');
 const sectionsMobile = document.querySelectorAll('.mobile.sections__list-li');
 const musicPlayer = document.querySelector('.js-music-player');
 const voicePlayer = document.querySelectorAll('.js-voice-player');
+const voicePlayerMobile = document.querySelector('.js-voice-player-mobile');
 const soundControl = document.querySelector('.js-sound-control');
 const pageOrder = document.querySelector('.js-pages-index');
 const startSound = document.querySelector('.js-start-sound');
@@ -56,10 +57,12 @@ document.onreadystatechange = () => {
 			sound = true;
 			initialization();
 			loadingScreen.classList.add("fadeOut");
+			
 			setTimeout(() => {
 				loadingScreen.remove();
 				musicPlayer.play();
 				soundControl.classList.add('play');
+				page1();
 			}, 1000);
 		});
 
@@ -68,8 +71,10 @@ document.onreadystatechange = () => {
 			sound = false;
 			initialization();
 			loadingScreen.classList.add("fadeOut");
+			
 			setTimeout(() => {
 				loadingScreen.remove();
+				page1();
 			}, 1000);
 		});
 	}
@@ -237,8 +242,12 @@ const page1 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/1.mp3';
 	},2500);
+
+	
 }
 
 const page2 = () => {
@@ -278,7 +287,9 @@ const page2 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/2.mp3';
 	},1000);
 
 	const sequenceInterval01 = setInterval(changeSrc, 70);
@@ -356,7 +367,9 @@ const page3 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/3.mp3';
 	},1000);
 }
 
@@ -437,7 +450,9 @@ const page4 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/4.mp3';
 	},1000);
 }
 
@@ -479,7 +494,9 @@ const page5 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/5.mp3';
 	}, 1500);
 }
 
@@ -529,7 +546,9 @@ const page6 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/6.mp3';
 	}, 1000);
 
 	sequenceInterval = setInterval(changeSrc, 55);
@@ -602,7 +621,9 @@ const page7 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/7.mp3';
 	}, 2000);
 }
 
@@ -644,7 +665,9 @@ const page8 = () => {
 	}, 2500);
 
 	setTimeout(() => {
-		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/8.mp3';
 	}, 1000);
 }
 
@@ -707,7 +730,9 @@ const page9 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/9.mp3';
 	}, 1000);
 
 	sequenceInterval = setInterval(changetTuzluSrc, 30);
@@ -767,7 +792,9 @@ const page10 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/10.mp3';
 	}, 1000);
 }
 
@@ -814,7 +841,9 @@ const page11 = () => {
 	}
 
 	setTimeout(() => {
-		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/11.mp3';
 	}, 1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
@@ -898,7 +927,9 @@ const page12 = () => {
 	}	, 2000);
 
 	setTimeout(() => {
-		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
+		windowWidth > 1023 ?
+		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false :
+		voicePlayerMobile.src = './assets/audio/12.mp3';
 	}, 1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
@@ -1043,9 +1074,12 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				:  elem.classList.remove('getFront', 'hide')
 			});
 
-			voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
+			
 
-			if(windowWidth < 1024) {
+			if(windowWidth <= 1023) {
+				voicePlayerMobile.pause() ; 
+				voicePlayerMobile.currentTime = 0;
+
 				if (anchorLink == 'giris') {
 					page1();
 				}
@@ -1085,6 +1119,8 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				if (anchorLink == 'son') {
 					page13();
 				}
+			} else {
+				voicePlayer.forEach(voice => {voice.pause() ; voice.currentTime = 0});
 			}
 		}
 	});
@@ -1171,4 +1207,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('updat 12.6 css animasyonları iptal js tamamen aktif');
+console.log('update 12.7 css animasyonları iptal mobil sesler açık ve sorunsuz çalışıyor');

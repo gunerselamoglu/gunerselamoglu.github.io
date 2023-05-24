@@ -252,6 +252,7 @@ section:nth-child(odd).hide {
 @media (max-width:1023px) { 
   .section {
     overflow: hidden;
+    overflow-x: hidden!important;
     position:relative;
     top:0;
     left:0;
