@@ -313,22 +313,22 @@ const page3 = () => {
 	const blow = document.querySelector('.js-page-02-blow');
 	const tuzluEyeBall = document.querySelector('.js-page-02-tuzlu-eyeball');	
 
-	// cloudLeft.classList.add('slideLeft');
-	// cloudTop.classList.add('slideLeft');
-	// decor.classList.add('slideLeft');
-	// cake.classList.add('slideLeft');
-	// page02FlamingoRightPink.classList.add('slideLeft');
-	// page02FlamingoFrontPink.classList.add('slideLeft');
-	// page02FlamingoFrontBlack.classList.add('slideLeft');
-	// page02BirdFrontRight.classList.add('slideLeft');
-	// page02BirdTopRight.classList.add('slideLeft');	
-	// page02FireFly.classList.add('slideLeft');
-	// fireflyLight.classList.add('slideLeft');
-	// page02Content1.classList.add('slideLeft');
-	// page02Content2.classList.add('slideLeft');
-	// page02Blow.classList.add('slideLeft');
-	// page02ConfetiFront.classList.add('slideDown');
-	// page02ConfetiBack.classList.add('slideDown');
+	cloudLeft.classList.add('slideLeft');
+	cloudTop.classList.add('slideLeft');
+	decor.classList.add('slideLeft');
+	cake.classList.add('slideLeft');
+	page02FlamingoRightPink.classList.add('slideLeft');
+	page02FlamingoFrontPink.classList.add('slideLeft');
+	page02FlamingoFrontBlack.classList.add('slideLeft');
+	page02BirdFrontRight.classList.add('slideLeft');
+	page02BirdTopRight.classList.add('slideLeft');	
+	page02FireFly.classList.add('slideLeft');
+	fireflyLight.classList.add('slideLeft');
+	page02Content1.classList.add('slideLeft');
+	page02Content2.classList.add('slideLeft');
+	page02Blow.classList.add('slideLeft');
+	page02ConfetiFront.classList.add('slideDown');
+	page02ConfetiBack.classList.add('slideDown');
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -383,29 +383,29 @@ const page4 = () => {
 	const plantRightDark = document.querySelector('.js-page-03-plant-right-dark');
 	const content = document.querySelector('.js-page-03-content');
 	
-	// tuzlu.classList.add('slideLeft');
-	// rockLeft.classList.add('slideLeft');
-	// rockRight.classList.add('slideLeft');
-	// flamingoLeft.classList.add('slideLeft');
-	// flamingoLeftGaga.classList.add('slideLeft');
-	// flamingoRight.classList.add('slideLeft');
-	// flamingoRightWing.classList.add('slideLeft');
-	// plantLeft.classList.add('slideLeft');
-	// plantRight.classList.add('slideLeft');
-	// content.classList.add('slideLeft');
-	// thunder.classList.add('flash');
-	// rockLeftDark.classList.add('show');
-	// flamingoLeftGagaDark.classList.add('show');
-	// rockRightDark.classList.add('show');
-	// flamingoRightWingDark.classList.add('show');
-	// flamingoLeftDark.classList.add('show');
-	// flamingoRightDark.classList.add('show');
-	// plantLeftDark.classList.add('show');
-	// plantRightDark.classList.add('show');
-	// sectionsOpen.classList.remove('blue');
-	// ysLogoHeader.classList.add('fadeIn');
-	// header.classList.add('fadeIn');
-	// footer.classList.add('fadeIn');
+	tuzlu.classList.add('slideLeft');
+	rockLeft.classList.add('slideLeft');
+	rockRight.classList.add('slideLeft');
+	flamingoLeft.classList.add('slideLeft');
+	flamingoLeftGaga.classList.add('slideLeft');
+	flamingoRight.classList.add('slideLeft');
+	flamingoRightWing.classList.add('slideLeft');
+	plantLeft.classList.add('slideLeft');
+	plantRight.classList.add('slideLeft');
+	content.classList.add('slideLeft');
+	thunder.classList.add('flash');
+	rockLeftDark.classList.add('show');
+	flamingoLeftGagaDark.classList.add('show');
+	rockRightDark.classList.add('show');
+	flamingoRightWingDark.classList.add('show');
+	flamingoLeftDark.classList.add('show');
+	flamingoRightDark.classList.add('show');
+	plantLeftDark.classList.add('show');
+	plantRightDark.classList.add('show');
+	sectionsOpen.classList.remove('blue');
+	ysLogoHeader.classList.add('fadeIn');
+	header.classList.add('fadeIn');
+	footer.classList.add('fadeIn');
 
 	// setTimeout(() => {
 	// 	flamingoRightWing.classList.remove('slideLeft');
@@ -567,12 +567,6 @@ const page7 = () => {
 	childArm.classList.add('slideLeft');
 	tuzluLeft.classList.add('slideLeft');
 	tuzluCenter.classList.add('slideLeft');
-	tuzluRight.classList.add('slideLeft');
-	cloudLeft.classList.add('slideLeft');
-	cloudRight.classList.add('slideLeft');
-	content1.classList.add('slideLeft');
-	content2.classList.add('slideLeft');
-
 	sectionsOpen.classList.remove('blue');
 	ysLogoHeader.classList.add('fadeIn');
 	header.classList.add('fadeIn');
@@ -588,6 +582,12 @@ const page7 = () => {
 	// 	childEyes.classList.remove('slideLeft');
 	// 	childEyes.classList.add('move');
 	// }, 2000);
+
+	tuzluRight.classList.add('slideLeft');
+	cloudLeft.classList.add('slideLeft');
+	cloudRight.classList.add('slideLeft');
+	content1.classList.add('slideLeft');
+	content2.classList.add('slideLeft');
 
 	if(windowWidth > 1023) {
 		new Parallax(child);
@@ -643,9 +643,9 @@ const page8 = () => {
 	// 	handLeft.classList.add('opacity');
 	// }, 2500);
 
-	setTimeout(() => {
-		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
-	}, 1000);
+	// setTimeout(() => {
+	// 	sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false;
+	// }, 1000);
 }
 
 const page9 = () => { 
@@ -892,10 +892,10 @@ const page12 = () => {
 		new Parallax(bubble5);
 	}
 
-	setTimeout(() => {
-		flamingos.classList.remove('slideLeft');
-		flamingos.classList.add('move');
-	} ,2000);
+	// setTimeout(() => {
+	// 	flamingos.classList.remove('slideLeft');
+	// 	flamingos.classList.add('move');
+	// }	, 2000);
 
 	setTimeout(() => {
 		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false;
@@ -1171,4 +1171,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 12.1');
+console.log('update 12.2');
