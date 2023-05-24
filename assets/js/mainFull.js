@@ -241,10 +241,12 @@ const page1 = () => {
 		new Parallax(introBubbles[0]);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/1.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/1.mp3';
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
 	},2500);
 
 	
@@ -286,10 +288,12 @@ const page2 = () => {
 		new Parallax(page01PlantRight);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/2.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/2.mp3';
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
 	},1000);
 
 	const sequenceInterval01 = setInterval(changeSrc, 70);
@@ -366,10 +370,12 @@ const page3 = () => {
 		new Parallax(page02FlamingoRightPink);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/3.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/3.mp3';
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
 	},1000);
 }
 
@@ -449,10 +455,12 @@ const page4 = () => {
 		new Parallax(plantRightDark);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/4.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/4.mp3';
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
 	},1000);
 }
 
@@ -493,11 +501,13 @@ const page5 = () => {
 		new Parallax(footPrint);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/5.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/5.mp3';
-	}, 1500);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1500);
 }
 
 const page6 = () => {
@@ -545,11 +555,13 @@ const page6 = () => {
 		new Parallax(plant);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/6.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/6.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 55);
 	let counter = 0;
@@ -620,11 +632,13 @@ const page7 = () => {
 		new Parallax(cloudRight);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/7.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/7.mp3';
-	}, 2000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},2000);
 }
 
 const page8 = () => {
@@ -664,11 +678,13 @@ const page8 = () => {
 		handLeft.classList.add('opacity');
 	}, 2500);
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/8.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/8.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 }
 
 const page9 = () => { 
@@ -729,11 +745,13 @@ const page9 = () => {
 		new Parallax(mountines);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/9.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/9.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 
 	sequenceInterval = setInterval(changetTuzluSrc, 30);
 	sequenceInterval2 = setInterval(changetRabbitSrc, 30);
@@ -791,11 +809,13 @@ const page10 = () => {
 		new Parallax(rasimAmca);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/10.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/10.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 }
 
 const page11 = () => {
@@ -840,11 +860,13 @@ const page11 = () => {
 		new Parallax(sun);
 	}
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/11.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/11.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
 	let counter = 0;
@@ -926,11 +948,13 @@ const page12 = () => {
 		flamingos.classList.add('move');
 	}	, 2000);
 
+	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/12.mp3' : '';
+
 	setTimeout(() => {
 		windowWidth > 1023 ?
 		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false :
-		voicePlayerMobile.src = './assets/audio/12.mp3';
-	}, 1000);
+		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
 	let counter = 0;
@@ -1207,4 +1231,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 12.7 css animasyonları iptal mobil sesler açık ve sorunsuz çalışıyor');
+console.log('update 12.7 dış ses ile ilgili mobil çalışma yapıldı');
