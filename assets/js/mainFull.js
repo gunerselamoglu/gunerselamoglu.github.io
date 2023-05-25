@@ -1231,4 +1231,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 13.0 css animasyonlar açılmaya başlıyor');
+console.log('update 13.1 css animasyonları tekrar iptal edildi');
