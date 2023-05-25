@@ -1,4 +1,4 @@
-/* @keyframes slideLeftPage02Blow {
+@keyframes slideLeftPage02Blow {
   0%   {
     transform: translateX(-90px);
     opacity: 0;
@@ -73,4 +73,4 @@
     right:5.572916666666667%;
     opacity: 1;
   }
-} */
+}
