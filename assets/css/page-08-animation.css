@@ -1,4 +1,4 @@
-/* @keyframes rabbitSlide {
+@keyframes rabbitSlide {
   0%   {
     transform: translateX(20%);
   }
@@ -50,4 +50,4 @@
   100% {
     left: 80.114583333333332%;
   }
-} */
+}

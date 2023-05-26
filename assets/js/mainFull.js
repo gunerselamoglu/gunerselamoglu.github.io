@@ -244,9 +244,11 @@ const page1 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/1.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[0].play() + (voicePlayer[0].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},2500);
 
 	
@@ -291,9 +293,11 @@ const page2 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/2.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[1].play() + (voicePlayer[1].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 
 	const sequenceInterval01 = setInterval(changeSrc, 70);
@@ -373,9 +377,11 @@ const page3 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/3.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[2].play() + (voicePlayer[2].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 }
 
@@ -458,9 +464,11 @@ const page4 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/4.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[3].play() + (voicePlayer[3].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 }
 
@@ -504,9 +512,11 @@ const page5 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/5.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[4].play() + (voicePlayer[4].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1500);
 }
 
@@ -558,9 +568,11 @@ const page6 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/6.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[5].play() + (voicePlayer[5].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 55);
@@ -635,9 +647,11 @@ const page7 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/7.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[6].play() + (voicePlayer[6].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},2000);
 }
 
@@ -681,9 +695,11 @@ const page8 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/8.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[7].play() + (voicePlayer[7].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 }
 
@@ -748,9 +764,11 @@ const page9 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/9.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[8].play() + (voicePlayer[8].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 
 	sequenceInterval = setInterval(changetTuzluSrc, 30);
@@ -812,9 +830,11 @@ const page10 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/10.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[9].play() + (voicePlayer[9].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 }
 
@@ -863,9 +883,11 @@ const page11 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/11.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[10].play() + (voicePlayer[10].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
@@ -951,9 +973,11 @@ const page12 = () => {
 	windowWidth < 1024 ? voicePlayerMobile.src = './assets/audio/12.mp3' : '';
 
 	setTimeout(() => {
-		windowWidth > 1023 ?
-		sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false :
-		voicePlayerMobile.play() + (voicePlayerMobile.volume = 1);
+		if(windowWidth > 1023) {
+			sound ? voicePlayer[11].play() + (voicePlayer[11].volume = 1) : false
+		} else {
+			sound ? voicePlayerMobile.play() + (voicePlayerMobile.volume = 1) + musicPlayer.play() + (musicPlayer.volume = 1) : false
+		}
 	},1000);
 
 	sequenceInterval = setInterval(changeSrc, 30);
@@ -1098,8 +1122,6 @@ let anchors = ['giris', 'merhaba', 'dogum-gunu', 'birsey-duydum', 'golde-yuruyus
 				:  elem.classList.remove('getFront', 'hide')
 			});
 
-			
-
 			if(windowWidth <= 1023) {
 				voicePlayerMobile.pause() ; 
 				voicePlayerMobile.currentTime = 0;
@@ -1231,4 +1253,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 13.2 css animasyonları sayfa 1 ve 2 açıldı');
+console.log('update 13.2 css animasyonları mobil yatayda iptal ediliyor');

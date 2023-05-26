@@ -1,4 +1,4 @@
-/* @keyframes fadeIn {
+@keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
@@ -93,4 +93,26 @@
       transform: translateX(-20px);
     }
   }
-} */
+}
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) {
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+  
+  @keyframes showSlideToLeft {}
+  
+  @keyframes hideSlideToRight {}
+  
+  @keyframes slideToMinus {}
+  
+  @keyframes slideToZero {}
+  
+  @keyframes contentSlideLeft {}
+}
