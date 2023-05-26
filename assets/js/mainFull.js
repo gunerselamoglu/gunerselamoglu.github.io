@@ -1253,4 +1253,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 13.2 css animasyonları mobil yatayda iptal ediliyor');
+console.log('update 13.3 css animasyonları mobil yatayda iptal ediliyor');

@@ -319,3 +319,9 @@ section:nth-child(odd).hide {
     opacity: 1;
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
+  .o-section__figure-wrapper::before {
+    padding-bottom: 48%;
+  }
+}
