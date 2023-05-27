@@ -72,3 +72,62 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) {  
+  @keyframes Page03Talk {
+    0%   {
+      transform: rotate(-2deg) translateX(-45px);
+    }
+  }
+  
+  @keyframes Page03FlamingoRightWing {
+    0%   {
+      transform: rotate(0) translateX(0);
+    }
+  }
+  
+  @keyframes Page03FlashThunder {
+    0%   {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    53% {
+      opacity: .9;
+    }
+    59% {
+      opacity: .7;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes Page03Flash {
+    0%   {
+      visibility: hidden;
+      opacity: 0;
+    }
+    50% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    53% {
+      visibility: visible;
+      opacity: 1;
+    }
+    65% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

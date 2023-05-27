@@ -257,3 +257,37 @@
     }
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
+  @keyframes slideCloud {
+    0% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes armMove {
+    0% {
+      transform: translateX(-40px) rotate(0);
+    }
+  }
+  
+  @keyframes eyeBrowMove {
+    0% {
+      transform: translateY(0) translateX(-40px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes eyesMove {
+    0% {
+      transform: translateY(10px) translateX(-40px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes tuzluCenterMove {
+    0% {
+      transform: translateX(0);
+    }
+  }
+}

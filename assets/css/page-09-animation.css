@@ -24,3 +24,17 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
+  @keyframes fadeIn09 {
+    0% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn09-2 {
+    0% {
+      opacity: 1;
+    }
+  }
+}

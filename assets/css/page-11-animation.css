@@ -34,3 +34,24 @@
     transform: translateY(0);
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
+  @keyframes flamingosSlide11 {
+    0% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes plantLeft11 {
+    0% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  @keyframes flamingosMove11 {
+    0% {
+      transform: translateY(0);
+    }
+  }
+}

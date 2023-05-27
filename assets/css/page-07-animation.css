@@ -38,3 +38,30 @@
     transform: translateX(0);
   }
 }
+
+@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
+  @keyframes rotaFadeIn {
+    0% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotaFadeOut {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes linePaint {
+    0% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes page07TuzluMove {
+    0% {
+      transform: translateX(0);
+    }
+  }
+}
