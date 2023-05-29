@@ -1,38 +1,38 @@
 ﻿@charset "utf-8";
 @import 'reset.css';
 @import 'fonts.css';
-@import 'animations.css';
+/* @import 'animations.css'; */
 @import 'header.css';
 @import 'footer.css';
 @import 'map.css';
 @import 'sections.css';
-@import 'intro-animation.css';
+/* @import 'intro-animation.css'; */
 @import 'rotate-phone.css';
 @import 'loading.css';
 @import 'intro.css';
-@import 'skip-animation.css';
-@import 'page-01-animation.css';
+/* @import 'skip-animation.css'; */
+/* @import 'page-01-animation.css'; */
 @import 'page-01.css';
-@import 'page-02-animation.css';
+/* @import 'page-02-animation.css'; */
 @import 'page-02.css';
-@import 'page-03-animation.css';
+/* @import 'page-03-animation.css'; */
 @import 'page-03.css';
 @import 'page-04.css';
-@import 'page-05-animation.css';
+/* @import 'page-05-animation.css'; */
 @import 'page-05.css';
-@import 'page-06-animation.css';
+/* @import 'page-06-animation.css'; */
 @import 'page-06.css';
-@import 'page-07-animation.css';
+/* @import 'page-07-animation.css'; */
 @import 'page-07.css';
-@import 'page-08-animation.css';
+/* @import 'page-08-animation.css'; */
 @import 'page-08.css';
-@import 'page-09-animation.css';
+/* @import 'page-09-animation.css'; */
 @import 'page-09.css';
-@import 'page-10-animation.css';
+/* @import 'page-10-animation.css'; */
 @import 'page-10.css';
-@import 'page-11-animation.css';
+/* @import 'page-11-animation.css'; */
 @import 'page-11.css';
-@import 'son-animation.css';
+/* @import 'son-animation.css'; */
 @import 'son.css';
 
 html {

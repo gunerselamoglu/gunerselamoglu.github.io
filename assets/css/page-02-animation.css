@@ -74,28 +74,3 @@
     opacity: 1;
   }
 }
-
-@media only screen and (max-device-width: 844px) and (orientation: landscape) {  
-  @keyframes slideLeftPage02Blow {}
-  
-  @keyframes Page02Light {}
-  
-  @keyframes slideDownPage02ConfetiFront {
-    0% {
-      margin-top: 38%;
-    }
-  }
-  
-  @keyframes slideDownPage02ConfetiBack {
-    0% {
-      margin-top: 40%;
-    }
-  }
-  
-  @keyframes slideLeftPage02Content {
-    0% {
-      right:5.572916666666667%;
-      opacity: 1;
-    }
-  }
-}

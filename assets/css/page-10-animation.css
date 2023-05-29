@@ -6,11 +6,3 @@
     transform: translateX(100%);
   }
 }
-
-@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
-  @keyframes slideLeft10Tuzlu {
-    0% {
-      transform: translateX(100%);
-    }
-  }
-}

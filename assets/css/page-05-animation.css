@@ -36,23 +36,3 @@
     transform: rotate(0deg) translateX(-40px);
   }
 }
-
-@media only screen and (max-device-width: 844px) and (orientation: landscape) {  
-  @keyframes slideCloud {
-    0% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes headShake {
-    0% {
-      transform: rotate(0deg) translateX(-40px);
-    }
-  }
-  
-  @keyframes tailShake {
-    0% {
-      transform: rotate(0deg) translateX(-40px);
-    }
-  }
-}

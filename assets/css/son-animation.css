@@ -6,11 +6,3 @@
     transform: translateX(0);
   }
 }
-
-@media only screen and (max-device-width: 844px) and (orientation: landscape) { 
-  @keyframes sonSlideUp {
-    0% {
-      transform: translateX(0);
-    }
-  }
-}
