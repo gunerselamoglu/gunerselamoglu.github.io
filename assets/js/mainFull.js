@@ -1201,6 +1201,7 @@ if(windowWidth > 1023) {
 }
 
 let currentWidth = window.innerWidth;
+let currentHeight = window.innerHeight;
 let resizeTimeout;
 
 if(currentWidth > 1023) {
@@ -1208,22 +1209,21 @@ if(currentWidth > 1023) {
     clearTimeout(resizeTimeout);
 
     resizeTimeout = setTimeout(function() {
-        let windowHeight = window.innerHeight;
-        let windowWidth = window.innerWidth;
+        let newWidth = window.innerWidth;
+        let newHeight = window.innerHeight;
 
-        let threshold = 100; // İstediğiniz eşik değerini burada belirleyebilirsiniz
+        let threshold = 100;
 
-        if (Math.abs(windowHeight - window.innerHeight) > threshold || Math.abs(windowWidth - window.innerWidth) > threshold) {
+        if (Math.abs(newWidth - currentWidth) > threshold || Math.abs(newHeight - currentHeight) > threshold) {
             location.reload();
         }
-    }, 200); // Belirli bir gecikme süresiyle (örneğin 200ms) çalışmasını sağlar
+    }, 200);
 	});
 }
 
 window.addEventListener('orientationchange', function() {
 	location.reload();
 });
-
 
 // pressKitButton.addEventListener('click', () => {
 // 	dataLayer.push({'event': 'tuzlu_print'});
@@ -1253,4 +1253,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 13.8 webp dönüşümü tamamlandı');
+console.log('update 13.9 resize durumunda sayfanın yenilenmesi eklendi');
