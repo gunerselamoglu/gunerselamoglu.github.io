@@ -1253,4 +1253,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 13.7 webp aktif ediliyor');
+console.log('update 13.8 webp dönüşümü tamamlandı');
