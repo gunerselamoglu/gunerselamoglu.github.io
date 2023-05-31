@@ -93,7 +93,6 @@ soundControl?.addEventListener('click', () => {
 		soundControl.classList.add('play');
 		sound = true;
 	} else if(musicPlayer.paused && mobileCheck()) {
-		console.log('musicPlayer.paused && mobileCheck() burada')
 		musicPlayer.play();
 		voicePlayerMobile.volume = 1;
 		voicePlayerMobile.play();
@@ -276,7 +275,6 @@ const page1 = () => {
 			voicePlayer[0].play();
 			voicePlayer[0].volume = 1;
 		} else if(mobileCheck() && sound) {
-			console.log('mobil alana girdi ')
 			voicePlayerMobile.src = './assets/audio/1.mp3';
 			musicPlayer.play();
 			voicePlayerMobile.volume = 1;
@@ -1316,5 +1314,3 @@ window.addEventListener('orientationchange', function() {
 // twitter.addEventListener('click', () => {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
-
-console.log('update 14.1 ses ve müzikle ilgili mobile yönelik bir çalışma yapıldı');
