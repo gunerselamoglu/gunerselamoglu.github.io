@@ -93,6 +93,7 @@ soundControl?.addEventListener('click', () => {
 		soundControl.classList.add('play');
 		sound = true;
 	} else if(musicPlayer.paused && mobileCheck()) {
+		console.log('musicPlayer.paused && mobileCheck() burada')
 		musicPlayer.play();
 		voicePlayerMobile.volume = 1;
 		voicePlayerMobile.play();
@@ -245,7 +246,7 @@ const page1 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(introLightEffect);
 		new Parallax(introLightEffect2);
 		new Parallax(introLightEffect3);
@@ -268,21 +269,19 @@ const page1 = () => {
 		new Parallax(introBubbles[0]);
 	}
 
-	setTimeout(() => {
+	setTimeout(() => {},3800);
 		if(!mobileCheck() && sound) {
 			musicPlayer.play();
 			musicPlayer.volume = 1;
 			voicePlayer[0].play();
 			voicePlayer[0].volume = 1;
 		} else if(mobileCheck() && sound) {
+			console.log('mobil alana girdi ')
 			voicePlayerMobile.src = './assets/audio/1.mp3';
-			voicePlayerMobile.play();
-			voicePlayerMobile.volume = 1;
 			musicPlayer.play();
-			musicPlayer.volume = 1;
+			voicePlayerMobile.volume = 1;
+			voicePlayerMobile.play();
 		}
-	},3800);
-
 	
 }
 
@@ -312,7 +311,7 @@ const page2 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(page01CloudRight);
 		new Parallax(page01CloudSmall);
 		new Parallax(page01Flamingos);
@@ -388,7 +387,7 @@ const page3 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(lakeFloor);
 		new Parallax(tuzlu);
 		new Parallax(blow);
@@ -477,7 +476,7 @@ const page4 = () => {
 		flamingoLeftGaga.classList.add('talk');
 	},2500);
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(lakeFloor);
 		new Parallax(tuzlu);
 		new Parallax(cloud);
@@ -540,7 +539,7 @@ const page5 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(tuzlu);
 		new Parallax(rock);
 		new Parallax(tuzluCloud);
@@ -599,7 +598,7 @@ const page6 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(lake);
 		new Parallax(tuzlu);
 		new Parallax(children);
@@ -679,7 +678,7 @@ const page7 = () => {
 	content1.classList.add('slideLeft');
 	content2.classList.add('slideLeft');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(child);
 		new Parallax(childArm);
 		new Parallax(childEyes);
@@ -725,7 +724,7 @@ const page8 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(beach);
 		new Parallax(tuzlu);
 		new Parallax(boy);
@@ -801,7 +800,7 @@ const page9 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(tuzlu);
 		new Parallax(rabbit);
 		new Parallax(plants);
@@ -877,7 +876,7 @@ const page10 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(ayseTeyze);
 		new Parallax(hasanAmca);
 		new Parallax(rasimAmca);
@@ -929,7 +928,7 @@ const page11 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(clouds);
 		new Parallax(tuzlu);
 		new Parallax(flamingosLittle);
@@ -1010,7 +1009,7 @@ const page12 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 	
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(lake);
 		new Parallax(sun);
 		new Parallax(clouds);
@@ -1099,7 +1098,7 @@ const page13 = () => {
 	header.classList.add('fadeIn');
 	footer.classList.add('fadeIn');
 
-	if(windowWidth > 1023) {
+	if(!mobileCheck()) {
 		new Parallax(boy[0]);
 		new Parallax(tuzlu[0]);
 		new Parallax(shine);
