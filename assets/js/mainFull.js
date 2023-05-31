@@ -66,9 +66,8 @@ document.onreadystatechange = () => {
 			
 			setTimeout(() => {
 				loadingScreen.remove();
-				musicPlayer.play();
-				soundControl.classList.add('play');
 				page1();
+				soundControl.classList.add('play');
 			}, 1000);
 		});
 
@@ -271,6 +270,8 @@ const page1 = () => {
 
 	setTimeout(() => {
 		if(!mobileCheck() && sound) {
+			musicPlayer.play();
+			musicPlayer.volume = 1;
 			voicePlayer[0].play();
 			voicePlayer[0].volume = 1;
 		} else if(mobileCheck() && sound) {
@@ -1317,4 +1318,4 @@ window.addEventListener('orientationchange', function() {
 // 	dataLayer.push({'event': 'tuzlu_end_twitter'})
 // });
 
-console.log('update 14.0 mobil versiyon ses kontrolleri konuldu');
+console.log('update 14.1 ses ve müzikle ilgili mobile yönelik bir çalışma yapıldı');
