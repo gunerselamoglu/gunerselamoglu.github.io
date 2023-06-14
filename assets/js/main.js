@@ -1,5 +1,5 @@
-// Güner Selamoğlu HavasCX 2022
-// Yarının Suyu Tuzlu
+// Güner Selamoğlu HavasCX 2023
+// Yarının Suyu Tuzlu V2
 let windowWidth = $(window).width()
 let windowHeight = $(window).height();
 
@@ -1287,30 +1287,30 @@ window.addEventListener('orientationchange', function() {
 	location.reload();
 });
 
-// pressKitButton.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_print'});
-// });
+pressKitButton.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_print'});
+});
 
-// startSound.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_story_soundon'});
-// });
+startSound.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_story_soundon'});
+});
 
-// startMute.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_story_soundoff'});
-// });
+startMute.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_story_soundoff'});
+});
 
-// promise.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_end_promise'});
-// });
+promise.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_end_promise'});
+});
 
-// instagram.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_end_ig'});
-// });
+instagram.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_end_ig'});
+});
 
-// facebook.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_end_fb'});
-// });
+facebook.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_end_fb'});
+});
 
-// twitter.addEventListener('click', () => {
-// 	dataLayer.push({'event': 'tuzlu_end_twitter'})
-// });
+twitter.addEventListener('click', () => {
+	dataLayer.push({'event': 'tuzlu_end_twitter'})
+});
