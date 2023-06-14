@@ -17,5 +17,36 @@
   </head>
   <body>
     <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code </a>
+
+    <a href="app://gedik.com/openApp/#S.browser\_fallback\_url=https://play.google.com/store/apps/details?id=com.gedik.hizlihesap;end"> Gedik </a>
+    
+
+    <script>
+      function isAppInstalled() {
+  // Custom URL Scheme kontrolü yaparak uygulamanın yüklü olup olmadığını kontrol eder
+  // Uygulamanın URL şemasını burada "app-scheme" olarak varsayalım
+  var appScheme = "app-scheme://";
+
+ 
+
+  // Bir iframe oluşturup URL şemasını deneyelim
+  var iframe = document.createElement("iframe");
+  iframe.style.display = "none";
+  iframe.src = appScheme;
+  document.body.appendChild(iframe);
+
+ 
+
+  // Uygulama URL şemasının açılıp açılmadığını kontrol edelim
+  setTimeout(function() {
+    document.body.removeChild(iframe);
+    alert("Uygulama yüklü: ", !iframe.contentWindow);
+  }, 2000);
+}
+
+ 
+
+isAppInstalled();
+    </script>
   </body>
 </html>
