@@ -54,7 +54,7 @@
   </style>
   </head>
   <body>
-    <a href="intent://scan/#Intent;scheme=gedik.com;package=com.gedik.hizlihesap;end"> Gedik Intent:// 2 </a>
+    <a href="intent://scan/#Intent;scheme=gedik.hizlihesap;package=com.google.gedik.hizlihesap;end"> Gedik Intent:// </a>
 
     <p>
 
@@ -66,8 +66,11 @@
     <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code </a>
   </p>
   <p>
-    <a href="zxing://;end"> Take a QR code App:// </a>
+    <a href="app://gedik.com/openApp/#S.browser\_fallback\_url=https://play.google.com/store/apps/details?id=com.gedik.hizlihesap;end"> Take a QR App:// </a>
   </p>
+
+    <p> <a href="app://78.47.148.149/openApp/#S.browser\_fallback\_url=https://play.google.com/store/apps/details?id=com.gedik.hizlihesap&hl=tr&gl=US;end"**\>Gedik Hızlı Hesap Android</a></p>**
+ 
 
   
   <div class="centered">
@@ -79,7 +82,7 @@
     <br>
     <br>
 
-    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 8</a></div>
+    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 9</a></div>
     <br>
     <br>
     <div class="download-app">
@@ -698,7 +701,7 @@ return {
                     notSupportedMessage: 'Sorry, you’ll need to use a different browser to do this.',
                     universalLinkUrl: 'http://zxing.org',
                     appUri: 'zxing',
-                    androidAppId: 'com.google.zxing.client.android',
+                    androidAppId: 'com.google.zxing.client.android', //gedik.hizlihesap
                     iOsAppStore:'https://itunes.apple.com/us/app/linkedin/id288429040?mt=8',
                     debug:true // Optional
                     //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
