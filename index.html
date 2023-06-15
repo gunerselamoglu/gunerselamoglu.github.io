@@ -4,14 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=No" />
-    <meta name="description" content="Merhaba! Benim adım Tuzlu. 1 yaşımdayım." />
-    <meta property="og:url" content="https://www.yarininsuyu.com/tuzlu" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tuzlu - Bir Göl Hikayesi" />
-    <meta property="og:description" content="Merhaba! Benim adım Tuzlu. 1 yaşımdayım." />
-    <meta property="og:image" content="https://www.yarininsuyu.com/assets/img/intro-page/tuzlu-intro.webp" />
-    <link rel="icon" sizes="32x32" href="./assets/img/favicon-32x32.svg">
-    <link rel="icon" type="image/svg" href="./assets/img/favicon-16x16.svg" />
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <title>Deep Link Test</title>
 
     <script type="text/javascript">
@@ -89,6 +82,52 @@
         window.AppRedirect = AppRedirect;
       })();
     </script>
+     <style>
+      body {
+        font-family: "San Francisco", "Helvetica Neue", "Lucida Grande";
+          color:black;
+      }
+      div {
+          text-align: center;
+      }
+      .download-app{
+          color:#999;
+          font-size:15px;
+      }
+      .download-app a {
+          color:rebeccapurple;
+          font-weight:bold;
+      }
+      .centered {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          margin-top: -180px;
+          margin-left: -145px;
+      }
+      .open-app {
+          margin: 0 0 25px;
+          overflow: hidden;
+          padding: 12px;
+          background-color: #eeeeee;
+          border: 1px solid rebeccapurple;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          font-size: 20px;
+          font-weight: bold;
+          color:rebeccapurple;
+          text-decoration: none;
+      }
+
+      .app-logo {
+          background-color:rebeccapurple;
+          margin-bottom:50px;
+          color: white;
+          padding:30px;
+          border-radius: 8px;
+          font-size:35px;
+      }
+  </style>
   </head>
   <body>
     <a href="intent://scan/#Intent;scheme=gedik.com;package=com.gedik.hizlihesap;end"> Gedik Intent:// 2 </a>
@@ -103,33 +142,54 @@
     <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code </a>
   </p>
   <p>
-    <a href="zxing://openApp/#S.browser\_fallback\_url=https://play.google.com/store/apps/details?id=com.gedik.hizlihesap;end"> Take a QR code App:// </a>
+    <a href="zxing://;end"> Take a QR code App:// </a>
   </p>
 
-  <div class="container">
-    <div class="row">
-      <div class="column xs-12">
-        <strong>Example Deep Link</strong>
-      </div>
+  
+  <div class="centered">
+    <div>
+      <span class="app-logo">My App</span>
     </div>
-  </div> 
+    <br>
+    <br>
+    <br>
+    <br>
 
-  <script type="text/javascript">
-    var qs = AppRedirect.queryString;
-    AppRedirect.redirect({
-      iosApp: 'twitter://post?message=' + qs['message'],
-      iosAppStore: 'https://itunes.apple.com/il/app/twitter/id333903271?mt=8&message=' + qs['message'],
-      android: {
-        'host': 'qr?url=' + "<%= @url %>", // encodeURIComponent(qs['message']), // Host/path/querystring part in a custom scheme URL
-        // 'action': '', // Equivalent to ACTION in INTENTs
-        // 'category': '', // Equivalent to CATEGORY in INTENTs
-        // 'component': '', // Equivalent to COMPONENT in INTENTs
-        'scheme': 'pharosproduction', // Scheme part in a custom scheme URL
-        'package': 'com.pharosproduction', // Package name in Play store
-        'fallback': 'https://play.google.com/store/apps/details?id=com.pharosproduction&hl=en&message=' + qs['message']
-      }
-    });
-  </script>
+    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App</a></div>
+    <br>
+    <br>
+    <div class="download-app">
+      If you don't have app installed,
+      <br>
+        please
+       <a href="https://itunes.apple.com/us/app/facebook/id284882215?mt=8">download</a>
+        it at App store.
+    </div>
+    <em>This uses Linkedin app store details for testing.</em>
+</div>
+
+<script>
+  var NativeAppLauncher=function(a){"use strict";function b(a,b){console.log(a+":"+JSON.stringify(b,null,4))}var c={},d={getAppUri:function(){return"#"},getAppLauncherEl:function(){if(!c.appLauncherElId)throw new Error("Settings does not have valid appLauncherElId");return a("#"+c.appLauncherElId)},getNotSupportedMessage:function(){if(!c.appLauncherElId)throw new Error("Settings does not have valid NotSupportedMessage");return c.notSupportedMessage},getCampaignValue:function(){return c.campaignCode},getAppStoreURI:function(){return"#"}},e=a.extend({},d,{getIntentURI:function(){return"intent://m/#Intent;scheme="+c.appUri+";package="+c.androidAppId+";end"},getAppUri:function(){return c.appUri},getAppStoreURI:function(){var a=this.getCampaignValue()?"&referrer=utm_source%3Dother%26utm_campaign%3D"+this.getCampaignValue():"";return"https://play.google.com/store/apps/details?id="+c.androidAppId+a}}),f=a.extend({},d,{getAppStoreURI:function(){return this.getCampaignValue()?s.appendQueryParameter(c.iOsAppStore,"ct",this.getCampaignValue()):c.iOsAppStore},getUniversalLinkingUrl:function(){return c.universalLinkUrl},getAppUri:function(){if(!c.appUri)throw new Error("Settings does not have valid AppURI");return c.appUri}}),g=function(a){this.strategyParameters=a,this.init=function(){}},h=function(a){this.init=function(){var b=a.getAppLauncherEl(),c=a.getAppUri();b.click(function(a){a.preventDefault(),window.location.reload()}),window.location=c}},i=function(b){g.call(this,b);var c=["pagehide","blur","beforeunload"],d=null,e=function(){clearTimeout(d),d=null,a(window).unbind(c.join(" "))},f=b.getAppLauncherEl();this.init=function(){h(),f.unbind("click").on("click",function(a){a.preventDefault(),h()})};var h=function(){window.location=b.getAppUri(),a(window).bind(c.join(" "),e),d=setTimeout(function(){window.top.location=b.getAppStoreURI()},1500)}},j=function(b){g.call(this,b),this.init=function(){var c=new i(b),d=b.getAppLauncherEl(),e=d.attr("id");a("body").on("click","#"+e,function(a){a.preventDefault(),c.init()})}},k=function(a){g.call(this,a),this.init=function(){var b=a.getAppLauncherEl();b.attr("id");b.attr("href",a.getIntentURI())}},l=function(b){g.call(this,b),this.init=function(){var c=b.getAppLauncherEl().attr("id");a("body").on("click","#"+c,function(a){a.preventDefault();var c=b.getNotSupportedMessage()?b.getNotSupportedMessage():"Not Supported";alert(c)})}},m=function(b){function c(a,b,c){var d=new Date;d.setTime(d.getTime()+1e3*c);var e="; expires="+d.toGMTString();document.cookie=a+"="+b+e+"; path=/"}function d(a){for(var b=a+"=",c=document.cookie.split(";"),d=0;d<c.length;d++){for(var e=c[d];" "==e.charAt(0);)e=e.substring(1,e.length);if(0==e.indexOf(b))return e.substring(b.length,e.length)}return null}function e(a){c(a,"",-1)}g.call(this,b),this.init=function(){function f(){return d(i)>1}function g(){var a=d(i);!a||isNaN(a)?c(i,1,60):c(i,2,60)}b.getUniversalLinkingUrl()||console.log("Error: Universal Linking: Invalid url provided: "+b.getUniversalLinkingUrl());var h=b.getAppLauncherEl(),i="ul-app-detection-flag",j=b.getUniversalLinkingUrl();f()&&(window.location=b.getAppStoreURI(),e()),h.attr("href",j),a(window).on("blur",function(){e(i)}),g(),h.click(function(){g()})}},n=function(){var a,g=d;return p().isIOS?(a="ios",g=f):p().isAndroid?(a="android",g=e):(a="desktop or default",g=d),c.debug&&g&&b("AppLaunchParameter",a),g},o=function(a){var d,e=n();if("cta"==a||void 0==a)d=new j(e);else if("direct"==a)d=new i(e);else if("ul"==a)d=new m(e);else if("notsupported"==a)d=new l(e);else if("directapponly"==a)d=new h(e);else{if("intent_cta"!=a)throw new Error("Deeplinking: Unsupported deeplinking strategy type");d=new k(e)}return c.debug&&d&&b("AppLaunchStrategyType",a),d},p=function(){var a=window.navigator.userAgent.toLowerCase(),b=function(){return c()?parseInt(a.match(/os\s+(\d+)_/)[1],10):!1},c=function(){return/(?:i(?:phone|p(?:o|a)d))/.test(a)},d=function(){return!!a.match(/FBAV/i)},e=function(){return a.indexOf("chrome")>-1},f=function(){var b=a.match(/chrom(e|ium)\/([0-9]+)\./);return b?parseInt(b[2],10):!1},g=function(){return a.indexOf("twitter")>-1},h=function(){return a.indexOf("android")>-1},i=function(){var b=a.match(/android\s([0-9\.]*)/);return b?parseFloat(b[1]):!1},j=function(){return h()&&e()&&l()&&!d()},k=function(){return!d()&&(h()&&m()&&m()<537||f()&&f()<37)},l=function(){return a.indexOf("version")>-1},m=function(){var b=a.match(/AppleWebKit\/([\d.]+)/);return b?parseFloat(b[1]):!1};return{isIOS:c(),iOSVersion:b(),isAndroid:h(),androidVersion:i(),isAndroidStockBrowser:j(),isAndroidNativeBrowser:k(),isFacebook:d(),isChrome:e(),isTwitter:g()}},q=function(){var a=p(),d=new o("cta");return a.isIOS?a.iOSVersion<9?(d=new o("direct"),a.isTwitter&&(d=new o("directapponly"))):(d=new o("direct"),a.isFacebook&&(d=new o("ul"))):a.isAndroid&&(d=new o("intent_cta"),(a.isAndroidNativeBrowser||a.isAndroidStockBrowser)&&(d=new o("notsupported"))),1==c.debug&&b("browser",a),d},r=function(a){c=a,setTimeout(function(){return q().init()},1e3)},s={getQueryString:function(a){void 0==a&&(a=window.location.search),a=a.split("+").join(" ");for(var b,c={},d=/[?&]?([^=]+)=([^&]*)/g;b=d.exec(a);)c[decodeURIComponent(b[1])]=decodeURIComponent(b[2]);return c},appendQueryParameter:function(a,b,c){var d=new RegExp("([?&])"+b+"=.*?(&|$)","i"),e=-1!==a.indexOf("?")?"&":"?";return a.match(d)?a.replace(d,"$1"+b+"="+c+"$2"):a+e+b+"="+c}};return{init:r,browserChecker:p,util:s,androidParameters:e,iOSParameters:f}}(jQuery);
+</script>
+  <script>
+    !(function($) {
+        $(document).ready(function() {
+            /** Initialize Deeplinking ***/
+            $(document).ready(function() {
+                NativeAppLauncher.init({
+                    appLauncherElId: 'open-app-link', // Element Id of App Launcher button.
+                    notSupportedMessage: 'Sorry, you’ll need to use a different browser to do this.',
+                    universalLinkUrl: 'http://linkedin.com',
+                    appUri: 'linkedin://',
+                    androidAppId: 'com.linkedin.android',
+                    iOsAppStore:'https://itunes.apple.com/us/app/linkedin/id288429040?mt=8',
+                    debug:false // Optional
+                    //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
+                });
+            });
+        });
+    })(jQuery);
+</script>
 
   </body>
 </html>
