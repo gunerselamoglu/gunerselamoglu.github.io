@@ -79,7 +79,7 @@
     <br>
     <br>
 
-    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 4</a></div>
+    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 5</a></div>
     <br>
     <br>
     <div class="download-app">
@@ -151,7 +151,7 @@ var AppLaunchStrategyParameters =  {
  */
 var AndroidAppLaunchStrategyParameters = $.extend({}, AppLaunchStrategyParameters, {
     getIntentURI: function() {
-        return "intent://scan/#Intent;scheme=" + Settings.appUri + ";package="+ Settings.androidAppId +";end";
+        return "intent://m/#Intent;scheme=" + Settings.appUri + ";package="+ Settings.androidAppId +";end";
     },
     getAppUri: function () {
         return Settings.appUri;
@@ -699,7 +699,7 @@ return {
                     appUri: 'zxing',
                     androidAppId: 'com.google.zxing.client.android',
                     iOsAppStore:'https://itunes.apple.com/us/app/linkedin/id288429040?mt=8',
-                    debug:false // Optional
+                    debug:true // Optional
                     //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
                 });
             });
