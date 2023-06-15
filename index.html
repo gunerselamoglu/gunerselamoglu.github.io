@@ -79,7 +79,7 @@
     <br>
     <br>
 
-    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 6</a></div>
+    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 7</a></div>
     <br>
     <br>
     <div class="download-app">
@@ -93,7 +93,7 @@
 </div>
 
 <script>
-  window.location.replace("com.zxing://");
+
   /**
  *
  * @author
@@ -152,7 +152,7 @@ var AppLaunchStrategyParameters =  {
  */
 var AndroidAppLaunchStrategyParameters = $.extend({}, AppLaunchStrategyParameters, {
     getIntentURI: function() {
-        return "intent://scan/#Intent;scheme=" + Settings.appUri + ";package="+ Settings.androidAppId +";end";
+        return "intent://m/#Intent;scheme=" + Settings.appUri + ";package="+ Settings.androidAppId +";end";
     },
     getAppUri: function () {
         return Settings.appUri;
