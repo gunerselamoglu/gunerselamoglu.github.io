@@ -128,7 +128,7 @@
     <br>
     <br>
 
-    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 12</a></div>
+    <div><a id="open-app-link" class="open-app" href="javascript:;"> Open App 13</a></div>
     <br>
     <br>
     <div class="download-app">
@@ -739,22 +739,22 @@ return {
 </script>
   <script>
     !(function($) {
-        $(document).ready(function() {
-            /** Initialize Deeplinking ***/
-            $(document).ready(function() {
-                NativeAppLauncher.init({
-                    appLauncherElId: 'open-app-link', // Element Id of App Launcher button.
-                    notSupportedMessage: 'Sorry, you’ll need to use a different browser to do this.',
-                    universalLinkUrl: 'https://gedik.com',
-                    appUri: 'gedik',
-                    androidAppId: 'com.gedik.hizlihesap', //gedik.hizlihesap
-                    iOsAppStore:'https://apps.apple.com/tr/app/gedik-yat%C4%B1r%C4%B1m-h%C4%B1zl%C4%B1-hesap/id1604600328',
-                    debug:true // Optional
-                    //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
-                });
-            });
-        });
-    })(jQuery);
+              $(document).ready(function() {
+                  /** Initialize Deeplinking ***/
+                  $(document).ready(function() {
+                      NativeAppLauncher.init({
+                          appLauncherElId: 'open-app-link', // Element Id of App Launcher button.
+                          notSupportedMessage: 'Sorry, you’ll need to use a different browser to do this.',
+                          universalLinkUrl: 'http://linkedin.com',
+                          appUri: 'linkedin://',
+                          androidAppId: 'com.linkedin.android',
+                          iOsAppStore:'https://itunes.apple.com/us/app/linkedin/id288429040?mt=8',
+                          debug:false // Optional
+                          //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
+                      });
+                  });
+              });
+          })(jQuery);
 </script>
 
   </body>
