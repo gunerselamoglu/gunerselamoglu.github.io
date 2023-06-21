@@ -67,7 +67,9 @@
   <p>
     <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end"> Take a QR code </a>
   </p> -->
-
+    <p>
+        <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end"> Take a QR code </a>
+    </p>
     <p> <a href="app://78.47.148.149/openApp;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end">Link version 1</a></p>
   
     <p> <a href="app://gedik.hizlihesap/openApp;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end">Link version 2</a></p>
@@ -81,7 +83,7 @@
     <p> <a href="app://zxing/openApp;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end">Link version 6</a></p>
 
     <p>
-      <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code </a>
+      <a href="intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;end"> Take a QR code 2</a>
     </p>
 
     <p>
@@ -745,9 +747,9 @@ return {
                       NativeAppLauncher.init({
                           appLauncherElId: 'open-app-link', // Element Id of App Launcher button.
                           notSupportedMessage: 'Sorry, you’ll need to use a different browser to do this.',
-                          universalLinkUrl: 'http://gedik.com',
-                          appUri: 'gedik://',
-                          androidAppId: 'com.gedik.hizlihesap',
+                          universalLinkUrl: 'http%3A%2F%2Fzxing.org',
+                          appUri: 'zxing://',
+                          androidAppId: 'com.google.zxing.client.android',
                           iOsAppStore:'https://itunes.apple.com/us/app/gedik-trader/id1116732065',
                           debug:false // Optional
                           //campaignCode: 'this-is-test-campaign' // optional, this appends campaign on app store url.
